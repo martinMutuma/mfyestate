@@ -1,0 +1,75 @@
+input {
+	height: 25px;
+	width: 200px;
+	line-height: 25px;
+	font-size: 19px;
+	padding-left: 2px;
+}
+
+.zhmm {
+	width: 960px;
+	border: 1px #E8E8E8 solid;
+	background: #FFFDF6 url(../images/kefu.gif) no-repeat right
+		bottom;
+	text-align: left;
+	margin-top: 30px;
+	padding: 74px 0 60px 0;
+}
+
+dl.findcon {
+	width: 776px;
+	border: 1px #E8E8E8 solid;
+	float: left;
+	margin-left: 29px;
+	display: inline;
+}
+
+.findmm {
+	color: #199600;
+}
+
+.findpadd {
+	padding: 10px 0 20px 26px;
+	list-style-type: none;
+	color: #000000;
+}
+
+.findpass {
+	background: url(../images/findpass.png) no-repeat;
+	margin-left: -2px;
+	margin-top: 60px;
+}
+
+.f_padd {
+	padding: 0 0 19px 72px;
+}
+
+.log_lo {
+	width: 157px;
+	height: 56px;
+	position: absolute;
+	top: 230px;
+	left: 155px;
+}
+
+.dlbutton {
+	width: 70px;
+	height: 34px;
+	border: none;
+	cursor: pointer;
+	background: url(../dlbutton.gif) no-repeat;
+}
+
+.sendbutt {
+	width: 100px;
+	height: 30px;
+	background: url(../images/sendan.gif) no-repeat;
+	border: none;
+	cursor: pointer;
+}
+
+.f_padd {
+	padding: 0 0 19px 72px;
+	list-style-type: none;
+	color: #000000;
+}

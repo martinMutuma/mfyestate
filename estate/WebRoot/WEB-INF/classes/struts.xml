@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+	<package name="global" namespace="/" extends="json-default">
+		<global-results>
+			<result name="input">/s2error.jsp</result>
+			<result name="jsonStringPage1">/jsonString.jsp</result>
+			<result name="jsonStringPage" type="json">
+				
+			</result>
+		</global-results>
+	</package>
+	
+	<include file="com/estate/web/member/config/member_struts.xml"></include>
+	<include file="com/estate/web/pro/config/pro_struts.xml"></include>
+	<include file="com/estate/web/stage/config/stage_struts.xml"></include>
+	<include file="com/estate/web/news/config/news_struts.xml"></include>
+	<include file="com/estate/web/stage/config/integration_struts.xml"></include>
+</struts>
+

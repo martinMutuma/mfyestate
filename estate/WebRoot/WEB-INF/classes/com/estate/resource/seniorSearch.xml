@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<table name="0">
+		<tablename><![CDATA[t_p_office]]></tablename>
+		<title><![CDATA[title]]></title>
+		<seniorSearch><![CDATA[
+		select t.id,t.title,t.address,t.area,t.propertyManagement as pm,t.price,t.authorId,m.realName,t.createtime,
+		t.flag,t.compressUrl
+		from t_p_office t,t_m_baseinfo m where m.id = t.authorId
+		]]></seniorSearch>
+		<showInfo><![CDATA[select m.realname,m.disname as mdisname,m.company,m.headurl,m.id as mid,m.mobile as tel,
+		p.title,p.content,p.positionX,p.positionY,p.compressUrl,
+		ifnull(p.imgUrl1,'') as imgUrl1,ifnull(p.imgUrl2,'') as imgUrl2,ifnull(p.imgUrl3,'') as imgUrl3,
+		ifnull(p.imgUrl4,'') as imgUrl4,ifnull(p.imgUrl5,'') as imgUrl5,imgName1,imgName2,imgName3,imgName4,imgName5,
+		imgType1,imgType2,imgType3,imgType4,imgType5,
+		p.flag,p.createtime,p.num,p.rentType,
+		p.id id,p.attentionNum attentionNum,p.floorCategory,
+		p.name as name,p.price,p.address,p.fitment,p.consyear,p.subfloor,
+		p.floor2,p.totalfloor,p.forward, {selectquery} as disname,
+		p.area,p.areauseful,p.mright,p.propertyManagement
+		from t_p_office p,t_m_baseinfo m,t_s_district d where d.code = p.district and p.authorid = m.id and p.id = ?
+		]]>
+		</showInfo>
+		<keywordSearch><![CDATA[
+			select t.id,t.title,t.address,t.area,t.propertyManagement as pm,t.price,t.authorId,t.createtime,t.flag,
+				   t.compressUrl
+            from t_p_office t 
+            where t.title like ?
+		]]>
+		</keywordSearch>
+		<keywordSearch-countSql><![CDATA[
+			select count(id) from t_p_office where title like ?
+		]]>
+		</keywordSearch-countSql>
+	</table>
+	<table name="1">
+		<tablename><![CDATA[t_s_shops]]></tablename>
+		<title><![CDATA[title]]></title>
+		<seniorSearch><![CDATA[
+		select t.id,t.title,t.address,t.propertyManagement as pm,t.bursary as price,t.authorId,m.realName,
+		t.createtime,t.flag,t.compressUrl,
+		t.area,t.areauseful
+		from t_s_shops t,t_m_baseinfo m where m.id = t.authorId  
+		]]></seniorSearch>
+		<showInfo><![CDATA[select m.realname,m.disname as mdisname,m.company,m.headurl,m.id as mid,m.mobile as tel,
+		p.title,p.content,p.positionX,p.positionY,p.compressUrl,
+		ifnull(p.imgUrl1,'') as imgUrl1,ifnull(p.imgUrl2,'') as imgUrl2,ifnull(p.imgUrl3,'') as imgUrl3,
+		ifnull(p.imgUrl4,'') as imgUrl4,ifnull(p.imgUrl5,'') as imgUrl5,imgName1,imgName2,imgName3,imgName4,imgName5,
+		imgType1,imgType2,imgType3,imgType4,imgType5,
+		p.flag,p.createtime,p.num,p.rentType,p.cbd,
+		p.id id,p.attentionNum attentionNum,p.floorCategory,p.bursary as price,
+		p.name as name,p.address,p.fitment,p.consyear,p.subfloor,
+		p.floor2,p.totalfloor,p.forward, {selectquery} as disname,
+		p.area,p.areauseful,p.mright,p.propertyManagement
+		from t_s_shops p,t_m_baseinfo m,t_s_district d where d.code = p.district and p.authorid = m.id and p.id = ?
+		]]>
+		</showInfo>
+		<keywordSearch><![CDATA[
+			select t.id,t.title,t.address,t.propertyManagement as pm,t.bursary as price,t.authorId,t.createtime,t.flag,t.compressUrl,
+				   t.area,t.areauseful
+				   from t_s_shops t where title like ?
+		]]>
+		</keywordSearch>
+		<keywordSearch-countSql><![CDATA[
+			select count(id) from t_s_shops where title like ?
+		]]>
+		</keywordSearch-countSql>
+	</table>
+	<table name="2">
+		<tablename><![CDATA[t_p_business]]></tablename>
+		<title><![CDATA[title]]></title>
+		<seniorSearch><![CDATA[
+		select t.id,t.title,t.address,t.propertyRent as pm,t.price as price,t.authorId,m.realName,
+		t.createtime,t.compressUrl,
+		t.area
+		from t_p_business t,t_m_baseinfo m where m.id = t.authorId  
+		]]></seniorSearch>
+		<showInfo><![CDATA[select m.realname,m.disname as mdisname,m.company,m.headurl,m.id as mid,m.mobile as tel,
+		p.*
+		from t_p_business p,t_m_baseinfo m,t_s_district d where d.code = p.district and p.authorid = m.id and p.id = ?
+		]]>
+		</showInfo>
+	</table>
+	<table name="3">
+		<tablename><![CDATA[t_p_industry]]></tablename>
+		<title><![CDATA[title]]></title>
+		<seniorSearch><![CDATA[
+		select t.id,t.title,t.address,t.propertyManagement as pm,t.bursary as price,t.authorId,m.realName,
+		t.createtime,t.compressUrl,
+		t.area,t.spaceArea
+		from t_p_industry t,t_m_baseinfo m where m.id = t.authorId 
+		]]></seniorSearch>
+		<showInfo><![CDATA[select m.realname,m.disname as mdisname,m.company,m.headurl,m.id as mid,m.mobile as tel,
+		p.*
+		from t_p_industry p,t_m_baseinfo m,t_s_district d where d.code = p.district and p.authorid = m.id and p.id = ?
+		]]>
+		</showInfo>
+	</table>
+	<table name="4">
+		<tablename><![CDATA[t_p_largepro]]></tablename>
+		<title><![CDATA[title]]></title>
+		<seniorSearch><![CDATA[
+		select t.id,t.title,t.address,t.price as price,t.authorId,m.realName,
+		t.createtime,t.compressUrl
+		from t_p_largepro t,t_m_baseinfo m where m.id = t.authorId  
+		]]></seniorSearch>
+		<showInfo><![CDATA[select m.realname,m.disname as mdisname,m.company,m.headurl,m.id as mid,m.mobile as tel,
+		p.*
+		from t_p_largepro p,t_m_baseinfo m,t_s_district d where d.code = p.district and p.authorid = m.id and p.id = ?
+		]]>
+		</showInfo>
+	</table>
+	<table name="5">
+		<tablename><![CDATA[t_m_baseinfo]]></tablename>
+		<title><![CDATA[realName]]></title>
+	</table>
+	<table name="9">
+		<tablename><![CDATA[t_p_building]]></tablename>
+		<title><![CDATA[name]]></title>
+		<seniorSearch><![CDATA[
+		select id,compressUrl,name,disname,fit_Condition as fitCondition,address,features,
+		open_Date as openDate,check_Date as checkDate,min_Price as minPrice 
+		from t_p_building t where 1= 1 
+		]]></seniorSearch>
+		<keywordSearch><![CDATA[
+			select id,compressUrl,name,disname,fit_Condition as fitCondition,address,features,open_Date as openDate,
+			       check_Date as checkDate,min_Price as minPrice,building_Type as buildingType,attentionNum from t_p_building
+			where NAME like ?
+		]]>
+		</keywordSearch>
+		<keywordSearch-countSql><![CDATA[
+			select count(*) from t_p_building where NAME like ?
+		]]>
+		</keywordSearch-countSql>
+	</table>
+	<table name="10">
+		<tablename><![CDATA[t_p_second_buliding]]></tablename>
+		<title><![CDATA[title]]></title>
+		<seniorSearch><![CDATA[
+		select id,title,respDistrict,disname,useType,address,home,consArea,createDate,price,unitPrice 
+		from t_p_second_buliding t where flag = 2 
+		]]></seniorSearch>
+	</table>
+	<table name="11">
+		<tablename><![CDATA[t_p_second_buliding]]></tablename>
+		<title><![CDATA[title]]></title>
+		<seniorSearch><![CDATA[
+		select id,title,respDistrict,disname,useType,address,home,consArea,createDate,price,unitPrice 
+		from t_p_second_buliding t where flag = 1 
+		]]></seniorSearch>
+	</table>
+
+</root>

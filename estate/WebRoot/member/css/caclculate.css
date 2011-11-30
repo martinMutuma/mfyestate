@@ -1,0 +1,175 @@
+/*左侧开始*/
+.center_jsq{
+width:958px;
+height:auto;
+margin:5px auto 0;
+}
+.left_title_box{
+width:244px;
+height:auto;
+float:left;
+}
+.title_box{
+width:244px;
+height:auto;
+float:left;
+border:solid 1px #dfdfdf;
+border-top:none;
+}
+.title_box div ul li{
+width:244px;
+height:48px;
+float:left;
+text-align:center;
+font-weight:bold;
+line-height:48px;
+font-size:14px;
+padding-bottom:8px;
+display:block;
+}
+.title_box div ul li a{
+text-decoration:none;
+color:#333;
+}
+.title_box div ul li.title1{background:top center url(../images/jsq_bj2.jpg) no-repeat;}
+.title_box div ul li.title2{background:top center url(../images/jsq_bj3.jpg) no-repeat;}
+.title_box div ul li.title3{background:top center url(../images/jsq_bj4.jpg) no-repeat;}
+.title_box div ul li.title4{background:top center url(../images/jsq_bj5.jpg) no-repeat;}
+.title_box div ul li.title5{background:top center url(../images/jsq_bj6.jpg) no-repeat;}
+.title_box div ul li.title6{background:top center url(../images/jsq_bj7.jpg) no-repeat;}
+.title_box div ul li.title1 a:hover{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj2-2.jpg) no-repeat;
+}
+.title_box div ul li.title2 a:hover{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj3-3.jpg) no-repeat;
+}
+.title_box div ul li.title3 a:hover{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj4-4.jpg) no-repeat;
+}
+.title_box div ul li.title4 a:hover{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj5-5.jpg) no-repeat;
+}
+.title_box div ul li.title5 a:hover{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj6-6.jpg) no-repeat;
+}
+.title_box div ul li.title6 a:hover{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj7-7.jpg) no-repeat;
+}
+
+.title_box div ul li a.span1{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj2-2.jpg) no-repeat;
+}
+.title_box div ul li a.span2{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj3-3.jpg) no-repeat;
+}
+.title_box div ul li a.span3{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj4-4.jpg) no-repeat;
+}
+.title_box div ul li a.span4{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj5-5.jpg) no-repeat;
+}
+.title_box div ul li a.span5{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj6-6.jpg) no-repeat;
+}
+.title_box div ul li a.span6{
+width:244px;
+height:48px;
+float:left;
+color:#fff;
+background:top center url(../images/jsq_bj7-7.jpg) no-repeat;
+}
+
+/*左侧结束*/
+
+/*右侧开始*/
+.right_list_box{
+width:712px;
+height:auto;
+float:left;
+margin-top:13px;
+}
+.right_list_box2{
+width:691px;
+height:auto;
+float:left;
+padding:0 10px 10px 10px;
+border-right:solid 1px #dfdfdf;
+border-bottom:solid 1px #dfdfdf;
+}
+.right_list_div{
+width:660px;
+float:left;
+line-height:30px;
+padding:0 0 8px 30px;
+overflow:hidden;
+font-weight:bold;
+background:url(../images/jsq_bj14.jpg) no-repeat;
+}
+.list_box1{
+width:688px;
+height:auto;
+float:left;
+border:solid 1px #dfdfdf;
+}
+.list_box2{
+width:370px;
+height:auto;
+float:left;
+border-right: dashed 1px #dfdfdf;
+}
+.list_box2 td{
+line-height:23px;
+}
+.list_box3{
+width:317px;
+height:auto;
+float:left;
+}
+.list_box3 td{
+line-height:23px;
+}
+/*右侧结束*/

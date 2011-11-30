@@ -1,0 +1,266 @@
+body {
+	font-size: 12px;
+	color: #000;
+	font-family: Arial;
+	background: transparent;
+	margin: 4px 0;
+	padding: 0;
+	margin: 10px 12px;
+}
+
+html,body {
+	height: 100%;
+}
+
+h1,h2,h3,ul,ol,li,p {
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.sp {
+	font-size: 4px;
+	height: 4px;
+}
+
+.red {
+	color: red;
+}
+
+.gray {
+	color: #666;
+}
+
+.btn {
+	height: 2.0em;
+}
+
+#wrapper {
+	width: 984px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+a:link,a:visited {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a img {
+	border: 0;
+}
+
+.header {
+	height: 28px;
+	line-height: 28px;
+	border-bottom: 2px solid #aad29e;
+}
+
+.header h2 {
+	font-size: 14px;
+	color: #125908;
+	width: 107px;
+	border-bottom: 2px solid #269d00;
+	margin-bottom: -2px;
+	position: relative;
+}
+
+.taber {
+	margin-top: 16px;
+	background: #e6f4d0;
+	padding: 7px 0 6px 0;
+	zoom: 1;
+}
+
+.taber h3 {
+	font-size: 14px;
+	color: #125908;
+	margin-left: 10px;
+}
+
+.taber .more {
+	float: right;
+	margin-right: 6px;
+}
+
+.caption {
+	margin-top: 15px;
+	height: 28px;
+	line-height: 28px;
+	background: #f7fcf1;
+	border-top: 1px solid #cce5be;
+}
+
+.caption h1 {
+	font-size: 14px;
+	color: #333;
+	margin-left: 10px;
+}
+
+.caption a.more {
+	float: right;
+	margin-right: 9px;
+}
+
+.data-list {
+	margin-top: 4px;
+}
+
+.data-list td {
+	height: 32px;
+	line-height: 32px;
+	border-bottom: 1px dashed #e2e2e2;
+	color: #010004;
+}
+
+.data-list td a:link,.data-list td a:visited {
+	font-size: 14px;
+}
+
+.data-list td a.op:link,.data-list td a.op:visited {
+	font-size: 12px;
+}
+
+.data-list td.gray {
+	color: #666;
+}
+
+td.c,th.c {
+	text-align: center;
+	padding-right: 0;
+}
+
+td.l {
+	text-align: left;
+	padding-left: 8px;
+}
+
+.pen {
+	background: #FFF url(http://img.baidu.com/img/iknow/ques_arr.gif)
+		no-repeat scroll 0 -100px;
+}
+
+.switch-tab {
+	height: 30px;
+	background: #e6f4d0;
+	border-bottom: 2px solid #a3cf8c;
+}
+
+.switch-tab ul {
+	list-style: none;
+	margin-left: 10px;
+}
+
+.switch-tab li {
+	float: left;
+	width: 110px;
+	height: 26px;
+	margin: 3px 12px -2px 0;
+	background: #f7fcf0;
+	position: relative;
+}
+
+.switch-tab a:link,.switch-tab a:visited {
+	display: block;
+	height: 26px;
+	line-height: 28px;
+	border: 1px solid #cce5be;
+	border-bottom: none;
+	padding: 0 8px;
+	font-size: 14px;
+	color: #333;
+	text-decoration: none;
+	text-align: center;
+}
+
+.switch-tab li.on a:link,.switch-tab li.on a:visited {
+	border: 1px solid #a3cf8c;
+	border-right: 2px solid #a3cf8c;
+	border-bottom: 2px solid #fff;
+	background: #fff;
+	font-weight: bold;
+}
+
+.note {
+	color: #787878;
+	background: url(../images/popo.gif) no-repeat left
+		top;
+	padding-left: 20px;
+}
+
+.alert-note {
+	margin: 10px 12px;
+	padding: 6px;
+	border: 1px solid #D55111;
+	background: #fe0;
+}
+
+#page,#page a {
+	font-size: 14px;
+	font-family: arial;
+}
+
+#page {
+	padding: 10px 0;
+	text-align: center;
+}
+
+.td-hilight {
+	background: #fafedc;
+}
+
+.reward {
+	margin: 10px;
+}
+
+.reward li {
+	float: left;
+	list-style: none;
+	width: 96px;
+	height: 94px;
+}
+
+.reward a {
+	display: block;
+	width: 70px;
+	height: 70px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.reward a:hover {
+	text-decoration: none;
+}
+
+.reward li p {
+	margin-top: 6px;
+	text-align: center;
+}
+
+.reward li.none {
+	width: 200px;
+	height: 20px;
+}
+
+.reward .icon-num {
+	background: url("http://img.baidu.com/img/iknow/task/icon_num.gif")
+		no-repeat scroll 0 0 transparent;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	right: 2px;
+	font-size: 9px;
+	font-weight: bold;
+	font-family: arial;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}

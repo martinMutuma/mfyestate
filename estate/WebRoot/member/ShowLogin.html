@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../resource/css/jqueryui/default/easyui.css"></link>
+<link rel="stylesheet" type="text/css" href="../resource/css/jqueryui/icon.css"></link>
+<script type="text/javascript" src="../resource/js/jquery-1.4.2.js" charset="utf-8"></script>
+<script type="text/javascript" src="../resource/js/jquery.easyui.min.js"></script>
+<title>用户登录</title>
+</head>
+<style type="text/css">
+	*{margin:0px;border:0px;padding:0px;}
+	body{font:12px "宋体";}
+	a{color:#000;text-decoration:none;}
+	a:hover{color:#F30;text-decoration:underline;}
+	input{padding:0px;margin:0px;}
+	.txtbox{border:1px solid #E79F50;height:20px;line-height:22px;width:120px;}
+	.bfont{font:700 12px "宋体"};
+	#login{width:400px;height:100%;overflow:hidden;margin:0px auto;}
+	#title{width:400px;height:25px;line-height:25px;color:#F60;font-weight:700;background-color:#FDEBD9;text-align:center;margin:0px auto;}
+	#loginbox{width:185px;height:60px;margin:10px 20px;float:left;display:inline;}
+	#btnlogin{width:55px;height:60px;float:right;margin:10px 30px 10px 5px;}
+	#forget{width:200px;margin:0px auto;height:25px;line-height:25px;text-align:center;}
+	#forget span{width:80px;display:inline;margin:0px 10px;}
+</style>
+<body>
+<div id="login">
+	<div id="title" style="width:420px;">个人登录后才能浏览房源详细信息，没有注册请先注册成为个人会员。</div>
+    <div style="width:320px;height:80px;margin:0px auto;">
+        <table id="loginbox" border="0" cellpadding="0" cellspacing="0">
+            <tr style="height:30px">
+                <td class="bfont">用户名：</td>
+                <td><input class="txtbox" type="text"  class="easyui-validatebox" missingMessage="请输入用户名" required="true" name="username" id="username"/></td>
+            </tr>
+            <tr>
+                <td class="bfont">密&nbsp;&nbsp;码：</td>
+                <td><input class="txtbox" type="password" name="password" id="password"/></td>
+            </tr>
+        </table>
+        <div id="btnlogin" ><a href="javascript:login();"><img src="../resource/images/login.gif" width="55" height="55" /></a></div>
+    </div>
+    <div id="forget">
+    	<!--<span style="float:left;"><a href="#">忘记密码？</a></span>
+        <span style="float:right;"><a href="#">没有注册？</a></span>-->
+    </div>
+    <div style="height:25px;line-height:25px;text-align:center">马上注册，你就会得到更多更好的机会。 <a style="color:#06F;text-decoration:underline;font-weight:700" href="javascript:window.location.href='register.jsp'">点击注册</a></div>
+</div>
+</body>
+<script type="text/javascript">
+function login(){
+		var username = $("#username").val();
+		var password = $("#password").val();
+		if(username==''){$("#username").focus();return;}
+		if(password==''){$("#password").focus();return;}
+		// var time_second = $("#time_second option:selected").val();
+		var url = "/estate/mem/baseinfo_loginMember.shtml?username="+username+"&password="+password+"&time="+(new Date().getTime().toString(36));
+		$.get(url,function(mes){
+			if(mes=="1"){
+				TB_remove();
+				show2();
+			}else{
+				$.messager.alert('警告','验证码错误','error',function(){})
+			}
+	})
+}
+function show2(){
+	$.messager.show({
+   			showType:'slide',
+   			showSpeed:1000,
+   			width:300,
+   			height:150,
+   			msg:'经验值+5！',
+   			title:'登陆成功',
+   			timeout:5000
+   		});
+}
+</script>
+</html>

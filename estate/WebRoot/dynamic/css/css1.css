@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+BODY {font-size:12px; padding:0px; border:none; margin:0px auto; color:#333; font-family:"宋体", arial; text-align:center; background-color:#fff;}
+/***总体定义***/
+div,form,img,ul,ol,li,dl,dt,dd,em,i,h1,h2,h3,h4,h5,h6,span,p{padding:0px; margin:0px; border:none; list-style:none;font-style:normal;}
+a:link,a:visited{ color:#333; text-decoration:none;}
+a:hover{ color:#FF760D; text-decoration:underline;}
+.left{ float:left;}
+.right{ float:right;}
+.clear{ clear:both;}
+.esborder{ border:1px #B3B3B3 solid;width:146px; float:left; padding:4px 4px 0px 4px; margin-right:12px; display:inline;}
+.esborder img{width:146px; height:121px;}
+.esborder p{ line-height:24px; text-align:center;}
+.jun_jj{font-size:24px; font-weight:bold;  color:#FF3300;}
+.unit{width:97%; height:25px; background:#E0ECFF; overflow:hidden; padding:0px 26px 0px 5px;}
+.unit p a{ padding-left:20px;  line-height:25px;}
+.tR{text-align:right;}
+.unit p span{ color:#666;}
+.all366C a:link,.all366C a:visited{ color:#3366CC;}
+.all366C a:hover{ color:#3366CC;}
+.madt5{ margin-top:5px;}
+.w548{width:514px;}
+.w548 p{line-height:20px; margin-bottom:3px;}
+.w548 p span{ color:#666;}
+.w548 h2{ color:#FF6600; font-size:16px; line-height:20px;}
+.w548 h2 img{ vertical-align:middle;}
+.estateout{width:760px; overflow:hidden;margin-top:17px; float:left;}
+.estateout .padr_1{ padding-bottom:33px;}
+.estateout .padr_1 img{ vertical-align:middle;}
+.tex{width:33px; float:left; height:100px; text-align:left;border: 0px red solid;}

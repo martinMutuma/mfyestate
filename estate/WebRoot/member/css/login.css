@@ -1,0 +1,23 @@
+/* CSS Document */
+@charset="utf-8";
+
+/*  login */
+.login-table{height: 300px;margin-top: 15px;}
+.login-table tr{height: 35px;font-size: 14px;}
+.login-table input {height: 28px;width:200px;font-size: 14px;padding-top: 3px;}
+.login_btn{
+	width:50px;
+	*width:70px;
+}
+.user-login{margin-left: 50px}
+.login_split{border-right: 2px medium dotted #505050;}
+.login_split h3{color: #A41100}
+.login_split p{padding:0px;margin: 5px;text-align: left;}
+.why{border-bottom: 1px solid #D0121B;width: 60%;font-size: 14px;font-weight: bold;}
+.reason{letter-spacing:3px;width: 50%;}
+.register{letter-spacing:0px;width: 60%;}
+.login-table a{font-size: 14px;}
+.login-table a:link {color: #0066CC;text-decoration: none;}     /* unvisited link */
+.login-table a:visited {color: #D20805;text-decoration: none;}  /* visited link */
+.login-table a:hover {color: #FFA028;text-decoration: none;}   /* mouse over link */
+.login-table a:active {color: #FFA028;text-decoration: none;}   /* selected link */

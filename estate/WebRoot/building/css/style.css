@@ -1,0 +1,24 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #51492c; PADDING-TOP: 0px; FONT-FAMILY: "ËÎÌו", arial
+}
+.rollBox {
+	PADDING-RIGHT: 0px; PADDING-BOTTOM: 5px; OVERFLOW: hidden; WIDTH:100%;
+}
+.rollBox .LeftBotton {
+	DISPLAY: inline; FLOAT: left; MARGIN: 9px 0px 0px 0px; OVERFLOW: hidden; WIDTH: 15px; CURSOR: pointer; HEIGHT: 148px
+}
+.rollBox .RightBotton {
+	DISPLAY: inline; FLOAT: right; MARGIN: 9px 0px 0px 0px; OVERFLOW: hidden; WIDTH: 15px; CURSOR: pointer; HEIGHT: 148px
+}
+.rollBox .Cont {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 637px; margin-left:1px; display:inline;
+}
+.rollBox .ScrCont {
+	WIDTH: 10000000px
+}
+.rollBox #List1 {
+	FLOAT: left
+}
+.rollBox #List2 {
+	FLOAT: left
+}
