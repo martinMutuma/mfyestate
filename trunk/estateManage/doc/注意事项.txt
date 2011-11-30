@@ -1,0 +1,22 @@
+注意事项
+
+1、保存和修改方法命名：saveOrUpdate+模块名   
+如：saveOrUpdatePro()
+2、删除方法命名 del+模块名
+如：delPro()
+3、查询方法命名：read+模块名
+ 如:readPro() 
+3、action对应的service命名，请直接写成service
+   要是需要注入其他service 请用对应service的小写形式命名
+如ProAction中
+  private ProService service;
+  private UserService userService;
+4、对于简单项目的增删改查请使用一个jsp页面
+如：pro_info.jsp
+5、大家写的时候尽量参考项目里以前别人写过的，尽量复用，便于以后维护
+
+
+补充：java文件中不可以出现警告
+      每个方法加上注释
+      如果是接口及其实现类，请在借口中添加注释
+      
