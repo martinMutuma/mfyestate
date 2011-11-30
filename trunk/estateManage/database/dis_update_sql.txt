@@ -1,0 +1,6 @@
+
+--地区树显示到市
+update t_s_district set activity = '1' where (code like '32%' and level<3) or level=0;
+
+--地区树显示到区
+update t_s_district set activity = '1' where (code like '32%' and level<4) or level=0;
