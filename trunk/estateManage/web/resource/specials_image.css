@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+.selectArea{
+	height: 250px;
+	width: 958px;
+	border: 1px solid #91A3B6;
+}
+.title{
+	border: 1px solid #E8F2FE;
+	height: 30px;
+	width: 958px;
+	background-color: #E8F2FE;
+	line-height: 30px;
+	padding-left: 15px;
+}
+.imgBody{
+	width: 958px;
+	padding-top: 10px;
+}
+.imgBody img,easyui-tabs img{
+	width: 200px;
+	height: 150px;
+	cursor: pointer;
+}
+.img_split{
+	margin-left: 10px;
+}
