@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">
+<script type="text/javascript" src="../resource/js/jquery-1.4.2.js"></script>
+<body>
+
+<script> 
+function mouseMove(ev) 
+{ 
+ev= ev || window.event; 
+var mousePos = mouseCoords(ev); 
+//alert(ev.pageX); 
+//document.getElementById("xxx").value = mousePos.x; 
+$("#xxx").val(mousePos.x); 
+//document.getElementById("yyy").value = mousePos.y; 
+$("#yyy").val(mousePos.y); 
+}
+
+function mouseCoords(ev) 
+{ 
+if(ev.pageX || ev.pageY){ 
+return {x:ev.pageX, y:ev.pageY}; 
+} 
+return { 
+x:ev.clientX + document.body.scrollLeft - document.body.clientLeft, 
+y:ev.clientY + document.body.scrollTop - document.body.clientTop 
+}; 
+}
+
+document.onmousemove = mouseMove; 
+
+
+</script> 
+ Û±Í X ÷·: 
+<input id="xxx" type=text/>
+
+ Û±Í Y ÷·: 
+<input id="yyy" type=text/> 
+</body>

@@ -1,0 +1,126 @@
+.login_btn {
+	width: 50px;
+	 *width: 70px;
+}
+
+input {
+	height: 25px;
+}
+
+.center_left_box2 {
+	width: 750px;
+	height: auto;
+	float: left;
+	margin-right: 10px;
+	overflow: hidden;
+}
+
+.center_left5 {
+	width: 750px;
+	height: auto;
+	float: left;
+	display: inline;
+	text-align: center;
+	line-height: 27px;
+	overflow: hidden;
+}
+
+.center_right {
+	width: 200px;
+	height: auto;
+	display: inline;
+	overflow: hidden;
+}
+
+.center_right_box {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 200px;
+}
+
+.center_right_img {
+	float: left;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.right_box1 {
+	width: 198px;
+	height: auto;
+	float: left;
+	border: solid 1px #d5d5d5;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.right_box2 {
+	width: 298px;
+	height: auto;
+	float: left;
+	border: solid 1px #d5d5d5;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.right_title {
+	width: 198px;
+	height: 26px;
+	float: left;
+	text-align: center;
+	background: #f3f3f3;
+	color: #c20200;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 26px;
+	border-bottom: solid 1px #d5d5d5;
+}
+
+.right_main2 a {
+	color: #333;
+	text-decoration: none;
+}
+
+.btmborder {
+	border-bottom: dashed 1px #9d9d9d;
+}
+
+.right_td2 {
+	color: #c30000;
+}
+
+.right_main2 {
+	width: 182px;
+	height: auto;
+	float: left;
+	padding: 8px;
+}
+
+.flash_box2 {
+	width: 750px;
+	height: 80px;
+	float: left;
+	margin: 10px 0;
+}
+
+.clear {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+.toptd{
+	border: solid 1px #d7d7d7;
+	border-left:none;
+	border-right:none;
+}
+.toptd2{
+	border-bottom: solid 1px #d7d7d7;
+}
+.bg_over {
+	background-color: #F5F5F5;
+}
+
+.bg_out {
+	border-bottom:solid 1px #333;/* 列表背景鼠标离开变色，取父级对象颜色 */
+}

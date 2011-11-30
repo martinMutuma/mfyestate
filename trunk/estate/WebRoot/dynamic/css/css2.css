@@ -1,0 +1,9 @@
+.dbx_box{z-index:0; left:0px; visibility:hidden; width:143px; border:1px #ccc solid; position:absolute; top:0px; padding-bottom:8px; background-color:#FFF}
+.dbx_box .tit{ height:30px; line-height:30px; background:#e4e4e4; padding:0 8px;}
+.dbx_box .tit a{ margin-left:50px;}
+.dbx_box .tit01{ text-align:center; padding:5px 10px; line-height:24px;}
+.dbx_box .tit01 img{ width:100px; height:65px; margin:0 auto; display:block;}
+.dbx_box .tit01 .allf60{ margin-left:5px;}
+.dbx_box .tit02{ padding:10px 0 10px 20px;}
+.dbx_box .tit02 span{ margin-left:10px;}
+.dbx_box .tit02 a{ background:#36C; font-weight:bold; color:#FFF; padding:3px 10px;}

@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+.top_menu{clear:none;height:19px;margin-top:5px;margin-left: 5px;}
+.top_menu span{
+	display:-moz-inline-box;display:inline-block;font-size: 13px;color: #FFFFFF;float: left;
+}
+.tab{
+	width:85px;
+	height:19px;
+	line-height:19px;
+	color:white;
+	padding-left:5px;
+	background:#7EC2E5;
+	cursor: pointer;
+}
+.tab_selected{
+	width:85px;
+	height:19px;
+	line-height:19px;
+	color:white;
+	padding-left:5px;
+	background:#2882C6;
+	cursor: pointer;
+}
+.tab2{	
+	width:21px;
+	height:19px;
+	line-height:19px;
+	background:url('tabPlugin/deselected.gif');
+	cursor: pointer;
+}
+.tab3{
+	width:21px;
+	height:19px;
+	line-height:19px;
+	background:url('tabPlugin/selected.gif');
+	cursor: pointer;
+}
+.tab_mul_selected{
+	width:21px;
+	height:19px;
+	line-height:19px;
+	background:url('tabPlugin/selected_deselected.gif');
+	cursor: pointer;
+}
+.tab_mul_unselected{
+	width:21px;
+	height:19px;
+	line-height:19px;
+	background:url('tabPlugin/deselected_selected.gif');
+	cursor: pointer;
+}
+.tab_mul_unselected1{
+	width:21px;
+	height:19px;
+	line-height:19px;
+	background:url('tabPlugin/deselected_deselected.gif');
+	cursor: pointer;
+}
+.mainBody{
+	border: 2px solid #2882C6;
+	margin-left:5px;
+	overflow: auto;
+}

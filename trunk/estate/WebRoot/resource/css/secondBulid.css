@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+.title{
+	text-align: left;
+	height: 80px;
+	background:url(../images/house.jpg) no-repeat 0 -1px;
+}
+#head{border-bottom: 1px solid #D0121B;margin-top:0px;}
+#contentLeft{float: left;width: 250px;}
+#contentRight{float: left;width: 710px;}
+.leftDiv{width: 240px;}
+.rightDiv{width:707px;}
+#contentLeft{
+}
+.jjrHead{
+	margin-top:2px;
+	height: 38px;
+	line-height: 38px;
+	position: absolute;
+	width: 238px;
+}
+.border_full{border: 1px solid #D7D7D7;}
+.jjrHead_bg{
+	background: url("../images/s6_7.gif") no-repeat 1px;
+	position: absolute;
+	height: 38px;
+	line-height:30px;
+	color:white;
+	font-weight:bold;
+	padding-left:40px;
+	width: 238px;
+}
+.jjrH{height: 40px;width: 240px}
+.jjrBody{width: 238px;height: 169px;clear: both;border-top: 0px;background: url("../images/sale.gif") no-repeat 0 10px;}
+.jjrBody table td{font-size: 14px;}
+.she{margin-left: 150px;margin-top: 10px;cursor: pointer;height: 17px;}
+.font1{font-size: 13px;}
+.font2{font-size: 20px;font-weight: 600;}
+#biLeft,#biRight{float:left;}
+#biRight{padding-left: 15px;}
+#biImgDiv{width: 260px;height: 208px;border: 1px solid #D5D5D5;padding-top: 4px;}
+#biImgDiv img{
+	width: 252px;height: 200px;
+}
+#adds{width: 260px;height:25px;margin-top: 15px;}#adds img{cursor: pointer;}
+#biImgList{margin-top: 5px;}
+#biImgList img{
+	width: 80px;height: 60px;
+}
+#biRight table td{font-size: 14px;height: 35px;}
+#content,#mapArea,#imageArea,#company{clear: both;margin-top: 15px;}
+#baseinfo{}
+.instroduce{width: 707px;background: url("../images/s6_1_03.gif") no-repeat;height: 34px;color: white;padding-left:45px;font-weight: bold;font-size: 15px;line-height: 30px; }
+.instroduceContent{height: 100px;width:703px;width: 705px\9;padding-top: 5px;}
+.imageAreaContent{width:703px;width: 705px\9;padding-top:15px;}
+.tabDiv{background: url("../images/s6_1_03.gif") repeat-x;height: 29px;}
+a:link {color: black;text-decoration: none;}     /* unvisited link */
+a:visited {color: black;text-decoration: none;}  /* visited link */
+a:hover {color: #FFA028;text-decoration: underline;}   /* mouse over link */
+a:active {color: #FFA028;text-decoration: none;}   /* selected link */
+
+
+.l_loca{ text-align:left;  overflow:hidden; width:960px;}
+.l_loca .lo_le{background:url(../images/hous.gif) no-repeat;padding:2px 0px 7px 19px; font-family:"宋体";font-size:13px}
