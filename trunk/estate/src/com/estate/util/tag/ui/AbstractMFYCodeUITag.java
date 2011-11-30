@@ -1,0 +1,392 @@
+package com.estate.util.tag.ui;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.tagext.TagSupport;
+
+import org.apache.taglibs.standard.lang.support.ExpressionEvaluatorManager;
+
+import com.estate.util.comm.Contants;
+
+import freemarker.template.Configuration;
+import freemarker.template.DefaultObjectWrapper;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
+
+public class AbstractMFYCodeUITag extends TagSupport {
+
+	private static final long serialVersionUID = 1L;
+	protected Configuration freemarkerConfig;
+	String templetePath;
+
+	protected String id;
+	protected String name;
+	protected String value;
+	protected String cssClass;
+	protected String cssStyle;
+	protected String cssErrorClass;
+	protected String cssErrorStyle;
+	protected String disabled;
+	protected String label;
+	protected String labelPosition;
+	protected String labelSeparator;
+	protected String requiredposition;
+	protected String required;
+	protected String tabindex;
+	protected String title;
+
+	// HTML scripting events attributes
+	protected String onclick;
+	protected String ondblclick;
+	protected String onmousedown;
+	protected String onmouseup;
+	protected String onmouseover;
+	protected String onmousemove;
+	protected String onmouseout;
+	protected String onfocus;
+	protected String onblur;
+	protected String onkeypress;
+	protected String onkeydown;
+	protected String onkeyup;
+	protected String onselect;
+	protected String onchange;
+
+	protected String codeType;
+	protected String defaultValue;
+
+	// base attributes
+	protected Template temp;
+	protected MFYUIBean uiBean;
+	// dynamic attributes.
+	protected Map<String, Object> dynamicAttributes = new HashMap<String, Object>();
+
+	public int doStartTag() throws JspException {
+		freemarkerConfig = Contants.freemarkerConfig;
+
+		if (null == freemarkerConfig) {
+			HttpServletRequest request = (HttpServletRequest) pageContext
+					.getRequest();
+			templetePath = request.getSession().getServletContext()
+					.getRealPath("/mfy/templete/ui");
+			Contants.uiTempleteUrl = "";
+			freemarkerConfig = new Configuration();
+			try {
+				freemarkerConfig.setDirectoryForTemplateLoading(new File(
+						templetePath));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			freemarkerConfig.setObjectWrapper(new DefaultObjectWrapper());
+			freemarkerConfig.setEncoding(Locale.CHINA, "utf-8");
+		}
+		return EVAL_BODY_INCLUDE;
+	}
+
+	public int doEndTag() throws JspException {
+		JspWriter out = pageContext.getOut();
+		try {
+			populateParams();
+			temp.process(uiBean, out);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (TemplateException e) {
+			e.printStackTrace();
+		}
+		return EVAL_PAGE;
+	}
+
+	protected void populateParams() {
+		uiBean = new MFYUIBean();
+		uiBean.setCssClass(cssClass);
+		uiBean.setCssStyle(cssStyle);
+		uiBean.setCssErrorClass(cssErrorClass);
+		uiBean.setCssErrorStyle(cssErrorStyle);
+		uiBean.setTitle(title);
+		uiBean.setDisabled(disabled);
+		uiBean.setLabel(label);
+		uiBean.setLabelSeparator(labelSeparator);
+		uiBean.setLabelPosition(labelPosition);
+		uiBean.setRequiredposition(requiredposition);
+		uiBean.setName(name);
+		uiBean.setRequired(required);
+		uiBean.setTabindex(tabindex);
+		uiBean.setValue(value);
+		uiBean.setOnclick(onclick);
+		uiBean.setOndblclick(ondblclick);
+		uiBean.setOnmousedown(onmousedown);
+		uiBean.setOnmouseup(onmouseup);
+		uiBean.setOnmouseover(onmouseover);
+		uiBean.setOnmousemove(onmousemove);
+		uiBean.setOnmouseout(onmouseout);
+		uiBean.setOnfocus(onfocus);
+		uiBean.setOnblur(onblur);
+		uiBean.setOnkeypress(onkeypress);
+		uiBean.setOnkeydown(onkeydown);
+		uiBean.setOnkeyup(onkeyup);
+		uiBean.setOnselect(onselect);
+		uiBean.setOnchange(onchange);
+		uiBean.setId(id);
+		uiBean.setCodeType(codeType);
+		uiBean.setDefaultValue(defaultValue);
+		uiBean.setDynamicAttributes(dynamicAttributes);
+		uiBean.setUiTempleteUrl(Contants.uiTempleteUrl);
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) throws JspException {
+		if (null != value)
+			this.value = (String) ExpressionEvaluatorManager.evaluate("value",
+					value.toString(), String.class, this, pageContext);
+
+	}
+
+	public String getCssClass() {
+		return cssClass;
+	}
+
+	public void setCssClass(String cssClass) {
+		this.cssClass = cssClass;
+	}
+
+	public String getCssStyle() {
+		return cssStyle;
+	}
+
+	public void setCssStyle(String cssStyle) {
+		this.cssStyle = cssStyle;
+	}
+
+	public String getCssErrorClass() {
+		return cssErrorClass;
+	}
+
+	public void setCssErrorClass(String cssErrorClass) {
+		this.cssErrorClass = cssErrorClass;
+	}
+
+	public String getCssErrorStyle() {
+		return cssErrorStyle;
+	}
+
+	public void setCssErrorStyle(String cssErrorStyle) {
+		this.cssErrorStyle = cssErrorStyle;
+	}
+
+	public String getDisabled() {
+		return disabled;
+	}
+
+	public void setDisabled(String disabled) {
+		this.disabled = disabled;
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
+	}
+
+	public String getLabelPosition() {
+		return labelPosition;
+	}
+
+	public void setLabelPosition(String labelPosition) {
+		this.labelPosition = labelPosition;
+	}
+
+	public String getLabelSeparator() {
+		return labelSeparator;
+	}
+
+	public void setLabelSeparator(String labelSeparator) {
+		this.labelSeparator = labelSeparator;
+	}
+
+	public String getRequiredposition() {
+		return requiredposition;
+	}
+
+	public void setRequiredposition(String requiredposition) {
+		this.requiredposition = requiredposition;
+	}
+
+	public String getRequired() {
+		return required;
+	}
+
+	public void setRequired(String required) {
+		this.required = required;
+	}
+
+	public String getTabindex() {
+		return tabindex;
+	}
+
+	public void setTabindex(String tabindex) {
+		this.tabindex = tabindex;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getOnclick() {
+		return onclick;
+	}
+
+	public void setOnclick(String onclick) {
+		this.onclick = onclick;
+	}
+
+	public String getOndblclick() {
+		return ondblclick;
+	}
+
+	public void setOndblclick(String ondblclick) {
+		this.ondblclick = ondblclick;
+	}
+
+	public String getOnmousedown() {
+		return onmousedown;
+	}
+
+	public void setOnmousedown(String onmousedown) {
+		this.onmousedown = onmousedown;
+	}
+
+	public String getOnmouseup() {
+		return onmouseup;
+	}
+
+	public void setOnmouseup(String onmouseup) {
+		this.onmouseup = onmouseup;
+	}
+
+	public String getOnmouseover() {
+		return onmouseover;
+	}
+
+	public void setOnmouseover(String onmouseover) {
+		this.onmouseover = onmouseover;
+	}
+
+	public String getOnmousemove() {
+		return onmousemove;
+	}
+
+	public void setOnmousemove(String onmousemove) {
+		this.onmousemove = onmousemove;
+	}
+
+	public String getOnmouseout() {
+		return onmouseout;
+	}
+
+	public void setOnmouseout(String onmouseout) {
+		this.onmouseout = onmouseout;
+	}
+
+	public String getOnfocus() {
+		return onfocus;
+	}
+
+	public void setOnfocus(String onfocus) {
+		this.onfocus = onfocus;
+	}
+
+	public String getOnblur() {
+		return onblur;
+	}
+
+	public void setOnblur(String onblur) {
+		this.onblur = onblur;
+	}
+
+	public String getOnkeypress() {
+		return onkeypress;
+	}
+
+	public void setOnkeypress(String onkeypress) {
+		this.onkeypress = onkeypress;
+	}
+
+	public String getOnkeydown() {
+		return onkeydown;
+	}
+
+	public void setOnkeydown(String onkeydown) {
+		this.onkeydown = onkeydown;
+	}
+
+	public String getOnkeyup() {
+		return onkeyup;
+	}
+
+	public void setOnkeyup(String onkeyup) {
+		this.onkeyup = onkeyup;
+	}
+
+	public String getOnselect() {
+		return onselect;
+	}
+
+	public void setOnselect(String onselect) {
+		this.onselect = onselect;
+	}
+
+	public String getOnchange() {
+		return onchange;
+	}
+
+	public void setOnchange(String onchange) {
+		this.onchange = onchange;
+	}
+
+	public String getCodeType() {
+		return codeType;
+	}
+
+	public void setCodeType(String codeType) {
+		this.codeType = codeType;
+	}
+
+	public String getDefaultValue() {
+		return defaultValue;
+	}
+
+	public void setDefaultValue(String defaultValue) {
+		this.defaultValue = defaultValue;
+	}
+}

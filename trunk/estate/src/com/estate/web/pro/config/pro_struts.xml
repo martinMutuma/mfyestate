@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="proglobal" namespace="/" extends="global">
+		<global-results>
+			<result name="error">/pro/error.jsp</result>
+            <result name="modifySuccess">/pro/modifySuccess.jsp</result>
+		</global-results>
+	</package>
+	
+	<package name="office" namespace="/office" extends="proglobal">
+		<action name="*" class="com.estate.web.pro.action.OfficeAction" method="{1}">
+			<result name="success">/pro/addbuildrentsuccess.jsp</result>
+			<result name="modify">/pro/office/modifybuilderent.jsp</result>			
+			<result name="modifyPic">/pro/office/modifypic.jsp</result>
+			<result name="see">/pro/see/seebuilderent.jsp</result>
+			<result name="loginPage">/member/login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="floor" namespace="/floor" extends="proglobal">
+		<action name="*" class="com.estate.web.pro.action.FloorAction" method="{1}">
+			<result name="success">/pro/addfloor.jsp</result>
+		</action>
+	</package>
+	
+	<package name="officeneed" namespace="/officeneed" extends="proglobal">
+		<action name="*" class="com.estate.web.pro.action.OfficeNeedAction" method="{1}">
+			<result name="success">/pro/addbuildrentsuccess.jsp</result>
+			<result name="modify">/pro/modifydemand.jsp</result>
+			<result name="modifyshopneed">/pro/modifyshopdemand.jsp</result>
+			<result name="modifyproneed">/pro/modifyprodemand.jsp</result>
+			<result name="modifyindustryneed">/pro/modifyindustrydemand.jsp</result>
+		</action>
+	</package>
+	
+	<package name="shop" namespace="/shop" extends="proglobal">
+		<action name="*" class="com.estate.web.pro.action.ShopAction" method="{1}">
+			<result name="success">/pro/addbuildrentsuccess.jsp</result>
+			<result name="modifyrent">/pro/modifyshoprent.jsp</result>
+			<result name="modifyPic">/pro/shopmodifypic.jsp</result>
+		</action>
+	</package>
+	
+	<package name="business" namespace="/business" extends="proglobal">
+		<action name="*" class="com.estate.web.pro.action.BusinessAction" method="{1}">
+			<result name="success">/pro/addbuildrentsuccess.jsp</result>
+			<result name="modify">/pro/modifymessage.jsp</result>
+			<result name="modifyPic">/pro/bsmodifypic.jsp</result>
+		</action>
+	</package>
+	
+	<package name="industry" namespace="/industry" extends="proglobal">
+		<action name="*" class="com.estate.web.pro.action.IndustryAction" method="{1}">
+			<result name="success">/pro/addbuildrentsuccess.jsp</result>
+			<result name="modifyrent">/pro/modifyindustryrent.jsp</result>
+			<result name="modifysale">/pro/modifyindustrysale.jsp</result>
+			<result name="modifyPic">/pro/industrymodifypic.jsp</result>
+		</action>
+	</package>
+	
+	<package name="largePro" namespace="/largePro" extends="proglobal">
+		<action name="*"
+			class="com.estate.web.pro.action.LargeProAction" method="{1}">
+			<result name="success">/pro/addbuildrentsuccess.jsp</result>
+			<result name="modifyproject">/pro/modifyproject.jsp</result>
+			<result name="modifyPic">/pro/promodifypic.jsp</result>
+		</action>
+	</package>
+	
+	<package name="comutil" namespace="/comutil" extends="proglobal">
+		<action name="*" class="com.estate.util.comm.ImageUploadUtil" method="{1}" />
+	</package>
+	
+	<package name="building" namespace="/building" extends="proglobal">
+		<action name="*" class="com.estate.web.building.action.TpBulidingAction" method="{1}" >
+			<result name="nextgo">/pro/goaddbuilding.jsp</result>
+			<result name="nextgoOn">/pro/goonaddbuilding.jsp</result>
+			<result name="toBuidingInfo">/building/buildinginfo.jsp</result>
+			<result name="housetype">/building/housetype.jsp</result>
+			<result name="buildingimages">/building/buildingimages.jsp</result>
+			<result name="showimage">/building/showimage.jsp</result>
+			<result name="success">/pro/addbuildrentsuccess.jsp</result>
+			<result name="modify">/pro/modifytabuilding.jsp</result>
+			<result name="modifygo">/pro/modifygoaddbuilding.jsp</result>
+			<result name="modifygoOn">/pro/modifygoonaddbuilding.jsp</result>
+			<result name="modifyPic">/pro/tabaddpropic.jsp</result>
+			<result name="loginPage">/member/login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="secondBd" namespace="/secondBd" extends="proglobal">
+		<action name="*" class="com.estate.web.building.action.TpSecondBulidingAction" method="{1}" >
+			<result>/pro/addbuildrentsuccess.jsp</result>
+			<result name="toImage" type="chain">
+				<param name="actionName">showImgs</param> 
+            	<param name="namespace">/secondBd</param> 
+			</result>
+			<result name="proImg">/pro/secondBuilding_image.jsp</result>
+			<result name="toInfo">/pro/secondBuilding_info.jsp</result>
+			<result name="showBuliding">/secondBulidShow.jsp</result>
+		</action>
+	</package>
+	
+	<package name="imprint" namespace="/imprint" extends="proglobal">
+		<action name="imprint_*" class="com.estate.web.pro.action.ImprintAction" method="{1}" >
+			<result name="imprint">/imprint/imprint.jsp</result>
+		</action>
+	</package>
+	
+	<package name="tpPerson" namespace="/tpPerson" extends="proglobal">
+		<action name="*" class="com.estate.web.pro.action.TpSpePersonAction" method="{1}">
+			<result name="tuansuccess">/jointuansuccess.jsp</result>
+		</action>
+	</package>
+	
+	<package name="tpMessage" namespace="/tpMessage" extends="proglobal">
+		<action name="*" class="com.estate.web.pro.action.TpMessageAction" method="{1}">		
+		</action>
+	</package>
+</struts>
+

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<honorList>
+	<honor htype="1" hname="军衔系列">
+		<level ltype="1">
+			<lscore>0-80</lscore>
+			<lname>新兵</lname>
+		</level>
+		<level ltype="2">
+			<lscore>81-400</lscore>
+			<lname>列兵</lname>
+		</level>
+		<level ltype="3">
+			<lscore>401-800</lscore>
+			<lname>下士</lname>
+		</level>
+		<level ltype="4">
+			<lscore>801-2000</lscore>
+			<lname>中士</lname>
+		</level>
+		<level ltype="5">
+			<lscore>2001-4000</lscore>
+			<lname>上士</lname>
+		</level>
+		<level ltype="6">
+			<lscore>4001-7000</lscore>
+			<lname>准尉</lname>
+		</level>
+		<level ltype="7">
+			<lscore>7001-10000</lscore>
+			<lname>少尉</lname>
+		</level>
+		<level ltype="8">
+			<lscore>10001-14000</lscore>
+			<lname>中尉</lname>
+		</level>
+		<level ltype="9">
+			<lscore>14001-18000</lscore>
+			<lname>上尉</lname>
+		</level>
+		<level ltype="10">
+			<lscore>18001-22000</lscore>
+			<lname>大尉</lname>
+		</level>
+		<level ltype="11">
+			<lscore>22001-32000</lscore>
+			<lname>少校</lname>
+		</level>
+		<level ltype="12">
+			<lscore>32001-45000</lscore>
+			<lname>中校</lname>
+		</level>
+		<level ltype="13">
+			<lscore>45001-60000</lscore>
+			<lname>上校</lname>
+		</level>
+		<level ltype="14">
+			<lscore>60001-100000</lscore>
+			<lname>大校</lname>
+		</level>
+		<level ltype="15">
+			<lscore>100001-150000</lscore>
+			<lname>准将</lname>
+		</level>
+		<level ltype="16">
+			<lscore>150001-250000</lscore>
+			<lname>少将</lname>
+		</level>
+		<level ltype="17">
+			<lscore>250001-400000</lscore>
+			<lname>中将</lname>
+		</level>
+		<level ltype="18">
+			<lscore>400001-700000</lscore>
+			<lname>上将</lname>
+		</level>
+		<level ltype="19">
+			<lscore>700001-1000000</lscore>
+			<lname>大将</lname>
+		</level>
+		<level ltype="20">
+			<lscore>1000000 以上</lscore>
+			<lname>元帅</lname>
+		</level>
+	</honor>
+	<honor htype="2" hname="科举系列">
+		<level ltype="1">
+			<lscore>0-80</lscore>
+			<lname>书童</lname>
+		</level>
+		<level ltype="2">
+			<lscore>81-400</lscore>
+			<lname>书生</lname>
+		</level>
+		<level ltype="3">
+			<lscore>401-800</lscore>
+			<lname>秀才</lname>
+		</level>
+		<level ltype="4">
+			<lscore>801-2000</lscore>
+			<lname>举人</lname>
+		</level>
+		<level ltype="5">
+			<lscore>2001-4000</lscore>
+			<lname>解元</lname>
+		</level>
+		<level ltype="6">
+			<lscore>4001-7000</lscore>
+			<lname>贡士</lname>
+		</level>
+		<level ltype="7">
+			<lscore>7001-10000</lscore>
+			<lname>会元</lname>
+		</level>
+		<level ltype="8">
+			<lscore>10001-14000</lscore>
+			<lname>同进士出身</lname>
+		</level>
+		<level ltype="9">
+			<lscore>14001-18000</lscore>
+			<lname>进士出身</lname>
+		</level>
+		<level ltype="10">
+			<lscore>18001-22000</lscore>
+			<lname>探花</lname>
+		</level>
+		<level ltype="11">
+			<lscore>22001-32000</lscore>
+			<lname>榜眼</lname>
+		</level>
+		<level ltype="12">
+			<lscore>32001-45000</lscore>
+			<lname>状元</lname>
+		</level>
+		<level ltype="13">
+			<lscore>45001-60000</lscore>
+			<lname>编修</lname>
+		</level>
+		<level ltype="14">
+			<lscore>60001-100000</lscore>
+			<lname>府丞</lname>
+		</level>
+		<level ltype="15">
+			<lscore>100001-150000</lscore>
+			<lname>翰林学士</lname>
+		</level>
+		<level ltype="16">
+			<lscore>150001-250000</lscore>
+			<lname>御史中丞</lname>
+		</level>
+		<level ltype="17">
+			<lscore>250001-400000</lscore>
+			<lname>詹士</lname>
+		</level>
+		<level ltype="18">
+			<lscore>400001-700000</lscore>
+			<lname>侍郎</lname>
+		</level>
+		<level ltype="19">
+			<lscore>700001-1000000</lscore>
+			<lname>大学士</lname>
+		</level>
+		<level ltype="20">
+			<lscore>1000000 以上</lscore>
+			<lname>文曲星</lname>
+		</level>
+	</honor>
+	<honor htype="3" hname="武将系列">
+		<level ltype="1">
+			<lscore>0-80</lscore>
+			<lname>兵卒</lname>
+		</level>
+		<level ltype="2">
+			<lscore>81-400</lscore>
+			<lname>门吏</lname>
+		</level>
+		<level ltype="3">
+			<lscore>401-800</lscore>
+			<lname>武卒</lname>
+		</level>
+		<level ltype="4">
+			<lscore>801-2000</lscore>
+			<lname>伍长</lname>
+		</level>
+		<level ltype="5">
+			<lscore>2001-4000</lscore>
+			<lname>什长</lname>
+		</level>
+		<level ltype="6">
+			<lscore>4001-7000</lscore>
+			<lname>队率</lname>
+		</level>
+		<level ltype="7">
+			<lscore>7001-10000</lscore>
+			<lname>屯长</lname>
+		</level>
+		<level ltype="8">
+			<lscore>10001-14000</lscore>
+			<lname>军侯</lname>
+		</level>
+		<level ltype="9">
+			<lscore>14001-18000</lscore>
+			<lname>军司马</lname>
+		</level>
+		<level ltype="10">
+			<lscore>18001-22000</lscore>
+			<lname>都尉</lname>
+		</level>
+		<level ltype="11">
+			<lscore>22001-32000</lscore>
+			<lname>校尉</lname>
+		</level>
+		<level ltype="12">
+			<lscore>32001-45000</lscore>
+			<lname>中郎将</lname>
+		</level>
+		<level ltype="13">
+			<lscore>45001-60000</lscore>
+			<lname>裨将军</lname>
+		</level>
+		<level ltype="14">
+			<lscore>60001-100000</lscore>
+			<lname>偏将军</lname>
+		</level>
+		<level ltype="15">
+			<lscore>100001-150000</lscore>
+			<lname>卫将军</lname>
+		</level>
+		<level ltype="16">
+			<lscore>150001-250000</lscore>
+			<lname>车骑将军</lname>
+		</level>
+		<level ltype="17">
+			<lscore>250001-400000</lscore>
+			<lname>骠骑将军</lname>
+		</level>
+		<level ltype="18">
+			<lscore>400001-700000</lscore>
+			<lname>大将军</lname>
+		</level>
+		<level ltype="19">
+			<lscore>700001-1000000</lscore>
+			<lname>大司马</lname>
+		</level>
+		<level ltype="20">
+			<lscore>1000000 以上</lscore>
+			<lname>天下兵马大都督</lname>
+		</level>
+	</honor>
+	<honor htype="4" hname="江湖系列">
+		<level ltype="1">
+			<lscore>0-80</lscore>
+			<lname>初学弟子</lname>
+		</level>
+		<level ltype="2">
+			<lscore>81-400</lscore>
+			<lname>中级弟子</lname>
+		</level>
+		<level ltype="3">
+			<lscore>401-800</lscore>
+			<lname>高级弟子</lname>
+		</level>
+		<level ltype="4">
+			<lscore>801-2000</lscore>
+			<lname>初入江湖</lname>
+		</level>
+		<level ltype="5">
+			<lscore>2001-4000</lscore>
+			<lname>小有名气</lname>
+		</level>
+		<level ltype="6">
+			<lscore>4001-7000</lscore>
+			<lname>名动一方</lname>
+		</level>
+		<level ltype="7">
+			<lscore>7001-10000</lscore>
+			<lname>江湖少侠</lname>
+		</level>
+		<level ltype="8">
+			<lscore>10001-14000</lscore>
+			<lname>江湖大侠</lname>
+		</level>
+		<level ltype="9">
+			<lscore>14001-18000</lscore>
+			<lname>江湖豪侠</lname>
+		</level>
+		<level ltype="10">
+			<lscore>18001-22000</lscore>
+			<lname>一派堂主</lname>
+		</level>
+		<level ltype="11">
+			<lscore>22001-32000</lscore>
+			<lname>一派护法</lname>
+		</level>
+		<level ltype="12">
+			<lscore>32001-45000</lscore>
+			<lname>一派掌门</lname>
+		</level>
+		<level ltype="13">
+			<lscore>45001-60000</lscore>
+			<lname>武林盟主</lname>
+		</level>
+		<level ltype="14">
+			<lscore>60001-100000</lscore>
+			<lname>一代宗师</lname>
+		</level>
+		<level ltype="15">
+			<lscore>100001-150000</lscore>
+			<lname>超凡入圣</lname>
+		</level>
+		<level ltype="16">
+			<lscore>150001-250000</lscore>
+			<lname>天人合一</lname>
+		</level>
+		<level ltype="17">
+			<lscore>250001-400000</lscore>
+			<lname>返璞归真</lname>
+		</level>
+		<level ltype="18">
+			<lscore>400001-700000</lscore>
+			<lname>笑傲江湖</lname>
+		</level>
+		<level ltype="19">
+			<lscore>700001-1000000</lscore>
+			<lname>独孤求败</lname>
+		</level>
+		<level ltype="20">
+			<lscore>1000000 以上</lscore>
+			<lname>天外飞仙</lname>
+		</level>
+	</honor>
+	<honor htype="5" hname="白领系列">
+		<level ltype="1">
+			<lscore>0-80</lscore>
+			<lname>实习生</lname>
+		</level>
+		<level ltype="2">
+			<lscore>81-400</lscore>
+			<lname>试用期</lname>
+		</level>
+		<level ltype="3">
+			<lscore>401-800</lscore>
+			<lname>职场新人</lname>
+		</level>
+		<level ltype="4">
+			<lscore>801-2000</lscore>
+			<lname>助理</lname>
+		</level>
+		<level ltype="5">
+			<lscore>2001-4000</lscore>
+			<lname>见习主管</lname>
+		</level>
+		<level ltype="6">
+			<lscore>4001-7000</lscore>
+			<lname>主管</lname>
+		</level>
+		<level ltype="7">
+			<lscore>7001-10000</lscore>
+			<lname>初级经理</lname>
+		</level>
+		<level ltype="8">
+			<lscore>10001-14000</lscore>
+			<lname>中级经理</lname>
+		</level>
+		<level ltype="9">
+			<lscore>14001-18000</lscore>
+			<lname>高级经理</lname>
+		</level>
+		<level ltype="10">
+			<lscore>18001-22000</lscore>
+			<lname>部门总监</lname>
+		</level>
+		<level ltype="11">
+			<lscore>22001-32000</lscore>
+			<lname>区域总监</lname>
+		</level>
+		<level ltype="12">
+			<lscore>32001-45000</lscore>
+			<lname>部门总裁</lname>
+		</level>
+		<level ltype="13">
+			<lscore>45001-60000</lscore>
+			<lname>区域总裁</lname>
+		</level>
+		<level ltype="14">
+			<lscore>60001-100000</lscore>
+			<lname>副总裁</lname>
+		</level>
+		<level ltype="15">
+			<lscore>100001-150000</lscore>
+			<lname>首席运营官</lname>
+		</level>
+		<level ltype="16">
+			<lscore>150001-250000</lscore>
+			<lname>首席执行官</lname>
+		</level>
+		<level ltype="17">
+			<lscore>250001-400000</lscore>
+			<lname>副董事长</lname>
+		</level>
+		<level ltype="18">
+			<lscore>400001-700000</lscore>
+			<lname>董事长</lname>
+		</level>
+		<level ltype="19">
+			<lscore>700001-1000000</lscore>
+			<lname>商界领袖</lname>
+		</level>
+		<level ltype="20">
+			<lscore>1000000 以上</lscore>
+			<lname>商界楷模</lname>
+		</level>
+	</honor>
+	<honor htype="6" hname="魔法系列">
+		<level ltype="1">
+			<lscore>0-80</lscore>
+			<lname>魔法学徒</lname>
+		</level>
+		<level ltype="2">
+			<lscore>81-400</lscore>
+			<lname>见习魔法师</lname>
+		</level>
+		<level ltype="3">
+			<lscore>401-800</lscore>
+			<lname>初级魔法师</lname>
+		</level>
+		<level ltype="4">
+			<lscore>801-2000</lscore>
+			<lname>中级魔法师</lname>
+		</level>
+		<level ltype="5">
+			<lscore>2001-4000</lscore>
+			<lname>高级魔法师</lname>
+		</level>
+		<level ltype="6">
+			<lscore>4001-7000</lscore>
+			<lname>大魔法师</lname>
+		</level>
+		<level ltype="7">
+			<lscore>7001-10000</lscore>
+			<lname>下位魔导士</lname>
+		</level>
+		<level ltype="8">
+			<lscore>10001-14000</lscore>
+			<lname>中位魔导士</lname>
+		</level>
+		<level ltype="9">
+			<lscore>14001-18000</lscore>
+			<lname>上位魔导士</lname>
+		</level>
+		<level ltype="10">
+			<lscore>18001-22000</lscore>
+			<lname>大魔导士</lname>
+		</level>
+		<level ltype="11">
+			<lscore>22001-32000</lscore>
+			<lname>下位魔导师</lname>
+		</level>
+		<level ltype="12">
+			<lscore>32001-45000</lscore>
+			<lname>中位魔导师</lname>
+		</level>
+		<level ltype="13">
+			<lscore>45001-60000</lscore>
+			<lname>上位魔导师</lname>
+		</level>
+		<level ltype="14">
+			<lscore>60001-100000</lscore>
+			<lname>大魔导师</lname>
+		</level>
+		<level ltype="15">
+			<lscore>100001-150000</lscore>
+			<lname>护国法师</lname>
+		</level>
+		<level ltype="16">
+			<lscore>150001-250000</lscore>
+			<lname>法神</lname>
+		</level>
+		<level ltype="17">
+			<lscore>250001-400000</lscore>
+			<lname>法圣</lname>
+		</level>
+		<level ltype="18">
+			<lscore>400001-700000</lscore>
+			<lname>魔神</lname>
+		</level>
+		<level ltype="19">
+			<lscore>700001-1000000</lscore>
+			<lname>魔圣</lname>
+		</level>
+		<level ltype="20">
+			<lscore>1000000 以上</lscore>
+			<lname>魔界至尊</lname>
+		</level>
+	</honor>
+	<honor htype="7" hname="欧洲复古系列">
+		<level ltype="1">
+			<lscore>0-80</lscore>
+			<lname>平民</lname>
+		</level>
+		<level ltype="2">
+			<lscore>81-400</lscore>
+			<lname>侍童</lname>
+		</level>
+		<level ltype="3">
+			<lscore>401-800</lscore>
+			<lname>侍从</lname>
+		</level>
+		<level ltype="4">
+			<lscore>801-2000</lscore>
+			<lname>高级侍从</lname>
+		</level>
+		<level ltype="5">
+			<lscore>2001-4000</lscore>
+			<lname>见习骑士</lname>
+		</level>
+		<level ltype="6">
+			<lscore>4001-7000</lscore>
+			<lname>步兵骑士</lname>
+		</level>
+		<level ltype="7">
+			<lscore>7001-10000</lscore>
+			<lname>骑兵骑士</lname>
+		</level>
+		<level ltype="8">
+			<lscore>10001-14000</lscore>
+			<lname>圣殿骑士</lname>
+		</level>
+		<level ltype="9">
+			<lscore>14001-18000</lscore>
+			<lname>从男爵</lname>
+		</level>
+		<level ltype="10">
+			<lscore>18001-22000</lscore>
+			<lname>男爵</lname>
+		</level>
+		<level ltype="11">
+			<lscore>22001-32000</lscore>
+			<lname>子爵</lname>
+		</level>
+		<level ltype="12">
+			<lscore>32001-45000</lscore>
+			<lname>伯爵</lname>
+		</level>
+		<level ltype="13">
+			<lscore>45001-60000</lscore>
+			<lname>侯爵</lname>
+		</level>
+		<level ltype="14">
+			<lscore>60001-100000</lscore>
+			<lname>公爵</lname>
+		</level>
+		<level ltype="15">
+			<lscore>100001-150000</lscore>
+			<lname>大公</lname>
+		</level>
+		<level ltype="16">
+			<lscore>150001-250000</lscore>
+			<lname>亲王</lname>
+		</level>
+		<level ltype="17">
+			<lscore>250001-400000</lscore>
+			<lname>国王</lname>
+		</level>
+		<level ltype="18">
+			<lscore>400001-700000</lscore>
+			<lname>皇帝</lname>
+		</level>
+		<level ltype="19">
+			<lscore>700001-1000000</lscore>
+			<lname>贤者</lname>
+		</level>
+		<level ltype="20">
+			<lscore>1000000 以上</lscore>
+			<lname></lname>
+		</level>
+	</honor>
+</honorList>
