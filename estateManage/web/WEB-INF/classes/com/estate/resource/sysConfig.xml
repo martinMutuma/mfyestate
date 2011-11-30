@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<config name="imgPath">
+		<value><![CDATA[imageFloder]]></value>
+	</config>
+	<config name="compression_diagram">
+		<value><![CDATA[compressDia]]></value>
+	</config>
+	<config name="encodingType"><!-- 1:tomcat等容器未配置字符及2:tomcat已配置 -->
+		<value><![CDATA[1]]></value>
+	</config>
+	<config name="jndi"><!-- 1:jndi 2:jdbc -->
+		<value><![CDATA[2]]></value>
+	</config>
+	<config name="dataBaseName"><!-- 1:jndi 2:jdbc -->
+		<value>
+			<![CDATA[estate]]>
+		</value>
+	</config>
+	<!-- JDBC CONFIG -->
+	<config name="dataBaseDbDriver">
+		<value>
+			<![CDATA[com.mysql.jdbc.Driver]]>
+		</value>
+	</config>
+	<config name="dataBaseUrl">
+		<value>
+			<![CDATA[jdbc:mysql://127.0.0.1:3306/estate]]>
+		</value>
+	</config>
+	<config name="dataBaseUserName">
+		<value>
+			<![CDATA[root]]>
+		</value>
+	</config>
+	<config name="dataBasePassword">
+		<value>
+			<![CDATA[fc1986]]>
+		</value>
+	</config>
+	<config name="dataBaseType"><!-- 数据库 1:mysql 2:sqlserver 3:oracle -->
+		<value>
+			<![CDATA[1]]>
+		</value>
+	</config>
+		<config name="newsImgPath">
+		<value><![CDATA[newsimage]]></value>
+	</config>
+</root>
