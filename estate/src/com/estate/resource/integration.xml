@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<url name="loginUrl-365">
+		<value>http://bbs.house365.com/member.php</value>
+	</url>
+	<url name="saleWithoutLoginUrl-365">
+		<value>http://www.house365.com/publish/?kind=1</value>
+	</url>
+	<url name="rentWithoutLoginUrl-365">
+		<value>http://www.house365.com/publish/?kind=2</value>
+	</url>
+	<url name="saleNeedWithoutLoginUrl-365">
+		<value>http://www.house365.com/publish/?kind=3</value>
+	</url>
+	<url name="rentNeedWithoutLoginUrl-365">
+		<value>http://www.house365.com/publish/?kind=4</value>
+	</url>
+</root>

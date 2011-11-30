@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<config name="imgPath"><!-- 存储图片的路径 -->
+		<value><![CDATA[imageFloder]]></value>
+	</config>
+	<config name="filePath"><!-- 存储文件的路径 -->
+		<value><![CDATA[fileFloder]]></value>
+	</config>
+	<config name="findPasswordFilePath"><!--  -->
+		<value><![CDATA[WEB-INF/fileFloder]]></value>
+	</config>
+	<config name="compression_diagram"><!-- 存放缩略图路径 -->
+		<value><![CDATA[compressDia]]></value>
+	</config>
+	<config name="imgTemp"><!-- 存放图片临时路径，该路径下图片每天临晨进行清空 -->
+		<value><![CDATA[imgTemp]]></value>
+	</config>
+	<config name="encodingType"><!-- 字符转码方式 1:tomcat等容器未配置字符及2:tomcat已配置 -->
+		<value><![CDATA[1]]></value>
+	</config>
+	<config name="jndi"><!-- 数据库连接方式 1:jndi 2:jdbc -->
+		<value><![CDATA[1]]></value>
+	</config>
+	<config name="dataBaseName"><!-- 数据库名称或SID号 database sid /name -->
+		<value>
+			<![CDATA[estate]]>
+		</value>
+	</config>
+	<!-- JDBC CONFIG -->
+	<config name="dataBaseDbDriver"><!-- 数据库驱动 -->
+		<value>
+			<![CDATA[com.mysql.jdbc.Driver]]>
+		</value>
+	</config>
+	<config name="dataBaseUrl"><!-- jdbc连接地址 -->
+		<value>
+			<![CDATA[jdbc:mysql://192.168.1.5:3306/estate]]>
+		</value>
+	</config>
+	<config name="dataBaseUserName"><!-- jdbc连接用户名 -->
+		<value>
+			<![CDATA[root]]>
+		</value>
+	</config>
+	<config name="dataBasePassword"><!-- jdbc连接密码 -->
+		<value>
+			<![CDATA[root]]>
+		</value>
+	</config>
+	<config name="dataBaseType"><!-- 数据库类型 1:mysql 2:sqlserver 3:oracle -->
+		<value>
+			<![CDATA[1]]>
+		</value>
+	</config>
+	<config name="show_sql"><!-- 是否显示数据库提交的语句 true:显示执行的sql语句 false:不显示执行的sql语句 -->
+		<value>
+			<![CDATA[true]]>
+		</value>
+	</config>
+</root>
