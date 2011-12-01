@@ -1,0 +1,5 @@
+CREATE VIEW statisticsPublishInfo AS SELECT SUM(IF(flag=1,1,0)) AS sb1,SUM(IF(flag=2,1,0)) AS sb2 
+FROM t_p_second_buliding sb,t_p_office of,t_s_shops sp,t_p_business bu,t_p_industry id,t_p_largepro la;
+
+SELECT SUM(IF(flag=1,0,1))  FROM t_p_second_buliding;
+
