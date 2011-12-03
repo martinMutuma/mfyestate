@@ -264,6 +264,7 @@ CREATE TABLE `T_S_SHOPS` (
 `propertyManagement` double(5,2) default NULL COMMENT '物业管理费',
 `bursary` double(5,2) default NULL COMMENT '年租金/出售总价',
 `title` varchar(100) default NULL COMMENT '案源标题',
+`consYear` varchar(4) default NULL COMMENT '建筑年代',
 `content` varchar(2000) default NULL COMMENT '案源描述',
 `imgName1` varchar(50) default NULL COMMENT '图片名称1',
 `imgType1` char(1) default NULL COMMENT '图片类型1',
@@ -877,7 +878,7 @@ ALTER TABLE `estate`.`t_p_second_buliding`     ADD COLUMN `nature` CHAR(1) NULL 
    alter table `estate`.`t_p_largepro` 
    add column `flag` char(1) NULL COMMENT '交易类型' after `nearAddress`;
    alter table `estate`.`t_p_largepro` drop column `payWay`;
-   alter table `estate`.`t_s_shops` change `buildingYear` `consYear` varchar(4) character set utf8 collate utf8_general_ci NULL  comment '建筑年代';
+   /**alter table `estate`.`t_s_shops` change `buildingYear` `consYear` varchar(4) character set utf8 collate utf8_general_ci NULL  comment '建筑年代';**/
    alter table `estate`.`t_p_business` 
    change `area` `area` double(8,2) NULL  comment '物业面积', 
    change `price` `price` double(8,2) NULL  comment '转让价格', 
