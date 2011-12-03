@@ -19,14 +19,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="../resource/css/jqueryui/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="../resource/css/jqueryui/icon.css">
 	<link rel="stylesheet" href="<%=basePath%>resource/css/global.css" type="text/css"></link>
-	    <link rel="stylesheet" href="../resource/css/whole.css" type="text/css"></link>
-	    <link rel="stylesheet" href="css/registerskip.css" type="text/css"></link>
+    <link rel="stylesheet" href="../resource/css/whole.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/registerskip.css" type="text/css"></link>
 	<script type="text/javascript" src="<%=basePath %>resource/js/jquery-1.4.2.js" charset="utf-8"></script>
 	<script type="text/javascript" src="<%=basePath %>resource/js/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="<%=basePath %>resource/js/jquery.tip.js"></script>
 	<script type="text/javascript" src="<%=basePath %>member/register.js" charset="utf-8"></script>
-	<script type="text/javascript" src="<%=basePath%>resource/js/global.js"></script>
-	  <script type="text/javascript" src="../resource/js/whole.js"></script>
+	<script type="text/javascript" src="../resource/js/whole.js"></script>
   </head>
   
   <script LANGUAGE="JavaScript">

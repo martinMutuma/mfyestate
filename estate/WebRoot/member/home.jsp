@@ -151,89 +151,104 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					案源类型
 				</td>
 				<td align="center" bgcolor="#F9F9F9" width="20%">
-					数量
+					出租案源数
 				</td>
 				<td align="center" bgcolor="#F9F9F9" width="20%">
-					推荐信息额度
+					出售案源数
 				</td>
 				<td align="center" bgcolor="#F9F9F9" width="20%">
-					推荐信息
+					审核通过数
 				</td>
 				<td align="center" bgcolor="#F9F9F9" width="20%">
-					成交单数
+					合计
 				</td>
 			</tr>
 			<tr>
 				<td height="35" align="center" bgcolor="#FFFFFF">
-					商铺
-				</td>
-				
-				<td align="center" bgcolor="#FFFFFF">
-					0
+					住宅
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
-					--
+					${svo.col1 }
 				</td>
-				<td align="center" bgcolor="#FFFFFF">0</td>
-				
-				<td align="center" bgcolor="#FFFFFF">0</td>
+				<td align="center" bgcolor="#FFFFFF">
+					${svo.col2 }
+				</td>
+				<td align="center" bgcolor="#FFFFFF">
+					${svo.col3 }
+				</td>
+				<td align="center" bgcolor="#FFFFFF">
+					${svo.col4 }
+				</td>
 			</tr>
 			<tr>
 				<td height="35" align="center" bgcolor="#FFFFFF">
 					写字楼
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
-					0
+					${svo.col5 }
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
-					--
+					${svo.col6 }
 				</td>
-				<td align="center" bgcolor="#FFFFFF">0</td>
+				<td align="center" bgcolor="#FFFFFF">${svo.col7 }</td>
 			
-				<td align="center" bgcolor="#FFFFFF">0</td>
+				<td align="center" bgcolor="#FFFFFF">${svo.col8 }</td>
+			</tr>
+			<tr>
+				<td height="35" align="center" bgcolor="#FFFFFF">
+					商铺
+				</td>
+				<td align="center" bgcolor="#FFFFFF">
+					${svo.col9 }
+				</td>
+				<td align="center" bgcolor="#FFFFFF">
+					${svo.col10 }
+				</td>
+				<td align="center" bgcolor="#FFFFFF">${svo.col11 }</td>
+				
+				<td align="center" bgcolor="#FFFFFF">${svo.col12 }</td>
+			</tr>
+			<tr>
+				<td height="35" align="center" bgcolor="#FFFFFF">
+					生意转让
+				</td>
+				<td align="center" bgcolor="#FFFFFF">
+					${svo.col13 }
+				</td>
+				<td align="center" bgcolor="#FFFFFF">
+					${svo.col14 }
+				</td>
+				<td align="center" bgcolor="#FFFFFF">${svo.col15 }</td>
+				
+				<td align="center" bgcolor="#FFFFFF">${svo.col16 }</td>
 			</tr>
 			<tr>
 				<td height="35" align="center" bgcolor="#FFFFFF">
 					工业地产
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
-					0
+					${svo.col17 }
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
-					--
+					${svo.col18 }
 				</td>
-				<td align="center" bgcolor="#FFFFFF">0</td>
+				<td align="center" bgcolor="#FFFFFF">${svo.col19 }</td>
 				
-				<td align="center" bgcolor="#FFFFFF">0</td>
+				<td align="center" bgcolor="#FFFFFF">${svo.col20 }</td>
 			</tr>
 			<tr>
 				<td height="35" align="center" bgcolor="#FFFFFF">
 					大型项目
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
-					0
+					${svo.col21 }
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
-					--
+					${svo.col22 }
 				</td>
-				<td align="center" bgcolor="#FFFFFF">0</td>
+				<td align="center" bgcolor="#FFFFFF">${svo.col23 }</td>
 			
-				<td align="center" bgcolor="#FFFFFF">0</td>
-			</tr>
-
-			<tr>
-				<td height="35" align="center" bgcolor="#FFFFFF">
-					生意转让
-				</td>
-				<td align="center" bgcolor="#FFFFFF">
-					0
-				</td>
-				<td align="center" bgcolor="#FFFFFF">
-					--
-				</td>
-				<td align="center" bgcolor="#FFFFFF">0</td>
-				
-				<td align="center" bgcolor="#FFFFFF">0</td>
+				<td align="center" bgcolor="#FFFFFF">${svo.col24 }</td>
 			</tr>
 
 			<tr>
@@ -241,11 +256,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					合计
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
-					0
+					${svo.col25 }
 				</td>
-				<td height="35" align="center" bgcolor="#FFFFFF">0</td>
-				<td height="35" align="center" bgcolor="#FFFFFF">0</td>
-				<td height="35" align="center" bgcolor="#FFFFFF">0</td>
+				<td height="35" align="center" bgcolor="#FFFFFF">${svo.col26 }</td>
+				<td height="35" align="center" bgcolor="#FFFFFF">${svo.col27 }</td>
+				<td height="35" align="center" bgcolor="#FFFFFF">${svo.col28 }</td>
 			</tr>
 		</table>
 <!-- 房源信息start -->

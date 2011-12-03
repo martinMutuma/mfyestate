@@ -27,6 +27,14 @@ public class StatisticsVO {
 	private String col18;
 	private String col19;
 	private String col20;
+	private String col21;
+	private String col22;
+	private String col23;
+	private String col24;
+	private String col25;
+	private String col26;
+	private String col27;
+	private String col28;
 
 	public String getCol1() {
 		return col1;
@@ -186,5 +194,69 @@ public class StatisticsVO {
 
 	public void setCol12(String col12) {
 		this.col12 = col12;
+	}
+
+	public String getCol21() {
+		return col21;
+	}
+
+	public void setCol21(String col21) {
+		this.col21 = col21;
+	}
+
+	public String getCol22() {
+		return col22;
+	}
+
+	public void setCol22(String col22) {
+		this.col22 = col22;
+	}
+
+	public String getCol23() {
+		return col23;
+	}
+
+	public void setCol23(String col23) {
+		this.col23 = col23;
+	}
+
+	public String getCol24() {
+		return col24;
+	}
+
+	public void setCol24(String col24) {
+		this.col24 = col24;
+	}
+
+	public String getCol25() {
+		return col25;
+	}
+
+	public void setCol25(String col25) {
+		this.col25 = col25;
+	}
+
+	public String getCol26() {
+		return col26;
+	}
+
+	public void setCol26(String col26) {
+		this.col26 = col26;
+	}
+
+	public String getCol27() {
+		return col27;
+	}
+
+	public void setCol27(String col27) {
+		this.col27 = col27;
+	}
+
+	public String getCol28() {
+		return col28;
+	}
+
+	public void setCol28(String col28) {
+		this.col28 = col28;
 	}
 }
