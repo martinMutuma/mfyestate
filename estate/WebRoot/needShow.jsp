@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
+<%@taglib uri="estateTag" prefix="estateTag" %>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -40,30 +41,25 @@
 	<script type="text/javascript">
   	</script>
 	<body>
+	<center>
 		<jsp:include page="head.jsp"></jsp:include>
-		<div style="width: 100%; height: 100%;" align="center">
-			<!-- 3.添加class="layoutTab"  -->
+		<div class="l_loca">
+    	<span class="left lo_le">您当前的位置：<a href="#">梦房园</a> <a href="#">楼盘信息</a> <s:property value="tpBulding.name"/></span>
+        <span class="clear"></span>
+       </div>
+		<div style="width: 100%; height: 100%;">
 			<table class="layoutTab">
 				<tr>
 					<td align="center">
 						<div class="search_result">
-						<div class="l_loca">
-				    		<span class="left lo_le">您当前的位置：<a href="#">梦房园</a> <a href="#"><estateTag:convertCode codeType="导航" code="${menuIndex}"></estateTag:convertCode></a> <s:property value="dataMap.title"/></span>
-				        </div>
-							<div class="search_result_list1"style="margin-top: 20px">
+							<div class="search_result_list1"style="margin-top: 0px">
 								<div class="pro_show_title" align="left" >
-									<s:if test='dataMap.flag == "1"'>求租</s:if>
-									<s:else>求购</s:else>
+								   <estateTag:convertCode codeType="交易方式" code="${dataMap.flag}"></estateTag:convertCode>
 									<s:property value="dataMap.disname" />
 									&nbsp;&nbsp;
 									<s:property value="dataMap.address" />
 									&nbsp;&nbsp;
-									<s:if test='searchPro == "0"'>写字楼</s:if>
-									<s:elseif test='searchPro == "1"'>商铺</s:elseif>
-									<s:elseif test='searchPro == "2"'>生意转让</s:elseif>
-									<s:elseif test='searchPro == "3"'>工业地产</s:elseif>
-									<s:elseif test='searchPro == "4"'>大型项目</s:elseif>
-									<s:elseif test='searchPro == "5"'>经纪人</s:elseif>
+									<estateTag:convertCode codeType="置业类型" code="${searchPro}"></estateTag:convertCode>
 									&nbsp;&nbsp;
 								</div>
 								<div class="search_result_pro1" align="left" id="proResult">
@@ -95,14 +91,6 @@
 											</tr>
 											<tr>
 												<td>
-													所属公司：
-												</td>
-												<td>
-													<s:property value="dataMap.company" />
-												</td>
-											</tr>
-											<tr>
-												<td>
 													&nbsp;
 												</td>
 												<td>
@@ -115,7 +103,7 @@
 										<table width="100%" cellspacing="1px" cellpadding="0">
 											<tr>
 												<td colspan="2"
-													style="border-bottom: 2px solid #68A1D9; color: #0066CC; font-size: 15px; font-weight: bold;">
+													style="border-bottom: 2px solid #ED192F; color: #ED192F; font-size: 15px; font-weight: bold;">
 													<s:property value="dataMap.title" />
 												</td>
 											</tr>
@@ -167,7 +155,7 @@
 												<td>
 													<s:property value="dataMap.minarea" />
 													-
-													<s:property value="dataMap.maxArea" />
+													<s:property value="dataMap.maxArea" />&nbsp;元/㎡ 
 												</td>
 											</tr>
 											<tr>
@@ -177,7 +165,7 @@
 												<td>
 													<s:property value="dataMap.minprice" />
 													-
-													<s:property value="dataMap.minprice" />
+													<s:property value="dataMap.minprice" />&nbsp;万元
 												</td>
 											</tr>
 											<tr>
@@ -192,37 +180,16 @@
 									</div>
 								</div>
 								<div class="pro_info_content">
-									<span class="content_span">需求信息：</span>
+									<span class="content_span">&nbsp;需求信息：</span>
 									<br />
 									&nbsp;&nbsp;&nbsp;&nbsp;<s:property value="dataMap.content" />
 									<br />
 								</div>
 							</div>
 							<div class="search_result_ad">
-								<img width="100%" height="100px" />
+								<img width="100%" height="90px" src="resource/images/dican.gif"/>
 								<div class="office_need">
-									<div class="need_title">
-										会员
-										<s:if test='searchPro=="0"'>
-			   						写字楼
-			   					</s:if>
-										<s:elseif test='searchPro=="1"'>
-			   						商铺
-			   					</s:elseif>
-										<s:elseif test='searchPro=="2"'>
-			   						生意转让
-			   					</s:elseif>
-										<s:elseif test='searchPro=="3"'>
-			   						工业地产
-			   					</s:elseif>
-										<s:elseif test='searchPro=="4"'>
-			   						大型项目
-			   					</s:elseif>
-										<s:elseif test='searchPro=="5"'>
-			   						经纪人
-			   					</s:elseif>
-										需求信息
-									</div>
+									<div class="title_news"><font class="headtitle">&nbsp;&nbsp;<estateTag:convertCode codeType="置业类型" code="${searchPro}"></estateTag:convertCode>需求信息</font></div>
 									<div class="need_content">
 										<table width="95%" id="needTab">
 
@@ -240,6 +207,7 @@
 				</tr>
 			</table>
 		</div>
+		</center>
 	</body>
 	<SCRIPT type="text/javascript">
   	$(function(){

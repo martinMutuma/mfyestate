@@ -83,7 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		   	</div>
    		</div>
    		<div class="search_result_ad">
-   			<img width="100%" height="100px"/>
+   			<img width="100%" height="100px" src="resource/images/dican.gif"/>
    			  <div id="p_center" >
 							<div class="title_news"><font class="headtitle">&nbsp;&nbsp;写字楼需求</font></div>
 							<div class="atBody" align="center" >
@@ -93,11 +93,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 														    <span style="width:45px;text-align:center"><font class="fonthead">区域</font></span>
 														    <span style="width:50px;text-align:center"><font class="fonthead">类型</font></span>
 														</li>
-														<s:iterator value="#data.recommendSbList">
+														<s:iterator value="#data.officeNeedList">
 																<li style=" border-bottom: 0px;">
-																	<span style="width:100px;text-align:left"><a href="javascript:tosecondBd('<s:property value="id"/>','3')" title="<s:property value='respDistrict'/>"><s:property value="respDistrict"/></a></span>
+																	<span style="width:100px;text-align:left"><a href="javascript:showNeed('<s:property value="id"/>','0')" title="<s:property value='title'/>"><s:property value="title"/></a></span>
 																    <span style="width:45px;text-align:center"><font class="fontcolor3"><s:property value="disname"/></font></span>
-																    <span style="width:50px;text-align:center" class="prominentfont"><estateTag:format value='${price}'></estateTag:format></span>
+																    <span style="width:50px;text-align:center" class="prominentfont"><estateTag:convertCode codeType="交易方式" code="${flag}"></estateTag:convertCode></span>
 																</li>
 														</s:iterator>
 											     </ul>
@@ -107,22 +107,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    			
    			<img width="100%" height="100px" style="margin-top: 15px;"/>
    			 <div id="p_center" >
-											<div id="xylHead" class="title_news "><font class="headtitle">&nbsp;&nbsp;商铺需求</font></div>
-											<div class="h240">
-											<div id="atBody" align="center">
-									   <ul>
-									 <s:iterator value="#data.shopNeedList" status="sta">
-											<li id="atBody_t<s:property value="#sta.index"/>">
-												<span style="width:90px;text-align:left">&nbsp;<a href="javascript:showNeed('<s:property value="id"/>','1')">
-									                    &#8226;&nbsp;<s:property value="title"/>
-								     </a></span>
-											</li>
-									</s:iterator>
-								</ul>
+											<div class="title_news" class="title_news "><font class="headtitle">&nbsp;&nbsp;商铺需求</font></div>
+											<div class="atBody" align="center">
+												<ul>
+												        <li style=" border-bottom: 0px; ">
+															<span style="width:100px;"><font class="fonthead">标题</font></span>
+														    <span style="width:45px;text-align:center"><font class="fonthead">区域</font></span>
+														    <span style="width:50px;text-align:center"><font class="fonthead">租售</font></span>
+														</li>
+														<s:iterator value="#data.shopNeedList">
+																<li style=" border-bottom: 0px;">
+																	<span style="width:100px;text-align:left"><a href="javascript:showNeed('<s:property value="id"/>','1')" title="<s:property value='title'/>"><s:property value="title"/></a></span>
+																    <span style="width:45px;text-align:center"><font class="fontcolor3"><s:property value="disname"/></font></span>
+																    <span style="width:50px;text-align:center" class="prominentfont"><estateTag:convertCode codeType="交易方式" code="${flag}"></estateTag:convertCode></span>
+																</li>
+														</s:iterator>
+											     </ul>
 							</div>
 							</div>
 			</div>
    		</div>
-   	</div>
   </body>
 </html>
