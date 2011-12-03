@@ -1,5 +1,5 @@
 $(function(){
-	$("#tbtype").focus();
+	// $("#tbtype").focus();
   	$("#tipspan").hide();
   	$("#register_btn").hide();
 	$("#discode").combotree({

@@ -68,9 +68,54 @@ public class BaseInfoServiceImpl implements BaseInfoService {
 		return dao.findList(sql);
 	}
 
+	@SuppressWarnings("unchecked")
 	public StatisticsVO getStatisticsInfoByLoginId(Long id) {
-		// String sql = "select * from ";
-		return null;
+		 String sql = "SELECT IFNULL(sbt.flag1,0)AS sb1,IFNULL(sbt.flag2,0)AS sb2,IFNULL(sbt.audit,0)AS sbAudit, "
+						+" IFNULL(oft.flag1,0)AS of1,IFNULL(oft.flag2,0) AS of2,IFNULL(oft.audit,0)AS ofAudit, "
+						+" IFNULL(sht.flag1,0)AS sh1,IFNULL(sht.flag2,0) AS sh2,IFNULL(sht.audit,0)AS shAudit, "
+						+" IFNULL(but.flag1,0)AS bu1,IFNULL(but.flag2,0)AS bu2,IFNULL(but.audit,0)AS buAudit, "
+						+" IFNULL(indt.flag1,0)AS ind1,IFNULL(indt.flag2,0)AS ind2,IFNULL(indt.audit,0)AS indAudit, "
+						+" IFNULL(lpt.flag1,0)AS lp1,IFNULL(lpt.flag2,0)AS lp2,IFNULL(lpt.audit,0)AS lpAudit FROM  "
+						+" (SELECT SUM(IF(t.flag=1,1,0)) AS flag1,SUM(IF(t.flag=2,1,0)) AS flag2,SUM(IF(t.auditingState=1,1,0)) AS audit FROM t_p_second_buliding t  WHERE t.authorId = "+id+") sbt, "
+						+" (SELECT SUM(IF(t.flag=1,1,0)) AS flag1,SUM(IF(t.flag=2,1,0)) AS flag2,SUM(IF(t.auditingState=1,1,0)) AS audit FROM t_p_office t  WHERE t.authorId = "+id+") oft, "
+						+" (SELECT SUM(IF(t.flag=1,1,0)) AS flag1,SUM(IF(t.flag=2,1,0)) AS flag2,SUM(IF(t.auditingState=1,1,0)) AS audit FROM t_s_shops t  WHERE t.authorId = "+id+") sht, "
+						+" (SELECT SUM(IF(t.state=1,1,0)) AS flag1,SUM(IF(t.state=2,1,0)) AS flag2,SUM(IF(t.auditingState=1,1,0)) AS audit FROM t_p_business t  WHERE t.authorId = "+id+") but, "
+						+" (SELECT SUM(IF(t.flag=1,1,0)) AS flag1,SUM(IF(t.flag=2,1,0)) AS flag2,SUM(IF(t.auditingState=1,1,0)) AS audit FROM t_p_industry t  WHERE t.authorId = "+id+") indt, "
+						+" (SELECT SUM(IF(t.flag=1,1,0)) AS flag1,SUM(IF(t.flag=2,1,0)) AS flag2,SUM(IF(t.auditingState=1,1,0)) AS audit FROM t_p_largepro t  WHERE t.authorId = "+id+") lpt";
+		 List mapList =  dao.createSqlQuery(sql).mapList();
+		 StatisticsVO sVO = new StatisticsVO();
+			if(null!=mapList && mapList.size()>0){
+				Map voMap = (Map)mapList.get(0);
+				sVO.setCol1(voMap.get("sb1").toString());
+				sVO.setCol2(voMap.get("sb2").toString());
+				sVO.setCol3(voMap.get("sbAudit").toString());
+				sVO.setCol4(String.valueOf((Integer.valueOf(voMap.get("sb1").toString())+Integer.valueOf(voMap.get("sb2").toString()))));
+				sVO.setCol5(voMap.get("of1").toString());
+				sVO.setCol6(voMap.get("of2").toString());
+				sVO.setCol7(voMap.get("ofAudit").toString());
+				sVO.setCol8(String.valueOf((Integer.valueOf(voMap.get("of1").toString())+Integer.valueOf(voMap.get("of2").toString()))));
+				sVO.setCol9(voMap.get("sh1").toString());
+				sVO.setCol10(voMap.get("sh2").toString());
+				sVO.setCol11(voMap.get("buAudit").toString());
+				sVO.setCol12(String.valueOf((Integer.valueOf(voMap.get("sh1").toString())+Integer.valueOf(voMap.get("sh2").toString()))));
+				sVO.setCol13(voMap.get("bu1").toString());
+				sVO.setCol14(voMap.get("bu2").toString());
+				sVO.setCol15(voMap.get("buAudit").toString());
+				sVO.setCol16(String.valueOf((Integer.valueOf(voMap.get("bu1").toString())+Integer.valueOf(voMap.get("bu2").toString()))));
+				sVO.setCol17(voMap.get("ind1").toString());
+				sVO.setCol18(voMap.get("ind2").toString());
+				sVO.setCol19(voMap.get("indAudit").toString());
+				sVO.setCol20(String.valueOf((Integer.valueOf(voMap.get("ind1").toString())+Integer.valueOf(voMap.get("ind2").toString()))));
+				sVO.setCol21(voMap.get("lp1").toString());
+				sVO.setCol22(voMap.get("lp2").toString());
+				sVO.setCol23(voMap.get("lpAudit").toString());
+				sVO.setCol24(String.valueOf((Integer.valueOf(voMap.get("lp1").toString())+Integer.valueOf(voMap.get("lp2").toString()))));
+				sVO.setCol25(String.valueOf(Integer.valueOf(sVO.getCol1())+Integer.valueOf(sVO.getCol5())+Integer.valueOf(sVO.getCol9())+Integer.valueOf(sVO.getCol13())+Integer.valueOf(sVO.getCol17())+Integer.valueOf(sVO.getCol21())));
+				sVO.setCol26(String.valueOf(Integer.valueOf(sVO.getCol2())+Integer.valueOf(sVO.getCol6())+Integer.valueOf(sVO.getCol10())+Integer.valueOf(sVO.getCol14())+Integer.valueOf(sVO.getCol18())+Integer.valueOf(sVO.getCol22())));
+				sVO.setCol27(String.valueOf(Integer.valueOf(sVO.getCol3())+Integer.valueOf(sVO.getCol7())+Integer.valueOf(sVO.getCol11())+Integer.valueOf(sVO.getCol15())+Integer.valueOf(sVO.getCol19())+Integer.valueOf(sVO.getCol23())));
+				sVO.setCol28(String.valueOf(Integer.valueOf(sVO.getCol4())+Integer.valueOf(sVO.getCol8())+Integer.valueOf(sVO.getCol12())+Integer.valueOf(sVO.getCol16())+Integer.valueOf(sVO.getCol20())+Integer.valueOf(sVO.getCol24())));
+			}
+			return sVO;
 	}
 
 	public List<TmBaseinfo> checkEmailIsExistMemberAndUseName(String email,
