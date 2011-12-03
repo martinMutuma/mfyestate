@@ -216,7 +216,7 @@
 .pro_show_title{
 	padding-left: 10px;
 	height: 30px;
-	background:url(../../building/images/navhou.gif);
+	background: url("../images/left_dt.gif");
 	line-height: 30px;
 }
 
@@ -243,7 +243,7 @@
 	font-weight: bold;
 	width:100%;
 	background-color: #E0D9D9;
-	background:url(../../building/images/navhou.gif);
+	background: url("../images/left_dt.gif");
 	height: 25px;
 	line-height: 25px;
 	border-top: 1px solid #E0D9D9;
@@ -317,3 +317,21 @@
 	overflow:hidden;
 	white-space:nowrap; 
 }
+
+
+.atBody  li span a:link,.list_div a:link {color: black;text-decoration: none;}     /* unvisited link */
+.atBody  li span a:visited,.list_div a:visited {color: black;text-decoration: none;}  /* visited link */
+.atBody  li span a:hover,.list_div a:hover {color: #FFA028;text-decoration: underline;}   /* mouse over link */
+.atBody  li span a:active,.list_div a:active {color: #FFA028;text-decoration: none;}   /* selected link */
+
+
+.fonthead{
+	color:#fa444c;
+	font-weight: bold;
+}
+
+
+.lo_le a:link {color: black;text-decoration: none;}     /* unvisited link */
+.lo_le a:visited {color: black;text-decoration: none;}  /* visited link */
+.lo_le a:hover {color: #FFA028;text-decoration: underline;}   /* mouse over link */
+.lo_le a:active {color: #FFA028;text-decoration: none;}   /* selected link */
