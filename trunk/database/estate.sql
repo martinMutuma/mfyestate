@@ -849,7 +849,7 @@ alter table `estate`.`t_s_shops` drop column `eightFloor`, drop column `sevenFlo
    add column `fitment` char(1) NULL COMMENT '装修程度' after `mright`, 
    add column `forward` varchar(2) NULL COMMENT '朝     向' after `fitment`, 
    add column `cbd` varchar(20) NULL COMMENT '所属商圈' after `forward`, 
-   add column `consYear` varchar(4) NULL COMMENT '建筑年代' after `cbd`, 
+   /* add column `consYear` varchar(4) NULL COMMENT '建筑年代' after `cbd`, */ 
    add column `category` varchar(2) NULL COMMENT '商铺类型' after `consYear`, 
    add column `baseService` varchar(50) NULL COMMENT '基础设施' after `category`, 
    add column `equipment` varchar(50) NULL COMMENT '房屋设备' after `baseService`, 
