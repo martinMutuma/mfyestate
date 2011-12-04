@@ -1,4 +1,4 @@
-﻿
+﻿CREATE DATABASE /*!32312 IF NOT EXISTS*/`estate` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `estate`;
 
 DROP TABLE IF EXISTS `t_d_data`;
