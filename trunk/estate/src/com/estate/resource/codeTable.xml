@@ -249,4 +249,14 @@
 		<code value="2">求购</code>
 		<code value="3">合作</code>
 	</collection>
+	<collection name="置业类型">
+	    <code value="0">写字楼</code>
+		<code value="1">商铺</code>
+		<code value="2">生意转让</code>
+		<code value="3">工业地产</code>
+		<code value="4">大型项目</code>
+		<code value="5">经纪人</code>
+	</collection>	
+	
+	
 </codeCollections>
