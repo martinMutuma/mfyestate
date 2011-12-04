@@ -178,7 +178,7 @@ public class OfficeNeedServiceImpl implements OfficeNeedService {
 					+ "%'";
 		}
 		sql += " order by createtime desc";
-		sql = dao.createSqlQuery(sql).setFirstResult(0).setMaxSize(10)
+		sql = dao.createSqlQuery(sql).setFirstResult(0).setMaxSize(9)
 				.setParameters(1, type).bulidSql();
 		return dao.findList(sql);
 	}
