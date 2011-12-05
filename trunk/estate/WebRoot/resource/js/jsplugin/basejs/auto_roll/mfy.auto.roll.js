@@ -1,7 +1,7 @@
 /*******************************************************************************
  * auto_roll Copyright (C) 2006-2011 chao Fu.
  * 
- * @author Roddy <fc19861011@gmail.com>
+ * @author F.C <fc19861011@gmail.com>
  * @site http://www.mymfy.com/
  * @licence
  * @version 1.0 (2011-11-28)
@@ -35,8 +35,8 @@
 		};
 	})();
 	AR.CONSTANT = {
-		SLOW_SPEED : 200,
-		NORMAL_SPEED : 100,
+		SLOW_SPEED : 100,
+		NORMAL_SPEED : 50,
 		FAST_SPEED : 5,
 		UP : 'up',
 		DOWN : 'down',
@@ -123,11 +123,12 @@
 			var roll_mode = stack.roll_mode;
 			if (roll_mode) {
 				var elementAry = stack.elementArray;
+				var elementCount = elementAry.length;
 				var showStart = stack.showStart;
 				var rowCount = stack.rowCount;
 				var obj = stack.containerObject;
 				var obj_start = elementAry[showStart];
-				var endIndex = (showStart+rowCount)>(elementAry.length-1)?(showStart+rowCount-elementAry.length):(showStart+rowCount);
+				var endIndex = (showStart+rowCount)>(elementCount-1)?(showStart+rowCount-elementCount):(showStart+rowCount);
 				var obj_end = elementAry[endIndex];
 				var height = obj_start.style.height + "";
 				height = parseInt(height.substring(0, height.length - 2))
@@ -140,21 +141,14 @@
 					obj_end.style.height = (height1) + "px";
 					setTimeout("AR.roll.up('" + id + "')", stack.speed)
 				} else {
-					if (stack.showId == elementAry.length) {
-						var firstElement = document
-								.getElementById(elementAry[0]);
-						var feHeight = 0;
-						// while(stack.cheight > feHeight){
-						// firstElement.style.height = (feHeight+5) + "px";
-						// }
-						firstElement.style.height = stack.cheight + "px";
-						for (var i = 1; i < elementAry.length; i++) {
-							document.getElementById(elementAry[i]).style.height = stack.cheight
-									+ "px";
-						}
-						stack.showId = 1;
-					} else {
-						stack.showId += 1;
+					var endObjIndex = (endIndex+1)>(elementCount-1)?(endIndex-elementCount+1):(endIndex+1);
+//					alert(endIndex+";"+endObjIndex);
+					obj.removeChild(obj_start);
+					elementAry[endObjIndex].style.height = '0px';
+					stack.containerObject.appendChild(elementAry[endObjIndex]);
+					stack.showStart += 1;
+					if(stack.showStart > (elementCount-1)){
+						stack.showStart = 0;
 					}
 					setTimeout("AR.roll.up('" + id + "')", stack.stagnation);
 				}
@@ -180,13 +174,13 @@
 			var elementObjs = containerObject.getElementsByTagName("li");
 			var elementArray = new Array();
 			for (var i = 0, length = elementObjs.length; i < length; i++) {
-				elementArray[i] = elementObjs[i].innerHTML.toDom()[0];
-				alert(elementArray[i].innerHTML)
+				elementArray[i] = elementObjs[i].innerHTML.toDom();
+				elementArray[i].style.overflow = "hidden";
 			}
 			stack.elementArray = elementArray;
 			var container_0 = "<div style='width:" + containerInnerWidth
 					+ ";height:" + containerInnerHeight
-					+ ";overflow:hidden;border:1px solid red;' id='"
+					+ ";overflow:hidden;' id='"
 					+ container + "_0' align='center'></div>";
 			containerObject.innerHTML = container_0;
 			stack.containerObject = document.getElementById(container + "_0");
@@ -208,7 +202,6 @@
 				stack.containerObject.appendChild(elementArray[rowCount]);
 				}catch(e){alert(e)}
 			}
-			alert(stack.containerObject.innerHTML)
 			// for (var i = 0; i < elementAry.length; i++) {
 			// if (stack.showId != (i + 1))
 			// document.getElementById(elementAry[i]).style.display = "none";
@@ -289,7 +282,8 @@ String.prototype.toDom = function(){
 　　 objE.innerHTML = this; 
 	   var childAry = objE.childNodes;
 	   for(var i = 0; i < childAry.length; i++){
-	   		if(childAry[i].)
+	   		if(childAry[i].nodeType == 1)
+	   			return childAry[i];
 	   }
-　　 return objE.childNodes; 
+　　 return childAry[0]; 
 }
