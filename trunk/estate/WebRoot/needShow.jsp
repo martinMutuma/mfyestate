@@ -94,7 +94,9 @@
 													&nbsp;
 												</td>
 												<td>
-													<a href="<%=basePath%>mem/baseinfo_toMyStore.shtml?authorId=<s:property value="dataMap.id"/>&type=office"><img src="resource/images/to.gif" border="0px;">进入我的店铺</a>
+													<s:if test='dataMap.type=="1"'>
+														<a href="<%=basePath%>mem/baseinfo_toMyStore.shtml?authorId=<s:property value="dataMap.id"/>&type=office"><img src="<%=basePath %>resource/images/to.gif" border="0px;">进入我的店铺</a>
+													</s:if>
 												</td>
 											</tr>
 										</table>
@@ -187,7 +189,7 @@
 								</div>
 							</div>
 							<div class="search_result_ad">
-								<img width="100%" height="90px" src="resource/images/dican.gif"/>
+								<img width="100%" height="90px" src="<%=basePath %>resource/images/dican.gif"/>
 								<div class="office_need">
 									<div class="title_news"><font class="headtitle">&nbsp;&nbsp;<estateTag:convertCode codeType="置业类型" code="${searchPro}"></estateTag:convertCode>需求信息</font></div>
 									<div class="need_content">
