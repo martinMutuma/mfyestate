@@ -22,12 +22,12 @@
 		<meta http-equiv="expires" content="0">
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="This is my page">
-		<link rel="stylesheet" href="resource/css/global.css" type="text/css"></link>
-		<link rel="stylesheet" href="resource/css/whole.css" type="text/css"></link>
-		<link rel="stylesheet" href="resource/css/search.css" type="text/css"></link>
-		<script type="text/javascript" src="resource/js/jquery-1.4.2.js" charset="utf-8"></script>
-		<script type="text/javascript" src="resource/js/whole.js"></script>
-		<script type="text/javascript" src="resource/js/global.js"></script>
+		<link rel="stylesheet" href="<%=basePath %>resource/css/global.css" type="text/css"></link>
+		<link rel="stylesheet" href="<%=basePath %>resource/css/whole.css" type="text/css"></link>
+		<link rel="stylesheet" href="<%=basePath %>resource/css/search.css" type="text/css"></link>
+		<script type="text/javascript" src="<%=basePath %>resource/js/jquery-1.4.2.js" charset="utf-8"></script>
+		<script type="text/javascript" src="<%=basePath %>resource/js/whole.js"></script>
+		<script type="text/javascript" src="<%=basePath %>resource/js/global.js"></script>
 		<STYLE type="text/css">
 <!--
 #searchPanel ul,#searchPanel li {
