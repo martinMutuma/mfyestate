@@ -146,7 +146,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<img src="<%=basePath%>member/images/ts.jpg" style="margin-top:5px" width="760" >
 		</p>
 		<table width="760" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-			<tr height="35">
+			<tr height="30">
 				<td align="center" bgcolor="#F9F9F9" width="20%">
 					案源类型
 				</td>
@@ -160,11 +160,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					审核通过数
 				</td>
 				<td align="center" bgcolor="#F9F9F9" width="20%">
-					合计
+					合计发布案源数
 				</td>
 			</tr>
 			<tr>
-				<td height="35" align="center" bgcolor="#FFFFFF">
+				<td height="30" align="center" bgcolor="#FFFFFF">
 					住宅
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
@@ -181,7 +181,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</td>
 			</tr>
 			<tr>
-				<td height="35" align="center" bgcolor="#FFFFFF">
+				<td height="30" align="center" bgcolor="#FFFFFF">
 					写字楼
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
@@ -195,7 +195,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td align="center" bgcolor="#FFFFFF">${svo.col8 }</td>
 			</tr>
 			<tr>
-				<td height="35" align="center" bgcolor="#FFFFFF">
+				<td height="30" align="center" bgcolor="#FFFFFF">
 					商铺
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
@@ -209,7 +209,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td align="center" bgcolor="#FFFFFF">${svo.col12 }</td>
 			</tr>
 			<tr>
-				<td height="35" align="center" bgcolor="#FFFFFF">
+				<td height="30" align="center" bgcolor="#FFFFFF">
 					生意转让
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
@@ -223,7 +223,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td align="center" bgcolor="#FFFFFF">${svo.col16 }</td>
 			</tr>
 			<tr>
-				<td height="35" align="center" bgcolor="#FFFFFF">
+				<td height="30" align="center" bgcolor="#FFFFFF">
 					工业地产
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
@@ -237,7 +237,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td align="center" bgcolor="#FFFFFF">${svo.col20 }</td>
 			</tr>
 			<tr>
-				<td height="35" align="center" bgcolor="#FFFFFF">
+				<td height="30" align="center" bgcolor="#FFFFFF">
 					大型项目
 				</td>
 				<td align="center" bgcolor="#FFFFFF">
@@ -252,7 +252,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</tr>
 
 			<tr>
-				<td height="35" align="center" bgcolor="#FFFFFF">
+				<td height="30" align="center" bgcolor="#FFFFFF">
 					合计
 				</td>
 				<td align="center" bgcolor="#FFFFFF">

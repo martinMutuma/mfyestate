@@ -94,7 +94,7 @@ $(function() {
 					text : '增加楼盘',
 					iconCls : 'icon-add1',
 					handler : function() {
-						$(this).attr("href", 'tabuilding.jsp');
+						$(this).attr("href", 'tabuilding.jsp?menuCls=11');
 
 					}
 				}, '-', {

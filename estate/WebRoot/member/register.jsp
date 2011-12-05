@@ -145,6 +145,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    <a href="#" id="btn" onclick="checkform();"></a>
 		  </p>
 		  <input type="hidden" name="tb.integral" value="10"/>
+		  <input type="hidden" name="tb.totalIntegral" value="10"/>
 		  <input type="hidden" name="tb.level" value="1"/>
 		  <input type="hidden" name="tb.honorType" value="1"/>
 		  <input type="hidden" name="tb.headUrl" value="default_head.jpg"/>

@@ -57,8 +57,8 @@ $(function() {
 						else
 							return '<span style="color:red"><span onclick=Onmodify("'
 									+ rec.id
-									+ '")>修改</span> <span onclick=Ondelete("'
-									+ rec.id + '")>删除</span></span>';
+									+ '")><font style="cursor:pointer;color:blue;">修改</font></span> <span onclick=Ondelete("'
+									+ rec.id + '")><font style="cursor:pointer;color:blue;">删除</font></span></span>';
 					}
 				}], [{
 					field : 'title',
