@@ -1,7 +1,7 @@
 /*******************************************************************************
  * auto_roll Copyright (C) 2006-2011 chao Fu.
  * 
- * @author Roddy <fc19861011@gmail.com>
+ * @author F.C <fc19861011@gmail.com>
  * @site http://www.mymfy.com/
  * @licence
  * @version 1.0 (2011-11-28)
