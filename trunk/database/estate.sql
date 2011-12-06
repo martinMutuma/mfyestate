@@ -906,3 +906,4 @@ ALTER TABLE `estate`.`t_p_second_buliding`     ADD COLUMN `nature` CHAR(1) NULL 
     alter table `estate`.`t_p_second_buliding` 
    change `price` `price` double(8,2) NULL  comment '售价', 
    change `unitPrice` `unitPrice` double(8,2) NULL  comment '单价';
+ALTER TABLE `estate`.`t_d_data` CHANGE COLUMN `minvalue` `min_value` VARCHAR(10) NULL DEFAULT NULL COMMENT '最小值'  , CHANGE COLUMN `maxvalue` `max_value` VARCHAR(10) NULL DEFAULT NULL COMMENT '最大值'  ;
