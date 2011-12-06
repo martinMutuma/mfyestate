@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+"http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.1</jsp-version>
+	<short-name>mytag</short-name>
+	<uri></uri>
+	<tag>
+		<name>convertCode</name><!--标签文件的别名 例子： Hello-->
+		<tag-class>com.estate.util.tag.convertCode2NameTag</tag-class><!--标签类文件的物理地址-->
+		<body-content>JSP</body-content><!--看看是否有标签体 没有是empty 有是jsp-->
+		<attribute>
+			<name>codeType</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>code</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description><![CDATA[code attribute,support el/jstl tag]]></description>
+		</attribute>
+	</tag>
+	<tag>
+		<name>format</name>
+		<tag-class>com.estate.util.tag.formatValue</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description><![CDATA[code attribute,support el/jstl tag]]></description>
+		</attribute>
+	</tag>
+	<tag>
+		<name>select</name>
+		<tag-class>com.estate.util.tag.ui.MFYSelectTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>id</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[HTML id attribute]]></description>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[HTML name attribute]]></description>
+		</attribute>
+		<attribute>
+			<name>value</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description><![CDATA[HTML value attribute,support el/jstl tag]]></description>
+		</attribute>
+		<attribute>
+			<name>disabled</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Set the html disabled attribute on rendered html element]]></description>
+		</attribute>
+		<attribute>
+			<name>headerKey</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[ Key for first item in list. Must not be empty! '-1' and '' is correct, '' is bad.]]></description>
+		</attribute>
+		<attribute>
+			<name>headerValue</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Value expression for first item in list]]></description>
+		</attribute>
+		<attribute>
+			<name>cssClass</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[The css class to use for element]]></description>
+		</attribute>
+		<attribute>
+			<name>cssStyle</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[The css style to use for element]]></description>
+		</attribute>
+		<attribute>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Label expression used for rendering an element specific label]]></description>
+		</attribute>
+		<attribute>
+			<name>labelPosition</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Define label position of form element (top/left)]]></description>
+		</attribute>
+		<attribute>
+			<name>multiple</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[ Creates a multiple select. The tag will pre-select multiple values if the values are passed as an Array or a Collection(of appropriate types) via the value attribute. If one of the keys equals one of the values in the Collection or Array it wil be selected]]></description>
+		</attribute>
+		<attribute>
+			<name>codeType</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[choose code]]></description>
+		</attribute>
+	</tag>
+	<tag>
+		<name>radio</name>
+		<tag-class>com.estate.util.tag.ui.MFYRadioTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>id</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[HTML id attribute]]></description>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[HTML name attribute]]></description>
+		</attribute>
+		<attribute>
+			<name>value</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description><![CDATA[HTML value attribute,support el/jstl tag]]></description>
+		</attribute>
+		<attribute>
+			<name>disabled</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Set the html disabled attribute on rendered html element]]></description>
+		</attribute>
+		<attribute>
+			<name>cssClass</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[The css class to use for element]]></description>
+		</attribute>
+		<attribute>
+			<name>cssStyle</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[The css style to use for element]]></description>
+		</attribute>
+		<attribute>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Label expression used for rendering an element specific label]]></description>
+		</attribute>
+		<attribute>
+			<name>labelPosition</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Define label position of form element (top/left)]]></description>
+		</attribute>
+		<attribute>
+			<name>multiple</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[ Creates a multiple select. The tag will pre-select multiple values if the values are passed as an Array or a Collection(of appropriate types) via the value attribute. If one of the keys equals one of the values in the Collection or Array it wil be selected]]></description>
+		</attribute>
+		<attribute>
+			<name>codeType</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[choose code]]></description>
+		</attribute>
+	</tag>
+	<tag>
+		<name>checkbox</name>
+		<tag-class>com.estate.util.tag.ui.MFYCheckboxTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>id</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[HTML id attribute]]></description>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[HTML name attribute]]></description>
+		</attribute>
+		<attribute>
+			<name>value</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description><![CDATA[HTML value attribute,support el/jstl tag]]></description>
+		</attribute>
+		<attribute>
+			<name>disabled</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Set the html disabled attribute on rendered html element]]></description>
+		</attribute>
+		<attribute>
+			<name>cssClass</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[The css class to use for element]]></description>
+		</attribute>
+		<attribute>
+			<name>cssStyle</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[The css style to use for element]]></description>
+		</attribute>
+		<attribute>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Label expression used for rendering an element specific label]]></description>
+		</attribute>
+		<attribute>
+			<name>labelPosition</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[Define label position of form element (top/left)]]></description>
+		</attribute>
+		<attribute>
+			<name>multiple</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[ Creates a multiple select. The tag will pre-select multiple values if the values are passed as an Array or a Collection(of appropriate types) via the value attribute. If one of the keys equals one of the values in the Collection or Array it wil be selected]]></description>
+		</attribute>
+		<attribute>
+			<name>codeType</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description><![CDATA[choose code]]></description>
+		</attribute>
+	</tag>
+	<!--	<tag>
+		<name>xue</name>另一个标签的别名-->
+	<!--<tag-class>com.lll.tag.XianShi</tag-class>标签类文件的物理地址-->
+	<!--	<body-content>empty</body-content>看看是不是具有标签体-->
+	<!--	<attribute>带参数的标签必须写-->
+	<!--	<name>username</name>属性名称-->
+	<!--	<required>true</required>当前的属性是否是必须的-->
+	<!--	<rtexprvalue>true</rtexprvalue> 是否通过程序代码进行赋值-->
+	<!-- 	</attribute>
+		</tag> -->
+</taglib>
