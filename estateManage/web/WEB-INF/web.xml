@@ -174,4 +174,11 @@
 		<error-code>500</error-code>
 		<location>/500.html</location>
 	</error-page> -->
+	
+	<jsp-config>
+		<taglib>
+		<taglib-uri>estateTag</taglib-uri><!-- 标签库文件调用的别名-->
+		<taglib-location>/WEB-INF/taglib/estate.tld</taglib-location><!-- 标签库文件所在的具体位置-->
+		</taglib>
+	</jsp-config>
 </web-app>
