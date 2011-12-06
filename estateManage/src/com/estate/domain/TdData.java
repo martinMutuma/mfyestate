@@ -1,5 +1,6 @@
 package com.estate.domain;
 
+import com.estate.base.annotation.Column;
 import com.estate.base.annotation.Table;
 import com.estate.base.entity.BaseEntity;
 
@@ -9,7 +10,9 @@ public class TdData extends BaseEntity {
 	private String name;
 	private String code;
 	private String descr;
+	@Column(name="min_value")
 	private String minvalue;
+	@Column(name="max_value")
 	private String maxvalue;
 
 	public Long getPid() {

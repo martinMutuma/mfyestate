@@ -9,6 +9,7 @@ import com.estate.business.service.DefinationService;
 import com.estate.business.service.DefinationServiceImpl;
 import com.estate.domain.TdData;
 import com.estate.domain.TdDefination;
+import com.estate.util.comm.BASE64Util;
 import com.estate.util.comm.RequestUtil;
 
 public class DefinationAction extends BaseAction {
@@ -61,9 +62,17 @@ public class DefinationAction extends BaseAction {
 		return "toDefinationInfo";
 	}
 
+	/**
+	 * 保存
+	 * @return
+	 */
 	public String save() {
 		try {
 			if (null != defination) {
+				if ("01".equals(defination.getCategory())) {
+					defination.setCode(BASE64Util.getBASE64(defination
+							.getCode()));
+				}
 				service.saveOrUpdate(defination);
 			}
 		} catch (Exception e) {
