@@ -45,7 +45,7 @@ public class StageServiceImpl implements IStageService {
 				if (keyAry.length > 1)
 					type = keyAry[1];
 				conditionSql.append(bulidSql(type, columnName, map.get(key)
-						.toString(), conditionSql.toString(), conditionList));
+						.toString(), conditionList));
 			}
 			// 中介
 			if ("1".equals(selectedTab)) {
@@ -104,8 +104,8 @@ public class StageServiceImpl implements IStageService {
 
 	// 处理查询条件
 	private String bulidSql(String searchType, String columnName, String value,
-			String sql, List<Object> conditionList) {
-		sql += " and ";
+			 List<Object> conditionList) {
+		String sql = " and ";
 		String[] valAry = value.split("@");
 		String[] columnNameAry = columnName.split("#");
 		columnName = columnNameAry[0];
