@@ -47,6 +47,7 @@ import com.estate.domain.system.TsAnnouncement;
 import com.estate.util.CacheUtil;
 import com.estate.util.House365Util;
 import com.estate.util.WebSiteUtil;
+import com.estate.util.comm.BASE64Util;
 import com.estate.util.comm.Contants;
 import com.estate.util.comm.CookiesUtil;
 import com.estate.util.comm.HttpClientUtil;
@@ -222,7 +223,7 @@ public class StageAction extends BaseAction {
 					try {
 						String queryString = queryAry[i];
 						String[] conditionAry = queryString.split("~");
-						String columnName = conditionAry[0];
+						String columnName = BASE64Util.getFromBASE64(conditionAry[0]);
 						String searchType = conditionAry[1];
 						String minValue = conditionAry[2];
 						String maxValue = "";
