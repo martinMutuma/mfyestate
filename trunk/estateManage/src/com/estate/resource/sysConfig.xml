@@ -35,7 +35,7 @@
 	</config>
 	<config name="dataBasePassword">
 		<value>
-			<![CDATA[fc1986]]>
+			<![CDATA[root]]>
 		</value>
 	</config>
 	<config name="dataBaseType"><!-- 数据库 1:mysql 2:sqlserver 3:oracle -->

@@ -91,7 +91,7 @@ public class StringUtil {
 			return zoneCode;
 		}
 	}
-	
+
 	/**
 	 * 比较两个String 是否相等
 	 * 
@@ -141,5 +141,17 @@ public class StringUtil {
 			}
 		}
 		return returnValue;
+	}
+
+	/**
+	 * 
+	 * @param str
+	 * @return
+	 */
+	public static String formatValue(Object str) {
+		String strTemp = str.toString();
+		strTemp = strTemp.indexOf(".") == -1 ? strTemp : strTemp.substring(0,
+				strTemp.indexOf("."));
+		return "0".equals(strTemp) ? "" : strTemp;
 	}
 }
