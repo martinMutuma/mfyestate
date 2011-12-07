@@ -31,6 +31,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
   </style>
 <body>
+<center>
+    <table >
+    <tr>
+    <td>
  	<div class="footer1" align="center" style="margin-top: 0px;">
 			<ul>
 				<li>
@@ -63,5 +67,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</li>
 			</ul>
 		</div>
+		</td>
+		</tr>
+		</table>
+		</center>
 </body>
 </html>

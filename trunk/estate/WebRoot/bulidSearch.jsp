@@ -22,7 +22,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <STYLE type="text/css">
 	#searchPanel{
 		height:180px;
-		*height: 180px;
 	}
 	#searchPanel{
 		margin-top: 15px;

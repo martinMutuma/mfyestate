@@ -11,6 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link rel="stylesheet" href="resource/css/whole.css" type="text/css"></link>
 <link rel="stylesheet" href="resource/css/global.css" type="text/css"></link>
 <link rel="stylesheet" href="resource/css/listShow.css" type="text/css"></link>
+<link rel="stylesheet" href="<%=basePath%>resource/css/hbody.css" type="text/css"></link>
 <link rel="stylesheet" href="<%=basePath%>resource/css/pagination2.css" type="text/css"></link>
 <script type="text/javascript" src="resource/js/jquery-1.4.2.js" charset="utf-8"></script>
 <script type="text/javascript" src="resource/js/whole.js"></script>
@@ -79,19 +80,69 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   	</div>
    			</div>
    			<div class="list_ri">
-   				<div id="attention">
-					<div id="atHead">最受关注楼盘</div>
-					<div id="atBody" align="center">
-					<ul>
-						<s:iterator value="#attentionBulidList" status="sta">
-							<li><span onclick="showBulid('<s:property value="id"/>')"><font color="#FF0000" size="3px"><s:property value="#sta.index+1"/></font>&nbsp;<a href="#"><s:property value="name"/>(<s:property value="attentionNum"/>)</a></span></li>
-						</s:iterator>
-					</ul>
-					</div>
-				</div>
+   				 <div id="attention" style="background: #ffffff;">
+								<div class="guanzhu"></div>
+								<div id="atBody" align="center">
+								<ul>
+									<s:iterator value="#attentionBulidList" status="sta">
+										<s:if test="#sta.index == 0">
+											<li id="atBody_s<s:property value="#sta.index"/>" style="height: 75px;line-height: 75px;">
+												<table width="100%" height="75px" cellpadding="0" cellspacing="0" border="0">
+													<tr>
+														<td align="left"><font color="#FF0000" size="5px"><s:property value="#sta.index+1"/></font></td>
+														<td>
+														<img onclick="showBulid('<s:property value="id"/>')" src="<s:property value="compressUrl"/>" width="70px" height="60px"/>
+														</td>
+														<td>
+															<span>&nbsp;<a class="bulidTile" href="javascript:showBulid('<s:property value="id"/>')"><s:property value="name"/></a></span>
+															<span>&nbsp;<font class="fontcolor3">地区：<s:property value="disname"/></font></span>
+															<span>&nbsp;<font class="fontcolor3">起价：<s:property value="minPrice"/> 元/㎡ </font></span>
+														</td>
+													</tr>
+												</table>
+											</li>
+											<li id="atBody_t<s:property value="#sta.index"/>" class="selected_li">
+											    <div style="width:110px;float:left">
+											    <font color="#FF0000" size="3px"><s:property value="#sta.index+1"/></font>&nbsp;<s:property value="name"/> 
+											    </div>
+											    <div style="width:90px;float:right;padding-right:3px;">
+											    <font class="fontcolor6">起价:<s:property value="minPrice"/>元/㎡</font>
+											    </div>
+											</li>
+										</s:if>
+										<s:else>
+											<li id="atBody_s<s:property value="#sta.index"/>" class="selected_li" style="height: 75px;line-height: 75px;">
+												<table width="100%" height="75px" cellpadding="0" cellspacing="0">
+													<tr>
+														<td align="left"><font color="#FF0000" size="5px"><s:property value="#sta.index+1"/></font></td>
+														<td>
+														<img src="<s:property value="compressUrl"/>" width="70px" height="60px"/>
+														</td>
+														<td>
+															<span>&nbsp;<a class="bulidTile" href="javascript:showBulid('<s:property value="id"/>')"><s:property value="name"/></a></span><br/>
+															<span>&nbsp;<font class="fontcolor3">地址：<s:property value="disname"/></font></span><br/>
+															<span>&nbsp;<font class="fontcolor3">起价：</font><font class="prominentfont"><s:property value="minPrice"/> 元/㎡ </font></span><br/>
+														</td>
+													</tr>
+												</table>
+											</li>
+											<li id="atBody_t<s:property value="#sta.index"/>">
+												<div style="width:110px;float:left">
+											    <font color="#FF0000" size="3px"><s:property value="#sta.index+1"/></font>&nbsp;<s:property value="name"/> 
+											    </div>
+											    <div style="width:90px;float:right;padding-right:3px;">
+											         <font class="fontcolor6">起价:<s:property value="minPrice"/>元/㎡</font>
+											    </div>
+											</li>
+										</s:else>
+									</s:iterator>
+								</ul>
+								</div>
+							</div>
    			</div>
    		</div>
    	</div>
+   	<jsp:include page="copyright.jsp"></jsp:include>
    	</div>
   </body>
 </html>

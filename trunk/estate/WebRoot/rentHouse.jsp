@@ -262,44 +262,41 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</div>
 						</div>
    				<div class="small_div h500" >
-											<div class="title_news "><font class="headtitle">&nbsp;&nbsp;经纪人信息</font></div>
-											<div class="h480">
-											<div id="marquee" style="margin-top: 10px; overflow: hidden; margin: -2px 0 4px 0;
-									            padding: 0; height: 100%; width: 100%; border: 0px; padding: 0px;" align="left">
-									            <div style="border: 0px; padding: 0px">
-									                <!-- Marquee Body Head -->
-									              	<s:iterator value="#data.baseinfoList" status="status">
-									                <div style="height: 1162x; margin:11px 3px 3px 3px; border: 1px dotted #c0c0c0; overflow: hidden;">
-									                   <table>
-									                      <tr>
-									                        <td width="80px" height="105px">
-									                        <img style="width:80px;height:105px;border:0px;cursor: pointer;" title="点击进入该经纪人商铺" onclick="toMyStore('<s:property value="id"/>')"  src="imageFloder/<s:property value="headUrl"/>" alt="点击进入该经纪人商铺" />
-									                        </td>
-									                        <td class="news_title" valign="top">
-									                        <br/>
-															 <a href="javascript:toMyStore('<s:property value="id"/>')" ><span title="点击进入<s:property value="realName"/>的商铺"><font class="fontcolor3"><b><s:property value="realName"/></b><font></span><br/></a>
-															<span title="<s:property value="company"/>"><font class="fontcolor3">公司名：<s:property value="company"/></font></span><br/>
-															<span title="<s:property value="disname"/>"><font class="fontcolor3">区域：<s:property value="disname"/></font></span><br/>
-															</td>
-									                      </tr>
-									                   </table>
-									                </div>
-									               </s:iterator>
-									               <s:if test="#data.baseinfoList.size==0">
-									                  <input type="hidden" id="listnull" value="0">
-									               </s:if>
-									               <s:else>
-									                  <input type="hidden" id="listnull" value="1">
-									               </s:else>
-									                <!-- Marquee Body Bottom -->
-									          </div>
-									      </div>
-									</div>
-					      </div>
+												<div class="title_news "><font class="headtitle">&nbsp;&nbsp;经纪人信息</font></div>
+												<div class="h480">
+													<div id="container" class="container">
+														<ul>
+															<s:iterator value="#data.baseinfoList" >
+															<li>
+															    <div style="height: 112px; margin:11px 3px 3px 3px; border: 1px dotted #c0c0c0; overflow: hidden;">
+												                   <table style="width:100%">
+												                      <tr>
+												                        <td width="80px" height="105px">
+												                        <img style="width:80px;height:105px;border:0px;cursor: pointer;" title="点击进入该经纪人商铺" onclick="toMyStore('<s:property value="id"/>')"  src="imageFloder/<s:property value="headUrl"/>" alt="点击进入该经纪人商铺" />
+												                        </td>
+												                        <td class="news_title" valign="top">
+												                        <br/>
+																		 <a href="javascript:toMyStore('<s:property value="id"/>')" ><span title="点击进入<s:property value="realName"/>的商铺"><font class="fontcolor3"><b><s:property value="realName"/></b></font></span><br/></a>
+																		<span title="<s:property value="company"/>"><font class="fontcolor3">公司名：<s:property value="company"/></font></span><br/>
+																		<span title="<s:property value="disname"/>"><font class="fontcolor3">区域：<s:property value="disname"/></font></span><br/>
+																		</td>
+												                      </tr>
+												                   </table>
+												                </div>
+															</li>
+															</s:iterator>
+														</ul>
+													</div>
+										        </div>
+						      </div>
    		</div>
+   			<div style="margin-top: 10px;float:left;">
+				<jsp:include page="copyright.jsp" />
+		</div>
    	</div>
-   		<jsp:include page="copyright.jsp"/>
    	</div>
-   
   </body>
+    </body>
+  <!-- 经纪人滚动 -->
+<script type="text/javascript" src="resource/js/mfy.auto.roll.js"></script>
 </html>
