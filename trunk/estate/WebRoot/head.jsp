@@ -34,7 +34,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									</tr>
 								</table>
 							</div>
-							<div id="hot_tag" align="left"><b>热门标签：</b><span id="rmbq"><a href="javascript:searchHot('0_3','building_type~8~2~','9','0','')">海景房</a><a href="javascript:searchHot('','','9','0','4')">宜居生态</a><a href="javascript:searchHot('','','9','0','2')">高档小区</a><a href="javascript:searchHot('0_5','building_type~8~4~','9','0','')">酒店式公寓</a><a href="javascript:searchHot('','','9','0','5')">花园洋房</a></span></div>
+							<div id="hot_tag" align="left"><b>热门标签：</b><span id="rmbq"><a href="javascript:searchHot('0_3','YnVpbGRpbmdfdHlwZSMx~8~2~','9','0','')">海景房</a><a href="javascript:searchHot('','','9','0','4')">宜居生态</a><a href="javascript:searchHot('','','9','0','2')">高档小区</a><a href="javascript:searchHot('0_5','YnVpbGRpbmdfdHlwZSMx~8~4~','9','0','')">酒店式公寓</a><a href="javascript:searchHot('','','9','0','5')">花园洋房</a></span></div>
 						</div>
 					</td>
 				</tr>
