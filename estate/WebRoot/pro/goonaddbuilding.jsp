@@ -234,7 +234,7 @@
 				</tr>
 			</table>
 		</div>
-			<div style="margin-top: 10px;">
+		<div style="margin-top: 10px;">
 			<center>
 				<jsp:include page="../copyright.jsp" />
 			</center>
