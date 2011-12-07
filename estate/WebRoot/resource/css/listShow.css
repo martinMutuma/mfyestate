@@ -190,6 +190,7 @@ a img{border:0px;}
 	margin-left: 8px;
 	*margin-left: 6px;
 	margin-left: 6px\9;
+	width: 242px;
 }
 .secondBulidAd{
 	position: absolute;
@@ -254,9 +255,13 @@ a img{border:0px;}
 	text-align: left;
 }
 .wtqg{
-	background: url(../images/ws_l2.gif) no-repeat;
 	width: 240px;
 	height: 100px;
+}
+
+.wtqg img{
+   width: 240px;
+   height: 100px;
 }
 .wtqg table td div{
 	width: 100%;

@@ -254,7 +254,8 @@
 }
 
 
-#p_center{
+.p_center{
+	height:265px;
 	margin-top: 10px;
 	border: 1px solid #C4C4C4;
 	width: 250px;

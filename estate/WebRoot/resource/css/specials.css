@@ -20,7 +20,7 @@
 .left_width1 h3{color: #DE0000;margin-top: 0px;}
 .left_width2{padding-left:10px;padding-top:5px; width: 698px;width:708px\9;border: 1px solid #FFB27F;}
 .left_width2 h5{color:#E5663A;margin-top: 0px;}
-.right_width{width: 225px;margin-left: 12px;float: left;}
+.right_width{width: 225px;margin-left: 12px;_margin-left: 8px;float: left;}
 .right_width_title{background: url("../images/tuan/tuan-gao.gif") no-repeat;height: 36px;padding-left: 15px;line-height: 36px;color: white;font-weight: bold;font-size: 15px;}
 .right_width_title1{padding-left: 5px;font-size: 13px;width:218px;width: 225px\9;border-style: solid;border-color: #FFB27F;border-width: 0 1px 1px 1px;}
 .right_width_title a{color: white;}
