@@ -9,7 +9,7 @@ public class BASE64Util {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(getBASE64("12345678"));
+		System.out.println(getBASE64("category#1"));
 
 		System.out.println(getFromBASE64("Nzc3MjA2"));
 	}
