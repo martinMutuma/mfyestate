@@ -241,7 +241,7 @@ public class StageAction extends BaseAction {
 		if ("9".equals(searchPro)) {
 			menuIndex = "1";
 			ActionContext.getContext().put("attentionBulidList",
-					tbsService.findFreshBulid(discode));
+			    CacheUtil.getHome().getAttentionBulidList());
 			return "bulidSearch";
 		} else if ("10".equals(searchPro)) {
 			menuIndex = "3";
@@ -351,7 +351,7 @@ public class StageAction extends BaseAction {
 			pu = tbsService.findBulidList(new Integer(pageNo), new Integer(
 					limit), discode);
 			ActionContext.getContext().put("attentionBulidList",
-					tbsService.findFreshBulid(discode));
+			    CacheUtil.getHome().getAttentionBulidList());
 		} catch (Exception e) {
 			log.error("住宅", e);
 		}
@@ -406,13 +406,13 @@ public class StageAction extends BaseAction {
 					new Integer(limit));
 			ActionContext.getContext().put("keyword", keyword);
 			ActionContext.getContext().put("proIndex", proIndex);
+			ActionContext.getContext().put("attentionBulidList",
+                CacheUtil.getHome().getAttentionBulidList());
 		} catch (Exception e) {
 			log.error("", e);
 		}
 		if ("0".equals(proIndex)) {
 			menuIndex = "1";
-			// ActionContext.getContext().put("attentionBulidList",
-			// tbsService.findFreshBulid());
 			return "bulidKeyWord";
 		} else {
 			menuIndex = "2";
@@ -422,12 +422,8 @@ public class StageAction extends BaseAction {
 			selectedTab = "0";
 			if ("1".equals(proIndex)) {
 				searchPro = "0";
-				// needList = needService
-				// .findFreshNeed((new Integer(searchPro) + 1) + "");
 			} else if ("2".equals(proIndex)) {
 				searchPro = "1";
-				// needList = needService
-				// .findFreshNeed((new Integer(searchPro) + 1) + "");
 			}
 			return "bus";
 		}
@@ -531,11 +527,11 @@ public class StageAction extends BaseAction {
 				discode = disCodeObj.toString();
 			pu = secondService.findSecondBulidList(new Integer(pageNo),
 					new Integer(limit), discode);
-			ActionContext.getContext().put("attentionBulidList",
-					tbsService.findFreshBulid(discode));
 			List<TpSecondBuliding> tsbList = secondService
 					.findTopWeight(3, "2");
 			ActionContext.getContext().put("tsbList", tsbList);
+			HomeData hd = CacheUtil.getHome();
+            ActionContext.getContext().put("data", hd);
 		} catch (Exception e) {
 			log.error("住宅", e);
 		}
@@ -562,11 +558,11 @@ public class StageAction extends BaseAction {
 				discode = disCodeObj.toString();
 			pu = secondService.findSecondBulidRentList(new Integer(pageNo),
 					new Integer(limit), discode);
-			ActionContext.getContext().put("attentionBulidList",
-					tbsService.findFreshBulid(discode));
 			List<TpSecondBuliding> tsbList = secondService
 					.findTopWeight(3, "1");
 			ActionContext.getContext().put("tsbList", tsbList);
+			HomeData hd = CacheUtil.getHome();
+            ActionContext.getContext().put("data", hd);
 		} catch (Exception e) {
 			log.error("租房", e);
 		}
