@@ -14,6 +14,7 @@
 <script type="text/javascript" src="resource/js/jquery-1.4.2.js" charset="utf-8"></script>
 <script type="text/javascript" src="resource/js/whole.js"></script>
 <script type="text/javascript" src="resource/js/hbody.js"></script>
+
 </head>
 <body>
     <div>
@@ -187,37 +188,30 @@
 							<div class="small_div h500" >
 											<div class="title_news "><font class="headtitle">&nbsp;&nbsp;经纪人信息</font></div>
 											<div class="h480">
-											<div id="marquee" style="margin-top: 10px; overflow: hidden; margin: -2px 0 4px 0;
-									            padding: 0; height: 100%; width: 100%; border: 0px; padding: 0px;" align="left">
-									            <div style="border: 0px; padding: 0px">
-									                <!-- Marquee Body Head -->
-									              	<s:iterator value="#data.baseinfoList" status="status">
-									                <div style="height: 112px; margin:11px 3px 3px 3px; border: 1px dotted #c0c0c0; overflow: hidden;">
-									                   <table>
-									                      <tr>
-									                        <td width="80px" height="105px">
-									                        <img style="width:80px;height:105px;border:0px;cursor: pointer;" title="点击进入该经纪人商铺" onclick="toMyStore('<s:property value="id"/>')"  src="imageFloder/<s:property value="headUrl"/>" alt="点击进入该经纪人商铺" />
-									                        </td>
-									                        <td class="news_title" valign="top">
-									                        <br/>
-															 <a href="javascript:toMyStore('<s:property value="id"/>')" ><span title="点击进入<s:property value="realName"/>的商铺"><font class="fontcolor3"><b><s:property value="realName"/></b><font></span><br/></a>
-															<span title="<s:property value="company"/>"><font class="fontcolor3">公司名：<s:property value="company"/></font></span><br/>
-															<span title="<s:property value="disname"/>"><font class="fontcolor3">区域：<s:property value="disname"/></font></span><br/>
-															</td>
-									                      </tr>
-									                   </table>
-									                </div>
-									               </s:iterator>
-									               <s:if test="#data.baseinfoList.size==0">
-									                  <input type="hidden" id="listnull" value="0">
-									               </s:if>
-									               <s:else>
-									                  <input type="hidden" id="listnull" value="1">
-									               </s:else>
-									                <!-- Marquee Body Bottom -->
-									          </div>
-									      </div>
-									</div>
+												<div id="container" class="container">
+													<ul>
+														<s:iterator value="#data.baseinfoList" >
+														<li>
+														    <div style="height: 112px; margin:11px 3px 3px 3px; border: 1px dotted #c0c0c0; overflow: hidden;">
+											                   <table style="width:100%">
+											                      <tr>
+											                        <td width="80px" height="105px">
+											                        <img style="width:80px;height:105px;border:0px;cursor: pointer;" title="点击进入该经纪人商铺" onclick="toMyStore('<s:property value="id"/>')"  src="imageFloder/<s:property value="headUrl"/>" alt="点击进入该经纪人商铺" />
+											                        </td>
+											                        <td class="news_title" valign="top">
+											                        <br/>
+																	 <a href="javascript:toMyStore('<s:property value="id"/>')" ><span title="点击进入<s:property value="realName"/>的商铺"><font class="fontcolor3"><b><s:property value="realName"/></b></font></span><br/></a>
+																	<span title="<s:property value="company"/>"><font class="fontcolor3">公司名：<s:property value="company"/></font></span><br/>
+																	<span title="<s:property value="disname"/>"><font class="fontcolor3">区域：<s:property value="disname"/></font></span><br/>
+																	</td>
+											                      </tr>
+											                   </table>
+											                </div>
+														</li>
+														</s:iterator>
+													</ul>
+												</div>
+									        </div>
 					      </div>
 					      <div class="gg2">
 					       <img src="resource/images/gg2.gif" >
@@ -277,7 +271,9 @@
 							<div class="clear"></div>
 				<div class="active mtop">
 				   <div id="tuan" class="active_over" onmouseover="tuanshow()">本期团购</div>
-				   <div id="te" class="active_out" onmouseover="teshow()">特价 1 套</div>
+				   <div id="te" class="active_out" onmouseover="teshow()">特价 1 套</div>	
+				   <input type="hidden" id="tuanEndTime" value="${data.tpSpecialsTuan.endTime}">
+					<input type="hidden" id="OneEndTime" value="${data.tpSpecialstOne.endTime}">
 				   <div id="tuanmain" class="activemain">
 						    <div class="activeimg">
 						      <img src="<s:property value='#data.tpSpecialsTuan.imgOne'/>" />
@@ -420,7 +416,8 @@
             </div>
 	    </div>
 	    
-	<div class="clear"></div> 
+	<div class="clear">
+	</div>  
 	<div style="padding-top: 15px;text-algin:center;">
 		<jsp:include page="copyright.jsp"/>
 		</div>
@@ -428,66 +425,8 @@
 	
 	
 </body>
-<script type="text/javascript" src="resource/js/scrollupanddown.js"></script>
-    <script type="text/javascript">
-  var endTimes = '${data.tpSpecialsTuan.endTime}';
-  if(endTimes.length>0){
-  	endTimes = replaceAll(endTimes,'-','/');
-  	endTimes = replaceAll(endTimes,' ',',');
-  }
-  
-  var teEndTimes = '${data.tpSpecialstOne.endTime}';
-  if(teEndTimes.length>0){
-  	teEndTimes = replaceAll(teEndTimes,'-','/');
-  	teEndTimes = replaceAll(teEndTimes,' ',',');
-  }
-  
-  function show_time(){
-	 var endtime=new Date(endTimes.substring(0,19));
-	 var nowtime = new Date();
-	 var leftsecond=parseInt((endtime.getTime()-nowtime.getTime())/1000);
-	 d=parseInt(leftsecond/3600/24);
-	 h=parseInt((leftsecond/3600)%24);
-	 m=parseInt((leftsecond/60)%60);
-	 s=parseInt(leftsecond%60);
-	 var c=new Date();
-	// var q=((c.getMilliseconds())%10);
-	 document.getElementById("tuan_str_time").innerHTML="<font class='fontcolor4'>"+d+"</font><font class='fontcolor3'>天 </font><font class='fontcolor4'>"+h+"</font><font class='fontcolor3'>小时 </font><font class='fontcolor4'>"+m+"</font><font class='fontcolor3'>分 </font><font class='fontcolor4'>"+s+"</font><font class='fontcolor3'>秒</font><font class='fontcolor4'>";
-	 if(leftsecond<=0){
-	 	 document.getElementById("tuan_end_Time").style.display='none';
-		 document.getElementById("tuan_str_time").innerHTML="很遗憾，活动已经结束啦！";
-		 clearInterval(vod_show);
-	 }  
- } 
-	show_time();
-	var vod_show;
-	vod_show=setInterval(show_time,1000);
-	
-
-  function te_show_time(){
-	 var teEndTime=new Date(teEndTimes.substring(0,19));
-	 var nowtime = new Date();
-	 var leftsecond=parseInt((teEndTime.getTime()-nowtime.getTime())/1000);
-	 d=parseInt(leftsecond/3600/24);
-	 h=parseInt((leftsecond/3600)%24);
-	 m=parseInt((leftsecond/60)%60);
-	 s=parseInt(leftsecond%60);
-	 var c=new Date();
-	// var q=((c.getMilliseconds())%10);
-	 document.getElementById("te_str_time").innerHTML="<font class='fontcolor4'>"+d+"</font><font class='fontcolor3'>天 </font><font class='fontcolor4'>"+h+"</font><font class='fontcolor3'>小时 </font><font class='fontcolor4'>"+m+"</font><font class='fontcolor3'>分 </font><font class='fontcolor4'>"+s+"</font><font class='fontcolor3'>秒</font><font class='fontcolor4'>";
-	 if(leftsecond<=0){
-	 	 document.getElementById("te_end_Time").style.display='none';
-		 document.getElementById("te_str_time").innerHTML="<font class='fontcolor4'>很遗憾，活动已经结束啦！<font>";
-		 clearInterval(te_vod_show);
-	 }
- }
-	te_show_time();
-	var te_vod_show;
-	te_vod_show=setInterval(te_show_time,1000);	
-	function toMyStore(id){
-		window.location.href='mem/baseinfo_toMyStore.shtml?authorId='+id+'&type=office'
-	}
-  </script>
-
-
+<!-- 倒计时 -->
+<script type="text/javascript" src="resource/js/countdown.js"></script>
+<!-- 经纪人滚动 -->
+<script type="text/javascript" src="resource/js/mfy.auto.roll.js"></script>
 </html>

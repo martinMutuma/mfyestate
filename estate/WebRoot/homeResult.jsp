@@ -84,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		</div>
    		<div class="search_result_ad">
    			<img width="100%" height="100px" src="resource/images/dican.gif"/>
-   			  <div id="p_center" >
+   			  <div class="p_center" >
 							<div class="title_news"><font class="headtitle">&nbsp;&nbsp;写字楼需求</font></div>
 							<div class="atBody" align="center" >
 												<ul>
@@ -105,8 +105,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							
 			</div>
    			
-   			<img width="100%" height="100px" style="margin-top: 15px;"/>
-   			 <div id="p_center" >
+   			<img width="100%" height="100px" style="margin-top: 15px;" src="resource/images/dican.gif"/>
+   			 <div class="p_center" >
 											<div class="title_news" class="title_news "><font class="headtitle">&nbsp;&nbsp;商铺需求</font></div>
 											<div class="atBody" align="center">
 												<ul>

@@ -76,72 +76,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   			<input type="hidden" id="pageNo" value="<s:property value="pu.pageNo"/>"/>
 	   			<input type="hidden" id="limit" value="20"/>
 	   			<input type="hidden" id="uri" value=""/>
-		   		<!-- 共<s:property value="pu.totalRecords"/>条记录,
-		   		当前显示第<s:property value="pu.pageNo"/>页，共<s:property value="pu.totalPages"/>页,
-		   		<s:if test="pu.pageNo==1">
-		   			第一页
-		   		</s:if>
-		   		<s:else>
-		   			<a href="javascript:search1('1')">第一页</a>
-		   		</s:else>
-		   		<s:if test="pu.pageNo==1">
-		   			上一页
-		   		</s:if>
-		   		<s:else>
-		   			<a href="javascript:search1('<s:property value="pu.pageNo-1"/>')">上一页</a>
-		   		</s:else>
-		   		<s:if test="pu.pageNo==pu.totalPages">
-		   			下一页
-		   		</s:if>
-		   		<s:else>
-		   			<a href="javascript:search1('<s:property value="pu.pageNo+1"/>')">下一页</a>
-		   		</s:else>
-		   		<s:if test="pu.pageNo==pu.totalPages">
-		   			最后页
-		   		</s:if>
-		   		<s:else>
-		   			<a href="javascript:search1('<s:property value="pu.totalPages"/>')">最后页</a>
-		   		</s:else> -->
-		   	</div>
+	   		 </div>	
    		</div>
-   		<div class="search_result_ad">
-   			<img width="100%" height="100px"/>
-   		<div id="p_center" >
-   				<div id="xylHead" class="title_news ">
-   					<s:if test='searchPro=="0"'>
-   						写字楼需求
-   					</s:if>
-   					<s:elseif test='searchPro=="1"'>
-   						商铺需求
-   					</s:elseif>
-   					<s:elseif test='searchPro=="2"'>
-   						生意转让需求
-   					</s:elseif>
-   					<s:elseif test='searchPro=="3"'>
-   						工业地产需求
-   					</s:elseif>
-   					<s:elseif test='searchPro=="4"'>
-   						大型项目需求
-   					</s:elseif>
-   					<s:elseif test='searchPro=="5"'>
-   						经纪人需求
-   					</s:elseif>
-   				</div>
-   				<div class="h240">
-											<div id="atBody" align="center">
-									   <ul>
-					 <s:iterator value="needList" status="sta">
-											<li id="atBody_t<s:property value="#sta.index"/>">
-												<span style="width:90px;text-align:left">&nbsp;<a href="javascript:showNeed('<s:property value="id"/>','<s:property value="searchPro"/>')">
-									&#8226;&nbsp;<s:property value="title"/>
-								</a>
-								    </span>
-											</li>
-									</s:iterator>
-								</ul>
-   				</div>
-   			</div>
-   		</div>
+   			<div class="search_result_ad">
+	   		   			<img width="100%" height="100px" src="resource/images/dican.gif"/>
+			   			  <div class="p_center" >
+										<div class="title_news"><font class="headtitle">&nbsp;&nbsp;<estateTag:convertCode codeType="置业类型" code="${searchPro}"></estateTag:convertCode>需求</font></div>
+										<div class="atBody" align="center" >
+															<ul>
+															        <li style=" border-bottom: 0px; ">
+																		<span style="width:100px;"><font class="fonthead">标题</font></span>
+																	    <span style="width:45px;text-align:center"><font class="fonthead">区域</font></span>
+																	    <span style="width:50px;text-align:center"><font class="fonthead">类型</font></span>
+																	</li>
+																	<s:iterator value="needList">
+																			<li style=" border-bottom: 0px;">
+																				<span style="width:100px;text-align:left"><a href="javascript:showNeed('<s:property value="id"/>','0')" title="<s:property value='title'/>"><s:property value="title"/></a></span>
+																			    <span style="width:45px;text-align:center"><font class="fontcolor3"><s:property value="disname"/></font></span>
+																			    <span style="width:50px;text-align:center" class="prominentfont"><estateTag:convertCode codeType="交易方式" code="${flag}"></estateTag:convertCode></span>
+																			</li>
+																	</s:iterator>
+														     </ul>
+										</div>
+										
+						 </div>
+	   			</div>
    	</div>
   </body>
 </html>
