@@ -348,9 +348,7 @@ overflow-x: hidden;
 
 
 .h480{
-   height:447px;
-   _height:417px;
-   	border: 1px solid #00ffff;
+   height:500px;
 }
 .h240{
     height:220px;
@@ -794,7 +792,7 @@ font-size: 13px;
 
 .h500{
    margin-top:10px;
-   height:480px;	
+   height:540px;	
 }
 
 .h260{
@@ -902,14 +900,14 @@ font-size: 13px;
   border: 1px solid #C4C4C4;
   width: 240px;
   margin-top:10px;
-  height:230px;
+  height:260px;
   float:left;
    overflow:hidden;
 }
 
 .gg2 img{
   width: 240px;
-  height:230px;
+  height:260px;
 }
 
 
@@ -1255,4 +1253,15 @@ ul.red li a.current span {
 	overflow:hidden;
 }
 
+
+.container{
+  margin-top: 10px; 
+  overflow: hidden; 
+  margin: -2px 0 4px 0;
+  padding: 0; 
+  height:500px;
+  width: 100%; 
+  border: 0px; 
+  padding: 0px;
+}
 
