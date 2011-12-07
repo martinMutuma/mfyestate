@@ -62,11 +62,10 @@ public class StageAction extends BaseAction {
 	private String jsonString;
 	private int total;
 	private String searchQuery;// 搜索条件
-	private String searchStatus;// 条件状�1�7�，页面根据此项设置相应选项是否为�1�7�中状�1�7�1�7
-	private String keyword;// 关键孄1�7
+	private String searchStatus;// 条件选中状态
 	private String searchPro;// 搜索项目
 	private String keywordValue;// 关键字
-	private String lpts;// 新房-网上售楼处-楼盘特色
+	private String lptsValue;// 新房-网上售楼处-楼盘特色
 	private TmBaseinfo baseinfo;// 会员基本信息
 	private List<Object> rows;
 	private String pageNo;
@@ -97,14 +96,6 @@ public class StageAction extends BaseAction {
 	private SpecialsService specialService;
 	private ITsAnnouncementService annouService;
 	private List<TpImage> imgList;
-
-	public List<TpImage> getImgList() {
-		return imgList;
-	}
-
-	public void setImgList(List<TpImage> imgList) {
-		this.imgList = imgList;
-	}
 
 	public StageAction() {
 		service = new StageServiceImpl();
@@ -189,7 +180,7 @@ public class StageAction extends BaseAction {
 	/**
 	 * 多条件搜索，所有模块公用，修改请写修改日志
 	 * 
-	 * @author F.C create update
+	 * @author F.C create update F.C 2011-12-07 对搜索条件中的字段名进行base64解密
 	 * @return
 	 */
 	public String search() {
@@ -223,7 +214,8 @@ public class StageAction extends BaseAction {
 					try {
 						String queryString = queryAry[i];
 						String[] conditionAry = queryString.split("~");
-						String columnName = BASE64Util.getFromBASE64(conditionAry[0]);
+						String columnName = BASE64Util
+								.getFromBASE64(conditionAry[0]);
 						String searchType = conditionAry[1];
 						String minValue = conditionAry[2];
 						String maxValue = "";
@@ -241,7 +233,7 @@ public class StageAction extends BaseAction {
 			if (null != disCodeObj)
 				discode = disCodeObj.toString();
 			pu = service.findByConditionMap(map, new Integer(pageNo),
-					new Integer(limit), discode, searchPro, lpts, keywordValue,
+					new Integer(limit), discode, searchPro, lptsValue, keywordValue,
 					selectedTab);
 		} catch (Exception e) {
 			log.error("查询项目出错", e);
@@ -280,12 +272,22 @@ public class StageAction extends BaseAction {
 		} catch (Exception e) {
 			log.error("霄1�7求项目详细错评1�7", e);
 		}
-		switch(new Integer(searchPro)){
-			case 0: proShowPage = "/proshow_office.jsp";break;
-			case 1: proShowPage = "/proshow_shop.jsp";break;
-			case 2: proShowPage = "/proshow_business.jsp";break;
-			case 3: proShowPage = "/proshow_industry.jsp";break;
-			case 4: proShowPage = "/proshow_largepro.jsp";break;
+		switch (new Integer(searchPro)) {
+		case 0:
+			proShowPage = "/proshow_office.jsp";
+			break;
+		case 1:
+			proShowPage = "/proshow_shop.jsp";
+			break;
+		case 2:
+			proShowPage = "/proshow_business.jsp";
+			break;
+		case 3:
+			proShowPage = "/proshow_industry.jsp";
+			break;
+		case 4:
+			proShowPage = "/proshow_largepro.jsp";
+			break;
 		}
 		return "proShow";
 	}
@@ -489,7 +491,7 @@ public class StageAction extends BaseAction {
 	}
 
 	/**
-	 * 切换地区，须更新session中地区信息，同时在cookie中记录
+	 * 切换地区，须更新session中地区信息，同时在cookie中记录 注：地产行天下板块不变(旅游地产不受地区限制)
 	 * 
 	 * @return
 	 */
@@ -731,13 +733,6 @@ public class StageAction extends BaseAction {
 		this.searchStatus = searchStatus;
 	}
 
-	public String getKeyword() {
-		return keyword;
-	}
-
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
-	}
 
 	public String getSearchPro() {
 		return searchPro;
@@ -851,14 +846,6 @@ public class StageAction extends BaseAction {
 		this.menuIndex = menuIndex;
 	}
 
-	public String getLpts() {
-		return lpts;
-	}
-
-	public void setLpts(String lpts) {
-		this.lpts = lpts;
-	}
-
 	public String getKeywordValue() {
 		return keywordValue;
 	}
@@ -944,4 +931,19 @@ public class StageAction extends BaseAction {
 		this.proShowPage = proShowPage;
 	}
 
+	public List<TpImage> getImgList() {
+		return imgList;
+	}
+
+	public void setImgList(List<TpImage> imgList) {
+		this.imgList = imgList;
+	}
+
+	public String getLptsValue() {
+		return lptsValue;
+	}
+
+	public void setLptsValue(String lptsValue) {
+		this.lptsValue = lptsValue;
+	}
 }

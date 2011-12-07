@@ -7,18 +7,17 @@ import com.estate.business.system.ITsAnnouncementService;
 import com.estate.business.system.TsAnnouncementServiceImpl;
 import com.estate.domain.system.TsAnnouncement;
 
+/**
+ * 公告
+ * 
+ * @author F.C
+ * 
+ */
 public class TsAnnouncementAction extends BaseAction {
 
+	private static final long serialVersionUID = 6581253984582656049L;
 	private ITsAnnouncementService service;
 	private List<TsAnnouncement> announcementList;
-
-	public List<TsAnnouncement> getAnnouncementList() {
-		return announcementList;
-	}
-
-	public void setAnnouncementList(List<TsAnnouncement> announcementList) {
-		this.announcementList = announcementList;
-	}
 
 	public TsAnnouncementAction() {
 		service = new TsAnnouncementServiceImpl();
@@ -31,5 +30,13 @@ public class TsAnnouncementAction extends BaseAction {
 			log.error("显示公告", e);
 		}
 		return "showAnnouncement";
+	}
+
+	public List<TsAnnouncement> getAnnouncementList() {
+		return announcementList;
+	}
+
+	public void setAnnouncementList(List<TsAnnouncement> announcementList) {
+		this.announcementList = announcementList;
 	}
 }
