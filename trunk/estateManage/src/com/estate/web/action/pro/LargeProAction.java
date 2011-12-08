@@ -1,16 +1,14 @@
-package com.estate.business.web.action.pro;
+package com.estate.web.action.pro;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.estate.base.web.BaseAction;
-import com.estate.business.service.pro.OfficeService;
-import com.estate.business.service.pro.OfficeServiceImpl;
-import com.estate.business.service.pro.ShopService;
-import com.estate.business.service.pro.ShopServiceImpl;
+import com.estate.business.service.pro.LargeProService;
+import com.estate.business.service.pro.LargeProServiceImpl;
+import com.estate.domain.pro.LargePro;
 import com.estate.domain.pro.Office;
-import com.estate.domain.pro.Shop;
 import com.estate.util.comm.Contants;
 import com.estate.util.comm.RequestUtil;
 import com.estate.util.comm.StringUtil;
@@ -23,9 +21,9 @@ import com.estate.util.comm.StringUtil;
  */
 
 @SuppressWarnings("serial")
-public class ShopAction extends BaseAction {
-	private Shop shop;
-	private ShopService service;
+public class LargeProAction extends BaseAction {
+	private LargePro largePro;
+	private LargeProService service;
 	private int total;
 	@SuppressWarnings("unchecked")
 	private List rows;
@@ -48,8 +46,8 @@ public class ShopAction extends BaseAction {
 		this.rows = rows;
 	}
 
-	public ShopAction() {
-		service = new ShopServiceImpl();
+	public LargeProAction() {
+		service = new LargeProServiceImpl();
 	}
 
 	/**
@@ -146,12 +144,12 @@ public class ShopAction extends BaseAction {
 		return map;
 	}
 
-	public Shop getShop() {
-		return shop;
+	public LargePro getLargePro() {
+		return largePro;
 	}
 
-	public void setShop(Shop shop) {
-		this.shop = shop;
+	public void setLargePro(LargePro largePro) {
+		this.largePro = largePro;
 	}
 
 }

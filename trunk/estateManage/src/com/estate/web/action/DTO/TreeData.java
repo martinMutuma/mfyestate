@@ -1,4 +1,4 @@
-package com.estate.business.web.action.DTO;
+package com.estate.web.action.DTO;
 
 import java.util.List;
 

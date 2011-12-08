@@ -13,7 +13,7 @@
 			<result name="jsonStringPage1">/jsonString.jsp</result>
 		</global-results>
 		<action name="user_*"
-			class="com.estate.business.web.action.UserAction" method="{1}"
+			class="com.estate.web.action.UserAction" method="{1}"
 		>
 			<result name="login_error">/login.jsp</result>
 			<result name="login_success">/index.htm</result>
@@ -28,7 +28,7 @@
 		</action>
 		<!-- 搜索项目管理 -->
 		<action name="pro_*"
-			class="com.estate.business.web.action.ProAction" method="{1}"
+			class="com.estate.web.action.ProAction" method="{1}"
 		>
 			<result name="proManage">/WEB-INF/searchManage/proManage.jsp</result>
 			<result name="toProManage" type="redirect">/pro_toProManage.shtml</result>
@@ -37,7 +37,7 @@
 		</action>
 		<!-- 项目分类维护 -->
 		<action name="dictional_*"
-			class="com.estate.business.web.action.DefinationAction" method="{1}"
+			class="com.estate.web.action.DefinationAction" method="{1}"
 		>
 			<result name="definationManage">/WEB-INF/searchManage/defination.jsp</result>
 			<result name="toDefinationManage" type="redirect">/dictional_toDefinationManage.shtml</result>
@@ -48,14 +48,14 @@
 		</action>
 		<!-- 会员菜单管理 -->
 		<action name="menu_*"
-			class="com.estate.business.web.action.MenuAction" method="{1}">
+			class="com.estate.web.action.MenuAction" method="{1}">
 			<result name="menuManage">/WEB-INF/sysManage/menuManage.jsp</result>
 			<result name="toMenuManage" type="redirect">/menu_toMenuManage.shtml</result>
 			<result name="toMenuInfo" >/WEB-INF/sysManage/menu_info.jsp</result>
 		</action>
 		<!-- 会员管理 -->
 		<action name="baseinfo_*"
-			class="com.estate.business.web.action.BaseinfoAction" method="{1}">
+			class="com.estate.web.action.BaseinfoAction" method="{1}">
 			<result name="baseinfoManage">/WEB-INF/baseinfoManage/baseinfoManage.jsp</result>
 			<result name="toBaseinfoManage" type="redirect">images/baseinfo_toBaseinfoManage.shtml</result>
 			<result name="toBaseinfoInfo" >/WEB-INF/baseinfoManage/baseinfo_info.jsp</result>
@@ -67,13 +67,13 @@
 		</action>
 		<!-- 新闻管理 -->
 		<action name="news_*"
-			class="com.estate.business.web.action.NewsAction" method="{1}">
+			class="com.estate.web.action.NewsAction" method="{1}">
 			<result name="newsManage">/WEB-INF/newsManage/newsManage.jsp</result>
 			<result name="toNewsManage" type="redirect">images/news_toNewsManage.shtml</result>
 			<result name="toNewsInfo" >/WEB-INF/newsManage/news_info.jsp</result>
 		</action>
 		<action name="suggestion_*"
-			class="com.estate.business.web.action.pro.SuggestionAction" method="{1}">
+			class="com.estate.web.action.pro.SuggestionAction" method="{1}">
 			<result name="suggestionManage">/WEB-INF/pro/suggestionsManage.jsp</result>
 			<result name="toSuggestionManage" type="redirect">images/suggestion_toSuggestionManage.shtml</result>
 			<result name="toTpSuggestionInfo" >/WEB-INF/pro/suggestion_info.jsp</result>
@@ -83,14 +83,14 @@
 	
 	<package name="district" namespace="/district" extends="global">
 		<action name="*"
-			class="com.estate.business.web.action.DistrictAction"
+			class="com.estate.web.action.DistrictAction"
 			method="{1}" />
 	</package>
 	
 	<!-- 团购/特价设置 -->
 	<package name="special" namespace="/special" extends="global">
 		<action name="*"
-			class="com.estate.business.web.action.pro.TpSpecialsAction"
+			class="com.estate.web.action.pro.TpSpecialsAction"
 			method="{1}">
 			<result name="showInfo">/buliding/building_info.jsp</result>
 			<result name="toinfo">/buliding/specials.jsp</result>
@@ -103,7 +103,7 @@
 	
 	<package name="announcement" namespace="/announcement" extends="global">
 		<action name="*"
-			class="com.estate.business.web.action.AnnouncementAction"
+			class="com.estate.web.action.AnnouncementAction"
 			method="{1}">
 			<result name="showInfo">/announcement/annouccement_info.jsp</result>
 		</action>

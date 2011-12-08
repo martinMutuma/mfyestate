@@ -1,4 +1,4 @@
-package com.estate.business.web.action.pro;
+package com.estate.web.action.pro;
 
 import java.util.HashMap;
 import java.util.List;
@@ -7,7 +7,10 @@ import java.util.Map;
 import com.estate.base.web.BaseAction;
 import com.estate.business.service.pro.OfficeService;
 import com.estate.business.service.pro.OfficeServiceImpl;
+import com.estate.business.service.pro.ShopService;
+import com.estate.business.service.pro.ShopServiceImpl;
 import com.estate.domain.pro.Office;
+import com.estate.domain.pro.Shop;
 import com.estate.util.comm.Contants;
 import com.estate.util.comm.RequestUtil;
 import com.estate.util.comm.StringUtil;
@@ -20,9 +23,9 @@ import com.estate.util.comm.StringUtil;
  */
 
 @SuppressWarnings("serial")
-public class OfficeAction extends BaseAction {
-	private Office office;
-	private OfficeService service;
+public class ShopAction extends BaseAction {
+	private Shop shop;
+	private ShopService service;
 	private int total;
 	@SuppressWarnings("unchecked")
 	private List rows;
@@ -45,8 +48,8 @@ public class OfficeAction extends BaseAction {
 		this.rows = rows;
 	}
 
-	public OfficeAction() {
-		service = new OfficeServiceImpl();
+	public ShopAction() {
+		service = new ShopServiceImpl();
 	}
 
 	/**
@@ -143,12 +146,12 @@ public class OfficeAction extends BaseAction {
 		return map;
 	}
 
-	public Office getOffice() {
-		return office;
+	public Shop getShop() {
+		return shop;
 	}
 
-	public void setOffice(Office office) {
-		this.office = office;
+	public void setShop(Shop shop) {
+		this.shop = shop;
 	}
 
 }

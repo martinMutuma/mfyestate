@@ -3,7 +3,7 @@ package com.estate.util.comm;
 import java.text.Collator;
 
 /**
- * Created by IntelliJ IDEA. User: 石铁军 Date: 2008-4-15 Time: 11:49:22 To change
+ * Created by IntelliJ IDEA. User: zh Date: 2011-4-15 Time: 11:49:22 To change
  * this template use File | Settings | File Templates.
  */
 public class StringUtil {
@@ -153,5 +153,41 @@ public class StringUtil {
 		strTemp = strTemp.indexOf(".") == -1 ? strTemp : strTemp.substring(0,
 				strTemp.indexOf("."));
 		return "0".equals(strTemp) ? "" : strTemp;
+	}
+	
+	/**
+	 * 
+	 * @param str
+	 * @return
+	 */
+	public static String formatAuditingState(String str) {
+		if("".equals(str) || null==str)
+			return "";
+		Integer strInt ;
+		try {
+			strInt = Integer.valueOf(str);
+		} catch (Exception e) {
+			return "";
+		}
+		switch (strInt) {
+		case 0:
+			return "未审核";
+		case 1:
+			return "审核成功";
+		case 2:
+			return "审核失败";
+		case 3:
+			return "审核驳回";
+		case 4:
+			return "申请成交";
+		case 5:
+			return "成交通过";
+		case 6:
+			return "成交失败";
+		case 7:
+			return "成交驳回";
+		default:
+			return "";
+		}
 	}
 }

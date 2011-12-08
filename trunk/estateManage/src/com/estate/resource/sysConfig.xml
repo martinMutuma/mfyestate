@@ -10,7 +10,7 @@
 		<value><![CDATA[1]]></value>
 	</config>
 	<config name="jndi"><!-- 1:jndi 2:jdbc -->
-		<value><![CDATA[2]]></value>
+		<value><![CDATA[1]]></value>
 	</config>
 	<config name="dataBaseName"><!-- 1:jndi 2:jdbc -->
 		<value>
