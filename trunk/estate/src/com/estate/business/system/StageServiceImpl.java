@@ -192,7 +192,7 @@ public class StageServiceImpl implements IStageService {
 
 	public Map<String, Object> findNeed(String id) {
 		Map<String, Object> map = null;
-		String sql = "select m.id,m.realname,m.disname as mdisname,m.company,m.headurl,m.id as mid,m.mobile as tel,"
+		String sql = "select m.id,m.realname,m.type,m.disname as mdisname,m.company,m.headurl,m.id as mid,m.mobile as tel,"
 				+ "p.title,p.descr as content,p.category,p.minprice,p.maxprice,p.minarea,p.maxArea,"
 				+ "p.address,p.flag,p.createtime,ifnull(p.num,'') as num,"
 				+ " {selectquery} as disname"

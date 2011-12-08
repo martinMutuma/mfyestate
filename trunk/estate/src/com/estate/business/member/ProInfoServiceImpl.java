@@ -51,6 +51,7 @@ public class ProInfoServiceImpl implements ProInfoService {
 		dao.delete(sql, new Object[] { id,proId, operateType ,proType});
 	}
 
+	@SuppressWarnings("unchecked")
 	public boolean checkHasAttention(String authorId, int proId, int operateType, int proType) {
 		List list = dao.findList(findTmProInfo_SQL + " authorId = ? and proId = ? and operateType=? and proType = ?",new Object[] { authorId,proId, operateType,proType });
 		if(list.isEmpty()){

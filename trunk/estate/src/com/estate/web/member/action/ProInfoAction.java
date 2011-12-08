@@ -75,6 +75,7 @@ public class ProInfoAction extends BaseAction {
 	 * 展示关注、收藏、浏览的楼盘
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public String showProInfo() {
 		currentPage = RequestUtil.getParam(request, "page", 1);
 		tb = (TmBaseinfo) RequestUtil.getLoginUserFromSession(request,Contants.SESSION_USER);
@@ -90,6 +91,7 @@ public class ProInfoAction extends BaseAction {
 	 * 保存备选、关注、收藏的楼盘
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public String createproInfo(){
 		tb = (TmBaseinfo) RequestUtil.getLoginUserFromSession(request,Contants.SESSION_USER);
 		Long proId = RequestUtil.getParam(request, "proId", Long.valueOf(0));
@@ -166,6 +168,7 @@ public class ProInfoAction extends BaseAction {
 	 * 最新开盘
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public String showNewBuilding(){
 		currentPage = RequestUtil.getParam(request, "page", 1);
 		Map<String,Object> tbuildingMap = tbuildingSer.showNewBuilding((currentPage-1)*pageSize,pageSize);
