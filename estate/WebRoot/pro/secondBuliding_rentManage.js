@@ -241,7 +241,7 @@ function Ondelete(id) {
 }
 function Onmodify(id) {
 	if (id == "undefined") {
-		$.messager.alert('删除操作','此条记录已删除','error',function(){})
+		$.messager.alert('修改操作','此条记录已删除','error',function(){})
 		return ;
 	}
 	window.location.href = "../secondBd/toUpdateRent.shtml?tpsId=" + id;
