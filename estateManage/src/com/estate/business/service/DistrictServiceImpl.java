@@ -5,9 +5,9 @@ import java.util.List;
 
 import com.estate.base.dao.BaseDao;
 import com.estate.base.dao.IBaseDao;
-import com.estate.business.web.action.DTO.TreeData;
 import com.estate.domain.TsDistrict;
 import com.estate.util.comm.StringUtil;
+import com.estate.web.action.DTO.TreeData;
 
 
 public class DistrictServiceImpl implements IDistrictService {

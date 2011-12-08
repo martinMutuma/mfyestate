@@ -2,8 +2,8 @@ package com.estate.business.service;
 
 import java.util.List;
 
-import com.estate.business.web.action.DTO.TreeData;
 import com.estate.domain.TsDistrict;
+import com.estate.web.action.DTO.TreeData;
 
 public interface IDistrictService {
 

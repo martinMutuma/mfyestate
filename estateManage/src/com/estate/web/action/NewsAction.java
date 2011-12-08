@@ -1,4 +1,4 @@
-package com.estate.business.web.action;
+package com.estate.web.action;
 
 import java.io.File;
 import java.io.IOException;

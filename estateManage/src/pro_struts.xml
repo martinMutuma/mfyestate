@@ -11,19 +11,19 @@
    </global-results>
    </package>
    <package name="office" namespace="/office" extends="proglobal">
-      <action name="*" class="com.estate.business.web.action.pro.OfficeAction" method="{1}">
+      <action name="*" class="com.estate.web.action.pro.OfficeAction" method="{1}">
         <result name="success">/pro/addbuildrentsuccess.jsp</result>
-        <result name="modify">/pro/modifybuilderent.jsp</result>
+        <result name="modify">/pro/modifyOffice.jsp</result>
         <result  name="modifyPic">/pro/modifypic.jsp</result>
       </action>
    </package>
      <package name="floor" namespace="/floor" extends="proglobal">
-      <action name="*" class="com.estate.business.web.action.pro.FloorAction" method="{1}">
+      <action name="*" class="com.estate.web.action.pro.FloorAction" method="{1}">
         <result name="success">/pro/addfloor.jsp</result>
       </action>
    </package>
 	 <package name="officeneed" namespace="/officeneed" extends="proglobal">
-      <action name="*" class="com.estate.business.web.action.pro.OfficeNeedAction" method="{1}">
+      <action name="*" class="com.estate.web.action.pro.OfficeNeedAction" method="{1}">
         <result name="success">/pro/addbuildrentsuccess.jsp</result>
         <result name="modify">/pro/modifydemand.jsp</result>
         <result name="modifyshopneed">/pro/modifyshopdemand.jsp</result>
@@ -32,7 +32,7 @@
       </action>
    </package>
    <package name="shop" namespace="/shop" extends="proglobal">
-      <action name="*" class="com.estate.business.web.action.pro.ShopAction" method="{1}">
+      <action name="*" class="com.estate.web.action.pro.ShopAction" method="{1}">
         <result name="success">/pro/addbuildrentsuccess.jsp</result>
         <result name="modifyrent">/pro/modifyshoprent.jsp</result>
          <result  name="modifyPic">/pro/shopmodifypic.jsp</result>
@@ -40,7 +40,7 @@
       </action>
    </package>
     <package name="business" namespace="/business" extends="proglobal">
-      <action name="*" class="com.estate.business.web.action.pro.BusinessAction" method="{1}">
+      <action name="*" class="com.estate.web.action.pro.BusinessAction" method="{1}">
         <result name="success">/pro/addbuildrentsuccess.jsp</result>
         <result name="modify">/pro/modifymessage.jsp</result>
          <result  name="modifyPic">/pro/bsmodifypic.jsp</result>
@@ -49,7 +49,7 @@
     <package name="industry" namespace="/industry"
     	extends="proglobal">
     	<action name="*"
-    		class="com.estate.business.web.action.pro.IndustryAction" method="{1}">
+    		class="com.estate.web.action.pro.IndustryAction" method="{1}">
     		<result name="success">/pro/addbuildrentsuccess.jsp</result>
     		<result name="modifyrent">/pro/modifyindustryrent.jsp</result>
     		<result name="modifysale">/pro/modifyindustrysale.jsp</result>
@@ -57,7 +57,7 @@
     	</action>
     </package>
     <package name="largePro" namespace="/largePro" extends="proglobal">
-      <action name="*" class="com.estate.business.web.action.pro.LargeProAction" method="{1}">
+      <action name="*" class="com.estate.web.action.pro.LargeProAction" method="{1}">
         <result name="success">/pro/addbuildrentsuccess.jsp</result>
         <result name="modifyproject">/pro/modifyproject.jsp</result>
          <result  name="modifyPic">/pro/promodifypic.jsp</result>

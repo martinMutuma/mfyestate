@@ -1,4 +1,4 @@
-package com.estate.business.web.action;
+package com.estate.web.action;
 
 import java.util.List;
 
@@ -7,10 +7,10 @@ import net.sf.json.JSONArray;
 import com.estate.base.web.BaseAction;
 import com.estate.business.service.DistrictServiceImpl;
 import com.estate.business.service.IDistrictService;
-import com.estate.business.web.action.DTO.TreeData;
 import com.estate.domain.TsDistrict;
 import com.estate.util.comm.Contants;
 import com.estate.util.comm.RequestUtil;
+import com.estate.web.action.DTO.TreeData;
 
 public class DistrictAction extends BaseAction {
 

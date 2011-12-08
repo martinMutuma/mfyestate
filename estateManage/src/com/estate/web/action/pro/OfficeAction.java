@@ -1,13 +1,12 @@
-package com.estate.business.web.action.pro;
+package com.estate.web.action.pro;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.estate.base.web.BaseAction;
-import com.estate.business.service.pro.LargeProService;
-import com.estate.business.service.pro.LargeProServiceImpl;
-import com.estate.domain.pro.LargePro;
+import com.estate.business.service.pro.OfficeService;
+import com.estate.business.service.pro.OfficeServiceImpl;
 import com.estate.domain.pro.Office;
 import com.estate.util.comm.Contants;
 import com.estate.util.comm.RequestUtil;
@@ -21,9 +20,9 @@ import com.estate.util.comm.StringUtil;
  */
 
 @SuppressWarnings("serial")
-public class LargeProAction extends BaseAction {
-	private LargePro largePro;
-	private LargeProService service;
+public class OfficeAction extends BaseAction {
+	private Office office;
+	private OfficeService service;
 	private int total;
 	@SuppressWarnings("unchecked")
 	private List rows;
@@ -46,8 +45,8 @@ public class LargeProAction extends BaseAction {
 		this.rows = rows;
 	}
 
-	public LargeProAction() {
-		service = new LargeProServiceImpl();
+	public OfficeAction() {
+		service = new OfficeServiceImpl();
 	}
 
 	/**
@@ -119,7 +118,25 @@ public class LargeProAction extends BaseAction {
 //		}
 		return null;
 	}
-	
+	/**
+	 * 通过id查询写字楼信息
+	 * 
+	 * @return
+	 */
+	public String searchById() {
+		String id = RequestUtil.getParam(request, "id", "");
+		String flag = RequestUtil.getParam(request, "flag", "");// 查看 or 修改
+		String type = RequestUtil.getParam(request, "type", "");
+		Office office = service.getOfficeById(id, type);
+		if ("1".equals(office.getFlag()))
+			office.setFlagString("出租");
+		if ("2".equals(office.getFlag()))
+			office.setFlagString("出售");
+		request.setAttribute("office", office);
+		if ("see".equals(flag))
+			return "see";
+		return "modify";
+	}
 	/**
 	 * 得到参数值
 	 * 
@@ -132,24 +149,26 @@ public class LargeProAction extends BaseAction {
 		String auditingState = RequestUtil.getParam(request, "auditingState",
 				"");
 		String tbtype = RequestUtil.getParam(request, "tbtype", "");
+		String tflag = RequestUtil.getParam(request, "tflag", "");
 		String page = RequestUtil.getParam(request, "page", "");
 		String row = RequestUtil.getParam(request, "rows", "");
 
 		map.put("discode", StringUtil.getShortZoneGB1(discode));
 		map.put("auditingState", auditingState);
 		map.put("tbtype", tbtype);
+		map.put("tflag", tflag);
 		map.put("page", page);
 		map.put("row", row);
 
 		return map;
 	}
 
-	public LargePro getLargePro() {
-		return largePro;
+	public Office getOffice() {
+		return office;
 	}
 
-	public void setLargePro(LargePro largePro) {
-		this.largePro = largePro;
+	public void setOffice(Office office) {
+		this.office = office;
 	}
 
 }

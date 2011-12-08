@@ -1,4 +1,4 @@
-package com.estate.business.web.action.pro;
+package com.estate.web.action.pro;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,7 +8,6 @@ import com.estate.base.web.BaseAction;
 import com.estate.business.service.pro.BusinessService;
 import com.estate.business.service.pro.BusinessServiceImpl;
 import com.estate.domain.pro.Business;
-import com.estate.domain.pro.Office;
 import com.estate.util.comm.Contants;
 import com.estate.util.comm.RequestUtil;
 import com.estate.util.comm.StringUtil;

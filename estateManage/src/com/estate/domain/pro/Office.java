@@ -45,15 +45,40 @@ public class Office extends BaseEntity {
 	private String positionX;
 	private String positionY;
 	private int authorId;
-	private String flag; 
+	private String flag;
 	private Date createTime;
 	private String auditingState;
-	@Column(name="reject")
-    private  String   createTimeString;
-	@Column(name="reject")
-    private  String   audtingString;
-	@Column(name="reject")
-	private   String   flagString;
+	@Column(name = "reject")
+	private String createTimeString;
+	@Column(name = "reject")
+	private String audtingString;
+	@Column(name = "reject")
+	private String flagString;
+
+	private String district;
+	private String disname;
+	private String compressUrl;
+	private String attentionNum;
+	private String views;
+	// 新增字段 F.C
+	private String floorCategory;
+	private Integer subFloor;
+	private Integer floor2;
+	private Integer totalFloor;
+	private Double areauseful;
+	private String consYear;
+	private String mright;
+	private String fitment;
+	private String forward;
+	private String cbd;
+	private String rentType;
+	private Date enterDate;
+	private String officeCost;
+	private String baseService;
+	private String equipment;
+	private String traffic;
+	private String payInfo;
+
 	public String getFlagString() {
 		return flagString;
 	}
@@ -332,5 +357,181 @@ public class Office extends BaseEntity {
 
 	public void setFlag(String flag) {
 		this.flag = flag;
+	}
+
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
+	}
+
+	public String getDisname() {
+		return disname;
+	}
+
+	public void setDisname(String disname) {
+		this.disname = disname;
+	}
+
+	public String getCompressUrl() {
+		return compressUrl;
+	}
+
+	public void setCompressUrl(String compressUrl) {
+		this.compressUrl = compressUrl;
+	}
+
+	public String getAttentionNum() {
+		return attentionNum;
+	}
+
+	public void setAttentionNum(String attentionNum) {
+		this.attentionNum = attentionNum;
+	}
+
+	public String getViews() {
+		return views;
+	}
+
+	public void setViews(String views) {
+		this.views = views;
+	}
+
+	public String getFloorCategory() {
+		return floorCategory;
+	}
+
+	public void setFloorCategory(String floorCategory) {
+		this.floorCategory = floorCategory;
+	}
+
+	public Integer getSubFloor() {
+		return subFloor;
+	}
+
+	public void setSubFloor(Integer subFloor) {
+		this.subFloor = subFloor;
+	}
+
+	public Integer getFloor2() {
+		return floor2;
+	}
+
+	public void setFloor2(Integer floor2) {
+		this.floor2 = floor2;
+	}
+
+	public Integer getTotalFloor() {
+		return totalFloor;
+	}
+
+	public void setTotalFloor(Integer totalFloor) {
+		this.totalFloor = totalFloor;
+	}
+
+	public Double getAreauseful() {
+		return areauseful;
+	}
+
+	public void setAreauseful(Double areauseful) {
+		this.areauseful = areauseful;
+	}
+
+	public String getConsYear() {
+		return consYear;
+	}
+
+	public void setConsYear(String consYear) {
+		this.consYear = consYear;
+	}
+
+	public String getMright() {
+		return mright;
+	}
+
+	public void setMright(String mright) {
+		this.mright = mright;
+	}
+
+	public String getFitment() {
+		return fitment;
+	}
+
+	public void setFitment(String fitment) {
+		this.fitment = fitment;
+	}
+
+	public String getForward() {
+		return forward;
+	}
+
+	public void setForward(String forward) {
+		this.forward = forward;
+	}
+
+	public String getCbd() {
+		return cbd;
+	}
+
+	public void setCbd(String cbd) {
+		this.cbd = cbd;
+	}
+
+	public String getRentType() {
+		return rentType;
+	}
+
+	public void setRentType(String rentType) {
+		this.rentType = rentType;
+	}
+
+	public Date getEnterDate() {
+		return enterDate;
+	}
+
+	public void setEnterDate(Date enterDate) {
+		this.enterDate = enterDate;
+	}
+
+	public String getOfficeCost() {
+		return officeCost;
+	}
+
+	public void setOfficeCost(String officeCost) {
+		this.officeCost = officeCost;
+	}
+
+	public String getBaseService() {
+		return baseService;
+	}
+
+	public void setBaseService(String baseService) {
+		this.baseService = baseService;
+	}
+
+	public String getEquipment() {
+		return equipment;
+	}
+
+	public void setEquipment(String equipment) {
+		this.equipment = equipment;
+	}
+
+	public String getTraffic() {
+		return traffic;
+	}
+
+	public void setTraffic(String traffic) {
+		this.traffic = traffic;
+	}
+
+	public String getPayInfo() {
+		return payInfo;
+	}
+
+	public void setPayInfo(String payInfo) {
+		this.payInfo = payInfo;
 	}
 }

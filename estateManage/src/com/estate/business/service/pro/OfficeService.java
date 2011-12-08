@@ -33,4 +33,9 @@ public interface OfficeService {
 	 * 核实写字楼信息
 	 */
 	public boolean auditByIdString(String idString);
+
+		/**
+	 * 根据 id，type（出租/出售）查询 写字楼信息
+	 */
+	public Office getOfficeById(String id, String type);
 }

@@ -1,11 +1,14 @@
 package com.estate.business.service.pro;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import com.estate.base.dao.BaseDao;
 import com.estate.base.dao.IBaseDao;
 import com.estate.domain.pro.Office;
+import com.estate.util.comm.DateTimeUtil;
+import com.estate.util.comm.StringUtil;
 
 public class OfficeServiceImpl implements  OfficeService{
      private IBaseDao<Office, Long> dao;
@@ -25,13 +28,25 @@ public class OfficeServiceImpl implements  OfficeService{
     				 sql+=" and p.auditingState = '"+map.get("auditingState")+ "'";
     			 if(!"".equals(map.get("tbtype"))) 
     				 sql+=" and m.type=  '"+map.get("tbtype")+ "'";
+    			 if(!"".equals(map.get("tflag")))
+    				 sql+=" and m.flag=  '"+map.get("tflag")+ "'";
     			 sql+=" order by createTime desc";
 			 if(start!=null && limt!=null) {
 	    	    	 int snum=Integer.parseInt(start)-1;
 	    	    	 sql+="   limit  "+(snum*Integer.parseInt(limt))+ " ,"+ limt+" ";}
 			 List<Office>  list=dao.findList(sql);
-			 return list;
-			
+			 List<Office> newlist = null;
+			 if (list != null && list.size() > 0) {
+					newlist = new ArrayList<Office>();
+					for (Office office : list) {
+						office.setCreateTimeString(DateTimeUtil.switchDateToString(
+								office.getCreateTime(), "yyyy-MM-dd"));
+							office.setAudtingString(StringUtil.formatAuditingState(office.getAuditingState()));
+						newlist.add(office);
+					}
+
+				}
+			 return newlist;
 		} catch (Exception e) {
 			  e.printStackTrace();
 		}
@@ -96,4 +111,19 @@ public class OfficeServiceImpl implements  OfficeService{
    		}
    		return isFlag;
    	}
+	
+	public Office getOfficeById(String id, String type) {
+		if ("".equals(id))
+			return null;
+		String sql = "select * from t_p_office where id=? and  flag=? ";
+		try {
+			List<Office> list = dao.findList(sql, new Object[] { id, type });
+			if (null != list && list.size() > 0) {
+				return list.get(0);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }
