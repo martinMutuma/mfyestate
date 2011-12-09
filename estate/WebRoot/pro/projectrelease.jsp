@@ -74,7 +74,7 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 											</tr>
 											<tr>
 												<td align="right">
-														交易方式:
+													<font color="red">*</font>	交易方式:
 												</td>
 												<td>
 														<select name="largePro.flag" onchange="selectNeedFlag(this.value)">
@@ -92,7 +92,7 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 											</tr>
 											<tr>
 												<td align="right">
-														<span id="moneyFlag">租金</span>:
+													<font color="red">*</font>	<span id="moneyFlag">租金</span>:
 												</td>
 												<td>
 														<input type="text" size="8" onKeyUp="isNum(this)" maxlength="5"
@@ -106,7 +106,7 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 												</td>
 												<td align="left">
 													<input id="area"
-														name="largePro.area" maxlength="5" style="width: 60px" onKeyUp="isNum(this)" value="${largePro.area }"  class="easyui-validatebox" required="true" missingMessage="建筑面积必填"/> 平方米
+														name="largePro.area" maxlength="5" style="width: 60px" onKeyUp="isNum(this)" value="${largePro.area }"  class="easyui-validatebox" required="true" missingMessage="建筑面积必填"/> 万平米
 												</td>
 											</tr>
 											<tr>
@@ -115,7 +115,7 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 												</td>
 												<td align="left">
 													<input id="areauseful"
-														name="largePro.areauseful" maxlength="5" style="width: 60px" onKeyUp="isNum(this)" value="${largePro.areauseful }"  class="easyui-validatebox" required="true" missingMessage="使用面积必填"/> 平方米
+														name="largePro.areauseful" maxlength="5" style="width: 60px" onKeyUp="isNum(this)" value="${largePro.areauseful }"  class="easyui-validatebox" required="true" missingMessage="使用面积必填"/> 万平米
 												</td>
 											</tr>
 											<tr>
