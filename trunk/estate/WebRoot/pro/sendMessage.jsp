@@ -96,14 +96,10 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 											    <td colspan="4" >
 											    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 														<input type="radio" name="business.category" value="5">
-												 其他服务业（包括宾馆酒店、文化教育、洗衣清洁、维修配件、宠物、房产中介、电脑复印、旅行社、人才中介、法律服务、养老院、摄影店、会计服务）
+												 其他服务业（包括宾馆酒店、文化教育、洗衣清洁、维修配件、宠物、房产中介、打字复印、旅行社、人才中介、法律服务、养老院、摄影店、会计服务）
 												 </td>
 											</tr>
-											<tr>
-												<th colspan="4" align="center">
-														&nbsp;
-												</th>
-											</tr>
+										
 											<tr>
 												<td  align="right">
 														<font color="red">*</font>地  区:
@@ -256,7 +252,7 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 														已经营年限:
 												</td>
 												<td>
-														<input type="text" name="business.businessYear"
+														<input type="text" maxlength="2"  name="business.businessYear"
 															onKeyUp="this.value=this.value.replace(/\D/g,'')"
 															size="8" id="businessYear">
 														月

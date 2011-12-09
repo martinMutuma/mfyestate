@@ -98,7 +98,7 @@ function checkImage(obj) {
 		return false;
 }
 function checkpro() {
-      var  district=$("#district");
+      var  district=$("#districtShow");
 	 if(district.combotree('getValue').trim().length==0){
          alert("请选择所在省区市");
         district.focus();
