@@ -171,8 +171,7 @@ function Ondelete(id) {
 	}
 }
 function  seeShow(id){
-    go("../building/toBuidingInfo.shtml?id="+id)
-    
+    　window.open ("../building/toBuidingInfo.shtml?id="+id);  
 }
 function Onmodify(id) {
 	if (id == "undefined") {
