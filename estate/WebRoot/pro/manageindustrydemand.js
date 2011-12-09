@@ -34,16 +34,16 @@ $(function() {
 				}, {
 					field : 'opt',
 					title : '操作',
-					width : 100,
+					width:100,
 					align : 'center',
 					rowspan : 2,
 					formatter : function(value, rec) {
 						if (rec.id == undefined)
 							return null;
 						else
-							return '<span style="color:red"><span onclick=Onmodify("'
+							return '<span style="cursor:pointer;color:blue;"><span style="cursor:pointer;color:blue;" onclick=Onmodify("'
 									+ rec.id
-									+ '")>修改</span> <span onclick=Ondelete("'
+									+ '")>修改</span> <span style="cursor:pointer;color:blue;"  onclick=Ondelete("'
 									+ rec.id + '")>删除</span></span>';
 					}
 				}], [{
@@ -54,14 +54,14 @@ $(function() {
 				}, {
 					field : 'flagString',
 					title : '租售',
-					width : 120,
+					width : 80,
 					rowspan : 2,
 					sortable : true
 
 				}, {
 					field : 'disname',
 					title : '所属区域',
-					width : 150,
+					width : 80,
 					rowspan : 2
 				}, {
 					field : 'priceString',
@@ -69,14 +69,25 @@ $(function() {
 					width : 100,
 					rowspan : 2
 				}, {
-					field : 'audtingString',
+					field : 'auditing',
 					title : '审核状态',
 					width : 100,
-					rowspan : 2
+					rowspan : 2,
+					formatter : function(value, rec) {
+						   if(value=='0')return '未审核';
+						   if(value=='1')return '审核成功';
+						   if(value=='2')return '审核失败';
+						   if(value=='3')return '审核驳回';
+						   if(value=='4')return '申请成交';
+						   if(value=='5')return '成交通过';
+						   if(value=='6')return '成交失败';
+						  if(value=='7')return '成交驳回';
+						
+					}
 				}, {
 					field : 'createTimeString',
 					title : '发布时间',
-					width : 100,
+					width : 80,
 					rowspan : 2
 				}
 
@@ -127,7 +138,7 @@ $(function() {
 										var obj = eval('(' + msg + ')');
 										var result = obj[0]["message"];
 										alert(result);
-										window.location.reload();
+										$('#grid').datagrid("reload");
 
 									}
 								});
@@ -162,7 +173,7 @@ function Ondelete(id) {
 						var obj = eval('(' + msg + ')');
 						var result = obj[0]["message"];
 						alert(result);
-						window.location.reload();
+						$('#grid').datagrid("reload");
 
 					}
 				});
