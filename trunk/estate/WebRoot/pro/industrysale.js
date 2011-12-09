@@ -433,6 +433,7 @@ function checksale() {
 		return true;
 	return false;
 };
-$(function (){
+$(document).ready(function()
+{
   load();
 });
