@@ -114,8 +114,8 @@ public class TpSecondBulidingAction extends BaseAction {
 							+ "/" + imageName, 135, 95, 1.0f, true);
 					FileUtil.doUpFile(basePath + sourceFloder
 							+ "/" + imageName, tpsImage);
-					tps.setSourceUrl(sourceFloder  + imageName);
-					tps.setCompressUrl(imageFloder  + imageName);
+					tps.setSourceUrl(sourceFloder  +"/"+ imageName);
+					tps.setCompressUrl(imageFloder  +"/"+ imageName);
 				}
 				tps.setAuthorId(baseinfo.getId());
 				if(null==tps.getFlag()||"".equals(tps.getFlag()))
@@ -162,8 +162,8 @@ public class TpSecondBulidingAction extends BaseAction {
 							+ "/" + imageName, 135, 95, 1.0f, true);
 					FileUtil.doUpFile(basePath + sourceFloder
 							+ "/" + imageName, tpsImage);
-					tps.setSourceUrl(sourceFloder + imageName);
-					tps.setCompressUrl(imageFloder  + imageName);
+					tps.setSourceUrl(sourceFloder +"/" +imageName);
+					tps.setCompressUrl(imageFloder  +"/"+ imageName);
 				}
 				if(tps.getAuditingState()==null || "".equals(tps.getAuditingState())){
 					tps.setAuditingState("0");
