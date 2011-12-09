@@ -116,7 +116,7 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 											</tr>
 											<tr>
 												<td align="right">
-													<font color="red">*</font>	面积:
+													<font color="red">*</font>	建筑面积:
 												</td>
 												<td>
 														<input type="text" size="8" name="need.minArea"
