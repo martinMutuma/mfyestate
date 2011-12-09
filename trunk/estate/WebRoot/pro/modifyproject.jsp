@@ -64,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											</tr>
 											<tr>
 												<td align="right">
-														交易方式:
+													<font color="red">*</font>	交易方式:
 												</td>
 												<td>
 														<select onchange="selectNeedFlag(this.value)" >
@@ -82,7 +82,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											</tr>
 											<tr>
 												<td align="right">
-														<span id="moneyFlag"><c:if test='${largePro.flag eq "1"}'>租    金</c:if><c:if test='${largePro.flag eq "2"}'>售    价</c:if></span>:
+													<font color="red">*</font>	<span id="moneyFlag"><c:if test='${largePro.flag eq "1"}'>租    金</c:if><c:if test='${largePro.flag eq "2"}'>售    价</c:if></span>:
 												</td>
 												<td>
 														<input type="text" style="width: 80px" maxlength="5" onKeyUp="isNum(this)" value="${largePro.price }"
@@ -96,7 +96,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td align="left">
 													<input id="area"
-														name="largePro.area" maxlength="5" style="width: 80px" onKeyUp="isNum(this)" value="${largePro.area }"  class="easyui-validatebox" required="true" missingMessage="建筑面积必填"/> 元/㎡·月
+														name="largePro.area" maxlength="5" style="width: 80px" onKeyUp="isNum(this)" value="${largePro.area }"  class="easyui-validatebox" required="true" missingMessage="建筑面积必填"/> 万平米
 												</td>
 											</tr>
 											<tr>
@@ -105,7 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td align="left">
 													<input id="areauseful"
-														name="largePro.areauseful" maxlength="5" style="width: 80px" onKeyUp="isNum(this)" value="${largePro.areauseful }"  class="easyui-validatebox" required="true" missingMessage="使用面积必填"/> 元/㎡·月
+														name="largePro.areauseful" maxlength="5" style="width: 80px" onKeyUp="isNum(this)" value="${largePro.areauseful }"  class="easyui-validatebox" required="true" missingMessage="使用面积必填"/>万平米
 												</td>
 											</tr>
 											<tr>
