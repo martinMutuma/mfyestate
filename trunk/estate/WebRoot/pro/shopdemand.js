@@ -112,17 +112,17 @@ function checkneed() {
     var consYearStart = document.getElementById("consYearStart");
 	var consYearEnd = document.getElementById("consYearEnd");
 	if (!checkNull(consYearStart)) {
-		alert("请填写建筑年份");
+		alert("请填写建筑年代");
 		consYearStart.focus();
 		return false;
 	}
 	if (!checkNull(consYearEnd)) {
-		alert("请填写建筑年份");
+		alert("请填写建筑年代");
 		consYearEnd.focus();
 		return false;
 	}
 	if (parseInt(consYearStart.value,10) >= parseInt(consYearEnd.value,10)){
-		alert("建筑年份最小值应小于最大值");
+		alert("建筑年代最小值应小于最大值");
 		return false;
 	}
 	var minArea = document.getElementById("minArea");
