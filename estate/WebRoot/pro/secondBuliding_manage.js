@@ -246,5 +246,5 @@ function Onmodify(id) {
 	window.location.href = "../secondBd/toUpdate.shtml?tpsId=" + id;
 }
 function seeBulid(id){
-	window.location.href = "../secondBd/showBuliding.shtml?tpsId=" + id+"&menuIndex=3";
+	　window.open ("../secondBd/showBuliding.shtml?tpsId=" + id+"&menuIndex=3");
 }

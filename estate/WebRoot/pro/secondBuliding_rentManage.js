@@ -247,5 +247,5 @@ function Onmodify(id) {
 	window.location.href = "../secondBd/toUpdateRent.shtml?tpsId=" + id;
 }
 function seeBulid(id){
-	window.location.href = "../secondBd/showBuliding.shtml?tpsId=" + id+"&menuIndex=4";
+	window.open ("../secondBd/showBuliding.shtml?tpsId=" + id+"&menuIndex=4");
 }
