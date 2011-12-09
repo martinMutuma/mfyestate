@@ -46,7 +46,7 @@
 									<form name="form" method="post"
 										action="../business/addBusiness.shtml" enctype="multipart/form-data"
 										onsubmit="return checksendMessage()">
-							<div class="position" align="left" style="width:80%"><label>您所在的位置：</label><a href="../home.shtml">梦房园</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="../mem/baseinfo_mainPage.shtml">会员中心</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="../pro/manageMessage.jsp?menuCls=13">生意转正管理</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;转让信息修改</div>
+							<div class="position" align="left" style="width:80%"><label>您所在的位置：</label><a href="../home.shtml">梦房园</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="../mem/baseinfo_mainPage.shtml">会员中心</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="../pro/manageMessage.jsp?menuCls=13">生意转让管理</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;转让信息修改</div>
 			                    <div class="info_top"></div>
 			                    <div class="info_mid">					
 										<table width="710px;" id="modifymessage" border="0" cellpadding="1" cellspacing="1">
@@ -106,13 +106,8 @@
 											    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 													<input type="radio" name="business.category"
 															${business.category eq 5?'checked' :''}   value="5">
-														 其他服务业（包括宾馆酒店、文化教育、洗衣清洁、维修配件、宠物、房产中介、电脑复印、旅行社、人才中介、   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;法律服务、养老院、摄影店、会计服务）
+														 其他服务业（包括宾馆酒店、文化教育、洗衣清洁、维修配件、宠物、房产中介、打字复印、旅行社、人才中介、法律服务、养老院、摄影店、会计服务）
 												 </td>
-											</tr>
-											<tr>
-												<th colspan="4" align="center">
-														&nbsp;
-												</th>
 											</tr>
 											<tr>
 												<td  align="right">
