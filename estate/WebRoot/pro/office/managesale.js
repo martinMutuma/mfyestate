@@ -81,7 +81,7 @@ $(function() {
 					rowspan : 2
 				}, {
 					field : 'area',
-					title : '建筑面积(平方米)',
+					title : '建筑面积(㎡)',
 					width : 75,
 					align : 'center',
 					rowspan : 2
