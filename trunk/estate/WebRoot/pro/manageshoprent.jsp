@@ -228,7 +228,7 @@ td {
 															<option value="20">
 																20
 															</option>
-														</select>&nbsp;元/㎡/天
+														</select>&nbsp;元/㎡.天
 														<img src="../resource/images/searchline.gif" align="middle"/>
 														<a id="searchid" href="javascript:onSearch()">查询</a>
 														<img src="../resource/images/searchline.gif" align="middle"/>
