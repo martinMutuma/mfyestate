@@ -68,6 +68,7 @@ public class OfficeNeedAction extends BaseAction {
 		if ("".equals(id)){
 			TmBaseinfo td=(TmBaseinfo)RequestUtil.getLoginUserFromSession(request,"");
 			need.setAuthorId(td.getId().intValue());
+			need.setAuditing("0");
 			need.setNum(bsservice.getNum(StringUtil.getShortZoneGB(need.getDistrict()),need.getNeedType()+"3", "t_p_officeneed"));
 		}
 		need.setCreateTime(new Date());
