@@ -122,15 +122,32 @@ $(function() {
 		toolbar : [{
 					id : 'btnadd',
 					text : '添加团购',
-					iconCls : 'icon-add',
+					iconCls : 'icon-save',
 					handler : function() {
 						addTab('团购设置','../buliding/buliding_manage.jsp','add');
+					}
+				},'-',{
+					id : 'btnadd',
+					text : '参团成员信息查看',
+					iconCls : 'icon-add',
+					handler : function() {
+					var records = $('#rentgrid').datagrid("getSelections");
+						var ids = '';
+						if (null == records || records == "") {
+							alert('请选择要查看的记录');
+							return;
+						}
+						if(records.length>1){
+							alert('只能逐条查看');
+							return;
+						}
+						addTab('成员信息查看','../buliding/specials_member.jsp?pid='+records[0].id+'&pflag='+records[0].flag,'add');
 					}
 				}]
 	}
 	);
 });
-
+//参团成员信息查看
 function onSearch() {
 	var queryParams = $('#rentgrid').datagrid("options").queryParams;
 	queryParams.name = $("#name").val();

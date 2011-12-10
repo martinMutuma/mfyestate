@@ -10,7 +10,11 @@ $(function() {
 			});
 	 $("#tbtype").combobox({
 				width :100,
-				panelHeight : 160
+				panelHeight : 200
+			});
+	 $("#tflag").combobox({
+				width :100,
+				panelHeight : 80
 			});
 	$("#searchid").linkbutton({
 				text : '查询',
@@ -34,7 +38,7 @@ $(function() {
 				}]],
 		columns : [[{
 					title : '基本信息',
-					colspan : 6
+					colspan : 7
 				}, {
 					field : 'opt',
 					title : '操作',
@@ -44,14 +48,11 @@ $(function() {
 					formatter : function(value, rec) {
 						if (rec.id == undefined)
 							return null;
-						else if(rec.auditingState=='0'||rec.auditingState=='3')
+						else 
 							return '<span style="color:red"><span onclick=onAudit("'
-									+ rec.id
+									+ rec.id+'","'+rec.flag
 									+ '")><font style="cursor:pointer">审核</font></span> <span onclick=onDelete("'
 									+ rec.id + '")><font style="cursor:pointer">删除</font></span></span>';
-						else 
-							return '<span style="color:red"><span onclick=onDelete("'
-										+ rec.id + '")><font style="cursor:pointer">删除</font></span></span>';
 					}
 				}], [{
 					field : 'title',
@@ -70,6 +71,12 @@ $(function() {
 						  return  value;
 					}
 				}, {
+					field : 'disname',
+					title : '地区',
+					width : 80,
+					align : 'center',
+					rowspan : 2
+				},  {
 					field : 'price',
 					title : '租金(元/平方米·天)',
 					width : 120,
@@ -84,22 +91,13 @@ $(function() {
 				}, {
 					field : 'createTimeString',
 					title : '发布时间',
-					width : 160,
+					width : 100,
 					align : 'center',
 					rowspan : 2
 				}, {
-					field : 'auditingState',
+					field : 'audtingString',
 					title : '状态',
 					align : 'center',
-					formatter:function(value,rec){
-						  if (value=='0')return '未审核';
-						  if (value=='1')return '已审核';
-						  if (value=='3')return '审核驳回';
-						  if (value=='4')return '申请成交';
-						  if (value=='5')return '成交通过';
-						  if (value=='7')return '成交驳回';
-						  return "";
-					},
 					width : 100,
 					rowspan : 2
 				}
@@ -108,18 +106,23 @@ $(function() {
 		rownumbers : true,
 		queryParams : {
 			discode:'0000000000',
-			auditingState : '',
-			tbtype : ''
+			auditingState : '0',
+			tbtype : '',
+			tflag : ''
 		} ,
-		toolbar : [{
+		toolbar : [
+		/*{
 				id : 'btnadd',
 				text : '审核信息',
 				iconCls : 'icon-add',
 				handler : function() {
 				var records = $('#rentgrid').datagrid("getSelections");
-				var ids = '';
 				if (null == records || records == "") {
 					alert('请选择要核实的记录');
+					return;
+				}
+				if (records.length>1) {
+					alert('只能逐条审核');
 					return;
 				}
 				for (var i = 0; i < records.length; i++) {
@@ -127,15 +130,13 @@ $(function() {
 						alert('此条记录已不存在');
 						return;
 					}
-					ids += records[i].id;
-					ids += '_';
 				}
 				$.messager.confirm('审核记录', '请确认要审核记录吗?', function(btn) {
 					if (btn) {
-						var url1 = "../office/auditPro.shtml";
+						var url1 = "../office/searchById.shtml";
 						$.ajax({
 							url : url1,
-							data : "idString=" + ids,
+							data : "type="+records[0].flag+"&id=" + records[0].id,
 							success : function(msg) {
 								//var obj = eval('(' + msg + ')');
 								//var result = obj[0]["message"];
@@ -146,7 +147,7 @@ $(function() {
 					}
 				})
 			}
-		}, '-', {
+		}, '-',*/ {
 			id : 'btnsave',
 			text : '删除信息',
 			iconCls : 'icon-save',
@@ -184,17 +185,17 @@ $(function() {
 	}
 	);
 });
-
 function onSearch() {
     var discode= $("#discode").combotree("getValue");
     if(discode=='全  国')discode='0000000000';
     var auditingState= $("#auditingState").combobox("getValue");
     var tbtype= $("#tbtype").combobox("getValue");
+    var tflag= $("#tflag").combobox("getValue");
 	var queryParams = $('#rentgrid').datagrid("options").queryParams;
 	queryParams.discode = discode;
 	queryParams.auditingState = auditingState;
 	queryParams.tbtype = tbtype;
-	
+	queryParams.tflag = tflag;
 	$('#rentgrid').datagrid("reload");
 }
 
@@ -219,23 +220,10 @@ function onDelete(id) {
 		}})
 }
 
-function onAudit(id) {
+function onAudit(id,type) {
 	if (id == "undefined") {
 		alert("此条记录已删除");
 		return;
 	}
-	$.messager.confirm('审核记录', '请确认要审核记录吗?', function(btn) {
-	if (btn) {
-		var url1 = "../office/auditPro.shtml";
-		$.ajax({
-			url : url1,
-			data : "idString=" + id,
-			success : function(msg) {
-			//	var obj = eval('(' + msg + ')');
-			//	var result = obj[0]["message"];
-			//	alert(result);
-				window.location.reload();
-			}
-		});
-		}})
+	window.location.href = "../office/searchById.shtml?type="+type+"&id=" + id
 }

@@ -96,200 +96,20 @@ function checkImage(obj){
 		return  false;
 }
 
-function   checkrent(){
-     var  name=  document.getElementById("name");
-     if( checkNull(name)){
-          alert('请填写楼盘名称');
-          name.focus();
+function checkrent(){
+     var auditingState = document.getElementById("auditingState");
+     if(checkNull(auditingState)){
+          alert('请选择核实状态');
+          auditingState.focus();
           return false;
      }
-     var  address=  document.getElementById("address");
-     if( checkNull(address)){
-          alert('请填写楼盘地址');
-          address.focus();
+     var auditingRemark = document.getElementById("auditingRemark");
+     if(auditingState.value!=0 && auditingState.value!=1 && auditingState.value!=4 && auditingState.value!=5 && checkNull(auditingRemark)){
+      	  alert('请填写审核意见');
+          auditingState.focus();
           return false;
      }
-     var  district=  document.getElementById("district");
-     if( checkNull(district)){
-          alert('请选择所属区域');
-          $("#districtShow").focus();
-          return false;
-     }
-     var  area=  document.getElementById("area");
-     if( checkNull(area)){
-          alert('请填写建筑面积');
-          area.focus();
-          return false;
-     }
-     if( !isUnsignedNumeric(area)){
-     	   alert('建筑面积应为正实数');
-           area.focus();
-           return false;
-     }
-     var  areauseful =  document.getElementById("areauseful");
-     if( checkNull(areauseful)){
-          alert('请填写使用面积');
-          areauseful.focus();
-          return false;
-     }
-     if( !isUnsignedNumeric(areauseful)){
-     	   alert('使用面积应为正实数');
-           area.focus();
-           return false;
-     }
-     var officeFlag = $("#officeFlag").val();
-     if(officeFlag == "1"){
-     var  rentType =  document.getElementById("rentType");
-     if( checkNull(rentType)){
-          alert('请选择租赁方式');
-          rentType.focus();
-          return false;
-     }
-     }
-     var  price=document.getElementById("price");
-     if( checkNull(price)){
-     	if(officeFlag == "1"){
-          alert('请填写租金单价');
-         }else{
-         	alert('请填写售价');
-         }
-          price.focus();
-          return false;
-     }
-     if( !isUnsignedNumeric(price)){
-     if(officeFlag == "1"){
-          alert('写字楼租金单价应为正实数');
-         }else{
-         	alert('写字楼售价应为正实数');
-         }
-           price.focus();
-           return false;
-     }
-     var  propertyManagement=document.getElementById("propertyManagement");
-     if( checkNull(propertyManagement)){
-          alert('请填写物业管理费');
-          propertyManagement.focus();
-          return false;
-     }
-     if( !isUnsignedNumeric(propertyManagement)){
-     	   alert('物业管理费应为正实数');
-           propertyManagement.focus();
-           return false;
-     }
-     var  floorType=document.getElementById("floorType");
-     if( checkNull(floorType)){
-          alert('请选择楼层类型');
-          floorType.focus();
-          return false;
-     }
-     var floorCategoryS = document.getElementById("floorCategoryS");
-     if(floorCategoryS.checked){
-     	var subFloorS = document.getElementById("subFloorS");
-     	if( checkNull(subFloorS)){
-          alert('请填写具体楼层');
-          subFloorS.focus();
-          return false;
-     	}
-     	var totalFloorS = document.getElementById("totalFloorS");
-     	if( checkNull(totalFloorS)){
-          alert('请填写具体楼层');
-          totalFloorS.focus();
-          return false;
-     	}
-     }else{
-     	var subFloor_fs = document.getElementById("subFloor_fs");
-     	if( checkNull(subFloor_fs)){
-          alert('请填写具体楼层');
-          subFloor_fs.focus();
-          return false;
-     	}
-     	var floor2_fs = document.getElementById("floor2_fs");
-     	if( checkNull(floor2_fs)){
-          alert('请填写具体楼层');
-          floor2_fs.focus();
-          return false;
-     	}
-     	var totalFloor_fs = document.getElementById("totalFloor_fs");
-     	if( checkNull(totalFloor_fs)){
-          alert('请填写具体楼层');
-          totalFloor_fs.focus();
-          return false;
-     	}
-     }
-     var  mright=document.getElementById("mright");
-     if( checkNull(mright)){
-          alert('请选择权属');
-          mright.focus();
-          return false;
-     }
-     var  fitment=document.getElementsByName("office.fitment");
-     var fitmentIndex = 0;
-     for(var i = 0; i < fitment.length; i++){
-     	if(fitment[i].checked)
-     		break;
-     	fitmentIndex ++;
-     }
-     if(fitmentIndex == fitment.length){
-     	alert("请选择装修情况");
-     	return false;
-     }
-     var  forward=document.getElementById("forward");
-     if( checkNull(forward)){
-          alert('请选择朝向');
-          forward.focus();
-          return false;
-     }
-     if(officeFlag == "2"){
-     	 var  cbd=document.getElementById("cbd");
-	     if( checkNull(cbd)){
-	          alert('请填写所属商圈');
-	          cbd.focus();
-	          return false;
-	     }
-     }
-     var  title=document.getElementById("title");
-     if(checkNull(title)){
-     	   alert('请填写写字楼案源标题');
-           title.focus();
-           return false;
-     }
-     if (!KE.util.isEmpty('content')) document.getElementById("content").value=KE.util.getData('content');
-     var content = document.getElementById("content");
-     if(content.length>1000){
-     	alert("案源描述字数不能超过1000个汉字");
-     }
-     var  img1=document.getElementById("img1");
-     if(!checkNull(img1)&&!checkImage(img1)){
-   	  alert('第一行图片上传格式不正确，应为 gif、png、jpg、jpeg、ico格式');
-   	  img1.focus();
-   	  return false;
-     }
-     var img2=document.getElementById("img2");
-     if(!checkNull(img2)&&!checkImage(img2)){
-   	  	alert('第二行图片上传格式不正确，应为 gif、png、jpg、jpeg、ico格式');
-   	   	img2.focus();
-   	  	return false;
-     }
-     var img3=document.getElementById("img3");
-     if(!checkNull(img3)&&!checkImage(img3)){
-   	  	alert('第三行图片上传格式不正确，应为 gif、png、jpg、jpeg、ico格式');
-   	   	img3.focus();
-   	  	return false;
-     }
-     var img4=document.getElementById("img4");
-     if(!checkNull(img4)&&!checkImage(img4)){
-  	   alert('第四行图片上传格式不正确，应为 gif、png、jpg、jpeg、ico格式');
-  	   img4.focus();
-  	   return false;
-     }
-     var  img5=document.getElementById("img5");
-       if(!checkNull(img5)&&!checkImage(img5)){
-     	  alert('第五行图片上传格式不正确，应为 gif、png、jpg、jpeg、ico格式');
-     	   img5.focus();
-     	  return false;
-         }
-       if(confirm("确认发布写字楼出租信息吗?"))return true;
-       return false;
+     return true;
  }
  
 function addFloor(){
@@ -309,6 +129,21 @@ function setvalue(data){
     $("#discode").val(data.district);
     $("#disname").val(data.disname);
 }
- 
+
+function auditingFailed(){
+	alert("审核失败");
+	window.location.href = basePath+'images/baseinfo_toManageRent.shtml';
+}
+
+function notLogged(){
+   alert("没有登录");
+   parent.window.location.href = basePath;
+}
+
+function auditingSuccess(){
+	alert("审核成功");
+	window.location.href = basePath+'images/baseinfo_toManageRent.shtml';
+}
+
  
   

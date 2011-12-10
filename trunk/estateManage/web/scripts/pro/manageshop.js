@@ -10,7 +10,11 @@ $(function() {
 			});
 	 $("#tbtype").combobox({
 				width :100,
-				panelHeight : 160
+				panelHeight : 200
+			});
+	 $("#tflag").combobox({
+				width :100,
+				panelHeight : 80
 			});
 	$("#searchid").linkbutton({
 				text : '查询',
@@ -34,7 +38,7 @@ $(function() {
 				}]],
 		columns : [[{
 					title : '基本信息',
-					colspan : 6
+					colspan : 7
 				}, {
 					field : 'opt',
 					title : '操作',
@@ -44,33 +48,36 @@ $(function() {
 					formatter : function(value, rec) {
 						if (rec.id == undefined)
 							return null;
-						else if(rec.auditingState=='0'||rec.auditingState=='3')
+						else
 							return '<span style="color:red"><span onclick=onAudit("'
-									+ rec.id
+									+ rec.id+'","'+rec.flag
 									+ '")><font style="cursor:pointer">审核</font></span> <span onclick=onDelete("'
 									+ rec.id + '")><font style="cursor:pointer">删除</font></span></span>';
-						else 
-							return '<span style="color:red"><span onclick=onDelete("'
-										+ rec.id + '")><font style="cursor:pointer">删除</font></span></span>';
 					}
 				}], [{
 					field : 'title',
 					title : '案源名称',
 					mapping : 'title',
 					align : 'center',
-					width : 160
+					width : 180
 				}, {
 					field : 'name',
 					title : '所属物业',
-					width : 160,
+					width : 180,
 					rowspan : 2,
 					align : 'center',
 					sortable : true,
 					formatter:function(value,rec){
 						  return  value;
 					}
-				}, {
-					field : 'price',
+				},  {
+					field : 'disname',
+					title : '地区',
+					width : 80,
+					align : 'center',
+					rowspan : 2
+				},  {
+					field : 'bursary',
 					title : '租金(元/平方米·天)',
 					width : 120,
 					align : 'center',
@@ -84,23 +91,14 @@ $(function() {
 				}, {
 					field : 'createTimeString',
 					title : '发布时间',
-					width : 160,
+					width : 100,
 					align : 'center',
 					rowspan : 2
-				}, {
-					field : 'auditingState',
+				},{
+					field : 'audtingString',
 					title : '状态',
 					align : 'center',
-					formatter:function(value,rec){
-						  if (value=='0')return '未审核';
-						  if (value=='1')return '已审核';
-						  if (value=='3')return '审核驳回';
-						  if (value=='4')return '申请成交';
-						  if (value=='5')return '成交通过';
-						  if (value=='7')return '成交驳回';
-						  return "";
-					},
-					width : 100,
+					width : 80,
 					rowspan : 2
 				}
 		]],
@@ -108,10 +106,11 @@ $(function() {
 		rownumbers : true,
 		queryParams : {
 			discode:'0000000000',
-			auditingState : '',
-			tbtype : ''
+			auditingState : '0',
+			tbtype : '',
+			tflag : ''
 		} ,
-		toolbar : [{
+		toolbar : [/*{
 				id : 'btnadd',
 				text : '审核信息',
 				iconCls : 'icon-add',
@@ -146,7 +145,7 @@ $(function() {
 					}
 				})
 			}
-		}, '-', {
+		}, '-',*/ {
 			id : 'btnsave',
 			text : '删除信息',
 			iconCls : 'icon-save',
@@ -219,23 +218,10 @@ function onDelete(id) {
 		}})
 }
 
-function onAudit(id) {
-	if (id == "undefined") {
+function onAudit(id,type) {
+if (id == "undefined") {
 		alert("此条记录已删除");
 		return;
 	}
-	$.messager.confirm('审核记录', '请确认要审核记录吗?', function(btn) {
-	if (btn) {
-		var url1 = "../shop/auditPro.shtml";
-		$.ajax({
-			url : url1,
-			data : "idString=" + id,
-			success : function(msg) {
-			//	var obj = eval('(' + msg + ')');
-			//	var result = obj[0]["message"];
-			//	alert(result);
-				window.location.reload();
-			}
-		});
-		}})
+	window.location.href = "../shop/searchById.shtml?type="+type+"&id=" + id
 }

@@ -16,11 +16,10 @@
 	<meta http-equiv="description" content="This is my page">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/jqueryui/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/jqueryui/icon.css">
-	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/jqueryui/icon.css">
 	<script type="text/javascript" src="<%=basePath%>scripts/jquery-1.4.2.js"></script>
 	<script type="text/javascript" src="<%=basePath%>scripts/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="<%=basePath%>scripts/easyui-lang-zh_CN.js"></script>
-	<script type="text/javascript" src="../scripts/pro/managerent.js"></script>
+	<script type="text/javascript" src="../scripts/pro/manageOffice.js"></script>
 	<style type="text/css">
 		<!--
 		td {
@@ -38,8 +37,8 @@
 						地区：<input id="discode" name="discode" value="全  国"  style="width: 150px;"/>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;案源状态：
 						<select name="auditingState" id="auditingState">
-							<option value=""selected> 全部 </option>
-							<option value="0"> 未审核 </option>
+							<option value=""> 全部 </option>
+							<option value="0" selected> 未审核 </option>
 							<option value="1"> 已审核 </option>
 							<option value="4"> 申请成交 </option>
 							<option value="3"> 审核驳回 </option>
@@ -60,6 +59,12 @@
 							<option value="9" >研究机构</option>
 							<option value="10" >连锁企业</option>
 							<option value="11" >其他</option>
+				        </select>
+				        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;租售类别：
+				        <select name="tb.flag" id="tflag"  style="width: 120px">
+				        	<option value=""selected> 全部 </option>
+				            <option value="1" >出租</option>
+				            <option value="2" >出售</option>
 				        </select>
 				        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<a id="searchid" href="javascript:onSearch()">查询</a>
