@@ -196,8 +196,9 @@ searchPanelÑùÊ½
 	margin-left: 5px;
 	text-align: center;
 	color:#3366CC;
+	border: 1px solid #FFFFFF;
 }
-
+.search_column input{float: left;}
 .search_column_span span{
 	display:-moz-inline-box;display:inline-block;
 	height: 25px;
