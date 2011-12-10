@@ -34,7 +34,7 @@
    <package name="shop" namespace="/shop" extends="proglobal">
       <action name="*" class="com.estate.web.action.pro.ShopAction" method="{1}">
         <result name="success">/pro/addbuildrentsuccess.jsp</result>
-        <result name="modifyrent">/WEB-INF//pro/modifyshoprent.jsp</result>
+        <result name="modifyrent">/WEB-INF//pro/modifyshop.jsp</result>
         <result  name="modifyPic">/pro/shopmodifypic.jsp</result>
       </action>
    </package>

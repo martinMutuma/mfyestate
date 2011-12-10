@@ -49,7 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<table width="710px;" border="0" cellpadding="1" id="buildingrent" cellspacing="1">
 											<tr>
 												<th align="center" colspan="2">
-													<b>发布写字楼${office.flagString}信息 </b>
+													<b>审核写字楼${office.flagString}信息 </b>
 												</th>
 											</tr>
 											<tr>
