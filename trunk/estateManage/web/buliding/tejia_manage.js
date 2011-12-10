@@ -122,6 +122,13 @@ $(function() {
 		toolbar : [{
 					id : 'btnadd',
 					text : '添加特价房',
+					iconCls : 'icon-save',
+					handler : function() {
+						addTab('特价设置','../buliding/tejiabuliding_manage.jsp','add');
+					}
+				},'-',{
+					id : 'btnadd',
+					text : '抢够人员信息查看',
 					iconCls : 'icon-add',
 					handler : function() {
 						addTab('特价设置','../buliding/tejiabuliding_manage.jsp','add');
