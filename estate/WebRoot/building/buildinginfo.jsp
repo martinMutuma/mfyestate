@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
+<%@taglib uri="estateTag" prefix="estateTag" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -117,29 +118,30 @@ function hh(Str){document.getElementById(Str).style.visibility="hidden"};
         <li>
         	<div class="left w4 all366C">
             	<span>楼盘类型：</span>
+            	
                <script>
 				switch(parseInt('<s:property value="tpBulding.buildingType"/>')){
-				    case 0 : document.write('住宅');break;
-				    case 1 : document.write('公寓');break;
-				    case 2 : document.write('海景房');break;
-				    case 3 : document.write('别墅');break;
-				    case 4 : document.write('酒店式公寓');break;
-				    case 5 : document.write('产权式公寓');break;
+				    case 0 : document.write('住宅 ');
+				    case 1 : document.write('公寓 ');
+				    case 2 : document.write('海景房 ');
+				    case 3 : document.write('别墅 ');
+				    case 4 : document.write('酒店式公寓 ');
+				    case 5 : document.write('产权式公寓 ');
 				}
             </script>            </div>
             <div class="left all366C">
             	<span>项目特色：</span>
                   <script>
 				switch(parseInt('<s:property value="tpBulding.features"/>')){
-				    case 0 : document.write('特色别墅');break;
-				    case 1 : document.write('养老居所');break;
-				    case 2 : document.write('高档小区');break;
-				    case 3 : document.write('景观居所');break;
-				    case 4 : document.write('宜居生态');break;
-				    case 5 : document.write('花园洋房');break;
-				    case 6 : document.write('投资地产');break;
-				    case 7 : document.write('创意地产');break;
-				    case 8 : document.write('水景地产');break;
+				    case 0 : document.write('特色别墅 ');
+				    case 1 : document.write('养老居所 ');
+				    case 2 : document.write('高档小区 ');
+				    case 3 : document.write('景观居所 ');
+				    case 4 : document.write('宜居生态 ');
+				    case 5 : document.write('花园洋房 ');
+				    case 6 : document.write('投资地产 ');
+				    case 7 : document.write('创意地产 ');
+				    case 8 : document.write('水景地产 ');
 				}
             </script>
                      </div>
@@ -150,7 +152,8 @@ function hh(Str){document.getElementById(Str).style.visibility="hidden"};
                 <span>起&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：</span><font class='bold cFF7'><s:property value="tpBulding.minPrice"/>元/㎡</font>           </div>
             <div class="left">
             	<span>装修状况：</span>
-                <s:property value="tpBulding.fitCondition"/></div>
+            	<estateTag:convertCode codeType="装修状况" code="${tpBulding.fitCondition}"></estateTag:convertCode>
+                </div>
             <div class="clear"></div>
         </li>
         <li>
@@ -176,16 +179,16 @@ function hh(Str){document.getElementById(Str).style.visibility="hidden"};
         <li>
         	<div class="left w4 all366C">
             	<span>绿 化 率：</span>
-                <s:property value="tpBulding.greenRate*100"/>%            </div>
+                <s:property value="tpBulding.greenRate"/>%            </div>
             <div class="left">
             	<span>容 积 率：</span>
-                  <s:property value="tpBulding.capacityRate"/>          </div>
+                  <s:property value="tpBulding.capacityRate"/>%           </div>
             <div class="clear"></div>
         </li>
         <li>
         	<div class="left w4 all366C">
             	<span>物 业 费：</span>
-                 <s:property value="tpBulding.propertyManagement"/> 元/平方米·月            </div>
+                 <s:property value="tpBulding.propertyManagement"/> 元/㎡·月            </div>
             <div class="left">
             	<span>物业公司：</span>
                 <s:property value="tpBulding.propertyCompany"/>  </div>
@@ -237,7 +240,7 @@ function hh(Str){document.getElementById(Str).style.visibility="hidden"};
                         <ol class="aas_ol">
                             <li class="bold">
                             <a href="toBuidingInfo.shtml?id=<s:property value='id'/> "><s:property value='name'/></a>
-                            <font class="c99 nom">（<s:property value='district'/>）
+                            <font class="c99 nom">（<s:property value='disname'/>）
                               </font>
                               </li>
                             <li>起价：<font class='bold cFF7'><s:property value='minPrice'/>元/㎡ </font></li>
@@ -273,7 +276,7 @@ function hh(Str){document.getElementById(Str).style.visibility="hidden"};
                         <ol class="aas_ol">
                             <li class="bold">
                             <a href="toBuidingInfo.shtml?id=<s:property value='id'/> "><s:property value='name'/></a>
-                            <font class="c99 nom">（<s:property value='district'/>）
+                            <font class="c99 nom">（<s:property value='disname'/>）
                               </font>
                               </li>
                             <li>起价：<font class='bold cFF7'><s:property value='minPrice'/>元/㎡ </font></li>
@@ -320,7 +323,15 @@ function hh(Str){document.getElementById(Str).style.visibility="hidden"};
           </ul>
           <span class="all366C fan_H"><a href="#" rel="nofollow">返回顶部</a></span></dt>
         <dd> <span id="knavcon1">
-          <div class="jbxx_box madt10"><p> <s:property value="tpBulding.projectIns" escape="false"/></p> </div>
+          <div class="jbxx_box madt10">
+          <div style="width:660px;height:320px;overflow-y:scroll; border:0px;">
+          <p><s:property value="tpBulding.projectIns" escape="false"/></p>
+          </div>
+          </div>
+          
+
+          
+          
           </span> <span id="knavcon2" class="disnon">
           <ul class="messs_house madt10">
             <li class="w4"><span>项目名称：</span><s:property value="tpBulding.name"/></li>
@@ -338,12 +349,12 @@ function hh(Str){document.getElementById(Str).style.visibility="hidden"};
             <li class="w4"><span>楼盘类型：</span>
               <script>
 				switch(parseInt('<s:property value="tpBulding.buildingType"/>')){
-				    case 0 : document.write('住宅');break;
-				    case 1 : document.write('公寓');break;
-				    case 2 : document.write('海景房');break;
-				    case 3 : document.write('别墅');break;
-				    case 4 : document.write('酒店式公寓');break;
-				    case 5 : document.write('产权式公寓');break;
+				    case 0 : document.write('住宅 ');
+				    case 1 : document.write('公寓 ');
+				    case 2 : document.write('海景房 ');
+				    case 3 : document.write('别墅 ');
+				    case 4 : document.write('酒店式公寓 ');
+				    case 5 : document.write('产权式公寓 ');
 				}
             </script>
             
@@ -351,51 +362,50 @@ function hh(Str){document.getElementById(Str).style.visibility="hidden"};
             <li class="w4"><span>项目特色：</span>
               <script>
 				switch(parseInt('<s:property value="tpBulding.features"/>')){
-				    case 0 : document.write('特色别墅');break;
-				    case 1 : document.write('养老居所');break;
-				    case 2 : document.write('高档小区');break;
-				    case 3 : document.write('景观居所');break;
-				    case 4 : document.write('宜居生态');break;
-				    case 5 : document.write('花园洋房');break;
-				    case 6 : document.write('投资地产');break;
-				    case 7 : document.write('创意地产');break;
-				    case 8 : document.write('水景地产');break;
+				    case 0 : document.write('特色别墅 ');
+				    case 1 : document.write('养老居所 ');
+				    case 2 : document.write('高档小区 ');
+				    case 3 : document.write('景观居所 ');
+				    case 4 : document.write('宜居生态 ');
+				    case 5 : document.write('花园洋房 ');
+				    case 6 : document.write('投资地产 ');
+				    case 7 : document.write('创意地产 ');
+				    case 8 : document.write('水景地产 ');
 				}
             </script>
              </li>
-            <li class="w4"><span>所在区域：</span><s:property value="tpBulding.district"/></li>
+            <li class="w4"><span>所在区域：</span><s:property value="tpBulding.disname"/></li>
             <li class="w4"><span>楼盘地址：</span><s:property value="tpBulding.address"/></li>
             <li class="w4"><span>主力户型：</span><s:property value="tpBulding.mainUnit"/></li>
-            <li class="w4"><span>装修状况：</span><s:property value="tpBulding.fitCondition"/></li>
+            <li class="w4"><span>装修状况：</span><estateTag:convertCode codeType="装修状况" code="${tpBulding.fitCondition}"></estateTag:convertCode></li>
             <li class="w9"><span>楼盘状况：</span><div style="width:80%; overflow:visible;"><s:property value="tpBulding.buildStatus"/></div></li>
             <li class="w4"><span>开盘日期：</span><s:date name="tpBulding.openDate" format="yyyy-MM-dd"/></li>
             <li class="w4"><span>入住日期：</span><s:date name="tpBulding.checkDate" format="yyyy-MM-dd"/></li>
             <li class="w4"><span>楼盘起价：</span><s:property value="tpBulding.minPrice"/>元/㎡</li>
-            <li class="w4"><span>楼盘均价：</span><s:property value="tpBulding.averagePrice"/></li>
-            <li class="w4"><strong class="c66">楼盘最高价：</strong><s:property value="tpBulding.maxPrice"/></li>
+            <li class="w4"><span>楼盘均价：</span><s:property value="tpBulding.averagePrice"/>元/㎡</li>
+            <li class="w4"><strong class="c66">楼盘最高价：</strong><s:property value="tpBulding.maxPrice"/>元/㎡</li>
             <li class="w4 all366C"><span>现房期房：</span>
               <script>
 				switch(parseInt('<s:property value="tpBulding.isForward"/>')){
-				    case 0 : document.write('现房');break;
-				    case 1 : document.write('期房');break;
+				    case 0 : document.write('现房 ');
+				    case 1 : document.write('期房 ');
 				}
             </script>
             </li>
             <li class="w4"><span>总栋数：</span><s:property value="tpBulding.buildingCount"/>栋</li>
             <li class="w4"><span>总套数：</span><s:property value="tpBulding.unitCount"/>套</li>
-            <li class="w4"><span>占地面积：</span><s:property value="tpBulding.area"/>平方米</li>
-            <li class="w4"><span>建筑面积：</span><s:property value="tpBulding.constructionArea"/>平方米</li>
-            <li class="w4 all366C"><span>容 积 率：</span><s:property value="tpBulding.capacityRate"/><a href="http://baike.baidu.com/view/77324.htm" target="_blank" rel="nofollow">什么是容积率</a></li>
-            <li class="w4 all366C"><span>绿 化 率：</span><s:property value="tpBulding.greenRate"/><a href="http://baike.baidu.com/view/77999.htm" target="_blank" rel="nofollow">什么是绿化率</a></li>
+            <li class="w4"><span>占地面积：</span><s:property value="tpBulding.area"/>㎡</li>
+            <li class="w4"><span>建筑面积：</span><s:property value="tpBulding.constructionArea"/>㎡</li>
+            <li class="w4 all366C"><span>容 积 率：</span><s:property value="tpBulding.capacityRate"/>% <a href="http://baike.baidu.com/view/77324.htm" target="_blank" rel="nofollow">什么是容积率</a></li>
+            <li class="w4 all366C"><span>绿 化 率：</span><s:property value="tpBulding.greenRate"/>% <a href="http://baike.baidu.com/view/77999.htm" target="_blank" rel="nofollow">什么是绿化率</a></li>
             <li class="w4"><span>外  墙：</span><s:property value="tpBulding.outterWall"/></li>
             <li class="w4"><span>结  构：</span><s:property value="tpBulding.structure"/></li>
             <li class="w4"><span>承 建 商：</span><s:property value="tpBulding.contractors"/></li>
-            <li class="w4"><span>建筑形式：</span><s:property value="tpBulding.archForms"/> </li>
           </ul>
           </span> <span id="knavcon3" class="disnon">
           <ul class="messs_house madt10">
             <li class="w4"><span>车 位：</span><s:property value="tpBulding.carPat"/>个</li>
-            <li class="w4"><span>物 业 费：</span><s:property value="tpBulding.propertyManagement"/>元/平方米·月/平方米</li>
+            <li class="w4"><span>物 业 费：</span><s:property value="tpBulding.propertyManagement"/>元/㎡·月</li>
             <li class="w1"><span>物业公司：</span><s:property value="tpBulding.propertyCompany"/></li>
             <li class="w4"><span>供 水：</span><s:property value="tpBulding.waterSupply"/></li>
             <li class="w4"><span>供 暖：</span><s:property value="tpBulding.heatingSupply"/></li>
@@ -519,7 +529,6 @@ function hh(Str){document.getElementById(Str).style.visibility="hidden"};
 
 </div>
 </div>
-
    		<div style="padding-top: 15px;text-algin:center;">
 		<jsp:include page="../copyright.jsp"/>
 		</div>
