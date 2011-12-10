@@ -79,6 +79,33 @@ public class Shop extends BaseEntity {
 	private String flagString;
 	@Column(name = "reject")
 	private String authorName;
+	private String auditingRemark;
+	private int auditingUser;
+	private Date auditingTime;
+
+	public String getAuditingRemark() {
+		return auditingRemark;
+	}
+
+	public void setAuditingRemark(String auditingRemark) {
+		this.auditingRemark = auditingRemark;
+	}
+
+	public int getAuditingUser() {
+		return auditingUser;
+	}
+
+	public void setAuditingUser(int auditingUser) {
+		this.auditingUser = auditingUser;
+	}
+
+	public Date getAuditingTime() {
+		return auditingTime;
+	}
+
+	public void setAuditingTime(Date auditingTime) {
+		this.auditingTime = auditingTime;
+	}
 
 	public String getDistrict() {
 		return district;
