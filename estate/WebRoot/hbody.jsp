@@ -293,7 +293,7 @@
 						      <img src="<s:property value='#data.tpSpecialstOne.imgOne'/>" />
 						    </div>
 						    <div class="activecontent">
-						      <div class="activetitle"><a href="javascript:window.location.href='tuan.shtml'"><s:property value='#data.tpSpecialstOne.descr'/></a></div>
+						      <div class="activetitle"><a href="javascript:window.location.href='special.shtml'"><s:property value='#data.tpSpecialstOne.descr'/></a></div>
 						       <div class="pd10">
 						      <span><font class="fontcolor3">梦房园独家优惠：</font><font class="activefontb"><s:property value='#data.tpSpecialstOne.specialsMes'/></font></span><br/>
 						      <span id="te_end_Time"><font class="fontcolor3">报名仅剩有：</font></span>
@@ -417,6 +417,14 @@
 	    
 	<div class="clear">
 	</div>  
+	  <!--liu cheng start -->
+            <div class="clearfix">
+            	<img style="width:960px" src="resource/images/zhifu.jpg">
+            </div>
+            
+            <!--liu cheng end -->
+	
+	
 	<div style="padding-top: 15px;text-algin:center;">
 		<jsp:include page="copyright.jsp"/>
 		</div>

@@ -85,7 +85,7 @@
    				<div class="right_width">
    					<div class="right_width">
    						<div class="right_width_title" ><s:property value="#request.buliding.name"/></div>
-   						<div class="right_width_title1" align="left" style="margin-top: 5px;margin-bottom: 5px;">
+   						<div class="right_width_title1" align="left" style="margin-top: 0px;margin-bottom: 5px;">
    						开盘时间：<s:date name="#request.buliding.openDate" format="yyyy-MM-dd"/><br/>
 						交房时间：<s:date name="#request.buliding.checkDate" format="yyyy-MM-dd"/><br/>
 						绿 化 率：<s:property value="#request.buliding.greenRate"/>%<br/>

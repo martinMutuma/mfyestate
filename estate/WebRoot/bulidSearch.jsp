@@ -139,8 +139,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
    			</div>
    		</div>
+   		 	<div style="margin-top: 10px;float:left">
+				<jsp:include page="copyright.jsp" />
+	</div>
    	</div>
-   	<jsp:include page="copyright.jsp"></jsp:include>
    	</div>
   </body>
 </html>

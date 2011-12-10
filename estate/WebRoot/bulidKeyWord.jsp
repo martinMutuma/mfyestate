@@ -38,6 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </STYLE>
 </head>
   <body>
+<center>
   	<jsp:include page="head.jsp"/>
   	<div style="width: 100%;" align="center">
    	<div class="layoutTab">
@@ -142,8 +143,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
    			</div>
    		</div>
+   		 	<div style="margin-top: 10px;float:left">
+				<jsp:include page="copyright.jsp" />
+	</div>	
    	</div>
-   	<jsp:include page="copyright.jsp"></jsp:include>
    	</div>
+   </center>	
   </body>
 </html>
