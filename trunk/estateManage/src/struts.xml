@@ -59,7 +59,7 @@
 			<result name="baseinfoManage">/WEB-INF/baseinfoManage/baseinfoManage.jsp</result>
 			<result name="toBaseinfoManage" type="redirect">images/baseinfo_toBaseinfoManage.shtml</result>
 			<result name="toBaseinfoInfo" >/WEB-INF/baseinfoManage/baseinfo_info.jsp</result>
-			<result name="manageRentPage" >/WEB-INF/pro/managerent.jsp</result>
+			<result name="manageRentPage" >/WEB-INF/pro/manageOffice.jsp</result>
 			<result name="manageShopPage" >/WEB-INF/pro/manageshop.jsp</result>
 			<result name="manageMessagePage" >/WEB-INF/pro/manageMessage.jsp</result>
 			<result name="manageProjectPage" >/WEB-INF/pro/manageproject.jsp</result>

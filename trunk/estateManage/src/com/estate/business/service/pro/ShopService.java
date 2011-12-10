@@ -34,4 +34,8 @@ public interface ShopService {
 	 * 核实写字楼信息
 	 */
 	public boolean auditByIdString(String idString);
+	/**
+	 * 根据Id查询 商铺信息
+	 */
+	public Shop getById(String id);
 }

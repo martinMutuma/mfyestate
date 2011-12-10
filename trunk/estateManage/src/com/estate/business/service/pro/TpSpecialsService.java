@@ -104,4 +104,10 @@ public interface TpSpecialsService {
 	 * @return
 	 */
 	public List<TpImage> findByProId(Long id);
+	/**
+	 * 查看团购成员
+	 * @return
+	 */
+	public PageUtil loadSpecialMember(Map<String, Object> bulidParams,
+			int pageNo, int limit);
 }

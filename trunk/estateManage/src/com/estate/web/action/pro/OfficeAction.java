@@ -1,5 +1,6 @@
 package com.estate.web.action.pro;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +8,7 @@ import java.util.Map;
 import com.estate.base.web.BaseAction;
 import com.estate.business.service.pro.OfficeService;
 import com.estate.business.service.pro.OfficeServiceImpl;
+import com.estate.domain.TsUser;
 import com.estate.domain.pro.Office;
 import com.estate.util.comm.Contants;
 import com.estate.util.comm.RequestUtil;
@@ -137,6 +139,33 @@ public class OfficeAction extends BaseAction {
 			return "see";
 		return "modify";
 	}
+	
+	/**
+	 * 保存楼盘审核信息，若审核通过+5分
+	 * 
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	public String addSend() {
+		String str = "";
+		TsUser user = (TsUser) RequestUtil.getLoginUserFromSession(request, "");
+		if(null == user || null == user.getId() || "".equals(user.getId())){
+			str = "<script>parent.notLogged();</script>";
+		}else{
+			office.setAuditingUser(Integer.valueOf(user.getId().toString()));
+			boolean saveFlag = service.updateAuditing(office);
+			if(!saveFlag)
+				str = "<script>parent.auditingFailed();</script>";
+			str = "<script>parent.auditingSuccess();</script>";
+		}
+		try {
+			response.getWriter().print(str);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	/**
 	 * 得到参数值
 	 * 
@@ -159,7 +188,6 @@ public class OfficeAction extends BaseAction {
 		map.put("tflag", tflag);
 		map.put("page", page);
 		map.put("row", row);
-
 		return map;
 	}
 

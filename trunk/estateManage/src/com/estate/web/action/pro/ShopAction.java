@@ -121,7 +121,19 @@ public class ShopAction extends BaseAction {
 //		}
 		return null;
 	}
-	
+	/**
+	 * 根据Id查询 商铺信息
+	 */
+	public String searchById() {
+		String id = RequestUtil.getParam(request, "id", "");
+		try {
+			Shop shop = service.getById(id);
+			request.setAttribute("shop", shop);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "modifyrent";
+	}
 	/**
 	 * 得到参数值
 	 * 

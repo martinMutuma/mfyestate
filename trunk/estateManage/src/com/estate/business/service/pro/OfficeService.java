@@ -38,4 +38,10 @@ public interface OfficeService {
 	 * 根据 id，type（出租/出售）查询 写字楼信息
 	 */
 	public Office getOfficeById(String id, String type);
+	/**
+	 * 保存楼盘审核信息
+	 * 
+	 * @return
+	 */
+		public boolean updateAuditing(Office obj);
 }

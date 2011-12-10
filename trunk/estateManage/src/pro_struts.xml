@@ -13,7 +13,7 @@
    <package name="office" namespace="/office" extends="proglobal">
       <action name="*" class="com.estate.web.action.pro.OfficeAction" method="{1}">
         <result name="success">/pro/addbuildrentsuccess.jsp</result>
-        <result name="modify">/pro/modifyOffice.jsp</result>
+        <result name="modify">/WEB-INF/pro/modifyOffice.jsp</result>
         <result  name="modifyPic">/pro/modifypic.jsp</result>
       </action>
    </package>
@@ -34,9 +34,8 @@
    <package name="shop" namespace="/shop" extends="proglobal">
       <action name="*" class="com.estate.web.action.pro.ShopAction" method="{1}">
         <result name="success">/pro/addbuildrentsuccess.jsp</result>
-        <result name="modifyrent">/pro/modifyshoprent.jsp</result>
-         <result  name="modifyPic">/pro/shopmodifypic.jsp</result>
-      
+        <result name="modifyrent">/WEB-INF//pro/modifyshoprent.jsp</result>
+        <result  name="modifyPic">/pro/shopmodifypic.jsp</result>
       </action>
    </package>
     <package name="business" namespace="/business" extends="proglobal">

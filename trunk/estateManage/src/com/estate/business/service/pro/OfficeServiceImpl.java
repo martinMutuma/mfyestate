@@ -9,6 +9,8 @@ import com.estate.base.dao.IBaseDao;
 import com.estate.domain.pro.Office;
 import com.estate.util.comm.DateTimeUtil;
 import com.estate.util.comm.StringUtil;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
 
 public class OfficeServiceImpl implements  OfficeService{
      private IBaseDao<Office, Long> dao;
@@ -125,5 +127,21 @@ public class OfficeServiceImpl implements  OfficeService{
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	public boolean updateAuditing(Office obj) {
+		String sql = "";
+		try {
+			if("1".equals(obj.getAuditingState())){
+				sql="update t_m_baseinfo set integral = integral+5,totalIntegral = totalIntegral+5 where id=?";
+				dao.update(sql, new Object[]{obj.getAuthorId()});
+			}
+			sql="update t_p_office set auditingState = ?,auditingRemark = ?,auditingUser = ?,auditingTime = now() where id=?";
+			dao.update(sql, new Object[]{obj.getAuditingState(),obj.getAuditingRemark(),obj.getAuditingUser(),obj.getId()});
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 }
