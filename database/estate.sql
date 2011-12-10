@@ -908,3 +908,11 @@ ALTER TABLE `estate`.`t_p_second_buliding`     ADD COLUMN `nature` CHAR(1) NULL 
    change `unitPrice` `unitPrice` double(8,2) NULL  comment '单价';
 ALTER TABLE `estate`.`t_d_data` CHANGE COLUMN `minvalue` `min_value` VARCHAR(10) NULL DEFAULT NULL COMMENT '最小值'  , CHANGE COLUMN `maxvalue` `max_value` VARCHAR(10) NULL DEFAULT NULL COMMENT '最大值'  ;
 ALTER TABLE `estate`.`t_d_defination` CHANGE COLUMN `code` `code` VARCHAR(64) NULL DEFAULT NULL COMMENT '编码'  ;
+alter table `estate`.`t_p_office` add column `auditingRemark` varchar(2000) NULL COMMENT '审核意见' after `payInfo`;
+alter table `estate`.`t_p_office` 
+   add column `auditingUser` int(11) NULL COMMENT '审核人' after `auditingRemark`, 
+   add column `auditingTime` timestamp NULL COMMENT '审核时间' after `auditingUser`;
+   alter table `estate`.`t_s_shops` add column `auditingRemark` varchar(2000) NULL COMMENT '审核意见' after `payInfo`;
+alter table `estate`.`t_s_shops` 
+   add column `auditingUser` int(11) NULL COMMENT '审核人' after `auditingRemark`, 
+   add column `auditingTime` timestamp NULL COMMENT '审核时间' after `auditingUser`;
