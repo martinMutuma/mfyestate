@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="mfy.auto.roll.js"></script>
+
+<style type="text/css">
+	.container{
+		width: 100px;
+		height: 525px;
+		border: 1px solid black;
+	}
+</style>
+</head>
+<body>
+	<div id="container" class="container">
+		<ul>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">1sdfsdfs<br>dfsdfsdfsdf<br>sdfsdfsdf</div>
+			</li>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">2</div>
+			</li>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">3</div>
+			</li>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">4</div>
+			</li>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">5</div>
+			</li>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">6</div>
+			</li>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">7</div>
+			</li>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">8</div>
+			</li>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">9</div>
+			</li>
+			<li>
+				<div style="width: 90px;height: 100px;background: red;margin-top: 5px;">10</div>
+			</li>
+		</ul>
+	</div>
+</body>
+<script>
+AR.start({
+	id : 'container_1',
+	topModel : true,
+	topModel : false,// 置顶模式是否开启
+	topStore : null,// 置顶数据源
+	topCount : 1,// 置顶数
+	container : 'container',// 容器
+	rowCount : 5,// 滚动区行数
+	colCount : 1,// 滚动区列数
+	speed : AR.CONSTANT.FAST_SPEED,
+	roll_type : AR.CONSTANT.UP
+})
+</script>
+</html>

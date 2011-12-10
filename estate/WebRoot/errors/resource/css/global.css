@@ -1,0 +1,223 @@
+/*
+top.jsp 样式
+*/
+body,html,td,input,select {
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color:black;
+}
+.top{
+	background: url(../images/logo.png) no-repeat;
+	width: 960px;
+	height: 112px;
+}
+
+.logo{
+	height: 73px;
+	font-size: 12px;
+}
+#welcomeTipSpan a{
+	text-decoration: none;
+	color: blue;
+	font-size: 15px;
+	font-weight: bold;
+}
+.menu_bg{
+	height: 35px;
+	width: 960px;
+	font-weight:bold;
+	display:-moz-inline-box;display:inline-block;
+}
+.menu_span{
+	width: 90px;
+	height: 35px;
+	color: #FFFFFF;
+	font-size:16px;
+	*font-size:14px;
+	line-height: 40px;
+	cursor: pointer;
+	display:-moz-inline-box;display:inline-block;
+}
+
+.menu_mouseover{
+	background:url(../images/menu_bg.gif) no-repeat;
+	background-position: 0px 5px;
+}
+.menu_mouseout{
+	background:url('');
+	color: #FFFFFF;
+}
+
+/*
+home.jsp样式
+*/
+.layoutTab{
+	width: 960px;
+}
+.menu_container{
+	border-top: 1px solid #99BBE8;
+	width: 200px;
+	display:-moz-inline-box;display:inline-block;
+}
+.menu_category{
+	height: 30px;
+	line-height:30px;
+	background: #9EC4ED;
+	font-size: 15px;
+	font-weight: bold;
+	border-left: 1px solid #99BBE8;
+	border-right: 1px solid #99BBE8;
+	border-bottom: 1px solid #99BBE8;
+	width: 198px;
+	*width:200px;
+}
+.leftNav{
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 200px;
+	display:-moz-inline-box;display:inline-block;
+}
+.leftNav li {
+	background: #E0ECFF;
+	border-bottom: 1px solid #99BBE8;
+	border-left: 1px solid #99BBE8;
+	border-right: 1px solid #99BBE8;
+	line-height: 30px;
+	height:30px;
+	list-style-type:none;
+	margin-left: 0px;
+	width: 198px;
+	*width:200px;
+	display:-moz-inline-box;display:inline-block;
+}
+.leftNav li a{
+	color:#333;
+	text-decoration:none;
+	margin-left: 25px;
+}
+.leftNav li.title{background: #f3f3f3;}
+
+
+.easyui-accordion a{
+	padding-left:25px;
+}
+
+.easyui-accordion a:link {color: black;text-decoration: none;}     /* unvisited link */
+.easyui-accordion a:visited {color: black;text-decoration: none;}  /* visited link */
+.easyui-accordion a:hover {color: #FFA028;text-decoration: none;}   /* mouse over link */
+.easyui-accordion a:active {color: #FFA028;text-decoration: none;}   /* selected link */
+
+#rightbox {
+	float: left;
+	height: auto;
+	width: 750px;
+	overflow:hidden;
+}
+#rightbox a{color:#333; text-decoration:none;}
+#rightbox2{
+	float: left;
+	height: auto;
+	width: 750px;
+}
+
+/*
+searchPanel样式
+*/
+#searchPanel{
+	border: 1px solid #D5D5D5;
+	height:200px;
+	*height: 202px;
+	height:202px\9;
+	width: 100%;
+}
+#searchPanel_{
+	margin-top:15px;
+	width: 100%;
+	border: 1px solid #D5D5D5;
+}
+.querySx{
+	width: 100%;
+	height: 20px;
+}
+.querySx span{
+	height: 20px;
+	width:150px;
+	display:-moz-inline-box;display:inline-block;
+	line-height: 20px;
+	border: 1px solid #D5D5D5;text-align: center;
+	border-top:0px;
+	cursor: pointer;
+}
+.search_pro_bg{
+	background: url(../images/search_pro_bg.jpg) repeat-x;
+	height: 40px;
+	line-height:40px;
+	text-align:center;
+	cursor: pointer;
+	width: 150px;
+	float: left;
+}
+
+/*
+	选中项目样式
+*/
+.checked_pro{
+	color:red;
+	background: url(../images/find.jpg) no-repeat;
+}
+
+.pro_need_panel{
+	position: absolute;
+	bottom: 5px;
+	right: 0px;
+	cursor: pointer;
+	height:22px;
+	width:128px;
+	line-height:22px;
+	text-align:center;
+	font-size:10px;
+	color:gray;
+	background: url(../images/need.jpg) no-repeat;
+}
+/*
+	搜索面板css
+*/
+.search_column_span{
+	width: 100px;
+	text-align: right;
+}
+.search_column{
+	display:-moz-inline-box;display:inline-block;
+	height: 25px;
+	line-height:25px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-left: 5px;
+	text-align: center;
+	color:#3366CC;
+}
+
+.search_column_span span{
+	display:-moz-inline-box;display:inline-block;
+	height: 25px;
+	line-height:25px;
+}
+.search_column_selected{
+	background-color: #1B8ED4;
+	color: #FFFFFF;
+}
+
+.keyWord_div{
+	height: 30px;
+	line-height: 30px;
+	display:-moz-inline-box;display:inline-block;
+}
+.copyright{
+	border-top: 5px solid #4E88D8;
+	height: 150px;
+	margin-top: 15px;
+}
+.btn01{
+	background: 
+}
