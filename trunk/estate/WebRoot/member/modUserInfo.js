@@ -27,7 +27,7 @@
    			id:'ad',
    			disabled:false,
    			plain: false,
-   			text:'注&nbsp;&nbsp;&nbsp;&nbsp;册',
+   			text:'报&nbsp;&nbsp;&nbsp;&nbsp;存',
    			iconCls:'icon-ok login_btn'
    		});
 	  if($("#reLogin").val()=='0'){
