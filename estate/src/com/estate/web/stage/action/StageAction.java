@@ -176,6 +176,16 @@ public class StageAction extends BaseAction {
 		ActionContext.getContext().put("proList", CacheUtil.getProAllList());
 		return "seniorSearch";
 	}
+	
+	/**
+	 * 高级搜索-复选
+	 * 
+	 * @return
+	 */
+	public String seniorSearchMul() {
+		ActionContext.getContext().put("proList", CacheUtil.getProAllList());
+		return "seniorSearchMul";
+	}
 
 	/**
 	 * 多条件搜索，所有模块公用，修改请写修改日志

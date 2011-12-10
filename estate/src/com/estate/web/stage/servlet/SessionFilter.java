@@ -25,7 +25,7 @@ public class SessionFilter implements Filter {
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) resp;
 		String requestUrl = request.getServletPath();
-		System.out.println(requestUrl);
+//		System.out.println(requestUrl);
 		if (!requestUrl.startsWith("/home.shtml")
 				&& !requestUrl.startsWith("/index.jsp")
 				&& !requestUrl.startsWith("/search.shtml")

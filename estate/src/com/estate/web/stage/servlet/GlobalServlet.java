@@ -27,7 +27,7 @@ public class GlobalServlet implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
-		System.out.println(httpRequest.getRequestURI());
+//		System.out.println(httpRequest.getRequestURI());
 		HttpSession session = httpRequest.getSession();
 		try {
 			// 登陆信息cookie
@@ -44,11 +44,11 @@ public class GlobalServlet implements Filter {
 			}
 			// 地区初始化
 			if (null != session.getAttribute(Contants.SESSION_DISTRICT)) {
-				System.out.println("session"+session.getAttribute(Contants.SESSION_DISTRICT));
+//				System.out.println("session"+session.getAttribute(Contants.SESSION_DISTRICT));
 			} else {
 				String cookieStr = CookiesUtil.getCookieValue(
 						Contants.COOKIE_DISTRICT_INFO, httpRequest);
-				System.out.println("cookie"+cookieStr);
+//				System.out.println("cookie"+cookieStr);
 				if (null != cookieStr && !"".equals(cookieStr)) {
 					String[] cookieAry = cookieStr.split(",");
 					if(cookieAry.length == 2)
