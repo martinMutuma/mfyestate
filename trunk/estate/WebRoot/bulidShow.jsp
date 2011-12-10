@@ -140,9 +140,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
    			</div>
    		</div>
+   		 	<div style="margin-top: 10px;float:left">
+				<jsp:include page="copyright.jsp" />
+	</div>
    	</div>
    	<iframe name="tempF" style="display: none"></iframe>
-   	<jsp:include page="copyright.jsp"></jsp:include>
    	</div>
   </body>
 </html>

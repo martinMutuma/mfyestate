@@ -22,7 +22,7 @@
    		<div class="whole_width">
    			<div class="head_top"></div>
    			<div class="head_body whole_body" align="center">
-   			<h1><span class="xm">本期团购：</span>【${buliding.name }】${special.descr }</h1>
+   			<h1><span class="xm_te">本期团购：</span>【${buliding.name }】${special.descr }</h1>
    			</div>
    			<div class="whole_body">
 				<table width="956px" cellpadding="0" cellspacing="0" border="0">
@@ -65,27 +65,27 @@
 											</div>
 								</div>
 								<div>
-									<p><img src="resource/images/tuan/big-dou.jpg"/>&nbsp;${special.bulidDesc }</p>
+									<p><img src="resource/images/tuan/big-dou_te.jpg"/>&nbsp;${special.bulidDesc }</p>
 								</div>
 							</td>
 						</tr>
 				</table>   			
    			</div>
    			<div class="head_bottom"></div>
-   			<div class="whole_width h_split">
+   			<div class="whole_width h_split ">
    				<div class="left_width">
-   					<div class="left_width1">
+   					<div class="left_width1 border_te">
    						<h3 align="left">最新动态</h3>
    					</div>
-					<div class="left_width2 h_split" align="left">
+					<div class="left_width2 h_split border_te" align="left">
 						<h5 align="center">除了最低折扣，还有梦房园网独家的优惠和无限的贴心服务！</h5>
 						${special.information }
 					</div>
    				</div>
    				<div class="right_width">
    					<div class="right_width">
-   						<div class="right_width_title"><s:property value="#request.buliding.name"/></div>
-   						<div class="right_width_title1" align="left">
+   						<div class="right_width_title right_wt_te"><s:property value="#request.buliding.name"/></div>
+   						<div class="right_width_title1 border_te" align="left">
    						开盘时间：<s:date name="#request.buliding.openDate" format="yyyy-MM-dd"/><br/>
 						交房时间：<s:date name="#request.buliding.checkDate" format="yyyy-MM-dd"/><br/>
 						绿 化 率：<s:property value="#request.buliding.greenRate"/>%<br/>
