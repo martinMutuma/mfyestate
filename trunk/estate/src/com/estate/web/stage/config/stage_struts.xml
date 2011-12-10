@@ -15,7 +15,8 @@
 			<result name="bus">/home.jsp</result>
 			<result name="proShow">${proShowPage}</result>
 			<result name="needShow">/needShow.jsp</result>
-			<result name="seniorSearch">/seniorSearch.jsp</result>
+			<result name="seniorSearch">/seniorSearchNew.jsp</result>
+			<result name="seniorSearchMul">/seniorSearchMul.jsp</result>
 			<result name="bulid">/bulidShow.jsp</result>
 			<result name="bulidSearch">/bulidSearch.jsp</result>
 			<result name="bulidKeyWord">/bulidKeyWord.jsp</result>
