@@ -28,7 +28,7 @@
 		<div class="searchContent">
 			<div class="proTitle">
 				<span class="checked_title">新房</span><span>写字楼</span><span>商铺</span><span>生意转让</span><span>工业地产</span><span>大型项目</span><span>二手房</span>
-				<b title="切换至单选模式" onclick="alert('1');window.location.href='seniorSearch.shtml'">切换至单选模式</b>
+				<b title="切换至单选模式" onclick="window.location.href='seniorSearch.shtml'">切换至单选模式</b>
 			</div>
 			<div id="proContent" class="proContent" align="center">
 				<table cellpadding="0" border="0" cellspacing="5px" width="920px" >
