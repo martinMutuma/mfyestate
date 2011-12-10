@@ -79,6 +79,33 @@ public class Office extends BaseEntity {
 	private String equipment;
 	private String traffic;
 	private String payInfo;
+	private String auditingRemark;
+	private int auditingUser;
+	private Date auditingTime;
+	
+	public String getAuditingRemark() {
+		return auditingRemark;
+	}
+
+	public void setAuditingRemark(String auditingRemark) {
+		this.auditingRemark = auditingRemark;
+	}
+
+	public int getAuditingUser() {
+		return auditingUser;
+	}
+
+	public void setAuditingUser(int auditingUser) {
+		this.auditingUser = auditingUser;
+	}
+
+	public Date getAuditingTime() {
+		return auditingTime;
+	}
+
+	public void setAuditingTime(Date auditingTime) {
+		this.auditingTime = auditingTime;
+	}
 
 	public String getNum() {
 		return num;
