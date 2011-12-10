@@ -67,7 +67,28 @@ public class TpSpecialsAction extends BaseAction {
 		return Contants.JSONSTRING_RESULT_NAME;
 	}
 	
-	
+	/**
+	 * 查看团购成员
+	 * @return
+	 */
+	public String loadSpecialMember(){
+		try {
+			if (pageNo <= 0)
+				pageNo = 1;
+			if (limit <= 0)
+				limit = 20;
+			pu = service.loadSpecialMember(bulidParams(request), pageNo, limit );
+			List list = pu.getList();
+			int count = pu.getTotalRecords();
+			if (list != null && list.size() > 0) {
+				total = count;
+				rows = list;
+			}
+		} catch (Exception e) {
+			log.error("查询二手房信息出错!", e);
+		}
+		return Contants.JSONSTRING_RESULT_NAME;
+	}
 	/**
 	 * 显示特价列表
 	 * @return
@@ -176,8 +197,14 @@ public class TpSpecialsAction extends BaseAction {
 	private Map<String, Object> bulidParams(HttpServletRequest request) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		String name = RequestUtil.getParam(request, "name", "");
+		String pid = RequestUtil.getParam(request, "pid", "");
+		String pflag = RequestUtil.getParam(request, "pflag", "");
 		if (!"".equals(name))
 			map.put("name@2@2", "%" + name + "%");
+		if (!"".equals(pid))
+			map.put("pid@1",pid);
+		if (!"".equals(pflag))
+			map.put("flag@2", pflag);
 		return map;
 	}
 

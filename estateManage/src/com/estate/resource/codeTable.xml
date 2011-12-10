@@ -256,7 +256,16 @@
 		<code value="3">工业地产</code>
 		<code value="4">大型项目</code>
 		<code value="5">经纪人</code>
-	</collection>	
-	
+	</collection>
+	<collection name="审核状态">
+	    <code value="0">未审核</code>
+		<code value="1">审核成功</code>
+		<code value="2">审核失败</code>
+		<code value="3">审核驳回</code>
+		<code value="4">申请成交</code>
+		<code value="5">成交通过</code>
+		<code value="6">成交失败</code>
+		<code value="7">成交驳回</code>
+	</collection>
 	
 </codeCollections>

@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.estate.base.dao.BaseDao;
 import com.estate.base.dao.IBaseDao;
+import com.estate.domain.TmBaseinfo;
 import com.estate.domain.TpImage;
 import com.estate.domain.TpSecondBuliding;
 import com.estate.domain.TpSpecials;
@@ -16,6 +17,7 @@ public class TpSpecialsServiceImpl implements TpSpecialsService {
 	private IBaseDao<TpSecondBuliding, Long> secondBulidDao;
 	private IBaseDao<TpImage, Long> imageDao;
 	private IBaseDao<TpBuilding, Long> bulidDao;
+	private IBaseDao<TmBaseinfo, Long> baseDao;
 
 	public TpSpecialsServiceImpl() {
 		bulidDao = new BaseDao<TpBuilding, Long>(TpBuilding.class);
@@ -178,5 +180,46 @@ public class TpSpecialsServiceImpl implements TpSpecialsService {
 	public List<TpImage> findByProId(Long id) {
 		String sql = "select * from t_p_image where PROTYPE=1 and PID = "+id;
 		return imageDao.findList(sql);
+	}
+
+	public PageUtil loadSpecialMember(Map<String, Object> paramsMap,
+			int pageNo, int limit) {
+		PageUtil pu = new PageUtil();
+		String sql = "select id,mobile,tel,name,sex,type,joinTime,confirmTime from t_p_spe_person where 1 = 1 ";
+		String countSql = "select count(*) from t_p_spe_person where 1=1 ";
+		if (null != paramsMap)
+			for (String key : paramsMap.keySet()) {
+				String conditionSql = "";
+				String[] keyAry = key.split("@");
+				if (keyAry.length == 1)
+					conditionSql = keyAry[0] + " = " + paramsMap.get(key);
+				if (keyAry.length > 1) {
+					if ("1".equals(keyAry[1]))
+						conditionSql = keyAry[0] + " = " + paramsMap.get(key);
+					else if (keyAry.length == 2)
+						conditionSql = keyAry[0] + " = '" + paramsMap.get(key)
+								+ "' ";
+					else if (keyAry.length > 2 && "2".equals(keyAry[2]))
+						conditionSql = keyAry[0] + " like '"
+								+ paramsMap.get(key) + "' ";
+				}
+				sql += " and " + conditionSql;
+				countSql += " and " + conditionSql;
+			}
+		sql += " order by confirmTime desc";
+		List<Object[]> countList = dao.findObjectArryList(countSql);
+		List<Map<String, Object>> list = null;
+		list = dao.createSqlQuery(sql).setFirstResult((pageNo - 1) * limit)
+				.setMaxSize(limit).mapList();
+		
+		if (null != countList && countList.size() > 0) {
+			Object[] obj = countList.get(0);
+			pu.setTotalRecords(new Integer(null == obj[0] ? "0" : obj[0]
+					.toString()));
+		}
+		pu.setList(list);
+		pu.setPageNo(pageNo);
+		pu.setPageSize(limit);
+		return pu;
 	}
 }

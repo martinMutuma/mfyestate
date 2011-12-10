@@ -1,11 +1,15 @@
 package com.estate.business.service.pro;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import com.estate.base.dao.BaseDao;
 import com.estate.base.dao.IBaseDao;
+import com.estate.domain.pro.Office;
 import com.estate.domain.pro.Shop;
+import com.estate.util.comm.DateTimeUtil;
+import com.estate.util.comm.StringUtil;
 
 public class ShopServiceImpl implements  ShopService{
      private IBaseDao<Shop, Long> dao;
@@ -30,8 +34,17 @@ public class ShopServiceImpl implements  ShopService{
 	    	    	 int snum=Integer.parseInt(start)-1;
 	    	    	 sql+="   limit  "+(snum*Integer.parseInt(limt))+ " ,"+ limt+" ";}
 			 List<Shop>  list=dao.findList(sql);
-			 return list;
-			
+			 List<Shop> newlist = null;
+			 if (list != null && list.size() > 0) {
+					newlist = new ArrayList<Shop>();
+					for (Shop shop : list) {
+						shop.setCreateTimeString(DateTimeUtil.switchDateToString(
+								shop.getCreateTime(), "yyyy-MM-dd"));
+						shop.setAudtingString(StringUtil.formatAuditingState(shop.getAuditingState()));
+						newlist.add(shop);
+					}
+				}
+			 return newlist;
 		} catch (Exception e) {
 			  e.printStackTrace();
 		}
@@ -96,4 +109,20 @@ public class ShopServiceImpl implements  ShopService{
    		}
    		return isFlag;
    	}
+	public Shop getById(String id) {
+		if ("".equals(id))
+			return null;
+		String sql = "select * from t_s_shops where  id=?";
+			List<Shop> list = dao.findList(sql, new Object[] { id });
+			if (null != list && list.size() > 0) {
+				Shop newShop = list.get(0);
+				if (newShop != null) {
+					if ("1".equals(newShop.getFlag()))
+						list.get(0).setFlagString("出租");
+					if ("2".equals(newShop.getFlag()))
+						list.get(0).setFlagString("出售");
+					}
+				}
+		return list.get(0);
+	}
 }
