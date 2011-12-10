@@ -1265,3 +1265,9 @@ ul.red li a.current span {
   padding: 0px;
 }
 
+
+.clearfix{
+  margin-top: 10px;
+  border-top:2px solid #D7D7D7;
+  width:960px;
+}
