@@ -13,7 +13,6 @@
 <script type="text/javascript" src="resource/js/jquery-1.4.2.js" charset="utf-8"></script>
 <script type="text/javascript" src="resource/js/whole.js"></script>
 <script type="text/javascript" src="resource/js/hbody.js"></script>
-
 </head>
 <body>
     <div>

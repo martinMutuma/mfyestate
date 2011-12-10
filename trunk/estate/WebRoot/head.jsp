@@ -6,8 +6,7 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-<LINK REL="SHORTCUT ICON" HREF="<%=basePath%>resource/images/website/favicon.ico">
- <link rel="shortcut icon" type="image/x-icon" href="<%=basePath%>resource/images/website/favicon.ico" media="screen" />
+ <link rel="Shortcut Icon" type="image/x-icon" href="<%=basePath%>resource/images/website/favicon.ico" media="screen" />
 <div class="top_tip" align="center">
 	<div>
 		<span style="float: left">${sessionScope.userinfo.realName}
