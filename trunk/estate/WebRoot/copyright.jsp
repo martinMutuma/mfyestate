@@ -44,17 +44,6 @@
 							Copyright &copy; 2010.
 							<a href="#">www.mymfy.com</a> All Rights Reserved
 							<a href="#" target="_blank">沪ICP备000000000号</a>
-
-							<script type="text/javascript">
-					var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-					document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-					</script>
-
-							<script type="text/javascript">
-					try {
-					var pageTracker = _gat._getTracker("UA-9557902-1");
-					pageTracker._trackPageview();
-					} catch(err) {}</script>
 						</li>
 					</ul>
 				</div>
