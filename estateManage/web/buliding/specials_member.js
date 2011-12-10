@@ -26,11 +26,11 @@ $(function() {
 					field : 'name',
 					title : '姓名',
 					align : 'center',
-					width : 120
+					width : 100
 				}, {
 					field : 'sex',
 					title : '性别',
-					width : 120,
+					width : 80,
 					align : 'center',
 					sortable : true,
 					formatter:function(value,rec){
@@ -60,6 +60,16 @@ $(function() {
 							return "";
 						}
 					}
+				},{
+					field : 'mobile',
+					title : '手机号码',
+					width : 120,
+					align : 'center'
+				},{
+					field : 'tel',
+					title : '固定电话',
+					width : 120,
+					align : 'center'
 				}, {
 					field : 'jointime',
 					title : '参加时间',
