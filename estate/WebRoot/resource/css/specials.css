@@ -1,9 +1,11 @@
 @CHARSET "UTF-8";
-.whole_width{width: 960px;}
-.head_top{background: url("../images/tuan/tuan_topbg.gif") no-repeat;height: 4px;}
+.whole_width{width: 960px;margin-top: 0px;}
+.head_top{background: url("../images/tuan/tuan_topbg.gif") no-repeat;height: 4px;margin-top: 0px;}
 .whole_body{padding:1px;border-width: 0 1px 0 1px;border-style: solid;border-color:#C8C8C8 ;}
-.head_body{margin-top: -15px\9;background: url("../images/tuan/tuan_cenbg.gif") repeat-x;}
-.head_body h1{font-size: 20px;line-height:150%;padding: 10px;text-align: left;}.head_body .xm{font-size: 23px;color: #FF6600}
+.head_body{margin-top: 0px !important;margin-top: -18px;   background: url("../images/tuan/tuan_cenbg.gif") repeat-x;}
+.head_body h1{font-size: 20px;line-height:150%;padding: 10px;text-align: left;}.head_body 
+.xm{font-size: 23px;color: #FF6600}
+.xm_te{font-size: 23px;color: #ff4045}
 .specials1{background: url("../images/tuan/deal-tuan1.gif") no-repeat;position: absolute;margin-left: -52px;height: 83px;width: 541px;color: white;font-size: 30px;line-height: 63px;padding-left: 15px;font-weight: bold;}
 .specials2{background: url("../images/tuan/deal-tuan2.gif") no-repeat;position: absolute;margin-left: -52px;height: 83px;width: 541px;color: white;font-size: 30px;line-height: 63px;padding-left: 15px;font-weight: bold;}
 .specials_can{cursor:pointer;background: url("../images/tuan/li_can.png") no-repeat;width: 125px;height: 46px;display:-moz-inline-box;display:inline-block;position: absolute;margin-top: -53px;margin-top: -6px\9;margin-left: 380px;margin-left: 320px\9;}
@@ -22,7 +24,9 @@
 .left_width2 h5{color:#E5663A;margin-top: 0px;}
 .right_width{width: 225px;margin-left: 12px;_margin-left: 8px;float: left;}
 .right_width_title{background: url("../images/tuan/tuan-gao.gif") no-repeat;height: 36px;padding-left: 15px;line-height: 36px;color: white;font-weight: bold;font-size: 15px;}
+.right_wt_te{background: url("../images/tuan/tuan-gao_te.gif") no-repeat;}
 .right_width_title1{padding-left: 5px;font-size: 13px;width:218px;width: 225px\9;border-style: solid;border-color: #FFB27F;border-width: 0 1px 1px 1px;}
+.border_te{border-color: #ff4045}
 .right_width_title a{color: white;}
 .right_margin1{margin-left: 100px;}
 .right_width_title a:link {color: white;text-decoration: none;}     /* unvisited link */
