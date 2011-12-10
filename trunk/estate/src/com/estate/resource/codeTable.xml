@@ -257,5 +257,12 @@
 		<code value="4">大型项目</code>
 		<code value="5">经纪人</code>
 	</collection>	
+		<collection name="装修状况">
+		<code value="1">毛坯</code>
+		<code value="2">简装</code>
+		<code value="3">中等装修</code>
+		<code value="4">精装</code>
+		<code value="5">豪华装</code>
+	</collection>	
 	
 </codeCollections>
