@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -9,6 +9,7 @@
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
+	<link rel="shortcut icon" type="image/x-icon" href="resource/images/website/favicon.ico" media="screen" />
 	<link rel="stylesheet" href="resource/css/whole.css" type="text/css"></link>
 	<link rel="stylesheet" type="text/css" href="resource/css/specials.css">
 	<link rel="stylesheet" type="text/css" href="resource/css/common.css">

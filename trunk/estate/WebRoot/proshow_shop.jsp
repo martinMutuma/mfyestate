@@ -9,6 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <html>
 <head>
+<title>梦房园</title>
 <link rel="stylesheet" href="<%=basePath %>resource/css/whole.css" type="text/css"></link>
 <link rel="stylesheet" href="<%=basePath %>resource/css/secondBulid.css" type="text/css"></link>
 <script type="text/javascript" src="<%=basePath %>resource/js/jquery-1.4.2.js" charset="utf-8"></script>
