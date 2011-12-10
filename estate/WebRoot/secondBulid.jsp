@@ -40,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   		<s:iterator value="#tsbList" status="sta">
 			   			<img class="secondBulidAd1" id="adBulid_img_<s:property value="#sta.index"/>_big" <s:if test="#sta.index>0">style="display:none"</s:if> src="<s:property value="sourceUrl"/>"/>
 			   		</s:iterator>
-			   		<div class="secondBulidAd" >
+			   		<div class="secondBulidAd">
 			   						<table id="imgAdT" cellspacing="0" cellpadding="10" width="710px" border="0" height="300px">
 			   							<tr>
 			   								<td height="95px" style="padding-left: 400px;" valign="bottom">
