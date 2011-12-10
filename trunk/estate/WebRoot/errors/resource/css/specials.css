@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+.whole_width{width: 960px;}
+.head_top{background: url("../images/tuan/tuan_topbg.gif") no-repeat;height: 4px;}
+.whole_body{padding:1px;border-width: 0 1px 0 1px;border-style: solid;border-color:#C8C8C8 ;}
+.head_body{margin-top: -15px\9;background: url("../images/tuan/tuan_cenbg.gif") repeat-x;}
+.head_body h1{font-size: 20px;line-height:150%;padding: 10px;text-align: left;}.head_body .xm{font-size: 23px;color: #FF6600}
+.specials1{background: url("../images/tuan/deal-tuan1.gif") no-repeat;position: absolute;margin-left: -52px;height: 83px;width: 541px;color: white;font-size: 30px;line-height: 63px;padding-left: 15px;font-weight: bold;}
+.specials2{background: url("../images/tuan/deal-tuan2.gif") no-repeat;position: absolute;margin-left: -52px;height: 83px;width: 541px;color: white;font-size: 30px;line-height: 63px;padding-left: 15px;font-weight: bold;}
+.specials_can{cursor:pointer;background: url("../images/tuan/li_can.png") no-repeat;width: 125px;height: 46px;display:-moz-inline-box;display:inline-block;position: absolute;margin-top: -53px;margin-top: -6px\9;margin-left: 380px;margin-left: 320px\9;}
+.info_left{width: 100%;padding-left: 20px;}.specials_zw{height: 100px;}
+.info_left1{background: #FFF6E9;width: 380px;width: 410px\9;padding: 20px;}
+.info_left2{padding: 20px;}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	.specials_can{background: url("../images/tuan/li_can.png") no-repeat;width: 125px;height: 46px;display:-moz-inline-box;display:inline-block;position: absolute;margin-top: 10px;margin-left: 325px;}
+}
+.head_bottom{background: url("../images/tuan/tuan_fotbg.gif") no-repeat;height: 4px;}
+.h_split{margin-top: 10px;}
+.left_width{width: 710px;float: left;}
+.left_width1{padding-left:10px;padding-top:5px; width: 698px;width:708px\9;border: 1px solid #FFB27F;background: #FFFEEE}
+.left_width1 h3{color: #DE0000;margin-top: 0px;}
+.left_width2{padding-left:10px;padding-top:5px; width: 698px;width:708px\9;border: 1px solid #FFB27F;}
+.left_width2 h5{color:#E5663A;margin-top: 0px;}
+.right_width{width: 225px;margin-left: 12px;_margin-left: 8px;float: left;}
+.right_width_title{background: url("../images/tuan/tuan-gao.gif") no-repeat;height: 36px;padding-left: 15px;line-height: 36px;color: white;font-weight: bold;font-size: 15px;}
+.right_width_title1{padding-left: 5px;font-size: 13px;width:218px;width: 225px\9;border-style: solid;border-color: #FFB27F;border-width: 0 1px 1px 1px;}
+.right_width_title a{color: white;}
+.right_margin1{margin-left: 100px;}
+.right_width_title a:link {color: white;text-decoration: none;}     /* unvisited link */
+.right_width_title a:visited {color: white;text-decoration: none;}  /* visited link */
+.right_width_title a:hover {color: white;text-decoration: underline;}   /* mouse over link */
+.right_width_title a:active {color: white;text-decoration: none;}   /* selected link */
+
+.img-swith-main {
+	position: relative;
+	font-family: Arial, Verdana;
+	font-size: 12px;
+	width: 470px;
+	height: 200px;
+	background-color: #f3f3f3;
+	border: 1px solid #E4E4E4;
+	z-index: -9999;
+}
+
+.img-switch {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.img-switch ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.img-switch ul li {
+	float: left;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.img-switch ul li img {
+	width: 100%;
+	height: 100%;
+	border: 0px;
+}
+
+.img-switch-clear {
+	clear: both;
+}
+
+.img-switch-index {
+	position: absolute;
+	bottom: 6px;
+	right: 6px;
+	overflow: hidden;
+}
+
+.img-switch-index ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.img-switch-index ul li {
+	padding: 2px;
+	border: 1px solid #c0c0c0;
+	margin-right: 5px;
+	float: left;
+	font-weight: bold;
+	cursor: pointer;
+	color: Black;
+	padding-left: 6px;
+	padding-right: 6px;
+}

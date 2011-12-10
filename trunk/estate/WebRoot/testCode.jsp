@@ -10,5 +10,6 @@
 <estateTag:select cssStyle="width:120px" id="teset" codeType="租赁方式" headerKey="" value="1" headerValue="请选择" />
 <estateTag:radio  id="teset" codeType="产权性质" value="1"/>
 <estateTag:checkbox  id="teset" codeType="产权性质" value="1,2"/>
+<img src="http://www.mymfy.com/compressDia/13211564301610c4a4df48a930b56e7d71ec5a34b8257.jpg">
 </body>
 </html>
