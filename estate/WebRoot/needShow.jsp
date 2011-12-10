@@ -11,7 +11,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-
 		<title><s:if test='dataMap.flag == "1"'>求租</s:if> <s:else>求购</s:else>
 			<s:property value="dataMap.disname" />&nbsp;&nbsp;<s:property
 				value="dataMap.address" />&nbsp;&nbsp;<s:property

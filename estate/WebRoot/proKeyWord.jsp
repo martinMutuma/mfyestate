@@ -5,8 +5,6 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<html><head><link rel="stylesheet" href="resource/css/search.css" type="text/css"></link></head>
-  <body>
    	<div class="search_result">
    		<div class="search_result_list">
    			<div class="search_title_bg" align="left">
@@ -146,5 +144,3 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    			</div>
    		</div>
    	</div>
-  </body>
-</html>

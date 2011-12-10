@@ -8,7 +8,6 @@
 <title>梦房园</title>
 <meta http-equiv="keywords" content="楼盘,买房">
 <meta http-equiv="description" content="梦房园是买卖、租赁房屋平台，它提供新房、二手房买卖租赁信息,也提供地产投资、海景房、旅游地产以及房产资讯">
-
 <link rel="stylesheet" href="resource/css/whole.css" type="text/css"></link>
 <link rel="stylesheet" href="resource/css/hbody.css" type="text/css"></link>
 <script type="text/javascript" src="resource/js/jquery-1.4.2.js" charset="utf-8"></script>

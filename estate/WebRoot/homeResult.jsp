@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <html>
 <head>
-<link rel="stylesheet" href="resource/css/search.css" type="text/css"></link>
+
 </head>
   <body>
    	<div class="search_result">

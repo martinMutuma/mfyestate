@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java"  pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
@@ -7,6 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <html>
 <head>
+<title>梦房园</title>
 <link rel="stylesheet" href="resource/css/whole.css" type="text/css"></link>
 <link rel="stylesheet" href="resource/css/hbody.css" type="text/css"></link>
 <link rel="stylesheet" href="resource/css/global.css" type="text/css"></link>
