@@ -27,7 +27,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script type="text/javascript" src="<%=basePath%>pro/modifyshoprent.js"></script>
     <script type="text/javascript" src="<%=basePath%>resource/js/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>resource/js/jquery.dataGridTip.js"></script>
-	<script type="text/javascript" src="<%=basePath%>resource/js/global.js"></script>
 	<script type="text/javascript" src="<%=basePath%>resource/js/kindeditor/kindeditor.js"></script>
     <script type="text/javascript" src="<%=basePath%>resource/js/whole.js"></script>
 	<script type="text/javascript" src="<%=basePath%>resource/js/googlemap.js"></script>
