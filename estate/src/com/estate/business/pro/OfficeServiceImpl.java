@@ -44,8 +44,8 @@ public class OfficeServiceImpl implements OfficeService {
 			String sql = "select * from t_p_office where flag="
 					+ map.get("type");
 			if (!"".equals(map.get("nameparame")))
-				sql += "  and  name like " + map.get("nameparame")
-						+ "  or  title like " + map.get("nameparame");
+				sql += "  and  name like '%" + map.get("nameparame")
+						+ "%'  or  title like  '%" + map.get("nameparame")+"%'";
 			if (!"-1".equals(map.get("autingSate")))
 				sql += "  and auditingState=  " + map.get("autingSate");
 			if (!"".equals(map.get("authorId")))
@@ -57,7 +57,7 @@ public class OfficeServiceImpl implements OfficeService {
 				sql += " and   price between  " + map.get("price1") + "  and  "
 						+ map.get("price2");
 			if (!"-1".equals(map.get("discode"))) {
-				if ("0000000000".equals(map.get("discode")))
+				if ("00".equals(map.get("discode")))
 					sql += " and  district like '%'";
 				else
 					sql += "  and district  like '" + map.get("discode") + "%'";
@@ -114,8 +114,8 @@ public class OfficeServiceImpl implements OfficeService {
 			String sql = "select * from t_p_office  where  flag="
 					+ map.get("type");
 			if (!"".equals(map.get("nameparame")))
-				sql += "  and  name like " + map.get("nameparame")
-						+ "  or  title like " + map.get("nameparame");
+				sql += "  and  name like '%" + map.get("nameparame")
+						+ "%'  or  title like '%" + map.get("nameparame")+"%'";
 			if (!"-1".equals(map.get("autingSate")))
 				sql += "  and auditingState=  " + map.get("autingSate");
 			if (!"".equals(map.get("authorId")))
@@ -127,7 +127,7 @@ public class OfficeServiceImpl implements OfficeService {
 				sql += " and   price between  " + map.get("price1") + "  and  "
 						+ map.get("price2");
 			if (!"-1".equals(map.get("discode"))) {
-				if ("0000000000".equals(map.get("discode")))
+				if ("00".equals(map.get("discode")))
 					sql += " and  district like '%'";
 				else
 					sql += "  and district like '" + map.get("discode") + "%'";
