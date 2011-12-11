@@ -1,12 +1,16 @@
 <%@ page language="java" pageEncoding="utf-8"%>
 <%@taglib uri="estateTag" prefix="estateTag" %>
+<%@page import="com.estate.util.comm.RequestUtil"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
+<%
 
+String menuCls = RequestUtil.getParam(request,"menuCls","");
+%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
