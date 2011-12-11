@@ -237,5 +237,5 @@ function onsee(id) {
 	window.open("../../office/searchById.shtml?id=" + id + "&type=1&flag=see");
 }
 function seeBulid(id){
-	go('../../proShow.shtml?id='+id+'&searchPro=0')
+	window.open('../../proShow.shtml?id='+id+'&searchPro=0');
 }

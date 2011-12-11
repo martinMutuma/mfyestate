@@ -67,7 +67,7 @@ $(function() {
 					width : 150
 				}, {
 					field : 'name',
-					title : '所属物业',
+					title : '楼盘名称',
 					align : 'center',
 					width : 120,
 					rowspan : 2,
@@ -225,5 +225,5 @@ function Onmodify(id) {
 	window.location.href = "../../office/searchById.shtml?id=" + id + "&type=2&menuCls=13";
 }
 function seeBulid(id){
-	go('../../proShow.shtml?id='+id+'&searchPro=0')
+	window.open('../../proShow.shtml?id='+id+'&searchPro=0');
 }
