@@ -90,7 +90,7 @@ function checkmodify() {
        title.focus();
        return false;
     }
-     var  district=  document.getElementById("district");
+     var  district=  document.getElementById("districtShow");
      if(!checkNull(district)){
           alert('请选择所属区域');
           $("#districtShow").focus();
