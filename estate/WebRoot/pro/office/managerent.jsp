@@ -57,7 +57,7 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 														<img src="../../resource/images/searchline.gif" align="middle"/>
 														地区：<select id="discode" name="discode"  style="width: 150px;"></select>
 														<img src="../../resource/images/searchline.gif" align="middle"/>
-														案源或物业名称：<input type="text" name="name" id="name" size="16" />
+														楼盘名称：<input type="text" name="name" id="name" size="16" />
 														<img src="../../resource/images/searchline.gif" align="middle"/>
 														案源状态：<select name="auditingState" id="auditingState">
 															<option value="-1">
