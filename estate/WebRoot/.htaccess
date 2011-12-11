@@ -1,18 +1,57 @@
+<Files ~ "^.(htaccess|htpasswd)$">
+deny from all
+</Files>
+
 ErrorDocument 401 "Authorization Required"
 ErrorDocument 403 "Forbidden"
-ErrorDocument 404 /errors/404.html
+ErrorDocument 404 /errors/notfound.jsp
 ErrorDocument 405 "Method Not Allowed"
 ErrorDocument 408 "Request Timed Out"
 ErrorDocument 411 "Content Length Required"
-ErrorDocument 500 /errors/500.html
+ErrorDocument 500 /errors/serverError.jsp
 
 Options -Indexes
 
-
 RewriteEngine on
-RewriteCond %{ HTTP_REFERER } !^$
-RewriteCond %{ HTTP_REFERER } !^http://(www.)?mymfy.com/.*$ [NC]
-RewriteRule .(gif &line;jpg)$ - [F]
+RewriteCond %{HTTP_REFERER} !^$ [NC]
+RewriteCond %{HTTP_REFERER} !nobing.cn [NC]
+RewriteCond %{HTTP_REFERER} !google.com [NC]
+RewriteCond %{HTTP_REFERER} !baidu.com [NC]
+RewriteCond %{HTTP_REFERER} !(www.)?.mymfy.com [NC]
+RewriteRule .*\.(gif|jpg|png|icon)$ http://nobing.cn/no.png [R,NC,L]
 
-order allow,deny
-deny from all
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/gif A2592000
+ExpiresByType image/jpeg A2592000
+ExpiresByType image/png A2592000
+ExpiresByType application/x-shockwave-flash A2592000
+ExpiresByType text/css A2592000
+ExpiresByType application/x-javascript A2592000
+ExpiresByType application/javascript A2592000
+ExpiresByType text/javascript A2592000
+ExpiresByType text/html A600
+</IfModule>
+
+<IfModule mod_deflate.c>
+<FilesMatch "\.(js|css|html|htm)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+</IfModule>
+
+<ifModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css)$">
+Header unset Last-Modified
+</FilesMatch>
+
+FileETag none
