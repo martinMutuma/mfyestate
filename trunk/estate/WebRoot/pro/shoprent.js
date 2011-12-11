@@ -282,7 +282,7 @@ function checkshoprent() {
      	   img5.focus();
      	  return false;
          }
-       if(confirm("确认发布该商铺出售信息吗?"))return true;
+       if(confirm("确认发布该商铺出租信息吗?"))return true;
        return false;
 
 }
