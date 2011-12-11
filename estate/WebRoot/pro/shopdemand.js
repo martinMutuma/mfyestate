@@ -236,12 +236,34 @@ function checkneed() {
 		phone.focus();
 		return false;
 	}
+    if((!phone.value.isMobile())  &&  (!phone.value.isTel())){
+          alert('请填写合法的咨询电话');
+          phone.focus();
+          return  false;
+    }
 	if (!KE.util.isEmpty('content')) document.getElementById("content").value=KE.util.getData('content');
 	if (confirm("确认发布商铺需求信息吗?"))
 		return true;
 	return false;
 }
-
+//验证输入是否为手机号码
+String.prototype.isMobile = function() {   
+	var myreg = /^(((13[0-9]{1})|15[0-9]{1}|189)+\d{8})$/;  
+	//return (/^(?:13\d|15[89])-?\d{5}(\d{3}|\*{3})/.test(this.trim()));   
+	//return (/^13\d{9}$/g.test(value)||(/^15[0-35-9]\d{8}$/g.test(value))||(/^18[05-9]\d{8}$/g.test(this.trim());
+	/*if( myreg.test(this.trim())){
+		alert("true");
+	}else{
+	   alert("false")
+	}*/
+	return myreg.test(this.trim());
+} 
+//验证输入是否为电话
+String.prototype.isTel = function(){   
+//"兼容格式: 国家代码(2到3位)-区号(2到3位)-电话号码(7到8位)-分机号(3位)"   
+//return (/^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?/.test(this.trim()));   
+	return (/^(([0\+]\d{2,3}-)?(0\d{2,3})-)(\d{7,8})(-(\d{3,}))?/.test(this.trim()));   
+}
 function selectNeedFlag(value){
 	if(value=='1'){
 		document.getElementById("moneyFlag").innerHTML="租金";

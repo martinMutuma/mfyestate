@@ -151,7 +151,7 @@
 														<font color="red">*</font>联系人:
 												</td>
 												<td>
-														<input type="text" name="need.userName" id="title" size="22" maxlength="8"
+														<input type="text" name="need.userName" id="userName" size="22" maxlength="8"
 															value="${need.userName}">
 												</td>
 											</tr>
@@ -160,7 +160,7 @@
 														<font color="red">*</font>联系电话:
 												</td>
 												<td>
-														<input type="text" name="need.phone" id="title" size="22" maxlength="15"
+														<input type="text" name="need.phone" id="phone" size="22" maxlength="15"
 															value="${need.phone}">
 												</td>
 											</tr>
