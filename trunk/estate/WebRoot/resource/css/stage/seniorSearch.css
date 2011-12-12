@@ -53,3 +53,10 @@
 	background: url("../../images/search_title.gif") repeat-x;
 	background-position:-0px;
 }
+.sureDiv{
+	width:100%;
+	padding-left: 60px; 
+}
+.keyword{
+height: 30px;width: 300px;padding-top: 3px;font-size: 15px;padding-left: 3px;
+}

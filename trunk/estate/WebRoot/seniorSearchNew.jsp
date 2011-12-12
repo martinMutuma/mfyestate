@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="resource/css/stage/seniorSearch.css" type="text/css"></link>
 	<script type="text/javascript" src="resource/js/jquery-1.4.2.js" charset="utf-8"></script>
 	<script type="text/javascript" src="resource/js/whole.js"></script>
-	<script type="text/javascript" src="resource/js/search.js"></script>
 	<script type="text/javascript" src="resource/js/stage/seniorSearch.js"></script>
   </head>
   	<script type="text/javascript">
@@ -33,6 +32,14 @@
 			</div>
 			<div id="proContent" class="proContent" align="center">
 				<table cellpadding="0" border="0" cellspacing="5px" width="920px" >
+				<tr>
+						<td class="search_column_span line" valign="top">
+							<span>关&nbsp;&nbsp;键&nbsp;&nbsp;字：</span>
+						</td>
+						<td valign="top" class="line">
+							<input type="text" class="keyword"/>
+						</td>
+				</tr>
 				<tr>
 						<td class="search_column_span line" valign="top">
 							<span>销售状态：</span>
@@ -214,6 +221,9 @@
 					</tr>
 				</table>
 			</div>
+		</div>
+		<div class="sureDiv">
+			<input type="button" value="搜索全站"/>
 		</div>
   	</div>
   	<jsp:include page="copyright.jsp"></jsp:include>
