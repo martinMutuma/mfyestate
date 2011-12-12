@@ -214,6 +214,9 @@
 				</table>
 			</div>
 		</div>
+		<div class="sureDiv">
+			<input type="button" value="GO/搜索"/>
+		</div>
   	</div>
   	<jsp:include page="copyright.jsp"></jsp:include>
   </div>
