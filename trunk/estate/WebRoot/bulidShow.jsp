@@ -22,8 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript" src="resource/js/hbody.js"></script>
 <STYLE type="text/css">
 	#searchPanel{
-		height:180px;
-		*height: 180px;
+		height:210px;
 	}
 	#searchPanel{
 		padding-top: 5px;

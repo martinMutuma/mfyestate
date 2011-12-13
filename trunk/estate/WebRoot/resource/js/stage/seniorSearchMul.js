@@ -9,6 +9,9 @@ $(function(){
 		$(this).css({border:'1px solid #FFFFFF'})
 	})
 	$(".search_column_selected").find("input").attr("checked",true);
+	$("#bulidSearch").click(function(){
+			
+	})
 })
 function srClick(obj){
 	var sc = $(obj).parent().parent();
