@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
+<%@taglib uri="estateTag" prefix="estateTag" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -118,7 +119,7 @@ if(null==username)username="";
 			        <p><s:property value="disname"/></p>
 				</td>
 		        <td align="center">
-			        	<p><s:property value="flag"/></p>
+			        	<p><estateTag:convertCode codeType="租售" code="${flag}"></estateTag:convertCode> </p>
 		        </td>
 		        <td align="center">
 		        	<p><s:property value="price"/></p>
