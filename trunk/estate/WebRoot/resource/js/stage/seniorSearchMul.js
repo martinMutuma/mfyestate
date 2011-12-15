@@ -17,6 +17,8 @@ $(function() {
 	$("#bulidSearch").click(function() {
 		searchKeyWord('9');
 	})
+	
+	checkedPro = $("#searchTable_9");
 })
 
 function srClick(obj) {
@@ -138,4 +140,13 @@ function searchKeyWord(id) {
 	window.searchForm.method = "post";
 	window.searchForm.submit();
 	return;
+}
+
+var checkedPro;
+function choosePro(index,obj){
+	$(".checked_title").removeClass("checked_title");
+	$(obj).addClass("checked_title");
+	checkedPro.hide();
+	checkedPro =  $("#searchTable_"+index);
+	checkedPro.show();
 }
