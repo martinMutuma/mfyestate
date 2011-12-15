@@ -266,6 +266,76 @@ public class StageAction extends BaseAction {
 			return "bus";
 		}
 	}
+	
+	
+	/**
+	 * 多条件搜索，所有模块公用，修改请写修改日志
+	 * 
+	 * @author F.C create update F.C 2011-12-07 对搜索条件中的字段名进行base64解密
+	 * @return
+	 */
+	public String searchMul() {
+		String discode = "";
+		try {
+			Map<String, Object> map = new HashMap<String, Object>();
+			if (null == pageNo || "".equals(pageNo))
+				pageNo = "1";
+			if (null == limit || "".equals(limit))
+				limit = "20";
+			if (null == searchPro || "".equals(searchPro)) {
+				searchPro = "0";
+			}
+			if (null == selectedTab || "".equals(selectedTab))
+				selectedTab = "0";
+			// 处理查询条件
+			if (null != searchQuery) {
+				String[] queryAry = searchQuery.split("@");
+				for (int i = 0; i < queryAry.length; i++) {
+					try {
+						String queryString = queryAry[i];
+						String[] conditionAry = queryString.split("~");
+						String columnName = BASE64Util
+								.getFromBASE64(conditionAry[0]);
+						String searchType = conditionAry[1];
+						String minValue = conditionAry[2];
+						String maxValue = "";
+						if (conditionAry.length > 3)
+							maxValue = conditionAry[3];
+						String value = minValue + "@" + maxValue;
+						map.put(columnName + "@" + searchType, value);
+					} catch (Exception e) {
+						continue;
+					}
+				}
+			}
+			HttpSession session = this.request.getSession();
+			Object disCodeObj = session.getAttribute(Contants.SESSION_DISTRICT);
+			if (null != disCodeObj)
+				discode = disCodeObj.toString();
+			pu = service.findByConditionMulMap(map, new Integer(pageNo),
+					new Integer(limit), discode, searchPro, lptsValue, keywordValue,
+					selectedTab);
+		} catch (Exception e) {
+			log.error("查询项目出错", e);
+		}
+		if ("9".equals(searchPro)) {
+			menuIndex = "1";
+			ActionContext.getContext().put("attentionBulidList",
+			    CacheUtil.getHome().getAttentionBulidList());
+			return "bulidSearch";
+		} else if ("10".equals(searchPro)) {
+			menuIndex = "3";
+			return "secondBulid";
+		} else {
+			menuIndex = "2";
+			needList = needService.findFreshNeed((new Integer(searchPro) + 1)
+					+ "", discode);
+			ActionContext.getContext()
+					.put("proList", CacheUtil.getProAllList());
+			ActionContext.getContext().put("keywordFlag", false);
+			return "bus";
+		}
+	}
 
 	/**
 	 * 显示项目

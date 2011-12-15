@@ -94,6 +94,81 @@ public class StageServiceImpl implements IStageService {
 		return pu;
 	}
 
+	public PageUtil findByConditionMulMap(Map<String, Object> map, int pageNo,
+			int limit, String discode, String searchP, String lpts,
+			String keywordValue, String selectedTab) {
+		PageUtil pu = new PageUtil();
+		List<Map<String, Object>> list = null;
+		if (null != map) {
+			// 项目编号
+			String pro = (null == searchP || "".equals(searchP)) ? "0"
+					: searchP;
+			// 获取语句的搜索属性部分
+			String selectSqlHeader = SeniorSearchUtil.bulidProInfo(searchP, 6);
+			// 获取表名
+			String tableName = SeniorSearchUtil.bulidProInfo(pro, 1);
+			String countSql = "select count(*) from " + tableName
+					+ " t,t_m_baseinfo m where m.id = t.authorId ";
+			StringBuffer sql = new StringBuffer();
+			sql.append(selectSqlHeader);
+			List<Object> conditionList = new ArrayList<Object>();
+			StringBuffer conditionSql = new StringBuffer();
+			for (String key : map.keySet()) {
+				String[] keyAry = key.split("@");
+				String columnName = keyAry[0];
+				String type = "0";
+				if (keyAry.length > 1)
+					type = keyAry[1];
+				conditionSql.append(bulidSql(type, columnName, map.get(key)
+						.toString(), conditionList));
+			}
+			// 中介
+			if ("1".equals(selectedTab)) {
+				conditionSql.append(" and m.type = ? ");
+				conditionList.add("7");
+			} else if ("2".equals(selectedTab)) {
+				conditionSql.append(" and m.type = ? ");
+				conditionList.add("7");
+			}
+			// 特色楼盘
+			if (null != lpts && !"".equals(lpts)) {
+				conditionSql.append(" and t.features like ? ");
+				conditionList.add("%" + lpts.toString() + "%");
+			}
+			// 关键字查询
+			if (null != keywordValue && !"".equals(keywordValue)) {
+				// 获取关键字对应的字段
+				String title = SeniorSearchUtil.bulidProInfo(pro, 2);
+				conditionSql.append(" and t." + title + " like ? ");
+				conditionList.add("%" + keywordValue.toString() + "%");
+			}
+			// 地区
+			if (null != discode && !"".equals(discode)) {
+				conditionSql.append(" and t.district like ? ");
+				conditionList.add("%" + StringUtil.getShortZoneGB(discode)
+						+ "%");
+			}
+			conditionSql.append(" and auditingState = '1' ");
+			countSql += conditionSql;
+			sql.append(conditionSql).append(" order by createTime desc");
+			Object[] conditionObj = convertListToObjectArray(conditionList);
+			List<Object[]> countList = dao.findObjectArryList(countSql,
+					conditionObj);
+			list = dao.createBaseSqlQuery(sql.toString()).setFirstResult(
+					(pageNo - 1) * limit).setMaxSize(limit).mapList(
+					conditionObj);
+			if (null != countList && countList.size() > 0) {
+				Object[] obj = countList.get(0);
+				pu.setTotalRecords(new Integer(null == obj[0] ? "0" : obj[0]
+						.toString()));
+			}
+		}
+		pu.setList(list);
+		pu.setPageNo(pageNo);
+		pu.setPageSize(limit);
+		return pu;
+	}
+
 	private Object[] convertListToObjectArray(List<Object> list) {
 		Object[] objAry = new Object[list.size()];
 		for (int i = 0; i < list.size(); i++) {
@@ -104,7 +179,7 @@ public class StageServiceImpl implements IStageService {
 
 	// 处理查询条件
 	private String bulidSql(String searchType, String columnName, String value,
-			 List<Object> conditionList) {
+			List<Object> conditionList) {
 		String sql = " and ";
 		String[] valAry = value.split("@");
 		String[] columnNameAry = columnName.split("#");
