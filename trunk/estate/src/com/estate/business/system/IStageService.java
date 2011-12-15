@@ -18,6 +18,10 @@ public interface IStageService {
 			int limit, String discode, String searchPro, String lpts,
 			String keywordValue, String selectedTab);
 
+	public PageUtil findByConditionMulMap(Map<String, Object> map, int pageNo,
+			int limit, String discode, String searchPro, String lpts,
+			String keywordValue, String selectedTab);
+	
 	/**
 	 * 根据主键查找某个具体项目
 	 * 
