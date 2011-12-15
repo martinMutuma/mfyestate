@@ -27,11 +27,11 @@
 		<span class="location">精确搜索案源信息</span>
 		<div class="searchContent">
 			<div class="proTitle">
-				<span class="checked_title">新房</span><span>写字楼</span><span>商铺</span><span>生意转让</span><span>工业地产</span><span>大型项目</span><span>二手房</span>
+				<span class="checked_title" onclick="choosePro('9',this)">新房</span><span onclick="choosePro('0',this)">写字楼</span><span  onclick="choosePro('1',this)">商铺</span><span  onclick="choosePro('2',this)">生意转让</span><span  onclick="choosePro('3',this)">工业地产</span><span  onclick="choosePro('4',this)">大型项目</span><span  onclick="choosePro('10',this)">二手房</span>
 				<b title="切换至多选模式" onclick="window.location.href='seniorSearchMul.shtml'">切换至多选模式</b>
 			</div>
 			<div id="proContent" class="proContent" align="center">
-				<table cellpadding="0" border="0" cellspacing="5px" width="920px" >
+				<table cellpadding="0" border="0" style="display:block;" cellspacing="5px" width="920px" id="searchTable_9">
 				<tr>
 						<td class="search_column_span line" valign="top">
 							<span>关&nbsp;&nbsp;键&nbsp;&nbsp;字：</span>
@@ -219,50 +219,55 @@
 								style="cursor: pointer">水景地产</span>
 						</td>
 					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td><input type="button" id="bulidSearch" value="搜索全站"/></td>
+					</tr>
 				</table>
-			</div>
 			<s:iterator value="#proList" status="status" var="proTemp">
-    							<table border="0" cellspacing="0" style="margin-top: 5px;">
-    								<tr>
-    									<td align="right">关&nbsp;&nbsp;键&nbsp;&nbsp;字：</td>
-    									<td>
-    										<input id="keyword_<s:property value="#status.index"/>" type="text" class="keyword"/>
-    									</td>
-    								</tr>
-    								<s:iterator value="searchList" status="seStatus" var="define">
-    									<tr>
-    										<td class="search_column_span" valign="top"><span><s:property value="name"/>：</span></td>
-    										<td valign="top">
-    											<span style="cursor:pointer" id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_0" class="search_column search_column_selected" onclick="search('0','','','',this,'<s:property value="#seStatus.index"/>_0','<s:property value="#status.index"/>')">不限</span>
-    											<s:if test='%{searchType == "7"}'>
-	    											<s:iterator value="dataList" status="ssStatus">
-	    												<s:if test='maxvalue==null||maxvalue==""'>
-	    													<span id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>" class="search_column" onclick="search('<s:property value="searchType"/>','<s:property value="minvalue"/>','<s:property value="maxvalue"/>','<s:property value="#define.code"/>',this,'<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>','<s:property value="#status.index"/>')" style="cursor:pointer"><s:property value="name"/></span>
-	    												</s:if>
-	    												<s:elseif test='maxvalue==null||maxvalue==""'>
-	    													<span id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>" class="search_column" onclick="search('<s:property value="searchType"/>','<s:property value="minvalue"/>','<s:property value="maxvalue"/>','<s:property value="#define.code"/>',this,'<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>','<s:property value="#status.index"/>')" style="cursor:pointer"><s:property value="name"/></span>
-	    												</s:elseif>
-	    												<s:else>
-	    													<span id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>" class="search_column" onclick="search('<s:property value="searchType"/>','<s:property value="minvalue"/>','<s:property value="maxvalue"/>','<s:property value="#define.code"/>',this,'<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>','<s:property value="#status.index"/>')" style="cursor:pointer"><s:property value="name"/></span>
-	    												</s:else>
-	    											</s:iterator>
-	    										</s:if>
-	    										<s:else>
-	    											<s:iterator value="dataList" status="ssStatus">
-	    												<span id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>" class="search_column" onclick="search('<s:property value="searchType"/>','<s:property value="minvalue"/>','','<s:property value="#define.code"/>',this,'<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>','<s:property value="#status.index"/>')" style="cursor:pointer"><s:property value="name"/></span>
-	    											</s:iterator>
-	    										</s:else>
-    										</td>
-    									</tr>
-    								</s:iterator>
-    							</table>
-    					</s:iterator>
+				<table cellpadding="0" border="0" cellspacing="5px" style="display: none" width="920px" id="searchTable_<s:property value="#status.index"/>">
+					<tr>
+						<td align="right">关&nbsp;&nbsp;键&nbsp;&nbsp;字：</td>
+						<td>
+							<input id="keyword_<s:property value="#status.index"/>" type="text" class="keyword"/>
+						</td>
+					</tr>
+					<s:iterator value="searchList" status="seStatus" var="define">
+						<tr>
+							<td class="search_column_span" valign="top"><span><s:property value="name"/>：</span></td>
+							<td valign="top">
+								<span style="cursor:pointer" id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_0" class="search_column search_column_selected" onclick="search('0','','','',this,'<s:property value="#seStatus.index"/>_0','<s:property value="#status.index"/>')">不限</span>
+								<s:if test='%{searchType == "7"}'>
+									<s:iterator value="dataList" status="ssStatus">
+										<s:if test='maxvalue==null||maxvalue==""'>
+											<span id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>" class="search_column" onclick="search('<s:property value="searchType"/>','<s:property value="minvalue"/>','<s:property value="maxvalue"/>','<s:property value="#define.code"/>',this,'<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>','<s:property value="#status.index"/>')" style="cursor:pointer"><s:property value="name"/></span>
+										</s:if>
+										<s:elseif test='maxvalue==null||maxvalue==""'>
+											<span id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>" class="search_column" onclick="search('<s:property value="searchType"/>','<s:property value="minvalue"/>','<s:property value="maxvalue"/>','<s:property value="#define.code"/>',this,'<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>','<s:property value="#status.index"/>')" style="cursor:pointer"><s:property value="name"/></span>
+										</s:elseif>
+										<s:else>
+											<span id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>" class="search_column" onclick="search('<s:property value="searchType"/>','<s:property value="minvalue"/>','<s:property value="maxvalue"/>','<s:property value="#define.code"/>',this,'<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>','<s:property value="#status.index"/>')" style="cursor:pointer"><s:property value="name"/></span>
+										</s:else>
+									</s:iterator>
+								</s:if>
+								<s:else>
+									<s:iterator value="dataList" status="ssStatus">
+										<span id="rc_<s:property value="#status.index"/>_<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>" class="search_column" onclick="search('<s:property value="searchType"/>','<s:property value="minvalue"/>','','<s:property value="#define.code"/>',this,'<s:property value="#seStatus.index"/>_<s:property value="#ssStatus.index+1"/>','<s:property value="#status.index"/>')" style="cursor:pointer"><s:property value="name"/></span>
+									</s:iterator>
+								</s:else>
+							</td>
+						</tr>
+					</s:iterator>
+					<tr>
+						<td>&nbsp;</td>
+						<td><input type="button" id="bulidSearch" value="搜索全站"/></td>
+					</tr>
+				</table>
+		</s:iterator>
 		</div>
-		
-		<div class="sureDiv">
-			<input type="button" id="bulidSearch" value="搜索全站"/>
 		</div>
   	</div>
+  	
   	<jsp:include page="copyright.jsp"></jsp:include>
   </div>
   </body>
