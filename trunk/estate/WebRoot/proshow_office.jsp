@@ -12,6 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>梦房园</title>
 <link rel="stylesheet" href="<%=basePath %>resource/css/whole.css" type="text/css"></link>
 <link rel="stylesheet" href="<%=basePath %>resource/css/secondBulid.css" type="text/css"></link>
+<link rel="stylesheet" href="resource/css/hbody.css" type="text/css"></link>
 <script type="text/javascript" src="<%=basePath %>resource/js/jquery-1.4.2.js" charset="utf-8"></script>
 <script type="text/javascript" src="<%=basePath %>resource/js/whole.js"></script>
 </head>
@@ -57,12 +58,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   					</table>
 	   				</div>
 	   			</div>
-	   			<div class="leftDiv">
-	   				<div class="">
-	   					<div></div><div></div>
-	   				</div>
-	   				<div>
-	   				</div>
+	   			 <div class="p_center" style="width:238px;border: 1px solid #C4C4C4;margin-top:15px;">
+	   					<div class="title_news" ><font class="headtitle">&nbsp;&nbsp;同区写字楼<estateTag:convertCode codeType="租售" code="${dataMap.flag}"></estateTag:convertCode></font></div>
+											<div class="atBody" align="center" >
+												<ul >
+												        <li style=" border-bottom: 0px; " >
+															<span style="width:100px;"><font class="fonthead">标题</font></span>
+														    <span style="width:45px;text-align:center"><font class="fonthead">区域</font></span>
+														    <span style="width:50px;text-align:center"><font class="fonthead"><estateTag:convertCode codeType="租金售价" code="${dataMap.flag}"></estateTag:convertCode></font></span>
+														</li>
+											     </ul>
+							                   </div>
+	   			</div>
+	   			
+	   			 <div class="p_center" style="width:238px;border: 1px solid #C4C4C4;margin-top:15px;">
+	   					<div class="title_news" ><font class="headtitle">&nbsp;&nbsp;最新写字楼<estateTag:convertCode codeType="租售" code="${dataMap.flag}"></estateTag:convertCode></font></div>
+											<div class="atBody" align="center" >
+												<ul >
+												        <li style=" border-bottom: 0px; " >
+															<span style="width:100px;"><font class="fonthead">标题</font></span>
+														    <span style="width:45px;text-align:center"><font class="fonthead">区域</font></span>
+														    <span style="width:50px;text-align:center"><font class="fonthead"><estateTag:convertCode codeType="租金售价" code="${dataMap.flag}"></estateTag:convertCode></font></span>
+														</li>
+											     </ul>
+							                   </div>
 	   			</div>
 	   		</div>
 	   		<div id="contentRight" align="right">
