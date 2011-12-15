@@ -142,12 +142,12 @@ public class CacheUtil {
 		hd.setAttentionBulidList(bulidService.findFreshBulid(district));//关注
 		hd.setSpecialsList(specialService.findTop6Specials("2"));//折扣
 		try {
-			hd.setXylNewsList(newService.getListByteType(0, 8, 7, ""));
-			hd.setEstateNews(newService.getNewesList(0, 8));
-			hd.setSbList(sbservice.sbList(2));
-			hd.setRentList(sbservice.sbList(1));
-			hd.setRecommendSbList(sbservice.findTopWeight(10,"2"));
-			hd.setRecommendRentList(sbservice.findTopWeight(10,"1"));
+			hd.setXylNewsList(newService.getListByteType(0, 8, 7, ""));//新闻
+			hd.setEstateNews(newService.getNewesList(0, 8));//我们的动态
+			hd.setSbList(sbservice.sbList(2));//二手房
+			hd.setRentList(sbservice.sbList(1));//出租房
+			hd.setRecommendSbList(sbservice.findTopWeight(10,"2"));//推荐二手房
+			hd.setRecommendRentList(sbservice.findTopWeight(10,"1"));//推荐出租房
 			//最新一条团购
 			List<TpSpecials> list = specialService.findActiveSpecials(1, "1");
 			if(!list.isEmpty())
