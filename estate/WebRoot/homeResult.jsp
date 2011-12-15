@@ -47,6 +47,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		   		</div>
 		   	</s:iterator>
 		   	</div>
+		   	<div style="height:70px;width:700px;border: 1px solid #C4C4C4;	margin-top: 10px;">
+		   	广告
+		   	</div>
 		   	<div class="search_title_bg search_title_bellow" align="left">
 		   		<span class="search_title_tab checked_title_tab">商铺</span>
 		   		<span class="search_title_tab" onclick="search_home('1','1')">商铺出租</span>
@@ -80,6 +83,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   			</table>
 			   		</div>
 			   	</s:iterator>	
+		   	</div>
+		   	<div style="height:70px;width:700px;border: 1px solid #C4C4C4;	margin-top: 10px;">
+		   	广告
 		   	</div>
    		</div>
    		<div class="search_result_ad">
