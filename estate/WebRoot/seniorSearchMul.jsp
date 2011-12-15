@@ -34,6 +34,14 @@
 				<table cellpadding="0" border="0" cellspacing="5px" width="920px" >
 				<tr>
 						<td class="search_column_span line" valign="top">
+							<span>关&nbsp;&nbsp;键&nbsp;&nbsp;字：</span>
+						</td>
+						<td valign="top" class="line">
+							<input id="keyword_9" type="text" class="keyword"/>
+						</td>
+				</tr>
+				<tr>
+						<td class="search_column_span line" valign="top">
 							<span>销售状态：</span>
 						</td>
 						<td valign="top" class="line">
@@ -41,19 +49,19 @@
 								class="search_column search_column_selected"
 								onclick="search('0','','','',this,'0_0','9')">不限</span>
 							<span id="rc_9_0_1" class="search_column"
-								onclick="search('8','0','','c2FsZXNTdGF0dXMjMQ==',this,'0_1','9')"
+								onclick="search('8','0','','c2FsZXNfU3RhdHVzIzE=',this,'0_1','9')"
 								style="cursor: pointer">待售</span>
 							<span id="rc_9_0_2" class="search_column"
-								onclick="search('8','1','','c2FsZXNTdGF0dXMjMQ==',this,'0_2','9')"
+								onclick="search('8','1','','c2FsZXNfU3RhdHVzIzE=',this,'0_2','9')"
 								style="cursor: pointer">预售</span>
 							<span id="rc_9_0_3" class="search_column"
-								onclick="search('8','2','','c2FsZXNTdGF0dXMjMQ==',this,'0_3','9')"
+								onclick="search('8','2','','c2FsZXNfU3RhdHVzIzE=',this,'0_3','9')"
 								style="cursor: pointer">在售</span>
 							<span id="rc_9_0_4" class="search_column"
-								onclick="search('8','3','','c2FsZXNTdGF0dXMjMQ==',this,'0_4','9')"
+								onclick="search('8','3','','c2FsZXNfU3RhdHVzIzE=',this,'0_4','9')"
 								style="cursor: pointer">尾盘</span>
 							<span id="rc_9_0_5" class="search_column"
-								onclick="search('8','4','','c2FsZXNTdGF0dXMjMQ==',this,'0_5','9')"
+								onclick="search('8','4','','c2FsZXNfU3RhdHVzIzE=',this,'0_5','9')"
 								style="cursor: pointer">售完</span>
 						</td>
 					</tr>
@@ -66,10 +74,10 @@
 								class="search_column search_column_selected"
 								onclick="search('0','','','',this,'1_0','9')">不限</span>
 							<span id="rc_9_1_1" class="search_column"
-								onclick="search('8','1','','aXNGb3J3YXJkIzE=',this,'1_1','9')"
+								onclick="search('8','1','','aXNfZm9yd2FyZCMx',this,'1_1','9')"
 								style="cursor: pointer">现房</span>
 							<span id="rc_9_1_2" class="search_column"
-								onclick="search('8','2','','aXNGb3J3YXJkIzE=',this,'1_2','9')"
+								onclick="search('8','2','','aXNfZm9yd2FyZCMx',this,'1_2','9')"
 								style="cursor: pointer">期房</span>
 						</td>
 					</tr>
@@ -215,7 +223,7 @@
 			</div>
 		</div>
 		<div class="sureDiv">
-			<input type="button" value="GO/搜索"/>
+			<input type="button" id="bulidSearch" value="搜索全站"/>
 		</div>
   	</div>
   	<jsp:include page="copyright.jsp"></jsp:include>

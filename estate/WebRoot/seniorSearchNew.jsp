@@ -222,25 +222,11 @@
 				</table>
 			</div>
 			<s:iterator value="#proList" status="status" var="proTemp">
-    						<li style="clear: none;position: absolute;top:<s:property value="#status.index*40"/>px;">
-    							<div class="search_pro_bg" id="pro_<s:property value="#status.index"/>" style=""><s:property value="name"/></div>
-    							<div id="searchDiv_<s:property value="#status.index"/>" style="position:absolute;top:-<s:property value="#status.index*40"/>px;width:805px;left:150px;height:320px;
-    								<s:if test="#status.index != 0">
-    									display:none
-    								</s:if>"
-    							>	
     							<table border="0" cellspacing="0" style="margin-top: 5px;">
     								<tr>
-    									<td align="right">输入关键字：</td>
+    									<td align="right">关&nbsp;&nbsp;键&nbsp;&nbsp;字：</td>
     									<td>
-    										<div class="keyWord_div" style="float: left;">
-    											<input id="keyword_<s:property value="#status.index"/>" style="width: 300px;height: 25px;"/>&nbsp;&nbsp;<input onclick="searchKeyWord('<s:property value="#status.index"/>')" type="button" value="搜索"/>
-    											<label><input id="zj_<s:property value="#status.index"/>" type="checkbox" value="1" checked="checked"/>中介</label>
-    											<label><input id="fzj_<s:property value="#status.index"/>" type="checkbox" value="2" checked="checked"/>非中介</label>&nbsp;&nbsp;
-    										</div>
-    										<div style="float: left;">
-    											<a onclick="searchKeyWord('<s:property value="#status.index"/>')" class="icon-search" href="#" style="width: 100px;*width: 110px;"></a>
-    										</div>
+    										<input id="keyword_<s:property value="#status.index"/>" type="text" class="keyword"/>
     									</td>
     								</tr>
     								<s:iterator value="searchList" status="seStatus" var="define">
@@ -269,10 +255,7 @@
     										</td>
     									</tr>
     								</s:iterator>
-    								</table>
-    							</div>
-    							
-    						</li>
+    							</table>
     					</s:iterator>
 		</div>
 		

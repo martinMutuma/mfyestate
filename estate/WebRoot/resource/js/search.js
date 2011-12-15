@@ -72,10 +72,20 @@ $(function() {
 				color : '#FFA028'
 			});
 		} else {
-			lpts = parseInt(lpts);
-			$("#lpts_" + (lpts + 1)).css({
-				color : '#FFA028'
-			});
+			if (lpts.indexOf("@") == -1) {
+				lpts = parseInt(lpts);
+				$("#lpts_" + (lpts + 1)).css({
+					color : '#FFA028'
+				});
+			} else {
+				var lpAry = lpts.split("@");
+				for (var i = 0; i < lpAry.length; i++) {
+					var lptsV = parseInt(lpAry[i]);
+					$("#lpts_" + (lptsV + 1)).css({
+						color : '#FFA028'
+					});
+				}
+			}
 		}
 	}
 })
@@ -185,7 +195,7 @@ function myTab(titStr, boxStr, num, onnum, Csn, onCsn) {
 
 }
 
-//组装复杂查询
+// 组装复杂查询
 function filteQuery(sv, qv) {
 	var tv = "";
 	var tqv = "";
@@ -230,7 +240,7 @@ function lptsSearch(lptsType) {
 	window.searchForm.submit();
 }
 
-//搜索匹配符
+// 搜索匹配符
 function formatSearchType(type) {
 	var data = {
 		'1' : '<',
@@ -245,10 +255,9 @@ function formatSearchType(type) {
 	return data[type];
 }
 
-//通过价格查询
+// 通过价格查询
 function searchByPrice(minValue, maxValue, type, proType, pageno) {
 	window.location.href = 'searchByPrice.shtml?minValue=' + minValue
 			+ '&maxValue=' + maxValue + '&type=' + type + '&proType=' + proType
 			+ '&pageNo=' + pageno;
 }
-
