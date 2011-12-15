@@ -264,5 +264,9 @@
 		<code value="4">精装</code>
 		<code value="5">豪华装</code>
 	</collection>	
+	<collection name="租售">
+		<code value="2">出售</code>
+		<code value="1">出租</code>
+	</collection>	
 	
 </codeCollections>
