@@ -101,6 +101,7 @@
 			</result>
 			<result name="proImg">/pro/secondBuilding_image.jsp</result>
 			<result name="toInfo">/pro/secondBuilding_info.jsp</result>
+			<result name="torentInfo">/pro/secondBuilding_rentInfo.jsp</result>
 			<result name="showBuliding">/secondBulidShow.jsp</result>
 		</action>
 	</package>

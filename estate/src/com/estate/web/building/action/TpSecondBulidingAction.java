@@ -228,7 +228,15 @@ public class TpSecondBulidingAction extends BaseAction {
 		}
 		return "toInfo";
 	}
-
+	public String toUpdateRent() {
+		try {
+			if (null != tpsId) {
+				tps = service.find(tpsId);
+			}
+		} catch (Exception e) {
+		}
+		return "torentInfo";
+	}
 	public String deleteSB() throws IOException {
 		try {
 			if (null != tpsId) {
