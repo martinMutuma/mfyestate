@@ -12,7 +12,7 @@ if(null==username)username="";
 <html>
   <head>
     
-    <title>用户登录</title>
+    <title>网上店铺</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
