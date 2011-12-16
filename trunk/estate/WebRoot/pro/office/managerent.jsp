@@ -88,7 +88,6 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 														<img src="../../resource/images/searchline.gif" align="middle"/>
 														建筑面积：<select name="area1" id="area1" style="width:70px">
 															<option value="-1">
-																-
 															</option>
 															<option value="50">
 																50
@@ -113,7 +112,6 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 															</option>
 														</select>&nbsp;至&nbsp;<select name="area2" id="area2">
 															<option value="-1">
-																-
 															</option>
 															<option value="50">
 																50
@@ -140,7 +138,6 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 														<img src="../../resource/images/searchline.gif" align="middle"/>
 														租金：&nbsp;<select name="price1" id="price1">
 															<option value="-1">
-																-
 															</option>
 															<option value="1">
 																1
@@ -183,7 +180,6 @@ String menuCls = RequestUtil.getParam(request,"menuCls","");
 															</option>
 														</select>&nbsp;至<select name="price2" id="price2">
 															<option value="-1">
-																-
 															</option>
 															<option value="1">
 																1
