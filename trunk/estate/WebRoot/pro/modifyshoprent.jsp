@@ -89,7 +89,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td align="left">
 													<input id="area"
-														name="shop.area" maxlength="5" style="width: 60px" onKeyUp="isNum(this)" value="${shop.area }"  class="easyui-validatebox" required="true" missingMessage="建筑面积必填"/> 元/㎡·月
+														name="shop.area" maxlength="5" style="width: 60px" onKeyUp="isNum(this)" value="${shop.area }"  class="easyui-validatebox" required="true" missingMessage="建筑面积必填"/> ㎡
 												</td>
 											</tr>
 											<tr>
@@ -98,7 +98,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td align="left">
 													<input id="areauseful"
-														name="shop.areauseful" maxlength="5" style="width: 60px" onKeyUp="isNum(this)" value="${shop.areauseful }"  class="easyui-validatebox" required="true" missingMessage="使用面积必填"/> 元/㎡·月
+														name="shop.areauseful" maxlength="5" style="width: 60px" onKeyUp="isNum(this)" value="${shop.areauseful }"  class="easyui-validatebox" required="true" missingMessage="使用面积必填"/> ㎡
 												</td>
 											</tr>
 											<c:if test='${shop.flag eq "1"}'>
