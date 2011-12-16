@@ -92,7 +92,7 @@ td {
 														<img src="../../resource/images/searchline.gif" align="middle"/>
 														建筑面积：<select name="area1" id="area1" style="width:70px">
 															<option value="-1">
-																-
+															
 															</option>
 															<option value="50">
 																50
@@ -117,7 +117,7 @@ td {
 															</option>
 														</select>&nbsp;至&nbsp;<select name="area2" id="area2">
 															<option value="-1">
-																-
+															
 															</option>
 															<option value="50">
 																50
@@ -144,7 +144,7 @@ td {
 														<img src="../../resource/images/searchline.gif" align="middle"/>
 														售价：&nbsp;<select name="price1" id="price1">
 															<option value="-1">
-																-
+																
 															</option>
 															<option value="100">
 																100
@@ -172,7 +172,7 @@ td {
 															</option>
 														</select>&nbsp;至<select name="price2" id="price2">
 															<option value="-1">
-																-
+																
 															</option>
 														  <option value="100">
 																100
