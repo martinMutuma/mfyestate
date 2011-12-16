@@ -23,7 +23,7 @@
 	     <link rel="stylesheet" type="text/css" href="../resource/css/jqueryui/default/easyui.css"></link>
 		<script type="text/javascript" src="<%=basePath%>/resource/js/jquery-1.4.2.js"></script>
 			
-	     <script type="text/javascript" src="../resource/js/jquery.easyui.min.js"></script>
+	     <script type="text/javascript" src="<%=basePath%>/resource/js/jquery.easyui.min.js"></script>
 		<script type="text/javascript" src="../resource/js/global.js"></script>
 	      <script type="text/javascript" src="../resource/js/whole.js"></script>
 	    <link rel="stylesheet" href="../resource/css/whole.css" type="text/css"></link>s
@@ -73,8 +73,10 @@
 														<font color="red">*</font>省/市/区县:
 												</td>
 												<td align="left">
-														<input id="district" name="need.district" value='${need.disname }' style="width: 150px;"></input>
-														<input type="hidden" name="need.disname" id="disname" value="${need.disname }"/>
+												        <input   value="${need.disname}" id="showdistrict" style="width: 150px;"/>
+														<input id="district" type="hidden" name="need.district"   style="width: 150px;" ></input>
+														<input type="hidden" name="need.disname" id="disname"/>
+														
 												</td>
 											</tr>
 											<tr>
@@ -159,12 +161,12 @@
 			</center>
 		</div>    
 			<script language="javascript">
- $("#district").combotree({
+  $("#showdistrict").combotree({
     url:'',
     animate:false,
     onShowPanel:function(){
     	var dataUrl = '<%=basePath%>district/bulidDistrictTree.shtml?level=5&districtCode=0000000000&t='+(new Date()).getTime().toString(36);
-    	if($("#district").combotree("options").url==""){
+    	if($("#showdistrict").combotree("options").url==""){
     		$.messager.show({
 	   			showType:null,
 	   			showSpeed:1000,
@@ -174,7 +176,7 @@
 	   			title:'提示',
 	   			timeout:2000
 	   		});
-    		$("#district").combotree("options").url=dataUrl;
+    		$("#showdistrict").combotree("options").url=dataUrl;
 	    	$.get(dataUrl,function(data){
 				var json = "";
 				try{
@@ -182,27 +184,29 @@
 				}catch(e){
 					json = data;
 				}
-				$("#district").combotree("loadData",json);
+				$("#showdistrict").combotree("loadData",json);
 	    	})
     	}
     },
    	onLoadSuccess:function(){
-   	if($("#district").combotree("options").url!="")
+   	if($("#showdistrict").combotree("options").url!="")
    		$.messager.show({
    			showType:'slide',
    			showSpeed:1000,
    			width:150,
    			height:70,
-   			ms
-   			g:'地区信息加载完成',
+   			msg:'地区信息加载完成',
    			title:'提示',
    			timeout:3000
    		})
+
    	},
    	onClick:function(node){
    		$("#disname").val(node.text)
+   		$("#district").val(node.id);  
+
    	}
-});
+ })
 		      
 		</script>
 		<script>

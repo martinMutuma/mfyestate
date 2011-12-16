@@ -40,7 +40,12 @@ function isNum(obj) {
 }
 
 function checkmodify() {
-
+      var  district=$("#showdistrict");
+	 if(district.combotree('getValue').trim().length==0){
+         alert("请选择所在区域");
+         district.focus();
+         return false;
+      }
 	var minArea = document.getElementById("minArea");
 	var maxArea = document.getElementById("maxArea");
 	if (minArea.value== 0.0)
