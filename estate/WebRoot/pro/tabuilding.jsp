@@ -68,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td>
 													<div align="left" >
-													    <estateTag:checkbox  id="buildingType"  name="tpBulding.buildingType" codeType="楼盘类型"/>
+													    <estateTag:checkbox   id="buildingType"  name="tpBulding.buildingType" codeType="楼盘类型"/>
 				
 													</div>
 												</td>
@@ -82,7 +82,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<td>
 													<div align="left">
 														<input type="text" id="name" name="tpBulding.name" 
-															 size="40" onblur="getName()" maxLength="23" ><span id="nameSpan"></span>
+															 size="40" onblur="getName()" maxLength="23" class="easyui-validatebox" required="true" missingMessage="楼盘名称必填" ><span id="nameSpan"></span>
 															 
 													</div>
 												</td>
@@ -134,7 +134,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td>
 													<div align="left" >
-                                                         <input type="text" name="tpBulding.address" id="address" maxLength="48" size="40"/>
+                                                         <input type="text" name="tpBulding.address"  class="easyui-validatebox" required="true" missingMessage="楼盘地址必填" id="address" maxLength="48" size="40"/>
 													</div>
 												</td>
 											</tr>
@@ -146,7 +146,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td align="left">
 													
-													<input type="text" name="tpBulding.mainUnit"  maxLength="14" id="mainUnit"  
+													<input type="text" name="tpBulding.mainUnit"  class="easyui-validatebox" required="true" missingMessage="主力户型必填"  maxLength="14" id="mainUnit"  
 														 />
 												   </td>
 											</tr>
@@ -170,7 +170,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td>
 													<div align="left">
-														<input type="text"  name="tpBulding.buildingCount"
+														<input type="text"  class="easyui-validatebox" required="true" missingMessage="总栋数必填" name="tpBulding.buildingCount"
 															onKeyUp="isNum(this)" id="buildingCount" maxLength="4"  size="4">
 													</div>
 												</td>
@@ -184,7 +184,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<td>
 													<div align="left">
 														<input type="text" name="tpBulding.area"
-															onKeyUp="isNum(this)" maxLength="8" id="area" size="4">
+															onKeyUp="isNum(this)" class="easyui-validatebox" required="true" missingMessage="占地面积必填" maxLength="8" id="area" size="4">
 														㎡
 													</div>
 												</td>
@@ -198,7 +198,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<td>
 													<div align="left">
 														<input type="text" name="tpBulding.constructionArea"
-															onKeyUp="isNum(this)" maxLength="8" id="constructionArea" size="4">
+															onKeyUp="isNum(this)" maxLength="8" class="easyui-validatebox" required="true" missingMessage="建筑面积必填" id="constructionArea" size="4">
 														㎡
 													</div>
 												</td>
@@ -210,7 +210,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													 <input type="text" id="opendate" name="tpBulding.openDate" readOnly="readOnly"
+													 <input type="text" id="opendate" class="easyui-validatebox" required="true" missingMessage="开盘日期必填" name="tpBulding.openDate" readOnly="readOnly"
 														onFocus="WdatePicker({firstDayOfWeek:7,dateFmt:'yyyy-MM-dd'})"
 																class="Wdate" >
 													
@@ -223,7 +223,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													 <input type="text" name="tpBulding.minPrice" maxLength="6" size="8"  id="minPrice" onKeyUp="isNum(this)"
+													 <input type="text" name="tpBulding.minPrice" maxLength="6" class="easyui-validatebox" required="true" missingMessage="楼盘起价必填" size="8"  id="minPrice" onKeyUp="isNum(this)"
 														 />元/㎡
 													
 												 </td>
@@ -235,7 +235,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													 <input type="text" maxLength="6" name="tpBulding.averagePrice" size="8"  id="averagePrice" onKeyUp="isNum(this)"
+													 <input type="text" maxLength="6" name="tpBulding.averagePrice" size="8" class="easyui-validatebox" required="true" missingMessage="楼盘均价必填" id="averagePrice" onKeyUp="isNum(this)"
 														 />元/㎡
 													
 												 </td>
@@ -248,7 +248,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td>
 													<div align="left">
-														     <estateTag:checkbox  id="archForms" value="0" name="tpBulding.archForms" codeType="建筑形式"/>
+														     <estateTag:checkbox  id="archForms"  value="0" name="tpBulding.archForms" codeType="建筑形式"/>
 																
 													</div>
 												</td>
@@ -260,7 +260,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													<input type="text" size="8" maxLength="7"  name="tpBulding.propertyManagement"  id="propertyManagement"    onKeyUp="isNum(this)"
+													<input type="text" size="8" maxLength="7"  class="easyui-validatebox" required="true" missingMessage="物业费必填" name="tpBulding.propertyManagement"  id="propertyManagement"    onKeyUp="isNum(this)"
 														 /> 元/㎡·月
 												</td>
 											</tr>
