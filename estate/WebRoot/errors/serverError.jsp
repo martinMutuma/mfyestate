@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+		<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -7,12 +11,12 @@
 		<meta http-equiv="keywords" content="楼盘,买房">
 		<meta http-equiv="description"
 			content="梦房园是买卖、租赁房屋平台，它提供新房、二手房买卖租赁信息,也提供地产投资、海景房、旅游地产以及房产资讯">
-		<link rel="stylesheet" href="../resource/css/whole.css"
+		<link rel="stylesheet" href="<%=basePath%>resource/css/whole.css"
 			type="text/css"></link>
-		<link rel="stylesheet" href="css/error.css" type="text/css"></link>
-		<script type="text/javascript" src="../resource/js/jquery-1.4.2.js"
+		<link rel="stylesheet" href="<%=basePath%>errors/css/error.css" type="text/css"></link>
+		<script type="text/javascript" src="<%=basePath%>resource/js/jquery-1.4.2.js"
 			charset="utf-8"></script>
-		<script type="text/javascript" src="../resource/js/whole.js"></script>
+		<script type="text/javascript" src="<%=basePath%>resource/js/whole.js"></script>
 	</head>
 	<body>
 		<jsp:include page="../head.jsp"></jsp:include>
