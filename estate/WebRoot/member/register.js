@@ -208,7 +208,6 @@ function hidediv(tag){
 }
   function checkform(){
       var tbtype=document.sysAgentBean.tbtype;
-      var tbsex=document.sysAgentBean.tbsex;
       var discode=$("#discode");
       var username = document.sysAgentBean.username;
       var password = document.sysAgentBean.password;
@@ -224,11 +223,6 @@ function hidediv(tag){
       
       if(!checkNull(tbtype)){
          _Alert(tbtype,"请选择会员类别。");
-         return false;
-      }
-      
-      if(!checkNull(tbsex)){
-         _Alert(tbsex,"请选择会员性别。");
          return false;
       }
       
