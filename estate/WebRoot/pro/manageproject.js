@@ -2,7 +2,9 @@
 $(function() {
 	$("#auditingState").combobox({
 				width : 100,
-				panelHeight : 100
+				panelHeight : 100,
+				editable:false 
+				
 			});
 	$("#searchid").linkbutton({
 				text : '查询',
