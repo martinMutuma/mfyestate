@@ -80,7 +80,7 @@
 												</td>
 												<td>
 													<div align="left">
-														<input type="text" maxLength="23" name="tpBulding.businessDevelopment"
+														<input type="text" maxLength="23" class="easyui-validatebox" required="true" missingMessage="开发商必填" name="tpBulding.businessDevelopment"
 															id="businessDevelopment" />
 													</div>
 												</td>
