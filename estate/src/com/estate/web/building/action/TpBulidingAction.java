@@ -180,7 +180,7 @@ public class TpBulidingAction extends BaseAction {
 					imgcomp)) {
 				ImageSizer
 				.doCompress(imgcomp, basePath
-						+ compressPath + fileName, 202, 112,
+						+ compressPath + fileName, 211, 120,
 						1.0f, true);
 		     tpBulding.setCompressUrl(compressPath+fileName);
 			}
@@ -333,7 +333,7 @@ public class TpBulidingAction extends BaseAction {
 					imgcomp)) {
 				ImageSizer
 				.doCompress(imgcomp, basePath
-						+ compressPath + fileName, 202, 112,
+						+ compressPath + fileName, 211, 120,
 						1.0f, true);
 		     tpBulding.setCompressUrl(compressPath+fileName);
 			}
