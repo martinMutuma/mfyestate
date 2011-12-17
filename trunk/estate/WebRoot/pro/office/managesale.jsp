@@ -90,7 +90,7 @@ td {
 														</div>
 														<div class="searchline">
 														<img src="../../resource/images/searchline.gif" align="middle"/>
-														建筑面积：<select name="area1" id="area1" style="width:70px">
+														建筑面积：<select name="area1" id="area1"  style="width:70px">
 															<option value="-1">
 															
 															</option>
