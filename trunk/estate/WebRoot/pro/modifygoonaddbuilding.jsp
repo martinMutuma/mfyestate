@@ -83,7 +83,7 @@
 												</td>
 												<td>
 													<div align="left">
-														<input type="text" name="tpBulding.lifeSupport"
+														<input type="text" class="easyui-validatebox" required="true" missingMessage="生活配套必填" name="tpBulding.lifeSupport"
 															id="lifeSupport" maxLength="99" value="${tpBulding.lifeSupport}"/>
 													</div>
 												</td>
@@ -97,7 +97,7 @@
 												<td>
 													<div align="left">
 														<input type="text" name="tpBulding.neighborhoods"
-															id="neighborhoods" maxLength="99" value="${tpBulding.neighborhoods}">
+															id="neighborhoods" maxLength="99" class="easyui-validatebox" required="true" missingMessage="小区配套必填" value="${tpBulding.neighborhoods}">
 													</div>
 												</td>
 											</tr>
@@ -109,7 +109,7 @@
 												</td>
 												<td>
 													<div align="left">
-														<input type="text"  maxLength="99" value="${tpBulding.traffic}" name="tpBulding.traffic" id="traffic">
+														<input type="text"  maxLength="99" class="easyui-validatebox" required="true" missingMessage="交通状况必填" value="${tpBulding.traffic}" name="tpBulding.traffic" id="traffic">
 													</div>
 												</td>
 											</tr>
