@@ -111,7 +111,7 @@ public class TpSecondBulidingAction extends BaseAction {
 					String sourceFloder = XmlUtil.getValue("imgPath", "sysConfig");
 					String imageName = (new Date()).getTime()+tpsImageFileName.substring(tpsImageFileName.lastIndexOf("."));
 					ImageSizer.doCompress(tpsImage, basePath + imageFloder
-							+ "/" + imageName, 135, 95, 1.0f, true);
+							+ "/" + imageName, 211, 120, 1.0f, true);
 					FileUtil.doUpFile(basePath + sourceFloder
 							+ "/" + imageName, tpsImage);
 					tps.setSourceUrl(sourceFloder  +"/"+ imageName);
@@ -159,7 +159,7 @@ public class TpSecondBulidingAction extends BaseAction {
 					String sourceFloder = XmlUtil.getValue("imgPath", "sysConfig");
 					String imageName = (new Date()).getTime()+tpsImageFileName.substring(tpsImageFileName.lastIndexOf("."));
 					ImageSizer.doCompress(tpsImage, basePath + imageFloder
-							+ "/" + imageName, 135, 95, 1.0f, true);
+							+ "/" + imageName, 211, 120, 1.0f, true);
 					FileUtil.doUpFile(basePath + sourceFloder
 							+ "/" + imageName, tpsImage);
 					tps.setSourceUrl(sourceFloder +"/" +imageName);
