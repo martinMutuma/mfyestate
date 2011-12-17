@@ -67,11 +67,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<tr>
 			      <td height="30" align="right" bgcolor="#FFFFFF" ><span style="color:#FF0000;"> </span>会员性别：</td>
  					<td bgcolor="#FFFFFF" >&nbsp;
-			        <select name="tb.sex" id="tbsex" class="easyui-validatebox" missingMessage="请选择会员性别" required="true" style="width: 120px">
-			        	<option value="" selected>请选择</option>
-			            <option value="1" >男</option>
-			            <option value="2" >女</option>
-			        </select></td>
+ 					<input name="tb.sex" type="radio" value="1" missingMessage="请选择会员性别" required="true" checked />男
+ 					<input  name="tb.sex" type="radio" value="2"  missingMessage="请选择会员性别" required="true"/>女
+			      
 			    </tr>
 		     <tr>
 		       <td height="30" align="right" bgcolor="#FFFFFF" ><span style="color:#FF0000;"> </span>地&nbsp;&nbsp;&nbsp;&nbsp;	区：</td>
