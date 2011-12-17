@@ -78,7 +78,7 @@
 														<font color="red">*</font>开发商:
 												</td>
 												<td align="left">
-														<input type="text" maxLength="23" name="tpBulding.businessDevelopment"
+														<input type="text" class="easyui-validatebox" required="true" missingMessage="开发商必填" maxLength="23" name="tpBulding.businessDevelopment"
 														  value="${tpBulding.businessDevelopment}"	id="businessDevelopment" />
 												</td>
 											</tr>
