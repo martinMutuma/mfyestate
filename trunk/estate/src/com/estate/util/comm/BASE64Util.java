@@ -9,9 +9,9 @@ public class BASE64Util {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(getBASE64("features#1"));
+		System.out.println(getBASE64("is_forward#1"));
 
-		System.out.println(getFromBASE64("Nzc3MjA2"));
+		System.out.println(getFromBASE64("NDgwMjEzOA=="));
 	}
 
 	// 将 s 进行 BASE64 编码
