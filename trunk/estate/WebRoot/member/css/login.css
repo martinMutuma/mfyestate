@@ -10,7 +10,7 @@
 	*width:70px;
 }
 .user-login{margin-left: 50px}
-.login_split{border-right: 2px medium dotted #505050;}
+.login_split{border-right: 1px dotted  #505050;}
 .login_split h3{color: #A41100}
 .login_split p{padding:0px;margin: 5px;text-align: left;}
 .why{border-bottom: 1px solid #D0121B;width: 60%;font-size: 14px;font-weight: bold;}

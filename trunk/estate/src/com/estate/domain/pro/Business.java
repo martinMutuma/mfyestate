@@ -82,6 +82,33 @@ public class Business extends BaseEntity {
     private  String   gongSi;
 	@Column(name="reject")
     private  String   qiTa;
+	private String auditingRemark;
+	private int auditingUser;
+	private Date auditingTime;
+	public String getAuditingRemark() {
+		return auditingRemark;
+	}
+
+	public void setAuditingRemark(String auditingRemark) {
+		this.auditingRemark = auditingRemark;
+	}
+
+	public int getAuditingUser() {
+		return auditingUser;
+	}
+
+	public void setAuditingUser(int auditingUser) {
+		this.auditingUser = auditingUser;
+	}
+
+	public Date getAuditingTime() {
+		return auditingTime;
+	}
+
+	public void setAuditingTime(Date auditingTime) {
+		this.auditingTime = auditingTime;
+	}
+
 	public String getCreateTimeString() {
 		return createTimeString;
 	}
