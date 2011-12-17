@@ -2,19 +2,27 @@
 $(function() {
      $("#category").combobox({
 				width :100,
-				panelHeight : 100
+				panelHeight : 100,
+				editable:false 
+				
 			});
 	 $("#price1").combobox({
 				width : 50,
-				panelHeight : 100
+				panelHeight : 100,
+				editable:false 
+				
 			});
 	 $("#price2").combobox({
 				width : 50,
-				panelHeight : 100
+				panelHeight : 100,
+				editable:false 
+				
 			});
 	$("#auditingState").combobox({
 				width : 100,
-				panelHeight : 100
+				panelHeight : 100,
+				editable:false 
+				
 			});
 	$("#searchid").linkbutton({
 				text : '查询',

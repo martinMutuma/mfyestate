@@ -2,12 +2,16 @@
 $(function() {
 	$("#flag").combobox({
 				width : 80,
-				panelHeight : 70
+				panelHeight : 70,
+				editable:false 
+				
 			});
 	$("#auditing").combobox({
 
 				width : 80,
-				panelHeight : 70
+				panelHeight : 70,
+				editable:false 
+				
 			});
 
 	$("#searchid").linkbutton({
