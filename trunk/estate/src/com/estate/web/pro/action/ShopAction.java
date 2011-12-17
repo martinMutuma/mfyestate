@@ -95,7 +95,7 @@ public class ShopAction extends BaseAction {
 						imageFile1)) {
 					ImageSizer
 					.doCompress(imageFile1, basePath
-							+ compressPath + fileName, 80, 60,
+							+ compressPath + fileName, 211, 120,
 							1.0f, true);
 					shop.setImgUrl1(imagePatn + fileName);
 					shop.setCompressUrl(compressPath + fileName);
