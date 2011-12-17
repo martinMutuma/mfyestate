@@ -77,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td>
 													<div align="left">
-														<input type="text" id="name" name="tpBulding.name" value="${tpBulding.name}"
+														<input type="text" id="name" class="easyui-validatebox" required="true" missingMessage="楼盘名称必填" name="tpBulding.name" value="${tpBulding.name}"
 															 size="40" maxLength="23" onBlur="getName()"><span id="nameSpan"></span>
 													</div>
 												</td>
@@ -130,7 +130,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td >
 													<div align="left" >
-                                                         <input type="text" id="address" maxLength="48" name="tpBulding.address"  size="40" value="${tpBulding.address}"  id="address"  />
+                                                         <input type="text" id="address" maxLength="48" class="easyui-validatebox" required="true" missingMessage="楼盘地址必填" name="tpBulding.address"  size="40" value="${tpBulding.address}"  id="address"  />
 													</div>
 												</td>
 											</tr>
@@ -142,7 +142,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td align="left">
 													
-													<input type="text" name="tpBulding.mainUnit" maxLength="14" id="mainUnit"  value="${tpBulding.mainUnit}"
+													<input type="text" name="tpBulding.mainUnit" maxLength="14" class="easyui-validatebox" required="true" missingMessage="主力户型必填" id="mainUnit"  value="${tpBulding.mainUnit}"
 														 />
 												   </td>
 											</tr>
@@ -167,7 +167,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<td>
 													<div align="left">
 														<input type="text" id="buildingCount" name="tpBulding.buildingCount"
-															onKeyUp="isNum(this)" maxLength="4" value="${tpBulding.buildingCount}" size="4">
+															onKeyUp="isNum(this)" maxLength="4" class="easyui-validatebox" required="true" missingMessage="总栋数必填"  value="${tpBulding.buildingCount}" size="4">
 													</div>
 												</td>
 											</tr>
@@ -180,7 +180,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<td>
 													<div align="left">
 														<input type="text" id="area" name="tpBulding.area"
-															onKeyUp="isNum(this)" id="area"  maxLength="8" value="${tpBulding.area}"  size="4">
+															onKeyUp="isNum(this)" id="area"  maxLength="8" class="easyui-validatebox" required="true" missingMessage="占地面积必填" value="${tpBulding.area}"  size="4">
 														㎡
 													</div>
 												</td>
@@ -193,7 +193,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td>
 													<div align="left">
-														<input type="text" id="constructionArea"  name="tpBulding.constructionArea"   value="${tpBulding.constructionArea}" 
+														<input type="text" id="constructionArea"  name="tpBulding.constructionArea" class="easyui-validatebox" required="true" missingMessage="建筑面积必填"  value="${tpBulding.constructionArea}" 
 															onKeyUp="isNum(this)" maxLength="8" id="constructionArea" size="4">
 														㎡
 													</div>
@@ -206,7 +206,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													 <input type="text"  name="tpBulding.openDate" id="openDate" readOnly="readOnly" value="${tpBulding.dateString}"
+													 <input type="text"  name="tpBulding.openDate" id="openDate" class="easyui-validatebox" required="true" missingMessage="开盘日期必填" readOnly="readOnly" value="${tpBulding.dateString}"
 														onFocus="WdatePicker({firstDayOfWeek:7,dateFmt:'yyyy-MM-dd'})"
 																class="Wdate" >
 													
@@ -219,12 +219,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													 <input type="text" name="tpBulding.minPrice"  maxLength="6" value="${tpBulding.minPrice}" id="minPrice" onKeyUp="isNum(this)"
+													 <input type="text" name="tpBulding.minPrice" size="6" class="easyui-validatebox" required="true" missingMessage="楼盘起价必填" maxLength="6" value="${tpBulding.minPrice}" id="minPrice" onKeyUp="isNum(this)"
 														 />元/每㎡
 													
 												 </td>
 											</tr>
-											
+											  <tr>
+												<td>
+													<div align="right" >
+													 <font color="red">*</font>楼盘均价:
+													</div>
+												</td>
+												<td align="left">
+													 <input type="text" maxLength="6" size="6"  name="tpBulding.averagePrice" class="easyui-validatebox" required="true" missingMessage="楼盘均价必填" value="${tpBulding.averagePrice==0?'':tpBulding.averagePrice}" id="averagePrice" onKeyUp="isNum(this)"
+														 />元/每㎡
+													
+												 </td>
+											</tr>
 												<tr>
 												<td>
 													<div align="right" >
@@ -242,7 +253,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													<input type="text" maxLength="7" name="tpBulding.propertyManagement"  value="${tpBulding.propertyManagement}"  id="propertyManagement"    onKeyUp="isNum(this)"
+													<input type="text" maxLength="7" name="tpBulding.propertyManagement" class="easyui-validatebox" required="true" missingMessage="物业费必填"  value="${tpBulding.propertyManagement}"  id="propertyManagement"    onKeyUp="isNum(this)"
 														 /> 元/㎡·月
 												</td>
 											</tr>
@@ -301,18 +312,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												 </td>
 											</tr>
 											
-											<tr>
-												<td>
-													<div align="right" >
-														楼盘均价:
-													</div>
-												</td>
-												<td align="left">
-													 <input type="text" maxLength="6"   name="tpBulding.averagePrice" value="${tpBulding.averagePrice==0?'':tpBulding.averagePrice}" id="averagePrice" onKeyUp="isNum(this)"
-														 />元/每㎡
-													
-												 </td>
-											</tr>
+											
 											 <tr>
 												<td>
 													<div align="right" >
@@ -327,10 +327,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 											</tr>
 											<tr>
-												<td>
-													<div align="right" >
+												<td align="right">
+													
 														楼盘最高价:
-													</div>
+													
 												</td>
 												<td align="left">
 													 <input type="text"  maxLength="6" name="tpBulding.maxPrice" value="${tpBulding.maxPrice==0?'':tpBulding.maxPrice}"  id="maxPrice"  onKeyUp="isNum(this)"
@@ -348,7 +348,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													 <input type="text" maxLength="7" onKeyUp="isNum(this)" id="greenRate" value="${tpBulding.greenRate==0.0?'':tpBulding.greenRate}"  name="tpBulding.greenRate"
+													 <input type="text" maxLength="7" size="4" onKeyUp="isNum(this)" id="greenRate" value="${tpBulding.greenRate==0.0?'':tpBulding.greenRate}"  name="tpBulding.greenRate"
 														 />%
 													
 												 </td>
@@ -360,7 +360,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													 <input type="text" maxLength="7" id="capacityRate" onKeyUp="isNum(this)" value="${tpBulding.capacityRate==0?'':tpBulding.capacityRate}"  name="tpBulding.capacityRate"
+													 <input type="text" maxLength="7" size="4" id="capacityRate" onKeyUp="isNum(this)" value="${tpBulding.capacityRate==0?'':tpBulding.capacityRate}"  name="tpBulding.capacityRate"
 														 />%
 													
 												 </td>
