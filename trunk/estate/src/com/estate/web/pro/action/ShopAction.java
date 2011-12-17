@@ -90,7 +90,7 @@ public class ShopAction extends BaseAction {
 					return null;
 				}
 
-				String fileName = new Date().getTime() + "";
+				String fileName = new Date().getTime() + imageFile1FileName.substring(imageFile1FileName.lastIndexOf("."));
 				if (FileUtil.doUpFile(basePath + imagePatn + fileName,
 						imageFile1)) {
 					ImageSizer
@@ -147,7 +147,7 @@ public class ShopAction extends BaseAction {
 				return false;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFileFileName.substring(imageFileFileName.lastIndexOf("."));;
 			if (FileUtil.doUpFile(basePath + imgPath + fileName, image)) {
 				switch (index) {
 				case 2:
@@ -336,7 +336,7 @@ public class ShopAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile1FileName.substring(imageFile1FileName.lastIndexOf("."));;
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile1)) {
 
 				map.put("name", shop.getImgName1());
@@ -373,7 +373,7 @@ public class ShopAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile2FileName.substring(imageFile2FileName.lastIndexOf("."));;
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile2)) {
 				map.put("name", shop.getImgName2());
 				map.put("type", shop.getImgType2());
@@ -409,7 +409,7 @@ public class ShopAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile3FileName.substring(imageFile3FileName.lastIndexOf("."));;
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile3)) {
 				map.put("name", shop.getImgName3());
 				map.put("type", shop.getImgType3());
@@ -444,7 +444,7 @@ public class ShopAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile4FileName.substring(imageFile4FileName.lastIndexOf("."));;
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile4)) {
 				map.put("name", shop.getImgName4());
 				map.put("type", shop.getImgType4());
@@ -477,7 +477,7 @@ public class ShopAction extends BaseAction {
 					e.printStackTrace();
 				}
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile5FileName.substring(imageFile5FileName.lastIndexOf("."));;
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile5)) {
 				map.put("name", shop.getImgName5());
 				map.put("type", shop.getImgType5());

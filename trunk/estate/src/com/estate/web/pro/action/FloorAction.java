@@ -78,7 +78,7 @@ public class FloorAction extends BaseAction {
 				return null;
 			}
 
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile1FileName.substring(imageFile1FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile1)) {
 				floor.setImgUrl1(fileName);
 			}
@@ -99,7 +99,7 @@ public class FloorAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile2FileName.substring(imageFile2FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile2))
 				floor.setImgUrl2(fileName);
 
@@ -120,7 +120,7 @@ public class FloorAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile3FileName.substring(imageFile3FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile3))
 				floor.setImgUrl3(fileName);
 
@@ -141,7 +141,7 @@ public class FloorAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile4FileName.substring(imageFile4FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile4))
 				floor.setImgUrl4(fileName);
 
@@ -162,7 +162,7 @@ public class FloorAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile5FileName.substring(imageFile5FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile5))
 				floor.setImgUrl5(fileName);
 

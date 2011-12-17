@@ -94,7 +94,7 @@ public class IndustryAction extends BaseAction {
 					return null;
 				}
 
-				String fileName = new Date().getTime() + "";
+				String fileName = new Date().getTime() + imageFile1FileName.substring(imageFile1FileName.lastIndexOf("."));
 				if (FileUtil.doUpFile(basePath + imagePatn + fileName,
 						imageFile1)) {
 					industry.setImgUrl1(imagePatn+fileName);
@@ -121,7 +121,7 @@ public class IndustryAction extends BaseAction {
 					return null;
 
 				}
-				String fileName = new Date().getTime() + "";
+				String fileName = new Date().getTime() + imageFile2FileName.substring(imageFile2FileName.lastIndexOf("."));
 				if (FileUtil.doUpFile(basePath + imagePatn + fileName,
 						imageFile2)){
 					industry.setImgUrl2(imagePatn+fileName);
@@ -151,7 +151,7 @@ public class IndustryAction extends BaseAction {
 					return null;
 
 				}
-				String fileName = new Date().getTime() +"";
+				String fileName = new Date().getTime() +imageFile3FileName.substring(imageFile3FileName.lastIndexOf("."));
 				if (FileUtil.doUpFile(basePath + imagePatn + fileName,
 						imageFile3)){
 					industry.setImgUrl3(imagePatn+fileName);
@@ -181,7 +181,7 @@ public class IndustryAction extends BaseAction {
 					return null;
 
 				}
-				String fileName = new Date().getTime() + "";
+				String fileName = new Date().getTime() + imageFile4FileName.substring(imageFile4FileName.lastIndexOf("."));
 				if (FileUtil.doUpFile(basePath + imagePatn + fileName,
 						imageFile4)){
 					industry.setImgUrl4(imagePatn+fileName);
@@ -211,7 +211,7 @@ public class IndustryAction extends BaseAction {
 					return null;
 
 				}
-				String fileName = new Date().getTime() + "";
+				String fileName = new Date().getTime() + imageFile5FileName.substring(imageFile5FileName.lastIndexOf("."));
 				if (FileUtil.doUpFile(basePath + imagePatn + fileName,
 						imageFile5)){
 					industry.setImgUrl5(imagePatn+fileName);
@@ -408,7 +408,7 @@ public class IndustryAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile1FileName.substring(imageFile1FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile1)) {
 
 				map.put("name", industry.getImgName1());
@@ -446,7 +446,7 @@ public class IndustryAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile2FileName.substring(imageFile2FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile2)) {
 				map.put("name", industry.getImgName2());
 				map.put("type", industry.getImgType2());
@@ -483,7 +483,7 @@ public class IndustryAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile3FileName.substring(imageFile3FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile3)) {
 				map.put("name", industry.getImgName3());
 				map.put("type", industry.getImgType3());
@@ -519,7 +519,7 @@ public class IndustryAction extends BaseAction {
 				return null;
 
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile4FileName.substring(imageFile4FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile4)) {
 				map.put("name", industry.getImgName4());
 				map.put("type", industry.getImgType4());
@@ -553,7 +553,7 @@ public class IndustryAction extends BaseAction {
 					e.printStackTrace();
 				}
 			}
-			String fileName = new Date().getTime() + "";
+			String fileName = new Date().getTime() + imageFile5FileName.substring(imageFile5FileName.lastIndexOf("."));
 			if (FileUtil.doUpFile(basePath + imagePatn + fileName, imageFile5)) {
 				map.put("name", industry.getImgName5());
 				map.put("type", industry.getImgType5());
