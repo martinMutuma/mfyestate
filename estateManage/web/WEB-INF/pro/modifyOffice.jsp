@@ -16,19 +16,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta http-equiv="expires" content="0">
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="This is my page">
-		<link rel="stylesheet" href="<%=basePath %>resource/css/global.css" type="text/css"></link>
 		<!-- 1.css -->
+		<link rel="stylesheet" href="<%=basePath %>resource/css/global.css" type="text/css"></link>
 		<link rel="stylesheet" type="text/css" href="<%=basePath %>css/jqueryui/default/easyui.css"></link>
+		<link rel="stylesheet" type="text/css" href="<%=basePath %>scripts/kindeditor/skins/default.css"></link>
+	    <link rel="stylesheet" href="<%=basePath %>resource/css/whole.css" type="text/css"></link>
+	    <link rel="stylesheet" href="<%=basePath %>resource/css/memberCenter/info.css" type="text/css"></link>
+	    <!-- 2.js -->
 		<script type="text/javascript" src="<%=basePath %>scripts/jquery-1.4.2.js"></script>
 	    <script type="text/javascript" src="<%=basePath %>scripts/jquery.dataGridTip.js"></script>
 	    <script type="text/javascript" src="../scripts/pro/modifyOffice.js"></script>
-	    <!-- 2.js -->
 	    <script type="text/javascript" src="<%=basePath %>scripts/jquery.easyui.min.js"></script>
 		<script type="text/javascript" src="<%=basePath %>scripts/kindeditor/kindeditor.js"></script>
-		<link rel="stylesheet" type="text/css" href="<%=basePath %>scripts/kindeditor/skins/default.css"></link>
-		  <script type="text/javascript" src="<%=basePath %>resource/js/whole.js"></script>
-	    <link rel="stylesheet" href="<%=basePath %>resource/css/whole.css" type="text/css"></link>
-	    <link rel="stylesheet" href="<%=basePath %>resource/css/memberCenter/info.css" type="text/css"></link>
+		<script type="text/javascript" src="<%=basePath %>resource/js/whole.js"></script>
 	</head>
 
 	<body>

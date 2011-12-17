@@ -141,7 +141,7 @@ public class OfficeAction extends BaseAction {
 	}
 	
 	/**
-	 * 保存楼盘审核信息，若审核通过+5分
+	 * 保存审核信息，若审核通过+5分
 	 * 
 	 * @return
 	 */

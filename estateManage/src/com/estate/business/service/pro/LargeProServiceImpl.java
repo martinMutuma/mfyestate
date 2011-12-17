@@ -1,11 +1,15 @@
 package com.estate.business.service.pro;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import com.estate.base.dao.BaseDao;
 import com.estate.base.dao.IBaseDao;
 import com.estate.domain.pro.LargePro;
+import com.estate.domain.pro.Office;
+import com.estate.util.comm.DateTimeUtil;
+import com.estate.util.comm.StringUtil;
 
 public class LargeProServiceImpl implements  LargeProService{
      private IBaseDao<LargePro, Long> dao;
@@ -15,7 +19,7 @@ public class LargeProServiceImpl implements  LargeProService{
      /**
       * 根据条件查询写字楼出租或出售信息
       */
-     public   List<LargePro>  getList(Map<String,String> map){
+     public  List<LargePro>  getList(Map<String,String> map){
     	 String start = map.get("page"); 
     	 String limt = map.get("row");
     	   if(map==null || map.size()==0)return null;
@@ -30,8 +34,18 @@ public class LargeProServiceImpl implements  LargeProService{
 	    	    	 int snum=Integer.parseInt(start)-1;
 	    	    	 sql+="   limit  "+(snum*Integer.parseInt(limt))+ " ,"+ limt+" ";}
 			 List<LargePro>  list=dao.findList(sql);
+			 List<LargePro> newlist = null;
+			 if (list != null && list.size() > 0) {
+					newlist = new ArrayList<LargePro>();
+					for (LargePro pro : list) {
+						pro.setCreateTimeString(DateTimeUtil.switchDateToString(
+								pro.getCreateTime(), "yyyy-MM-dd"));
+						pro.setAudtingString(StringUtil.formatAuditingState(pro.getAuditingState()));
+						newlist.add(pro);
+					}
+
+				}
 			 return list;
-			
 		} catch (Exception e) {
 			  e.printStackTrace();
 		}
@@ -96,4 +110,20 @@ public class LargeProServiceImpl implements  LargeProService{
    		}
    		return isFlag;
    	}
+	/**
+	 * 根据id查询大型项目信息
+	 */
+	public LargePro getById(String id) {
+		if ("".equals(id))
+			return null;
+		String sql = "select * from t_p_largepro where id=? ";
+		try {
+			List<LargePro> list = dao.findList(sql, new Object[] { id });
+			if (null != list && list.size() > 0)
+				return list.get(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

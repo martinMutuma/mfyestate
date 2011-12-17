@@ -121,6 +121,15 @@ public class LargeProAction extends BaseAction {
 	}
 	
 	/**
+	 * 根据Id查询 大型项目信息
+	 */
+	public String searchById() {
+		String id = RequestUtil.getParam(request, "id", "");
+		LargePro pro = service.getById(id);
+		request.setAttribute("largePro", pro);
+		return "modifyproject";
+	}
+	/**
 	 * 得到参数值
 	 * 
 	 * @return

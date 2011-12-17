@@ -33,4 +33,6 @@ public interface LargeProService {
 	 * 核实写字楼信息
 	 */
 	public boolean auditByIdString(String idString);
+
+	public LargePro getById(String id);
 }

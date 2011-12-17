@@ -49,14 +49,14 @@ public class BaseinfoAction extends BaseAction {
 	public String toManageShop() {
 		return "manageShopPage";
 	}
-	public String toManageMessage() {
-		return "manageMessagePage";
+	public String toManageBusiness() {
+		return "manageBusiness";
 	}
 	public String toManageProject() {
 		return "manageProjectPage";
 	}
-	public String toManagesale() {
-		return "managesalePage";
+	public String toManageIndustry() {
+		return "manageIndustryPage";
 	}
 
 	public String getBaseinfoManage() {

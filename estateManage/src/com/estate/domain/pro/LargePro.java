@@ -16,9 +16,10 @@ import com.estate.base.entity.BaseEntity;
 
 @Table("t_p_largepro")
 public class LargePro extends BaseEntity {
+	private  String  num;
 	private String district;
+	private  String  disname;
 	private String address;
-	private String payWay;
 	private double price;
 	private String title;
 	private String content;
@@ -50,6 +51,14 @@ public class LargePro extends BaseEntity {
 	@Column(name="reject")
 	private  String  paywayString;
 
+	private String nearAddress;
+	private String flag;
+	private Double area;
+	private Double areauseful;
+	private int views;
+	private int attentionnum;
+	private String compressUrl;
+	
 	public String getCreateTimeString() {
 		return createTimeString;
 	}
@@ -88,14 +97,6 @@ public class LargePro extends BaseEntity {
 
 	public void setAddress(String address) {
 		this.address = address;
-	}
-
-	public String getPayWay() {
-		return payWay;
-	}
-
-	public void setPayWay(String payWay) {
-		this.payWay = payWay;
 	}
 
 	public double getPrice() {
@@ -288,5 +289,77 @@ public class LargePro extends BaseEntity {
 
 	public void setAuditingState(String auditingState) {
 		this.auditingState = auditingState;
+	}
+
+	public String getNum() {
+		return num;
+	}
+
+	public void setNum(String num) {
+		this.num = num;
+	}
+
+	public String getDisname() {
+		return disname;
+	}
+
+	public void setDisname(String disname) {
+		this.disname = disname;
+	}
+
+	public String getNearAddress() {
+		return nearAddress;
+	}
+
+	public void setNearAddress(String nearAddress) {
+		this.nearAddress = nearAddress;
+	}
+
+	public String getFlag() {
+		return flag;
+	}
+
+	public void setFlag(String flag) {
+		this.flag = flag;
+	}
+
+	public Double getArea() {
+		return area;
+	}
+
+	public void setArea(Double area) {
+		this.area = area;
+	}
+
+	public Double getAreauseful() {
+		return areauseful;
+	}
+
+	public void setAreauseful(Double areauseful) {
+		this.areauseful = areauseful;
+	}
+
+	public int getViews() {
+		return views;
+	}
+
+	public void setViews(int views) {
+		this.views = views;
+	}
+
+	public int getAttentionnum() {
+		return attentionnum;
+	}
+
+	public void setAttentionnum(int attentionnum) {
+		this.attentionnum = attentionnum;
+	}
+
+	public String getCompressUrl() {
+		return compressUrl;
+	}
+
+	public void setCompressUrl(String compressUrl) {
+		this.compressUrl = compressUrl;
 	}
 }

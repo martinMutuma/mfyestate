@@ -6,6 +6,8 @@ import java.util.Map;
 import com.estate.base.dao.BaseDao;
 import com.estate.base.dao.IBaseDao;
 import com.estate.domain.pro.Business;
+import com.estate.domain.pro.Office;
+import com.estate.util.comm.DateTimeUtil;
 
 public class BusinessServiceImpl implements  BusinessService{
      private IBaseDao<Business, Long> dao;
@@ -96,4 +98,37 @@ public class BusinessServiceImpl implements  BusinessService{
    		}
    		return isFlag;
    	}
+	
+	public Business getById(String id) {
+		 if("".equals(id))return null;
+	   String  sql="select * from t_p_business where  id=? ";
+	   try {
+		   List<Business>   list=  dao.findList(sql, new Object[]{id});   
+		   if(null!=list && list.size()>0){
+			  Business business= list.get(0);
+				business.setCreateTimeString(DateTimeUtil.switchDateToString(
+						business.getCreateTime(), "yyyy-MM-dd"));
+			   return  business;
+		   }
+		} catch (Exception e) {
+			 e.printStackTrace();
+		}
+		return null;
+   }
+
+	public boolean updateAuditing(Business obj) {
+		String sql = "";
+		try {
+			if("1".equals(obj.getAuditingState())){
+				sql="update t_m_baseinfo set integral = integral+5,totalIntegral = totalIntegral+5 where id=?";
+				dao.update(sql, new Object[]{obj.getAuthorId()});
+			}
+			sql="update t_p_business set auditingState = ?,auditingRemark = ?,auditingUser = ?,auditingTime = now() where id=?";
+			dao.update(sql, new Object[]{obj.getAuditingState(),obj.getAuditingRemark(),obj.getAuditingUser(),obj.getId()});
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
 }

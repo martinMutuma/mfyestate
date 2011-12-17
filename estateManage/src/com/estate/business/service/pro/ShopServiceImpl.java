@@ -6,7 +6,6 @@ import java.util.Map;
 
 import com.estate.base.dao.BaseDao;
 import com.estate.base.dao.IBaseDao;
-import com.estate.domain.pro.Office;
 import com.estate.domain.pro.Shop;
 import com.estate.util.comm.DateTimeUtil;
 import com.estate.util.comm.StringUtil;
@@ -124,5 +123,21 @@ public class ShopServiceImpl implements  ShopService{
 					}
 				}
 		return list.get(0);
+	}
+	
+	public boolean updateAuditing(Shop obj) {
+		String sql = "";
+		try {
+			if("1".equals(obj.getAuditingState())){
+				sql="update t_m_baseinfo set integral = integral+5,totalIntegral = totalIntegral+5 where id=?";
+				dao.update(sql, new Object[]{obj.getAuthorId()});
+			}
+			sql="update t_s_shops set auditingState = ?,auditingRemark = ?,auditingUser = ?,auditingTime = now() where id=?";
+			dao.update(sql, new Object[]{obj.getAuditingState(),obj.getAuditingRemark(),obj.getAuditingUser(),obj.getId()});
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 }

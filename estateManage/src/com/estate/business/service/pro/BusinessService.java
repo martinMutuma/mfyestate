@@ -33,4 +33,8 @@ public interface BusinessService {
 	 * 核实写字楼信息
 	 */
 	public boolean auditByIdString(String idString);
+
+	public Business getById(String id);
+
+	public boolean updateAuditing(Business business);
 }

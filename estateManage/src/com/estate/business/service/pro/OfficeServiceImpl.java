@@ -9,8 +9,6 @@ import com.estate.base.dao.IBaseDao;
 import com.estate.domain.pro.Office;
 import com.estate.util.comm.DateTimeUtil;
 import com.estate.util.comm.StringUtil;
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
 
 public class OfficeServiceImpl implements  OfficeService{
      private IBaseDao<Office, Long> dao;
