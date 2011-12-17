@@ -119,11 +119,11 @@
 		<title><![CDATA[name]]></title>
 		<seniorSearch><![CDATA[
 		select id,compressUrl,name,disname,fit_Condition as fitCondition,address,features,
-		open_Date as openDate,check_Date as checkDate,min_Price as minPrice 
+		open_Date as openDate,check_Date as checkDate,building_Type as buildingType,min_Price as minPrice,SALES_STATUS as salesStatus
 		from t_p_building t where 1= 1 
 		]]></seniorSearch>
 		<keywordSearch><![CDATA[
-			select id,compressUrl,name,disname,fit_Condition as fitCondition,address,features,open_Date as openDate,
+			select id,compressUrl,name,disname,fit_Condition as fitCondition,address,features,open_Date as openDate,SALES_STATUS as salesStatus,
 			       check_Date as checkDate,min_Price as minPrice,building_Type as buildingType,attentionNum from t_p_building
 			where NAME like ?
 		]]>

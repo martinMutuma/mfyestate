@@ -118,6 +118,7 @@ public class Base64 {
 	}
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
+		System.out.println(decodeString("NDgwMjEzOA=="));
 		String s = "zhenghao98,rosham@126.com";
 //		System.out.println("加密前：" + s);
 //		String x = encode(s.getBytes());

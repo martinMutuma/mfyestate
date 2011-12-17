@@ -79,7 +79,7 @@ public class CacheInMemoryServlet extends HttpServlet {
 		if (debug)
 			log.info("---- Task on ----\r\n");
 		Timer timer = new Timer();
-		timer.schedule(new TaskUtil(), 1000, 30000 * 100);// 在系统启动后1S开始执行任务调度，每隔30S执行一次
+		timer.schedule(new TaskUtil(), 1000, 60000 * 30);// 在系统启动后1S开始执行任务调度，每隔30S执行一次
 		if (debug)
 			log.info("---- Task on success ----\r\n");
 		// if (debug)
