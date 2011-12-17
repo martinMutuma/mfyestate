@@ -28,7 +28,6 @@
 	    <link rel="stylesheet" href="../resource/css/memberCenter/info.css" type="text/css"></link>	
 		<script type="text/javascript" src="../resource/js/jquery-1.4.2.js"></script>
        	<script type="text/javascript" src="../resource/js/jquery.easyui.min.js"></script>
-	   	<script type="text/javascript" src="../resource/js/global.js"></script>
 	    <script type="text/javascript" src="../resource/js/whole.js"></script>
 		<script type="text/javascript" src="<%=basePath%>pro/modifymessage.js"></script>
         <script type="text/javascript" src="../resource/js/kindeditor/kindeditor.js"></script>
