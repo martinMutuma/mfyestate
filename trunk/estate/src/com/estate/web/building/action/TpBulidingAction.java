@@ -214,7 +214,7 @@ public class TpBulidingAction extends BaseAction {
 						 tpImage.setProtype("1");
 						for (int i = 0; i < img.length; i++) {
 							if (img[i] != null) {
-								String fileName = new Date().getTime() + "";
+								String fileName = new Date().getTime() +imgFileName[i].substring(imgFileName[i].lastIndexOf("."));
 								if (FileUtil.doUpFile(basePath + imagePatn + fileName, img[i])) {
 									tpImage.setImgUrl(imagePatn+fileName);
 								}
