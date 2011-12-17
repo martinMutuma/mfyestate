@@ -358,7 +358,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													 <input type="text" onKeyUp="isNum(this)" maxLength="7"  id="greenRate" name="tpBulding.greenRate"
+													 <input type="text" onKeyUp="isNum(this)" size="5" maxLength="7"  id="greenRate" name="tpBulding.greenRate"
 														 />%
 													
 												 </td>
@@ -370,7 +370,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</div>
 												</td>
 												<td align="left">
-													 <input type="text" id="capacityRate" maxLength="7"  onKeyUp="isNum(this)" name="tpBulding.capacityRate"
+													 <input type="text" id="capacityRate" size="5" maxLength="7"  onKeyUp="isNum(this)" name="tpBulding.capacityRate"
 														 />%
 													
 												 </td>
