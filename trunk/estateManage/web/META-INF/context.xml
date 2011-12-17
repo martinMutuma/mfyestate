@@ -3,7 +3,7 @@
 	<!-- JDNI 配置 -->
 	<Resource name="jndi/estate" auth="Container"
 		type="javax.sql.DataSource" maxActive="100" maxIdle="30"
-		maxWait="10000" username="root" password="fc1986"
+		maxWait="10000" username="root" password="1234"
 		driverClassName="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/estate" />
 </Context>

@@ -3,7 +3,6 @@ package com.estate.business.service.pro;
 import java.util.List;
 import java.util.Map;
 
-import com.estate.domain.pro.Office;
 import com.estate.domain.pro.Shop;
 
 /**
@@ -38,4 +37,11 @@ public interface ShopService {
 	 * 根据Id查询 商铺信息
 	 */
 	public Shop getById(String id);
+	
+	/**
+	 * 保存审核信息，若审核通过+5分
+	 * 
+	 * @return
+	 */
+	public boolean updateAuditing(Shop shop);
 }

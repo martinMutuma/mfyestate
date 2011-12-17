@@ -44,45 +44,57 @@ $(function() {
 					formatter : function(value, rec) {
 						if (rec.id == undefined)
 							return null;
-						else if(rec.auditingState=='0'||rec.auditingState=='3')
+						else(rec.auditingState=='0'||rec.auditingState=='3')
 							return '<span style="color:red"><span onclick=onAudit("'
 									+ rec.id
 									+ '")><font style="cursor:pointer">审核</font></span> <span onclick=onDelete("'
 									+ rec.id + '")><font style="cursor:pointer">删除</font></span></span>';
-						else 
-							return '<span style="color:red"><span onclick=onDelete("'
-										+ rec.id + '")><font style="cursor:pointer">删除</font></span></span>';
 					}
 				}],[{
 					field : 'title',
 					title : '案源名称',
 					mapping : 'title',
+					align : 'center',
 					width : 100
 				}, {
-					field : 'addressName',
+					field : 'disname',
 					title : '所属区域',
 					width : 120,
+					align : 'center',
 					rowspan : 2,
 					sortable : true
-
 				}, {
-					field : 'paywayString',
+					field : 'flag',
 					title : '交易类型',
+					align : 'center',
+					formatter : function(value, rec) {
+						if (rec.id == undefined)
+							return null;
+						else if(rec.flag=='1')
+							return '求租';
+						else if(rec.flag=='2')
+							return '求购';
+						else 
+							return '合作';
+					},
 					width : 150,
 					rowspan : 2
 				}, {
 					field : 'price',
+					align : 'center',
 					title : '价格(万元)',
 					width : 100,
 					rowspan : 2
 				}, {
 					field : 'createTimeString',
 					title : '发布时间',
+					align : 'center',
 					width : 100,
 					rowspan : 2
 				}, {
 					field : 'audtingString',
 					title : '状态',
+					align : 'center',
 					width : 100,
 					rowspan : 2
 				}
@@ -94,7 +106,7 @@ $(function() {
 			auditingState : '',
 			tbtype : ''
 		} ,
-		toolbar : [{
+		toolbar : [/*{
 				id : 'btnadd',
 				text : '审核信息',
 				iconCls : 'icon-add',
@@ -129,7 +141,7 @@ $(function() {
 					}
 				})
 			}
-		}, '-', {
+		}, '-', */{
 			id : 'btnsave',
 			text : '删除信息',
 			iconCls : 'icon-save',
@@ -207,18 +219,5 @@ function onAudit(id) {
 		alert("此条记录已删除");
 		return;
 	}
-	$.messager.confirm('审核记录', '请确认要审核记录吗?', function(btn) {
-	if (btn) {
-		var url1 = "../largePro/auditPro.shtml";
-		$.ajax({
-			url : url1,
-			data : "idString=" + id,
-			success : function(msg) {
-			//	var obj = eval('(' + msg + ')');
-			//	var result = obj[0]["message"];
-			//	alert(result);
-				window.location.reload();
-			}
-		});
-		}})
+	window.location.href='../largePro/searchById.shtml?id=' + id;
 }

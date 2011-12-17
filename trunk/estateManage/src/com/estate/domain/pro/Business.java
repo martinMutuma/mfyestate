@@ -77,6 +77,39 @@ public class Business extends BaseEntity {
     private  String   gongSi;
 	@Column(name="reject")
     private  String   qiTa;
+	private  String  num;
+	private  String  disname;
+	private String compressUrl;
+	private int views;
+	private int attentionNum;
+	private String auditingRemark;
+	private int auditingUser;
+	private Date auditingTime;
+	
+	public String getAuditingRemark() {
+		return auditingRemark;
+	}
+
+	public void setAuditingRemark(String auditingRemark) {
+		this.auditingRemark = auditingRemark;
+	}
+
+	public int getAuditingUser() {
+		return auditingUser;
+	}
+
+	public void setAuditingUser(int auditingUser) {
+		this.auditingUser = auditingUser;
+	}
+
+	public Date getAuditingTime() {
+		return auditingTime;
+	}
+
+	public void setAuditingTime(Date auditingTime) {
+		this.auditingTime = auditingTime;
+	}
+
 	public String getCreateTimeString() {
 		return createTimeString;
 	}
@@ -507,6 +540,46 @@ public class Business extends BaseEntity {
 
 	public void setQiTa(String qiTa) {
 		this.qiTa = qiTa;
+	}
+
+	public String getNum() {
+		return num;
+	}
+
+	public void setNum(String num) {
+		this.num = num;
+	}
+
+	public String getDisname() {
+		return disname;
+	}
+
+	public void setDisname(String disname) {
+		this.disname = disname;
+	}
+
+	public String getCompressUrl() {
+		return compressUrl;
+	}
+
+	public void setCompressUrl(String compressUrl) {
+		this.compressUrl = compressUrl;
+	}
+
+	public int getViews() {
+		return views;
+	}
+
+	public void setViews(int views) {
+		this.views = views;
+	}
+
+	public int getAttentionNum() {
+		return attentionNum;
+	}
+
+	public void setAttentionNum(int attentionNum) {
+		this.attentionNum = attentionNum;
 	}
 
 }

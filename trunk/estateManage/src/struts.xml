@@ -61,9 +61,9 @@
 			<result name="toBaseinfoInfo" >/WEB-INF/baseinfoManage/baseinfo_info.jsp</result>
 			<result name="manageRentPage" >/WEB-INF/pro/manageOffice.jsp</result>
 			<result name="manageShopPage" >/WEB-INF/pro/manageshop.jsp</result>
-			<result name="manageMessagePage" >/WEB-INF/pro/manageMessage.jsp</result>
+			<result name="manageBusiness" >/WEB-INF/pro/manageBusiness.jsp</result>
 			<result name="manageProjectPage" >/WEB-INF/pro/manageproject.jsp</result>
-			<result name="managesalePage" >/WEB-INF/pro/managesale.jsp</result>
+			<result name="manageIndustryPage" >/WEB-INF/pro/manageIndustry.jsp</result>
 		</action>
 		<!-- 新闻管理 -->
 		<action name="news_*"
