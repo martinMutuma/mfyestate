@@ -165,7 +165,7 @@
 		<code value="2">海景房</code>
 		<code value="3">别墅</code>
 		<code value="4">酒店式公寓</code>
-		<code value="5">酒店式公寓</code>
+		<code value="5">产权式酒店</code>
 	</collection>
 	<collection name="销售状态">
 		<code value="0">待售</code>
