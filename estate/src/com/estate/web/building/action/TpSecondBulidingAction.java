@@ -299,7 +299,7 @@ public class TpSecondBulidingAction extends BaseAction {
 				for (int i = 0; i < imageFile.length; i++) {
 					File image = imageFile[i];
 					String imageName = imageFileFileName[i];
-					imageName = (new Date()).getTime() +"";
+					imageName = (new Date()).getTime() +imageFileFileName[i].substring(imageFileFileName[i].lastIndexOf("."));
 					FileUtil.doUpFile(basePath + imageFloder + "/" + imageName,
 							image);
 					TpImage ti = new TpImage();
