@@ -100,7 +100,7 @@ public class IndustryAction extends BaseAction {
 					industry.setImgUrl1(imagePatn+fileName);
 					ImageSizer
 					.doCompress(imageFile1, basePath
-							+ compressPath + fileName, 80, 60,
+							+ compressPath + fileName, 211, 120,
 							1.0f, true);
 					industry.setCompressUrl(compressPath + fileName);
 				}
@@ -128,7 +128,7 @@ public class IndustryAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile2, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						industry.setCompressUrl(compressPath + fileName);
 					}
@@ -158,7 +158,7 @@ public class IndustryAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile3, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						industry.setCompressUrl(compressPath + fileName);
 					}
@@ -188,7 +188,7 @@ public class IndustryAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile4, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName,211, 120,
 								1.0f, true);
 						industry.setCompressUrl(compressPath + fileName);
 					}
@@ -218,7 +218,7 @@ public class IndustryAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile5, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						industry.setCompressUrl(compressPath + fileName);
 					}

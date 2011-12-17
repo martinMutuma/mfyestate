@@ -102,7 +102,7 @@ public class BusinessAction extends BaseAction {
 						imageFile1)) {
 					ImageSizer
 					.doCompress(imageFile1, basePath
-							+ compressPath + fileName, 80, 60,
+							+ compressPath + fileName, 211, 120,
 							1.0f, true);
 					business.setImgUrl1(imagePatn+fileName);
 					business.setCompressUrl(compressPath + fileName);
@@ -131,7 +131,7 @@ public class BusinessAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile2, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						business.setCompressUrl(compressPath + fileName);
 						isFlag = true;
@@ -162,7 +162,7 @@ public class BusinessAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile3, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						business.setCompressUrl(compressPath + fileName);
 						isFlag = true;
@@ -193,7 +193,7 @@ public class BusinessAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile4, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						business.setCompressUrl(compressPath + fileName);
 						isFlag = true;
@@ -223,7 +223,7 @@ public class BusinessAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile5, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						business.setCompressUrl(compressPath + fileName);
 						isFlag = true;

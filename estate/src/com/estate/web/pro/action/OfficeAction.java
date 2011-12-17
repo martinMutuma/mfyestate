@@ -190,7 +190,7 @@ public class OfficeAction extends BaseAction {
 				}
 				if (!flag) {
 					ImageSizer.doCompress(image, basePath + compressPath
-							+ fileName, 202, 112, 1.0f, true);
+							+ fileName, 211, 120, 1.0f, true);
 					office.setCompressUrl(compressPath + fileName);
 				}
 			}

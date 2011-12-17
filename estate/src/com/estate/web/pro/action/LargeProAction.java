@@ -127,7 +127,7 @@ public class LargeProAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile2, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						largePro.setCompressUrl(compressPath + fileName);
 						isFlag = true;
@@ -157,7 +157,7 @@ public class LargeProAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile3, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						largePro.setCompressUrl(compressPath + fileName);
 						isFlag = true;
@@ -187,7 +187,7 @@ public class LargeProAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile4, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						largePro.setCompressUrl(compressPath + fileName);
 						isFlag = true;
@@ -217,7 +217,7 @@ public class LargeProAction extends BaseAction {
 					if(!isFlag){
 						ImageSizer
 						.doCompress(imageFile5, basePath
-								+ compressPath + fileName, 80, 60,
+								+ compressPath + fileName, 211, 120,
 								1.0f, true);
 						largePro.setCompressUrl(compressPath + fileName);
 						isFlag = true;
