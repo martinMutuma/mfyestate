@@ -916,3 +916,12 @@ alter table `estate`.`t_p_office`
 alter table `estate`.`t_s_shops` 
    add column `auditingUser` int(11) NULL COMMENT '审核人' after `auditingRemark`, 
    add column `auditingTime` timestamp NULL COMMENT '审核时间' after `auditingUser`;
+alter table `estate`.`t_p_business` 
+   add column `auditingRemark` varchar(2000) NULL COMMENT '审核意见' after `views`, 
+   add column `auditingUser` int(11) NULL COMMENT '审核人' after `auditingRemark`, 
+   add column `auditingTime` timestamp NULL COMMENT '审核时间' after `auditingUser`;
+alter table `estate`.`t_p_largepro` 
+   add column `auditingRemark` varchar(2000) NULL COMMENT '审核意见' after `flag`, 
+   add column `auditingUser` int(11) NULL COMMENT '审核人' after `auditingRemark`, 
+   add column `auditingTime` timestamp NULL COMMENT '审核时间' after `auditingUser`,
+   change `nearAddress` `nearAddress` varchar(100) NULL ;
