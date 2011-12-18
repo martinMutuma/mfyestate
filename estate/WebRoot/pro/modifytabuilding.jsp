@@ -77,6 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td>
 													<div align="left">
+													        <input type="hidden"  id="modifyname"  value="${tpBulding.name}"/>
 														<input type="text" id="name" class="easyui-validatebox" required="true" missingMessage="楼盘名称必填" name="tpBulding.name" value="${tpBulding.name}"
 															 size="40" maxLength="23" onBlur="getName()"><span id="nameSpan"></span>
 													</div>
@@ -531,7 +532,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	       function  getName(){
   
     var  name=document.getElementById("name");
-   
+    var  modifyname=$('#modifyname').val();
+    if(name.value==modifyname){
+    $('#nameSpan').html('');
+    return};
      if(checkNull(name)){
         var url1 =basepath+"building/checkName.shtml";
            $.ajax({
