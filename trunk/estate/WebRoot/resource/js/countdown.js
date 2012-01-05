@@ -52,6 +52,3 @@
 	te_show_time();
 	var te_vod_show;
 	te_vod_show=setInterval(te_show_time,1000);	
-	function toMyStore(id){
-		window.location.href='mem/baseinfo_toMyStore.shtml?authorId='+id+'&type=office'
-	}

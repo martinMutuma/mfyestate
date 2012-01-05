@@ -175,7 +175,7 @@ function checkPhone(me){
 	}
 
 	function goDoFullInfoPage(){
-		window.location.href=basePath+"mem/baseinfo_modUserInfoPage.shtml";
+		window.location.href=basePath+"mem/baseinfo_modUserInfoPage.shtml?menuCls=31";
 	}
 	
 	function goMainPage(){

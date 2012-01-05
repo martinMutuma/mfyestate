@@ -105,7 +105,7 @@ if(null==username)username="";
 		      <tr onmouseover="this.className='bg_over'" onmouseout="this.className='bg_out'">
 			  	<td  height="86" align="center">
 			  		<a href="#" target="_blank">
-		        	<img border="0" href="<%=basePath%>building/toBuidingInfo.shtml?id=<s:property value="id"/>" src="<%=basePath%>imageFloder/<s:property value="compressUrl"/>" title="<s:property value="name"/>" width="79" height="59"/></a>
+		        	<img border="0" href="<%=basePath%>building/toBuidingInfo.shtml?id=<s:property value="id"/>" src="<%=basePath%><s:property value="compressUrl"/>" title="<s:property value="name"/>" width="79" height="59"/></a>
 				</td>
 		        <td align="center" >
  					<p>
@@ -171,11 +171,12 @@ if(null==username)username="";
 			          <td height="20" align="right">上次登录：</td>
 			          <td><s:date name="tb.lastLoginTime" format="yyyy-MM-dd"/></td>
 			        </tr>
-				      <tr >
+				 <!--      <tr >
 			            <td height="20" align="center" colspan="2">
 			      	 	  <p id="login_mess_ajax"><a href="#"><img src="../member/images/outline.jpg" height="16px" alt="给我留言" style="border:0;"/></a></p>
 				      </td>
-				      </tr>	
+				      </tr>
+				  -->	
 			      </table>
 				</div>
 	    	</div>

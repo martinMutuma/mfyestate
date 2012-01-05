@@ -224,8 +224,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td align="left">
 													 <input type="text" name="tpBulding.minPrice" maxLength="6" class="easyui-validatebox" required="true" missingMessage="楼盘起价必填" size="8"  id="minPrice" onKeyUp="isNum(this)"
-														 />元/㎡
-													
+														 />万元/㎡
 												 </td>
 											</tr>
 											<tr>
@@ -236,7 +235,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</td>
 												<td align="left">
 													 <input type="text" maxLength="6" name="tpBulding.averagePrice" size="8" class="easyui-validatebox" required="true" missingMessage="楼盘均价必填" id="averagePrice" onKeyUp="isNum(this)"
-														 />元/㎡
+														 />万元/㎡
 													
 												 </td>
 											</tr>
