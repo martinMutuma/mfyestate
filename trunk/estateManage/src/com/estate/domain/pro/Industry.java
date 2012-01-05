@@ -68,6 +68,12 @@ public class Industry extends BaseEntity {
 	private String audtingString;
 	@Column(name = "reject")
 	private String flagString;
+	
+	private String  num;
+	private String  disname;
+	private String compressUrl;
+    private int  views;
+    private  int attentionnum;
 
 	public String getDistrict() {
 		return district;
@@ -451,6 +457,46 @@ public class Industry extends BaseEntity {
 
 	public void setFlagString(String flagString) {
 		this.flagString = flagString;
+	}
+
+	public String getNum() {
+		return num;
+	}
+
+	public void setNum(String num) {
+		this.num = num;
+	}
+
+	public String getDisname() {
+		return disname;
+	}
+
+	public void setDisname(String disname) {
+		this.disname = disname;
+	}
+
+	public String getCompressUrl() {
+		return compressUrl;
+	}
+
+	public void setCompressUrl(String compressUrl) {
+		this.compressUrl = compressUrl;
+	}
+
+	public int getViews() {
+		return views;
+	}
+
+	public void setViews(int views) {
+		this.views = views;
+	}
+
+	public int getAttentionnum() {
+		return attentionnum;
+	}
+
+	public void setAttentionnum(int attentionnum) {
+		this.attentionnum = attentionnum;
 	}
 
 }

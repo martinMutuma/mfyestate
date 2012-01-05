@@ -6,8 +6,8 @@ import java.util.Map;
 import com.estate.base.dao.BaseDao;
 import com.estate.base.dao.IBaseDao;
 import com.estate.domain.pro.Business;
-import com.estate.domain.pro.Office;
 import com.estate.util.comm.DateTimeUtil;
+import com.estate.util.comm.StringUtil;
 
 public class BusinessServiceImpl implements  BusinessService{
      private IBaseDao<Business, Long> dao;
@@ -32,8 +32,15 @@ public class BusinessServiceImpl implements  BusinessService{
 	    	    	 int snum=Integer.parseInt(start)-1;
 	    	    	 sql+="   limit  "+(snum*Integer.parseInt(limt))+ " ,"+ limt+" ";}
 			 List<Business>  list=dao.findList(sql);
-			 return list;
-			
+			 if(null!=list && list.size()>0){
+				 for (int i = 0; i < list.size(); i++) {
+				  Business business= list.get(i);
+					business.setCreateTimeString(DateTimeUtil.switchDateToString(
+							business.getCreateTime(), "yyyy-MM-dd"));
+					business.setAudtingString(StringUtil.formatAuditingState(business.getAuditingState()));
+				 }
+				   return list;
+			   }
 		} catch (Exception e) {
 			  e.printStackTrace();
 		}

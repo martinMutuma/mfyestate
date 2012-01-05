@@ -71,6 +71,7 @@
 				</tr>
 			</table>
 	<script language="javascript">
+	alert();
  $("#discode").combotree({
     url:'',
     animate:true,
