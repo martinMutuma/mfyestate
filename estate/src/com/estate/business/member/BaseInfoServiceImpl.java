@@ -130,17 +130,17 @@ public class BaseInfoServiceImpl implements BaseInfoService {
 		if("office".equals(type))
 			sql = "select id,category,compressurl,name,disname,price,area,flag, createtime from t_p_office where authorId=?";
 		else if("shop".equals(type))
-			sql = "select id,suitIndustry as category,compressurl,title as name,disname,bursary as price,firstFloor as area,flag,createtime from t_s_shops where authorId=?"; 
+			sql = "select id,suitIndustry as category,compressurl,title as name,disname,bursary as price, area,flag,createtime from t_s_shops where authorId=?"; 
 		else if("build".equals(type))
-			sql = "select id,building_type as category,compressurl,name,disname,average_price as price,construction_area as area,1 as flag,createtime from t_p_building where protype=1 and authorid=?"; 
+			sql = "select id,building_type as category,compressurl,name,disname,average_price as price,construction_area as area,1 as flag,createtime from t_p_building where authorid=?"; 
 		else if("second".equals(type))
-			sql = "select id,useType as category,sourceUrl,respDistrict as name,disname, price,consArea,flag,createDate as createtime from t_p_second_buliding where authorid=?"; 
+			sql = "select id,'住宅' as category,sourceUrl,respDistrict as name,disname, price,consArea as area,flag,createDate as createtime from t_p_second_buliding where authorid=?"; 
 		else if("business".equals(type))
 			sql = "select id,category ,compressurl,title as name,disname, price,area,1 as flag,createtime from t_p_business where authorid=?"; 
 		else if("industry".equals(type))
 			sql = "select id,concat(industry,',',category),compressurl,title as name,disname,bursary as price,area,flag,createtime from t_p_industry where authorid=?"; 
 		else if("lagrepro".equals(type))
-			sql = "select id, 0 as category,compressurl,title as name,disname, price,address as area,payWay as flag,createtime from t_p_largepro where authorid=?"; 
+			sql = "select id, 0 as category,compressurl,title as name,disname, price,address as area, flag,createtime from t_p_largepro where authorid=?"; 
 		List mapList =  dao.createSqlQuery(sql).setParameters(1, authorId).mapList();
 		List<MystoreVO> objList = new ArrayList<MystoreVO>();
 		if(null!=mapList && mapList.size()>0){
