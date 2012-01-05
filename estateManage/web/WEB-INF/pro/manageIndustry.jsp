@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="<%=basePath%>scripts/jquery-1.4.2.js"></script>
 	<script type="text/javascript" src="<%=basePath%>scripts/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="<%=basePath%>scripts/easyui-lang-zh_CN.js"></script>
-	<script type="text/javascript" src="../scripts/pro/managesale.js"></script>
+	<script type="text/javascript" src="../scripts/pro/manageIndustry.js"></script>
 	<style type="text/css">
 		<!--
 		td {
