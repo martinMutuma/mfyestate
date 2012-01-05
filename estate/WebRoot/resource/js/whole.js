@@ -134,7 +134,7 @@ function showBulid(id) {
 
 // 进入经纪人商铺
 function toMyStore(id) {
-	go('mem/baseinfo_toMyStore.shtml?authorId=' + id + '&type=office');
+	go('mem/baseinfo_toMyStore.shtml?authorId=' + id + '&type=build');
 }
 
 // 进入二手房

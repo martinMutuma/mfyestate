@@ -3,7 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@taglib uri="estateTag" prefix="estateTag" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -67,9 +67,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<tr>
 			      <td height="30" align="right" bgcolor="#FFFFFF" ><span style="color:#FF0000;"> </span>会员性别：</td>
  					<td bgcolor="#FFFFFF" >&nbsp;
- 					<input name="tb.sex" type="radio" value="1" missingMessage="请选择会员性别" required="true" checked />男
- 					<input  name="tb.sex" type="radio" value="2"  missingMessage="请选择会员性别" required="true"/>女
-			      
+ 					<input type="radio" name="tb.sex" id="sex" value="1" checked="checked" />
+					  男
+					  <input type="radio" name="tb.sex" id="sex" value="2" />
+					  女
 			    </tr>
 		     <tr>
 		       <td height="30" align="right" bgcolor="#FFFFFF" ><span style="color:#FF0000;"> </span>地&nbsp;&nbsp;&nbsp;&nbsp;	区：</td>

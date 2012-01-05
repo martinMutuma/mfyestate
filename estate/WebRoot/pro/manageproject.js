@@ -1,4 +1,3 @@
-
 $(function() {
 	$("#auditingState").combobox({
 				width : 100,
