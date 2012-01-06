@@ -54,31 +54,29 @@ $(function() {
 					field : 'title',
 					title : '名称',
 					mapping : 'title',
-					width : 180
+					width : 100
 				}, {
-					field : 'disname',
+					field : 'addressName',
 					title : '所属区域',
 					width : 120,
-					align : 'center',
 					rowspan : 2,
 					sortable : true
 
 				}, {
 					field : 'price',
 					title : '转让价格(万元)',
-					align : 'center',
-					width : 100,
+					width : 150,
 					rowspan : 2
-				}, {
+				},
+
+				{
 					field : 'createTimeString',
 					title : '发布时间',
-					align : 'center',
 					width : 100,
 					rowspan : 2
 				}, {
 					field : 'audtingString',
 					title : '状态',
-					align : 'center',
 					width : 100,
 					rowspan : 2
 				}
@@ -90,7 +88,7 @@ $(function() {
 			auditingState : '',
 			tbtype : ''
 		} ,
-		toolbar : [/*{
+		toolbar : [{
 				id : 'btnadd',
 				text : '审核信息',
 				iconCls : 'icon-add',
@@ -125,7 +123,7 @@ $(function() {
 					}
 				})
 			}
-		}, '-', */{
+		}, '-', {
 			id : 'btnsave',
 			text : '删除信息',
 			iconCls : 'icon-save',
@@ -203,5 +201,18 @@ function onAudit(id) {
 		alert("此条记录已删除");
 		return;
 	}
-	window.location.href = "../business/searchById.shtml?id=" + id;
+	$.messager.confirm('审核记录', '请确认要审核记录吗?', function(btn) {
+	if (btn) {
+		var url1 = "../business/auditPro.shtml";
+		$.ajax({
+			url : url1,
+			data : "idString=" + id,
+			success : function(msg) {
+			//	var obj = eval('(' + msg + ')');
+			//	var result = obj[0]["message"];
+			//	alert(result);
+				window.location.reload();
+			}
+		});
+		}})
 }
