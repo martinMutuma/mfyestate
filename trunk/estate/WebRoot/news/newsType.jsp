@@ -136,7 +136,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<a
 											href="news_toNewsInfo.shtml?type=<s:property value='columnType'/>&id=<s:property value='id'/>"
 											title="<s:property value='title'/>" target="_blank"><img
-												src="../../../<s:property value='imgUrl'/>"
+												src="http://www.xylfc.com/<s:property value='imgUrl'/>"
 												alt="<s:property value='title'/>" /> </a><a
 											href="news_toNewsInfo.shtml?type=<s:property value='columnType'/>&id=<s:property value='id'/>"
 											target="_blank"><s:property value='title' /> </a>
