@@ -32,8 +32,10 @@
 								<div class="info_left1">
 									<span id="end_Time">距离报名结束时间还有：</span><br/>
 									<span id="str_time"></span><br/><br/>
-									<div class="specials1">${special.specialsMes }
-									<a href="javascript:onjointuan();"><span class="specials_can"></span></a>
+									<div class="specials1">
+										<div class="specials_div">${special.specialsMes}</div>
+										<div style="float:left;paddin-left:10px"><a href="javascript:onjointuan();"><span class="specials_can"></span></a></div>
+									    <div style="clear:both"></div>
 									</div>
 									<div class="specials_zw">
 									</div>

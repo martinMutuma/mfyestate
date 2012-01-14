@@ -288,7 +288,7 @@
 				    		<div class="clear"></div>
 				   </div>
 				   <div id="temain" class="activemain hid" >
-						        <div class="activeimg">
+						    <div class="activeimg">
 						      <img src="<s:property value='#data.tpSpecialstOne.imgOne'/>" />
 						    </div>
 						    <div class="activecontent">
