@@ -78,6 +78,10 @@
 			<img src="<%=basePath%>resource/images/xiyinli4.gif"
 				style="height: 80px; width: 960px">
 		</div>
+		<div >
+			<img src="<%=basePath%>resource/images/PProcess.jpg"
+				style="height: 51px; width: 960px">
+		</div>
 		<div id="menu" align="left">
 			<ul class="head">
 				<li>
