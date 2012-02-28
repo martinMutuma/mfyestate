@@ -65,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    						<td>
    							<span class="list_price">起价：<estateTag:format value="${minPrice}"></estateTag:format>元/㎡</span>
    							<span class="list_content"><a href="<%=basePath%>building/toBuidingInfo.shtml?id=<s:property value="id"/>#tuan"><img src="building/images/joi_t.gif" alt="参加看房团"/></a></span>
-   							&nbsp;<span class="list_content"><a href="<%=basePath%>building/attention.shtml?id=<s:property value='id'/>&attentioncount=<s:property value="attentionNum"/>" title="关注该楼盘" rel="nofollow" target="tempF" ><img src="building/images/guan_z.gif" alt="关注楼盘" /></a></span>
+   							<span class="list_content"><a href="<%=basePath%>building/attention.shtml?id=<s:property value='id'/>&attentioncount=<s:property value="attentionNum"/>" title="关注该楼盘" rel="nofollow" target="tempF" ><img src="building/images/guan_z.gif" alt="关注楼盘" /></a></span>
    						</td>
    					</tr>
    				</table>
