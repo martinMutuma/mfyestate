@@ -384,10 +384,10 @@ public class TpBuildingServiceImpl implements TpBuildingService {
 		String sql = "select * from t_p_building where auditingState='1' ";
 		if (null != discode && !"".equals(discode))
 			sql += " and district like '"+ StringUtil.getShortZoneGB(discode) + "%'";
-			sql +=" order by createTime";
+			sql +=" order by createTime desc";
 		sql = dao.createSqlQuery(sql).setFirstResult((pageNo - 1) * limit)
 				.setMaxSize(limit).bulidSql();
-		String countSql = "select count(id) from t_p_building where auditingState='1'";
+		String countSql = "select count(*) from t_p_building where auditingState='1'";
 		if (null != discode && !"".equals(discode))
 			countSql += " and district like '"+ StringUtil.getShortZoneGB(discode) + "%'";
 		List<Object[]> countList = dao

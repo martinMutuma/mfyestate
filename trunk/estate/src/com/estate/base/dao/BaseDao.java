@@ -390,7 +390,7 @@ public class BaseDao<ENTITY, ID extends Serializable> implements
 		Method setterM = null;
 		if ("java.lang.Integer".equals(className)) {
 			cls = new Class[] { Integer.class };
-			value = new Integer(value.toString());
+			value = new Integer("0.0".equals(value.toString())?"0":(value.toString()));
 		} else if ("int".equals(className)) {
 			cls = new Class[] { int.class };
 			value = new Integer(value.toString()).intValue();
